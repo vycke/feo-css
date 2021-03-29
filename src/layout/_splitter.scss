@@ -22,6 +22,6 @@
 // Generate classes to set the min-width of each half of .splitter
 @each $name, $size in $sizes {
   .splitter-w-#{$name} {
-    --min-width: #{$size}rem;
+    --min-width: #{$size};
   }
 }

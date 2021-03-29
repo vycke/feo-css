@@ -88,6 +88,9 @@ $sizes: (
   --radius-1: calc(2 * var(--radius-0));
   --radius-2: calc(4 * var(--radius-0));
 
+  // page-width
+  --page-width: 68ch;
+
   // misc
   --transition: all ease-in-out 200ms;
 }

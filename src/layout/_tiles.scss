@@ -21,6 +21,6 @@
 // Generate classes to set the tile min-sizes
 @each $name, $size in $sizes {
   .tiles-w-#{$name} {
-    --min-tile-width: #{$size}rem;
+    --min-tile-width: #{$size};
   }
 }

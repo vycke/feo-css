@@ -2,13 +2,12 @@
 // images) to span bigger than the actual center column
 .center-layout {
   --spacing: var(--spacing-0);
-  --page-width: var(--size-5);
 
   display: grid;
   grid-auto-rows: max-content;
   grid-template-columns:
     minmax(var(--spacing), 1fr)
-    minmax(auto, var(--page-width))
+    minmax(auto, var(--page-width, 68ch))
     minmax(var(--spacing), 1fr);
 
   > * {
@@ -30,7 +29,7 @@
 
 // Generate classes to set the width of the .center-layout
 @each $name, $size in $sizes {
-  .center-layout-w-#{$name} {
+  .page-width-#{$name} {
     --page-width: #{$size};
   }
 }

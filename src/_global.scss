@@ -1,0 +1,55 @@
+/*******
+* Generic styling
+*******/
+html,
+body {
+  min-width: var(--size-0);
+  color: var(--gray-100);
+  font-family: var(--sans-serif);
+  background-color: var(--gray-500);
+  transition: var(--transition);
+}
+
+// HEADINGS
+h1,
+h2,
+h3 {
+  width: 100%;
+  line-height: 1.4;
+  transition: var(--transition);
+}
+
+h1 {
+  font-size: var(--text-3);
+}
+
+h2 {
+  font-size: var(--text-2);
+}
+
+h3 {
+  font-size: var(--text-1);
+}
+
+// LINKS
+a,
+a > *,
+a:link,
+a:visited,
+a:active {
+  text-decoration-color: var(--red-200);
+  text-decoration-thickness: 2px;
+}
+
+a:hover,
+a:hover > * {
+  color: var(--red-200);
+  transition: var(--transition);
+  text-decoration-color: var(--red-200);
+  text-decoration-thickness: 2px;
+}
+
+::selection {
+  color: var(--gray-500) !important;
+  background: var(--gray-100) !important;
+}

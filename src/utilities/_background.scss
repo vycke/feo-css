@@ -1,0 +1,10 @@
+// Utility classes for background colors and different pseudo-classes
+@each $name, $color in $colors {
+  .bg-#{$name},
+  .hover\:bg-#{$name}:hover,
+  .focus\:bg-#{$name}:focus,
+  .active\:bg-#{$name}:active,
+  .checked\:bg-#{$name}:checked {
+    background-color: $color;
+  }
+}

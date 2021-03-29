@@ -1,0 +1,18 @@
+{
+  "dependencies": {
+    "sass": "^1.32.8"
+  },
+  "scripts": {
+    "test": "npx sass src/index.scss tmp/index.css"
+  },
+  "name": "css-framework",
+  "version": "1.0.0",
+  "main": "src/index.scss",
+  "description": "A tiny CSS generator",
+  "repository": "https://github.com/kevtiq/css-framework",
+  "author": "Kevin Pennekamp <github@crinkle.dev>",
+  "license": "MIT",
+  "devDependencies": {
+    "prettier": "^2.2.1"
+  }
+}

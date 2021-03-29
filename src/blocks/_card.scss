@@ -1,0 +1,9 @@
+// Example block for a card
+.card {
+  color: var(--gray-300);
+  font-size: var(--text-00);
+}
+
+.card__body {
+  padding: var(--spacing-0);
+}

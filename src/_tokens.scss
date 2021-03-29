@@ -1,0 +1,93 @@
+// List of colors that is used to generate utility classes, but also generate
+// CSS custom properties
+$colors: (
+  'gray-100': #fafafa,
+  'gray-200': #e5eaed,
+  'gray-300': #a7b1bc,
+  'gray-400': #19232a,
+  'gray-500': #0e141e,
+  'green-100': #85e0bb,
+  'green-200': #2ec997,
+  'green-300': #1b8e67,
+  'blue-200': #4876f8,
+  'red-200': #ff0056,
+);
+
+// Typography system (golden ratio)
+$base-font-size: calc(1.125rem + 0.15vw);
+$font-sizes: (
+  '0': 1,
+  '00': 0.8,
+  '000': 0.64,
+  '1': 1.25,
+  '2': 1.563,
+  '3': 1.953,
+);
+
+// Spacing system: padding, margin, gap
+$base-spacing: calc(1rem + 0.15vw);
+$spacing: (
+  '0': 1,
+  '00': 0.75,
+  '000': 0.5,
+  '1': 1.25,
+  '2': 2,
+  '3': 3,
+);
+
+// Size system
+$sizes: (
+  '0': 15rem,
+  '1': 20rem,
+  '2': 30rem,
+  '3': 40rem,
+  '4': 50rem,
+  '5': 75rem,
+);
+
+/*******
+* Generate CSS custom properties
+*******/
+:root {
+  // create CSS variables around colors
+  @each $name, $color in $colors {
+    --#{$name}: #{$color};
+  }
+
+  // create CSS variables around text-sizes
+  --text-base: #{$base-font-size};
+  @each $name, $size in $font-sizes {
+    --text-#{$name}: calc(#{$size} * var(--text-base));
+  }
+
+  // create CSS variables around spacing
+  --spacing-base: #{$base-spacing};
+  @each $name, $space in $spacing {
+    --spacing-#{$name}: calc(#{$space} * var(--spacing-base));
+  }
+
+  // create CSS variables around sizes
+  @each $name, $size in $sizes {
+    --size-#{$name}: #{$size};
+  }
+
+  --sans-serif: 'Inter', system-ui, -apple-system, blinkmacsystemfont,
+    'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', sans-serif;
+  --monospace: hack, consolas, menlo, monaco, 'Courier New', monospace;
+  --serif: Georgia, serif;
+
+  // box-shadow
+  --elevation-1: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  --elevation-2: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --elevation-3: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+
+  // border-radius
+  --radius-0: 0.25rem;
+  --radius-1: calc(2 * var(--radius-0));
+  --radius-2: calc(4 * var(--radius-0));
+
+  // misc
+  --transition: all ease-in-out 200ms;
+}

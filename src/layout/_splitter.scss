@@ -1,0 +1,27 @@
+// Responsive 2-column equal-size layout that stacks if the columns become less
+// than the set min-width.
+// Assumes the second column scales the available space when stacked
+.splitter {
+  --min-width: var(--size-0);
+  --gap: var(--spacing-0);
+
+  display: grid;
+  grid-template-rows: auto 1fr;
+  grid-row-gap: var(--gap);
+  grid-column-gap: var(--gap);
+  grid-template-columns: repeat(auto-fit, minmax(var(--min-width), 1fr));
+}
+
+// Generate classes to set the gap of .splitter
+@each $name, $space in $spacing {
+  .splitter-g-#{$name} {
+    --gap: #{$space}rem;
+  }
+}
+
+// Generate classes to set the min-width of each half of .splitter
+@each $name, $size in $sizes {
+  .splitter-w-#{$name} {
+    --min-width: #{$size}rem;
+  }
+}

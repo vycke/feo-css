@@ -1,0 +1,36 @@
+// centering layout with scaling side columns allowing for child elements (e.g.
+// images) to span bigger than the actual center column
+.center-layout {
+  --spacing: var(--spacing-0);
+  --page-width: var(--size-5);
+
+  display: grid;
+  grid-auto-rows: max-content;
+  grid-template-columns:
+    minmax(var(--spacing), 1fr)
+    minmax(auto, var(--page-width))
+    minmax(var(--spacing), 1fr);
+
+  > * {
+    grid-column: 2;
+  }
+}
+
+.center-exception {
+  --max-width: calc(var(--page-width) + 2 * var(--spacing-3));
+  grid-column: 2;
+}
+
+// Generate classes to set the padding of the .center-loyout
+@each $name, $space in $spacing {
+  .center-layout-p-#{$name} {
+    --spacing: #{$space};
+  }
+}
+
+// Generate classes to set the width of the .center-layout
+@each $name, $size in $sizes {
+  .center-layout-w-#{$name} {
+    --page-width: #{$size};
+  }
+}

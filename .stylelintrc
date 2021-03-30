@@ -1,0 +1,16 @@
+{
+  "plugins": ["stylelint-prettier"],
+  "extends": [
+    "stylelint-config-standard",
+    "stylelint-config-prettier",
+    "stylelint-config-rational-order"
+  ],
+  "rules": {
+    "prettier/prettier": true,
+    "at-rule-no-unknown": [ true, {
+      "ignoreAtRules": [
+        "for", "each", "include", "if", "mixin", "else", "elseif", "return", "function", "extend", "at-root", "error"
+      ]
+    }],
+  },
+}

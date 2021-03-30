@@ -1,3 +1,7 @@
+/*******
+* CSS Reset
+*******/
+
 /* Box sizing rules */
 *,
 *::before,
@@ -74,8 +78,8 @@ img[width][height] {
 /* Let SVG scale without boundaries */
 img[src$='.svg'] {
   width: 100%;
-  height: auto;
   max-width: none;
+  height: auto;
 }
 
 /* buttons */

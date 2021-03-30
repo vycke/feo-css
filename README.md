@@ -20,11 +20,12 @@ Currently implemented layout patterns:
 
 CSS classes that alter a single property, based on the set SCSS variables in the `_tokens.scss` file. In addition, some more utility classes that do a single thing well.
 
-- `background`: classes generated based on color settings, also for `:hover`, `:focus`, `:active` and `:checked` pseudo-classes;
+- `background`: classes generated based on color settings, also for `:hover`, `:focus`, `:active` and `:checked` pseudo-classes, for `background-color`;
 - `center`: creates a container of which the children are centered;
 - `click-area`: makes an entire container clickable based on the presence of a single `<a />` tag;
 - `hidden`: visually hide an element;
 - `spacing`: `padding` and `margin` classes based on the spacing settings;
+- `radius`: utilities for the `border-radius` property;
 - `typography`: `font-size` and `color` classes, based on the font-sizes and color settings.
 
 ## Blocks

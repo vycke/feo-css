@@ -1,16 +1,19 @@
-// reset, settings & generic styles
 @import 'tokens';
 @import 'reset';
 @import 'global';
 
-// Layout
+/*******
+* Layout classes
+*******/
 @import 'layout/center-layout';
 @import 'layout/flow';
 @import 'layout/pancake';
 @import 'layout/splitter';
 @import 'layout/tiles';
 
-// Utilities
+/*******
+* Utility classes
+*******/
 @import 'utilities/background';
 @import 'utilities/center';
 @import 'utilities/typography';
@@ -18,5 +21,12 @@
 @import 'utilities/hidden';
 @import 'utilities/click-area';
 
-// Blocks & expections
+/*******
+* Blocks
+*******/
 @import 'blocks/card';
+
+/*******
+* SHAME
+*******/
+@import 'shame';

@@ -3,7 +3,9 @@
     "sass": "^1.32.8"
   },
   "scripts": {
-    "test": "npx sass src/index.scss tmp/index.css"
+    "test": "npx sass src/index.scss tmp/index.css",
+    "lint": "stylelint '**/*.(s)css'",
+    "lint:fix": "stylelint-prettier --write 'src/**/*.{css,scss}' "
   },
   "name": "css-framework",
   "version": "1.0.0",
@@ -13,6 +15,12 @@
   "author": "Kevin Pennekamp <github@crinkle.dev>",
   "license": "MIT",
   "devDependencies": {
-    "prettier": "^2.2.1"
+    "prettier": "^2.2.1",
+    "stylelint": "^13.12.0",
+    "stylelint-config-prettier": "^8.0.2",
+    "stylelint-config-rational-order": "^0.1.2",
+    "stylelint-config-standard": "^21.0.0",
+    "stylelint-order": "^4.1.0",
+    "stylelint-prettier": "^1.2.0"
   }
 }

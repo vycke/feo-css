@@ -1,26 +1,26 @@
 // Class that creates a tile-based system that fills the space based on gap-size
 // and min-width for each individual tile
 .tiles {
-  --min-tile-width: var(--size-0);
-  --gap: var(--spacing-0);
+	--min-tile-width: var(--size-0);
+	--gap: var(--spacing-0);
 
-  display: grid;
-  grid-row-gap: var(--gap);
-  grid-column-gap: var(--gap);
-  grid-template-columns: repeat(auto-fit, minmax(var(--min-tile-width), 1fr));
-  width: 100%;
+	display: grid;
+	grid-row-gap: var(--gap);
+	grid-column-gap: var(--gap);
+	grid-template-columns: repeat(auto-fit, minmax(var(--min-tile-width), 1fr));
+	width: 100%;
 }
 
 // Generate classes to set the tile gap
 @each $name, $space in $spacing {
-  .tiles-g-#{$name} {
-    --gap: #{$space}rem;
-  }
+	.tiles-g-#{$name} {
+		--gap: var(--spacing-#{$name});
+	}
 }
 
 // Generate classes to set the tile min-sizes
 @each $name, $size in $sizes {
-  .tiles-w-#{$name} {
-    --min-tile-width: #{$size};
-  }
+	.tiles-w-#{$name} {
+		--min-tile-width: var(--size-#{name});
+	}
 }

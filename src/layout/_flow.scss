@@ -1,52 +1,52 @@
 // Similar to stack, but without a display; flex;
 .flow > * {
-  margin-top: 0;
-  margin-bottom: 0;
+	margin-top: 0;
+	margin-bottom: 0;
 }
 
 .flow {
-  --space: var(--spacing-0);
+	--space: var(--spacing-0);
 }
 
 .flow > * + * {
-  margin-top: var(--space);
+	margin-top: var(--space);
 }
 
 @each $name, $space in $spacing {
-  // Generate gap classes to be combined with 'flow'
-  .flow-g-#{$name} {
-    --space: #{$space}rem;
-  }
+	// Generate gap classes to be combined with 'flow'
+	.flow-g-#{$name} {
+		--space: var(--spacing-#{$name});
+	}
 
-  // Can be set on children from the stack
-  .flow-t-#{$name} {
-    --space: #{$space}rem;
-  }
+	// Can be set on children from the stack
+	.flow-t-#{$name} {
+		--space: var(--spacing-#{$name});
+	}
 
-  .flow-b-#{$name} + * {
-    --space: #{$space}rem;
-  }
+	.flow-b-#{$name} + * {
+		--space: var(--spacing-#{$name});
+	}
 }
 
 // Remove gap size
 .flow-g-none,
 .flow-t-none + *,
 .flow-b-none {
-  --space: 0;
+	--space: 0;
 }
 
 // Stop flow after x-th element (those elements are grouped at the bottom
 // Requires the height 100% when the flow is the only child of its parent
 // display:flex; is required for this.
 .flow-last-child {
-  display: flex;
-  flex-direction: column;
+	display: flex;
+	flex-direction: column;
 }
 
 .flow-last-child:only-child {
-  height: 100%;
+	height: 100%;
 }
 
 .flow-last-child > :last-child {
-  margin-bottom: auto;
+	margin-bottom: auto;
 }

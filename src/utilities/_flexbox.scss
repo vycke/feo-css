@@ -1,0 +1,190 @@
+// Initiate the flexbox
+.flex-col {
+	display: flex;
+	flex-direction: column;
+}
+.flex-row {
+	display: flex;
+	flex-direction: row;
+}
+.flex-col-reverse {
+	display: flex;
+	flex-direction: column-reverse;
+}
+.flex-row-reverse {
+	display: flex;
+	flex-direction: row-reverse;
+}
+
+// grow/shrink
+.flex-grow {
+	flex-grow: 1;
+}
+.flex-grow-0 {
+	flex-grow: 0;
+}
+.flex-shrink {
+	flex-shrink: 1;
+}
+.flex-shrink-0 {
+	flex-shrink: 0;
+}
+
+// wrap
+.flex-wrap {
+	flex-wrap: wrap;
+}
+
+.flex-no-wrap {
+	flex-wrap: nowrap;
+}
+
+// justify-content
+.justify-start {
+	justify-content: flex-start;
+}
+.justify-end {
+	justify-content: flex-end;
+}
+.justify-center {
+	justify-content: center;
+}
+.justify-between {
+	justify-content: space-between;
+}
+.justify-around {
+	justify-content: space-around;
+}
+.justify-evenly {
+	justify-content: space-evenly;
+}
+
+// justify-items
+.justify-items-start {
+	justify-items: start;
+}
+.justify-items-end {
+	justify-items: end;
+}
+.justify-items-center {
+	justify-items: center;
+}
+.justify-items-stretch {
+	justify-items: stretch;
+}
+
+// align-content
+.content-center {
+	align-content: center;
+}
+.content-start {
+	align-content: flex-start;
+}
+.content-end {
+	align-content: flex-end;
+}
+.content-between {
+	align-content: space-between;
+}
+.content-around {
+	align-content: space-around;
+}
+.content-evenly {
+	align-content: space-evenly;
+}
+
+// align items
+.items-start {
+	align-items: flex-start;
+}
+.items-end {
+	align-items: flex-end;
+}
+.items-center {
+	align-items: center;
+}
+.items-baseline {
+	align-items: baseline;
+}
+.items-stretch {
+	align-items: stretch;
+}
+
+// place content
+.place-content-center {
+	place-content: center;
+}
+.place-content-start {
+	place-content: start;
+}
+.place-content-end {
+	place-content: end;
+}
+.place-content-between {
+	place-content: space-between;
+}
+.place-content-around {
+	place-content: space-around;
+}
+.place-content-evenly {
+	place-content: space-evenly;
+}
+.place-content-stretch {
+	place-content: stretch;
+}
+
+// place-items
+.place-items-start {
+	place-items: start;
+}
+.place-items-end {
+	place-items: end;
+}
+.place-items-center {
+	place-items: center;
+}
+.place-items-stretch {
+	place-items: stretch;
+}
+
+// justify-self
+.justify-self-start {
+	justify-self: start;
+}
+.justify-self-end {
+	justify-self: end;
+}
+.justify-self-center {
+	justify-self: center;
+}
+.justify-self-stretch {
+	justify-self: stretch;
+}
+
+// align self
+.self-start {
+	align-self: flex-start;
+}
+.self-end {
+	align-self: flex-end;
+}
+.self-center {
+	align-self: center;
+}
+.self-stretch {
+	align-self: stretch;
+}
+
+// place self
+.place-self-start {
+	place-self: start;
+}
+.place-self-end {
+	place-self: end;
+}
+.place-self-center {
+	place-self: center;
+}
+.place-self-stretch {
+	place-self: stretch;
+}

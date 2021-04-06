@@ -1,13 +1,37 @@
 // Generate utility classes around colors
 @each $name, $color in $colors {
-  .text-#{$name} {
-    color: #{$color};
-  }
+	.text-#{$name} {
+		color: #{$color};
+	}
 }
 
 // Generate utility classes around font-size
 @each $name, $size in $font-sizes {
-  .text-#{$name} {
-    font-size: calc(#{$base-font-size} * #{$size});
-  }
+	.text-#{$name} {
+		font-size: var(--text-#{$name});
+	}
+}
+
+.bold {
+	font-weight: 600;
+}
+
+.italic {
+	font-style: italic;
+}
+
+.uppercase {
+	text-transform: uppercase;
+}
+
+.text-right {
+	text-align: right;
+}
+
+.text-left {
+	text-align: left;
+}
+
+.text-center {
+	text-align: center;
 }

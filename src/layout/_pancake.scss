@@ -2,8 +2,8 @@
 // Any additional rows exceeding the set 3, will automatically get the
 // 'auto' flag.
 .pancake {
-  display: grid;
-  grid-template-rows: auto 1fr auto;
-  max-width: 100%;
-  min-height: 100vh;
+	display: grid;
+	grid-template-rows: auto 1fr auto;
+	max-width: 100%;
+	min-height: 100vh;
 }

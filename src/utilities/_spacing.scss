@@ -1,34 +1,34 @@
 // Create various padding and margin utility classes
 @each $typename, $type in ('m': 'margin', 'p': 'padding') {
-	@each $name, $value in $spacing {
-		.#{$typename}b-#{$name} {
-			#{$type}-bottom: var(--spacing-#{$name});
-		}
+  @each $name, $value in $spacing {
+    .#{$typename}b-#{$name} {
+      #{$type}-bottom: var(--spacing-#{$name});
+    }
 
-		.#{$typename}t-#{$name} {
-			#{$type}-top: var(--spacing-#{$name});
-		}
+    .#{$typename}t-#{$name} {
+      #{$type}-top: var(--spacing-#{$name});
+    }
 
-		.#{$typename}l-#{$name} {
-			#{$type}-left: var(--spacing-#{$name});
-		}
+    .#{$typename}l-#{$name} {
+      #{$type}-left: var(--spacing-#{$name});
+    }
 
-		.#{$typename}r-#{$name} {
-			#{$type}-right: var(--spacing-#{$name});
-		}
+    .#{$typename}r-#{$name} {
+      #{$type}-right: var(--spacing-#{$name});
+    }
 
-		.#{$typename}x-#{$name} {
-			#{$type}-right: var(--spacing-#{$name});
-			#{$type}-left: var(--spacing-#{$name});
-		}
+    .#{$typename}x-#{$name} {
+      #{$type}-right: var(--spacing-#{$name});
+      #{$type}-left: var(--spacing-#{$name});
+    }
 
-		.#{$typename}y-#{$name} {
-			#{$type}-top: var(--spacing-#{$name});
-			#{$type}-bottom: var(--spacing-#{$name});
-		}
+    .#{$typename}y-#{$name} {
+      #{$type}-top: var(--spacing-#{$name});
+      #{$type}-bottom: var(--spacing-#{$name});
+    }
 
-		.#{$typename}-#{$name} {
-			#{$type}: var(--spacing-#{$name});
-		}
-	}
+    .#{$typename}-#{$name} {
+      #{$type}: var(--spacing-#{$name});
+    }
+  }
 }

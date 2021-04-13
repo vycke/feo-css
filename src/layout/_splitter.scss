@@ -2,29 +2,29 @@
 // than the set min-width.
 // Assumes the second column scales the available space when stacked
 .splitter {
-  --min-width: var(--size-0);
-  --gap: var(--spacing-0);
+  --splitter-width: var(--size-0);
+  --splitter-gap: var(--spacing-0);
 
   display: grid;
   grid-template-rows: auto 1fr;
-  grid-row-gap: var(--gap);
-  grid-column-gap: var(--gap);
+  grid-row-gap: var(--splitter-gap);
+  grid-column-gap: var(--splitter-gap);
   grid-template-columns: repeat(
     auto-fit,
-    minmax(min(100%, var(--min-width)), 1fr)
+    minmax(min(100%, var(--splitter-width)), 1fr)
   );
 }
 
 // Generate classes to set the gap of .splitter
 @each $name, $space in $spacing {
   .splitter-g-#{$name} {
-    --gap: var(--spacing-#{$name});
+    --splitter-gap: var(--spacing-#{$name});
   }
 }
 
 // Generate classes to set the min-width of each half of .splitter
 @each $name, $size in $sizes {
   .splitter-w-#{$name} {
-    --min-width: var(--size-#{$name});
+    --splitter-width: var(--size-#{$name});
   }
 }

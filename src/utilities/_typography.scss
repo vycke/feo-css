@@ -1,37 +1,40 @@
 // Generate utility classes around colors
 @each $name, $color in $colors {
-	.text-#{$name} {
-		color: #{$color};
-	}
+  .text-#{$name},
+  .hover\:text-#{$name}:hover,
+  .focus\:text-#{$name}:focus,
+  .active\:text-#{$name}:active {
+    color: #{$color};
+  }
 }
 
 // Generate utility classes around font-size
 @each $name, $size in $font-sizes {
-	.text-#{$name} {
-		font-size: var(--text-#{$name});
-	}
+  .text-#{$name} {
+    font-size: var(--text-#{$name});
+  }
 }
 
 .bold {
-	font-weight: 600;
+  font-weight: 600;
 }
 
 .italic {
-	font-style: italic;
+  font-style: italic;
 }
 
 .uppercase {
-	text-transform: uppercase;
+  text-transform: uppercase;
 }
 
 .text-right {
-	text-align: right;
+  text-align: right;
 }
 
 .text-left {
-	text-align: left;
+  text-align: left;
 }
 
 .text-center {
-	text-align: center;
+  text-align: center;
 }

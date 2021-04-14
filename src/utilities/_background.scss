@@ -5,6 +5,6 @@
   .focus\:bg-#{$name}:focus,
   .active\:bg-#{$name}:active,
   .checked\:bg-#{$name}:checked {
-    background-color: $color;
+    background-color: var(--color-#{$name});
   }
 }

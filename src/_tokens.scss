@@ -50,7 +50,7 @@ $sizes: (
 :root {
   // create CSS variables around colors
   @each $name, $color in $colors {
-    --#{$name}: #{$color};
+    --color-#{$name}: #{$color};
   }
 
   // create CSS variables around text-sizes

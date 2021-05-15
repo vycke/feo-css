@@ -1,19 +1,25 @@
 {
-  "dependencies": {
-    "sass": "^1.32.8"
-  },
+  "dependencies": {},
   "scripts": {
-    "test": "npx sass src/index.scss tmp/index.css",
+    "test": "npx sass feo.scss tmp/index.css",
     "lint": "stylelint '**/*.(s)css'",
     "lint:fix": "stylelint-prettier --write 'src/**/*.{css,scss}' "
   },
-  "name": "css-framework",
+  "name": "@crinkle/feo",
   "version": "1.0.0",
-  "main": "src/index.scss",
-  "description": "A tiny CSS generator",
-  "repository": "https://github.com/kevtiq/css-framework",
+  "main": "feo.scss",
+  "description": "A tiny CSS framework",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kevtiq/feo-css.git"
+  },
+  "keywords": ["cube css", "scss", "css"],
   "author": "Kevin Pennekamp <github@crinkle.dev>",
   "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kevtiq/feo-css/issues"
+  },
+  "homepage": "https://github.com/kevtiq/feo-css#readme",
   "devDependencies": {
     "prettier": "^2.2.1",
     "stylelint": "^13.12.0",
@@ -21,6 +27,7 @@
     "stylelint-config-rational-order": "^0.1.2",
     "stylelint-config-standard": "^21.0.0",
     "stylelint-order": "^4.1.0",
-    "stylelint-prettier": "^1.2.0"
+    "stylelint-prettier": "^1.2.0",
+    "sass": "^1.32.8"
   }
 }

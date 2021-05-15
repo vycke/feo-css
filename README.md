@@ -4,6 +4,11 @@ A tiny (S)CSS framework that implements parts of the [CUBE CSS](https://cube.fyi
 
 > LUB: layout, utility, block
 
+## Gettings started
+```scss
+@import '../path/to/your/node_modules/@crinkle/feo/feo.scss';
+```
+
 ## Configuration
 
 In the `src/_tokens.scss` file, lists of SCSS variables can be set to generate custom properties and utility classes that refer to these custom properties.

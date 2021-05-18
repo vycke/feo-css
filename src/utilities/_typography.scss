@@ -4,7 +4,7 @@
   .hover\:text-#{$name}:hover,
   .focus\:text-#{$name}:focus,
   .active\:text-#{$name}:active {
-    color: #{$color};
+    color: var(--color-#{$name});
   }
 }
 

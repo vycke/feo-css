@@ -1,0 +1,6 @@
+// Generate utility classes around rradius
+@each $name, $rad in $radius {
+  .radius-#{$name} {
+    border-radius: var(--radius-#{$name});
+  }
+}

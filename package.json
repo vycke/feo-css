@@ -3,10 +3,10 @@
   "scripts": {
     "test": "npx sass feo.scss tmp/index.css",
     "lint": "stylelint '**/*.(s)css'",
-    "lint:fix": "stylelint-prettier --write 'src/**/*.{css,scss}' "
+    "lint:fix": "yarn lint --fix"
   },
   "name": "@crinkle/feo",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "main": "feo.scss",
   "description": "A tiny CSS framework",
   "repository": {

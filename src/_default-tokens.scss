@@ -1,16 +1,8 @@
 // List of colors that is used to generate utility classes, but also generate
 // CSS custom properties
 $colors: (
-  'gray-100': #fafafa,
-  'gray-200': #e5eaed,
-  'gray-300': #a7b1bc,
-  'gray-400': #19232a,
-  'gray-500': #0e141e,
-  'green-100': #85e0bb,
-  'green-200': #2ec997,
-  'green-300': #1b8e67,
-  'blue-200': #4876f8,
-  'red-200': #ff0056,
+  'black': #000,
+  'white': #fff,
 ) !default;
 
 // Typography system (golden ratio)
@@ -40,8 +32,16 @@ $sizes: (
   '1': 20rem,
   '2': 30rem,
   '3': 40rem,
-  '4': 50rem,
+  '4': 52.5rem,
   '5': 75rem,
+) !default;
+
+// Radius
+$radius: (
+  '0': 0.25rem,
+  '1': 0.5rem,
+  '2': 1rem,
+  '100': 100rem,
 ) !default;
 
 /*******
@@ -57,13 +57,21 @@ $sizes: (
   // https://fluid-typography.netlify.app/
   // Scales between 400px and 1000px for base values 1.125rem and 1.3rem
   @each $name, $size in $font-sizes {
-    --text-#{$name}: clamp(1.125rem * #{$size}, 0.5vw * #{$size} + 1rem * #{$size}, 1.3rem * #{$size});
+    --text-#{$name}: clamp(
+      1.125rem * #{$size},
+      0.5vw * #{$size} + 1rem * #{$size},
+      1.3rem * #{$size}
+    );
   }
-  
+
   // create CSS variables around spacing
   // Scales between 250px and 1000px for base values 1rem and 1.15rem
   @each $name, $space in $spacing {
-    --spacing-#{$name}: clamp(1rem * #{$space}, 0.3vw * #{$space} + 1rem * #{$space}, 1.15rem * #{$space});
+    --spacing-#{$name}: clamp(
+      1rem * #{$space},
+      0.3vw * #{$space} + 1rem * #{$space},
+      1.15rem * #{$space}
+    );
   }
 
   // create CSS variables around sizes
@@ -71,10 +79,10 @@ $sizes: (
     --size-#{$name}: #{$size};
   }
 
-  --sans-serif: 'Inter', system-ui, -apple-system, blinkmacsystemfont,
-    'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', sans-serif !default;
-  --monospace: consolas, menlo, monaco, 'Courier New', monospace !default;
-  --serif: Georgia, serif !defaults;
+  // border-radius
+  @each $name, $rad in $radius {
+    --radius-#{$name}: #{$rad};
+  }
 
   // box-shadow
   --elevation-1: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
@@ -83,11 +91,9 @@ $sizes: (
   --elevation-3: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
     0 4px 6px -2px rgba(0, 0, 0, 0.05);
 
-  // border-radius
-  --radius-0: 0.25rem !default;
-  --radius-1: calc(2 * var(--radius-0)) !default;
-  --radius-2: calc(4 * var(--radius-0)) !default;
-
-  // misc
-  --transition: all ease-in-out 200ms !default;
+  // font-families
+  --sans-serif: 'Inter', system-ui, -apple-system, blinkmacsystemfont,
+    'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', sans-serif !default;
+  --monospace: consolas, menlo, monaco, 'Courier New', monospace !default;
+  --serif: georgia, serif !defaults;
 }

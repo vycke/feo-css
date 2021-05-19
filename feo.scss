@@ -2,6 +2,38 @@
 @import './src/reset';
 
 /*******
+* Generic styling
+*******/
+html,
+body {
+  min-width: var(--size-0);
+  color: var(--black);
+  font-family: var(--sans-serif);
+  background-color: var(--white);
+  overflow: hidden;
+}
+
+// HEADINGS
+h1,
+h2,
+h3 {
+  width: 100%;
+  line-height: 1.4;
+}
+
+h1 {
+  font-size: var(--text-3);
+}
+
+h2 {
+  font-size: var(--text-2);
+}
+
+h3 {
+  font-size: var(--text-1);
+}
+
+/*******
 * Layout classes
 *******/
 @import './src/layout/center';

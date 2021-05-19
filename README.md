@@ -5,13 +5,17 @@ A tiny (S)CSS framework that implements parts of the [CUBE CSS](https://cube.fyi
 > LUB: layout, utility, block
 
 ## Gettings started
+
+Import the `feo.scss` file from the package into the index of your `.scss` file, after defining your own token values.
+
 ```scss
+@import './your-tokens';
 @import '../path/to/your/node_modules/@crinkle/feo/feo.scss';
 ```
 
-## Configuration
+In the `src/_default-tokens.scss` file, lists of SCSS variables can be set overwritten to generate custom properties and utility classes that refer to these custom properties. Available SCSS variables that can be overwritten are: `$colors`, `$font-sizes`, `$spacing`, `$sizes`, and `$radius`.
 
-In the `src/_tokens.scss` file, lists of SCSS variables can be set to generate custom properties and utility classes that refer to these custom properties.
+Based on these settings, utility classes, but also CSS custom properties are generated for you, in the structure outlined below.
 
 ```scss
 $colors: (
@@ -67,6 +71,33 @@ Responsive [tile system](https://crinkle.dev/writing/css-layout-patterns#respons
 - `.tiles-g-{name}`: set the `grid-row-gap` and `grid-column-gap`, based on `$spacing`. Default set to `.tiles-g-0`.
 - `.tiles-w-{name}`: set the `min-width` of an individual item, based on `$sizes`. Default set to `.tiles-w-0`.
 
+### `grail`
+
+The holy grail layout like displayed below. It automatically discards headers, footers or the two sidebars when these do not exist.
+
+```
+fixed header
+--------------------------------
+aside | scrollable      | aside
+      | content         |
+      |                 |
+      |                 |
+--------------------------------
+fixed footer
+```
+
+The holy grail requires specific usage of HTML-tags.
+
+```html
+<div className="grail">
+  <header>Header</header>
+  <div class="any class here">sidebar</div>
+  <main>Scrollable content</main>
+  <div class="any class here">sidebar</div>
+  <footer>Footer</footer>
+</div>
+```
+
 ## Utilities
 
 Based on the defined variables, many utility classes are generated, that refer to the corresponding custom property. Most of these utility classes alter a single property. Some utility classes alter more properties, but combined do one thing.
@@ -77,6 +108,7 @@ Based on the defined variables, many utility classes are generated, that refer t
 - `.visually-hidden`: visually hides an element of users, but not for screen readers.
 - `.m[xytlbr]-{name}`: set the `margin`, including a direction, based on `$spacing`.
 - `.p[xytlbr]-{name}`: set the `padding`, including a direction, based on `$spacing`.
+- `.radius-{name}`: set the `border-radius`, including a direction, based on `$radius`.
 - `.text-{colorname}`, `.text-{fontsizename}`: sets the `color` and `font-size` properties, based on `$colors` and `$font-sizes`.
 - Several classes altering typography properties, like text-decoration.
 - All combinations round flexboxes as utility classes.

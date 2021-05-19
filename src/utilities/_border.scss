@@ -1,0 +1,21 @@
+// Utility classes for background colors and different pseudo-classes
+@each $name, $color in $colors {
+  .border-#{$name} {
+    border-color: var(--color-#{$name});
+    border-style: solid;
+  }
+}
+
+$border-sizes: (
+  '1': 1,
+  '2': 2,
+  '3': 3,
+  '4': 4,
+  '5': 5,
+);
+
+@each $name, $size in $border-sizes {
+  .border-w-#{$name} {
+    border-width: #{$size}px;
+  }
+}

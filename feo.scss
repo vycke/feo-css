@@ -7,10 +7,10 @@
 html,
 body {
   min-width: var(--size-0);
+  overflow: hidden;
   color: var(--black);
   font-family: var(--sans-serif);
   background-color: var(--white);
-  overflow: hidden;
 }
 
 // HEADINGS
@@ -54,3 +54,4 @@ h3 {
 @import './src/utilities/click-area';
 @import './src/utilities/flexbox';
 @import './src/utilities/radius';
+@import './src/utilities/border';

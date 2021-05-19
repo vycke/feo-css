@@ -109,6 +109,8 @@ Based on the defined variables, many utility classes are generated, that refer t
 - `.m[xytlbr]-{name}`: set the `margin`, including a direction, based on `$spacing`.
 - `.p[xytlbr]-{name}`: set the `padding`, including a direction, based on `$spacing`.
 - `.radius-{name}`: set the `border-radius`, including a direction, based on `$radius`.
+- `.border-{name}`: set the `border-color`, including a direction, based on `$colors`. It also sets the `border-style` to `solid`.
+- `.radius-w-{name}`: set the `border-width` in `px`, with values from 1 to 5.
 - `.text-{colorname}`, `.text-{fontsizename}`: sets the `color` and `font-size` properties, based on `$colors` and `$font-sizes`.
 - Several classes altering typography properties, like text-decoration.
 - All combinations round flexboxes as utility classes.

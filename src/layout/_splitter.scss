@@ -11,8 +11,9 @@
   grid-template-rows: auto 1fr;
   grid-template-columns: repeat(
     auto-fit,
-    minmax(min(100%, var(--splitter-width)), 1fr)
+    minmax(Min(100%, var(--splitter-width)), 1fr)
   );
+  // Capital M for the "min" to bypass issues with some SASS compilers
 }
 
 // Generate classes to set the gap of .splitter

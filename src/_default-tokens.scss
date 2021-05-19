@@ -92,8 +92,8 @@ $radius: (
     0 4px 6px -2px rgba(0, 0, 0, 0.05);
 
   // font-families
-  --sans-serif: 'Inter', system-ui, -apple-system, blinkmacsystemfont,
-    'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', sans-serif !default;
-  --monospace: consolas, menlo, monaco, 'Courier New', monospace !default;
-  --serif: georgia, serif !defaults;
+  --sans-serif: system-ui, -apple-system, blinkmacsystemfont, 'Segoe UI',
+    'Roboto', 'Helvetica Neue', 'Arial', sans-serif;
+  --monospace: consolas, menlo, monaco, 'Courier New', monospace;
+  --serif: georgia, serif;
 }

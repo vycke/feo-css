@@ -1,0 +1,39 @@
+// The holy grail layout of a fixed header & footer, and a content body that is
+// scrollable
+// <div class="grail">
+//   <header>header</header>
+//   <aside>sidebar</aside>
+//   <main>scrollable content</main>
+//   <aside>sidebar</aside>
+//   <footer>footer</footer>
+// </div>
+
+.grail {
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  grid-template-rows: auto 1fr auto;
+  overflow: hidden;
+}
+
+.grail > header {
+  grid-row: 1;
+  grid-column: 1 / -1;
+}
+
+.grail > main {
+  overflow-y: auto;
+  grid-column: 2;
+  grid-row: 2;
+}
+
+.grail > main + *:not(footer) {
+  grid-column: 3;
+  grid-row: 2;
+}
+
+.grail > footer {
+  grid-row: 3;
+  grid-column: 1 / -1;
+}

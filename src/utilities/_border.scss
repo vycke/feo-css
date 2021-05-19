@@ -1,8 +1,8 @@
 // Utility classes for background colors and different pseudo-classes
 @each $name, $color in $colors {
   .border-#{$name},
-  .hover\:bg-#{$name}:hover,
-  .focus\:bg-#{$name}:focus {
+  .hover\:border-#{$name}:hover,
+  .focus\:border-#{$name}:focus {
     border-color: var(--color-#{$name});
     border-style: solid;
   }
@@ -20,4 +20,8 @@ $border-sizes: (
   .border-w-#{$name} {
     border-width: #{$size}px;
   }
+}
+
+.border-solid {
+  border-style: solid;
 }

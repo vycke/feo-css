@@ -10,7 +10,8 @@ Import the `feo.scss` file from the package into the index of your `.scss` file,
 
 ```scss
 @import './your-tokens';
-@import '../path/to/your/node_modules/@crinkle/feo/feo.scss';
+// Use ~<package-name>/file-name.scss for .scss files on node_modules
+@import '~@crinkle/feo/feo.scss';
 ```
 
 In the `src/_default-tokens.scss` file, lists of SCSS variables can be set overwritten to generate custom properties and utility classes that refer to these custom properties. Available SCSS variables that can be overwritten are: `$colors`, `$font-sizes`, `$spacing`, `$sizes`, and `$radius`.

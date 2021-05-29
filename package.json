@@ -11,15 +11,15 @@
   "description": "A tiny CSS framework",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/kevtiq/feo-css.git"
+    "url": "git+https://github.com/crinklesio/feo-css.git"
   },
   "keywords": ["cube css", "scss", "css"],
   "author": "Kevin Pennekamp <github@crinkle.dev>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/kevtiq/feo-css/issues"
+    "url": "https://github.com/crinklesio/feo-css/issues"
   },
-  "homepage": "https://github.com/kevtiq/feo-css#readme",
+  "homepage": "https://github.com/crinklesio/feo-css#readme",
   "devDependencies": {
     "prettier": "^2.2.1",
     "stylelint": "^13.12.0",

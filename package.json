@@ -5,7 +5,7 @@
     "lint": "stylelint '**/*.(s)css'",
     "lint:fix": "yarn lint --fix"
   },
-  "name": "@crinkle/feo",
+  "name": "@crinkles/feo",
   "version": "1.4.1",
   "main": "feo.scss",
   "description": "A tiny CSS framework",

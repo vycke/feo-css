@@ -58,12 +58,13 @@ vertical rhythm using the method of the [Owl Selector](https://crinkle.dev/writi
 
 A default header-body-footer pattern, where the body takes all the available space. It has no additional utility classes linked to it.
 
-### `.splitter`
+### `.split-left` & `.split-right`
 
-Assumes a responsive 50-50 horizontal layout that becomes vertical after it shrinks below a certain width. More information can be found [here](https://crinkle.dev/writing/css-layout-patterns#two-way-card-layouts).
+A two-column responsive layout that becomes a one-column layout below a certain screen-width. Depending on the chosen mode, either the left, or right column is controllable through utility classes. When setting one column to a fixed width, the other column will automatically take the available space.
 
-- `.splitter-g-{name}`: set the `grid-row-gap` and `grid-column-gap`, based on `$spacing`. Default set to `.splitter-g-0`.
-- `.splitter-w-{name}`: set the `min-width` of an individual item, based on `$sizes`. Default set to `.splitter-w-0`.
+- `.split-g-{name}`: set the `gap` property, based on `$spacing`. This applies it to the horizontal and vertical gap (on small screens). Default set to `.splitter-g-0`.
+- `.split-w-{name}`: set the `width` of an controllable column, based on `$sizes`. Default set to `50%`.
+- `.split-min-w-{name}`: set the `min-width` of both columns based on `$sizes`. Default set to `.splitter-min-w-0`.
 
 ### `.tiles`
 

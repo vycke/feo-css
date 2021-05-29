@@ -1,8 +1,8 @@
 // centering layout with scaling side columns allowing for child elements (e.g.
 // images) to span bigger than the actual center column
 .center {
-  --center-spacing: var(--spacing-0);
-  --center-width: var(--size-4);
+  --center-spacing: var(--spacing-0, 1rem);
+  --center-width: var(--size-4, 52.5rem);
 
   display: grid;
   grid-auto-rows: max-content;

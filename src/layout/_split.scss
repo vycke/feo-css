@@ -1,0 +1,59 @@
+// Responsive 2-column layout with a default 50-50 split.
+// Allows you to set one of the two columns to a controllable size (-left, -right)
+// allows you to set the width, of the controllable column, min-width of both columns
+// and horizontal/vertical gap.
+
+.split {
+  --split-width: 50%;
+  --split-min-width: var(--size-0, 15rem);
+  --split-gap: var(--spacing-0, 1rem);
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--split-gap);
+  width: 100%;
+}
+
+.split > * {
+  flex-basis: max(var(--split-min-width), var(--split-width));
+  flex-grow: 1;
+  margin: calc(var(--s1) / 2);
+}
+
+.split-left,
+.split-right {
+  @extend .split;
+}
+
+.split-left > :last-child {
+  flex-basis: 0;
+  flex-grow: 999;
+  min-width: var(--split-min-width);
+}
+
+.split-right > :first-child {
+  flex-basis: 0;
+  flex-grow: 999;
+  min-width: var(--split-min-width);
+}
+
+// Generate classes to set the gap of .splitter
+@each $name, $space in $spacing {
+  .split-g-#{$name} {
+    --split-gap: var(--spacing-#{$name});
+  }
+}
+
+// Generate classes to set the min-width of each half of .splitter
+@each $name, $size in $sizes {
+  .split-w-#{$name} {
+    --split-width: var(--size-#{$name});
+  }
+}
+
+// Generate classes to set the min-width of each half of .splitter
+@each $name, $size in $sizes {
+  .split-min-w-#{$name} {
+    --split-min-width: var(--size-#{$name});
+  }
+}

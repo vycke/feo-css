@@ -1,8 +1,8 @@
 // Class that creates a tile-based system that fills the space based on gap-size
 // and min-width for each individual tile
 .tiles {
-  --tiles-width: var(--size-0);
-  --tiles-gap: var(--spacing-0);
+  --tiles-width: var(--size-0, 15rem);
+  --tiles-gap: var(--spacing-0, 1rem);
 
   display: grid;
   grid-row-gap: var(--tiles-gap);

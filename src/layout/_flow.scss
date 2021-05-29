@@ -5,7 +5,7 @@
 }
 
 .flow {
-  --flow-spacing: var(--spacing-0);
+  --flow-spacing: var(--spacing-0, 1rem);
 }
 
 .flow > * + * {

@@ -53,10 +53,15 @@ $themes: (
 
 The above configuration will result in the below settings. It takes the theme name, and generates a `data-theme` setting. By changing the value in your HTML, you can change the theme.
 
-```css
+```scss
 [data-theme='dark'] {
   --theme-bg: var(--color-black);
   --theme-text: var(--color-white);
+}
+
+// utility clases are also generated
+.bg-theme-bg {
+  background-color: var(--color-black);
 }
 ```
 

@@ -8,6 +8,18 @@
   }
 }
 
+// themes for [data-theme] attribute
+@each $tName, $theme in $themes {
+  @each $name, $color in $theme {
+    .text-theme-#{$name},
+    .hover\:text-theme-#{$name}:hover,
+    .focus\:text-theme-#{$name}:focus,
+    .active\:text-theme-#{$name}:active {
+      color: var(--theme-#{$name});
+    }
+  }
+}
+
 // Generate utility classes around font-size
 @each $name, $size in $font-sizes {
   .text-#{$name} {

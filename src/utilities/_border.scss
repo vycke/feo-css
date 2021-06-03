@@ -8,6 +8,18 @@
   }
 }
 
+// themes for [data-theme] attribute
+@each $tName, $theme in $themes {
+  @each $name, $color in $theme {
+    .border-theme-#{$name},
+    .hover\:border-theme-#{$name}:hover,
+    .focus\:border-theme-#{$name}:focus {
+      border-color: var(--theme-#{$name});
+      border-style: solid;
+    }
+  }
+}
+
 $border-sizes: (
   '1': 1,
   '2': 2,
@@ -20,8 +32,4 @@ $border-sizes: (
   .border-w-#{$name} {
     border-width: #{$size}px;
   }
-}
-
-.border-solid {
-  border-style: solid;
 }

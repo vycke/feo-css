@@ -6,7 +6,7 @@
     "lint:fix": "yarn lint --fix"
   },
   "name": "@crinkles/feo",
-  "version": "1.5.0",
+  "version": "1.6.0",
   "main": "feo.scss",
   "description": "A tiny CSS framework",
   "repository": {
@@ -14,7 +14,7 @@
     "url": "git+https://github.com/crinklesio/feo-css.git"
   },
   "keywords": ["cube css", "scss", "css"],
-  "author": "Kevin Pennekamp <github@crinkle.dev>",
+  "author": "Kevin Pennekamp <github@crinkles.io>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/crinklesio/feo-css/issues"

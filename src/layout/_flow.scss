@@ -9,12 +9,12 @@
 }
 
 .flow-y > * + * {
-  margin-rop: var(--flow-gap);
+  margin-top: var(--flow-gap);
 }
 
 .flow-x > * {
-  margin-left: 0;
   margin-right: 0;
+  margin-left: 0;
 }
 
 .flow-x > * + * {

@@ -44,56 +44,9 @@ $radius: (
   '100': 100rem,
 ) !default;
 
-/*******
-* Generate CSS custom properties
-*******/
-:root {
-  // create CSS variables around colors
-  @each $name, $color in $colors {
-    --color-#{$name}: #{$color};
-  }
-
-  // create CSS variables around text-sizes
-  // https://fluid-typography.netlify.app/
-  // Scales between 400px and 1000px for base values 1.125rem and 1.3rem
-  @each $name, $size in $font-sizes {
-    --text-#{$name}: clamp(
-      1.125rem * #{$size},
-      0.5vw * #{$size} + 1rem * #{$size},
-      1.3rem * #{$size}
-    );
-  }
-
-  // create CSS variables around spacing
-  // Scales between 250px and 1000px for base values 1rem and 1.15rem
-  @each $name, $space in $spacing {
-    --spacing-#{$name}: clamp(
-      1rem * #{$space},
-      0.3vw * #{$space} + 1rem * #{$space},
-      1.15rem * #{$space}
-    );
-  }
-
-  // create CSS variables around sizes
-  @each $name, $size in $sizes {
-    --size-#{$name}: #{$size};
-  }
-
-  // border-radius
-  @each $name, $rad in $radius {
-    --radius-#{$name}: #{$rad};
-  }
-
-  // box-shadow
-  --elevation-1: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
-  --elevation-2: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
-    0 2px 4px -1px rgba(0, 0, 0, 0.06);
-  --elevation-3: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
-    0 4px 6px -2px rgba(0, 0, 0, 0.05);
-
-  // font-families
-  --sans-serif: system-ui, -apple-system, blinkmacsystemfont, 'Segoe UI',
-    'Roboto', 'Helvetica Neue', 'Arial', sans-serif;
-  --monospace: consolas, menlo, monaco, 'Courier New', monospace;
-  --serif: georgia, serif;
-}
+$themes: (
+  'dark': (
+    'bg-primary': 'black',
+    'text-primary': 'white',
+  ),
+) !default;

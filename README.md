@@ -1,6 +1,6 @@
 # Feo CSS: A tiny CSS framework
 
-A tiny (S)CSS framework that implements parts of the [CUBE CSS](https://cube.fyi) methodology. It combines layout patterns, utilities with custom properties. More information about my personal idea behnid it, can be found [here](https://crinkle.dev/writing/my-css-architecture).
+A tiny (S)CSS framework that implements parts of the [CUBE CSS](https://cube.fyi) methodology. It combines layout patterns, utilities with custom properties. More information about my personal idea behnid it, can be found [here](https://crinkles.io/writing/my-css-architecture).
 
 > LUB: layout, utility, block
 
@@ -37,18 +37,41 @@ $colors: (
 }
 ```
 
+Next to the mentioned you can also configure color schemes (dark-mode anyone?!).
+
+```scss
+$themes: (
+  // theme name
+  'dark':
+    (
+      // theme-color name + a color name from $colors
+      'bg': 'black',
+      'text': 'white'
+    )
+);
+```
+
+The above configuration will result in the below settings. It takes the theme name, and generates a `data-theme` setting. By changing the value in your HTML, you can change the theme.
+
+```css
+[data-theme='dark'] {
+  --theme-bg: var(--color-black);
+  --theme-text: var(--color-white);
+}
+```
+
 ## Available layout & layout utility classes
 
 ### `.center`
 
-Horizontal centering of elements based on a configurable width, using CCSS grids under the hood. This allows individual elements to be taken out of the center flow and span the full width of the page (e.g. which comes in handy for images in articles). More explanation of this pattern can be found [here](https://crinkle.dev/writing/css-layout-patterns#dynamic-centered-layout).
+Horizontal centering of elements based on a configurable width, using CCSS grids under the hood. This allows individual elements to be taken out of the center flow and span the full width of the page (e.g. which comes in handy for images in articles). More explanation of this pattern can be found [here](https://crinkles.io/writing/css-layout-patterns#dynamic-centered-layout).
 
 - `.center-w-{name}`: set the `max-width` of the layout, based on `$sizes`. Default set to `.center-w-4`.
 - `.center-p-{name}`: set the padding on the aside, based on `$spacing`.. Default set to `.center-p-0`.
 
 ### `.flow-x` and `.flow-y`
 
-vertical rhythm using the method of the [Owl Selector](https://crinkle.dev/writing/an-ode-to-the-css-owl-selector). This class does _not_ apply `display: flex`. This is up to the developer to add.
+vertical rhythm using the method of the [Owl Selector](https://crinkles.io/writing/an-ode-to-the-css-owl-selector). This class does _not_ apply `display: flex`. This is up to the developer to add.
 
 - `.flow-g-{name}`: set the gap between the elements, based on `$spacing`. Default set to `.flow-g-0`.
 - `.flow-next-{name}`: can be set on a child. Alters the gap between chosen child and the next child (the effect is applied to the next child).
@@ -68,7 +91,7 @@ A two-column responsive layout that becomes a one-column layout below a certain 
 
 ### `.tiles`
 
-Responsive [tile system](https://crinkle.dev/writing/css-layout-patterns#responsive-multi-column-grid-system).
+Responsive [tile system](https://crinkles.io/writing/css-layout-patterns#responsive-multi-column-grid-system).
 
 - `.tiles-g-{name}`: set the `grid-row-gap` and `grid-column-gap`, based on `$spacing`. Default set to `.tiles-g-0`.
 - `.tiles-w-{name}`: set the `min-width` of an individual item, based on `$sizes`. Default set to `.tiles-w-0`.
@@ -113,6 +136,6 @@ Based on the defined variables, many utility classes are generated, that refer t
 - `.radius-{name}`: set the `border-radius`, including a direction, based on `$radius`.
 - `.border-{name}`: set the `border-color`, including a direction, based on `$colors`. It also sets the `border-style` to `solid`.
 - `.radius-w-{name}`: set the `border-width` in `px`, with values from 1 to 5.
-- `.text-{colorname}`, `.text-{fontsizename}`: sets the `color` and `font-size` properties, based on `$colors` and `$font-sizes`.
+- `.text-{colorname}`, `.text-{fontsizename}`: sets the `color` and `font-size` properties, based on `$colors` and `$font-sizes`. Font-sizes are [fluid](https://crinkles.io/writing/fluid-interfaces-using-css)
 - Several classes altering typography properties, like text-decoration.
 - All combinations round flexboxes as utility classes.

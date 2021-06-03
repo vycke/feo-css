@@ -46,13 +46,13 @@ Horizontal centering of elements based on a configurable width, using CCSS grids
 - `.center-w-{name}`: set the `max-width` of the layout, based on `$sizes`. Default set to `.center-w-4`.
 - `.center-p-{name}`: set the padding on the aside, based on `$spacing`.. Default set to `.center-p-0`.
 
-### `.flow`
+### `.flow-x` and `.flow-y`
 
-vertical rhythm using the method of the [Owl Selector](https://crinkle.dev/writing/an-ode-to-the-css-owl-selector).
+vertical rhythm using the method of the [Owl Selector](https://crinkle.dev/writing/an-ode-to-the-css-owl-selector). This class does _not_ apply `display: flex`. This is up to the developer to add.
 
 - `.flow-g-{name}`: set the gap between the elements, based on `$spacing`. Default set to `.flow-g-0`.
-- `.flow-b-{name}`: can be set on a child. Alters the gap between chosen child and the next child.
-- `.flow-t-{name}`: can be set on a child. Alters the gap between the chosen child and the previous child.
+- `.flow-next-{name}`: can be set on a child. Alters the gap between chosen child and the next child (the effect is applied to the next child).
+- `.flow-self-{name}`: can be set on a child. Alters the gap between the chosen child and the previous child (the effect is applied to itself).
 
 ### `.pancake`
 

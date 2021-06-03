@@ -1,29 +1,38 @@
-// Similar to stack, but without a display; flex;
-.flow > * {
+.flow-y,
+.flow-x {
+  --flow-gap: var(--spacing-0, 1rem);
+}
+
+.flow-y > * {
   margin-top: 0;
   margin-bottom: 0;
 }
 
-.flow {
-  --flow-spacing: var(--spacing-0, 1rem);
+.flow-y > * + * {
+  margin-rop: var(--flow-gap);
 }
 
-.flow > * + * {
-  margin-top: var(--flow-spacing);
+.flow-x > * {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.flow-x > * + * {
+  margin-left: var(--flow-gap);
 }
 
 @each $name, $space in $spacing {
   // Generate gap classes to be combined with 'flow'
   .flow-g-#{$name} {
-    --flow-spacing: var(--spacing-#{$name});
+    --flow-gap: var(--spacing-#{$name});
   }
 
-  // Can be set on children from the stack
-  .flow-t-#{$name} {
-    --flow-spacing: var(--spacing-#{$name});
+  // Can be set on children from the flow stack
+  .flow-self-#{$name} {
+    --flow-gap: var(--spacing-#{$name});
   }
 
-  .flow-b-#{$name} + * {
-    --flow-spacing: var(--spacing-#{$name});
+  .flow-next-#{$name} + * {
+    --flow-gap: var(--spacing-#{$name});
   }
 }

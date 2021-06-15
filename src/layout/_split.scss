@@ -5,8 +5,8 @@
 
 .split {
   --split-width: 50%;
-  --split-min-width: var(--size-0, 15rem);
-  --split-gap: var(--spacing-0, 1rem);
+  --split-min-width: 0;
+  --split-gap: 0;
 
   display: flex;
   flex-wrap: wrap;
@@ -33,21 +33,21 @@
 }
 
 // Generate classes to set the gap of .splitter
-@each $name, $space in $spacing {
+@each $name, $space in $feo-spacing {
   .split-g-#{$name} {
     --split-gap: var(--spacing-#{$name});
   }
 }
 
 // Generate classes to set the min-width of each half of .splitter
-@each $name, $size in $sizes {
+@each $name, $size in $feo-sizes {
   .split-w-#{$name} {
     --split-width: var(--size-#{$name});
   }
 }
 
 // Generate classes to set the min-width of each half of .splitter
-@each $name, $size in $sizes {
+@each $name, $size in $feo-sizes {
   .split-min-w-#{$name} {
     --split-min-width: var(--size-#{$name});
   }

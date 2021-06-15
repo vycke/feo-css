@@ -1,36 +1,30 @@
-// centering layout with scaling side columns allowing for child elements (e.g.
-// images) to span bigger than the actual center column
-.center {
-  --center-spacing: var(--spacing-0, 1rem);
-  --center-width: var(--size-4, 52.5rem);
+// standard centerin
+.center > * {
+  --center-spacing: 0;
+  --center-width: 0;
 
-  display: grid;
-  grid-auto-rows: max-content;
-  grid-template-columns:
-    minmax(var(--center-spacing), 1fr)
-    minmax(auto, var(--center-width))
-    minmax(var(--center-spacing), 1fr);
-
-  > * {
-    grid-column: 2;
-  }
+  max-width: var(--center-width);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--center-spacing);
+  padding-right: var(--center-spacing);
 }
 
 // Class that can be set on a child that needs to be full width and not centered
 .center-exception {
-  grid-column: 1/4;
+  max-width: none;
 }
 
 // Generate classes to set the padding of the .center
-@each $name, $space in $spacing {
-  .center-p-#{$name} {
+@each $name, $space in $feo-spacing {
+  .center-g-#{$name} {
     --center-spacing: var(--spacing-#{$name});
   }
 }
 
 // Generate classes to set the width of the .center
-@each $name, $size in $sizes {
-  .center-w-#{$name} {
+@each $name, $size in $feo-sizes {
+  .center-w-#{$name} > * {
     --center-width: var(--size-#{$name});
   }
 }

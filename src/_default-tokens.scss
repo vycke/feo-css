@@ -1,52 +1,15 @@
 // List of colors that is used to generate utility classes, but also generate
 // CSS custom properties
-$colors: (
-  'black': #000,
-  'white': #fff,
-) !default;
+$feo-colors: () !default;
 
 // Typography system (golden ratio)
-$font-sizes: (
-  '0': 1,
-  '00': 0.8,
-  '000': 0.64,
-  '1': 1.25,
-  '2': 1.563,
-  '3': 1.953,
-) !default;
+$feo-font-sizes: () !default;
 
 // Spacing system: padding, margin, gap
-$spacing: (
-  'none': 0,
-  '0': 1,
-  '00': 0.75,
-  '000': 0.5,
-  '1': 1.25,
-  '2': 2,
-  '3': 3,
-) !default;
+$feo-spacing: () !default;
 
 // Size system
-$sizes: (
-  '0': 15rem,
-  '1': 20rem,
-  '2': 30rem,
-  '3': 40rem,
-  '4': 52.5rem,
-  '5': 75rem,
-) !default;
+$feo-sizes: () !default;
 
-// Radius
-$radius: (
-  '0': 0.25rem,
-  '1': 0.5rem,
-  '2': 1rem,
-  '100': 100rem,
-) !default;
-
-$themes: (
-  'dark': (
-    'bg-primary': 'black',
-    'text-primary': 'white',
-  ),
-) !default;
+// Default themes array
+$feo-themes: () !default;

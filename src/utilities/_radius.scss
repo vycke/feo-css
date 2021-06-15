@@ -1,5 +1,5 @@
 // Generate utility classes around rradius
-@each $name, $rad in $radius {
+@each $name, $rad in $feo-spacing {
   .radius-#{$name} {
     border-radius: var(--radius-#{$name});
   }

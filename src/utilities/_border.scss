@@ -1,5 +1,5 @@
 // Utility classes for background colors and different pseudo-classes
-@each $name, $color in $colors {
+@each $name, $color in $feo-colors {
   .border-#{$name},
   .hover\:border-#{$name}:hover,
   .focus\:border-#{$name}:focus {
@@ -9,7 +9,7 @@
 }
 
 // themes for [data-theme] attribute
-@each $tName, $theme in $themes {
+@each $tName, $theme in $feo-themes {
   @each $name, $color in $theme {
     .border-theme-#{$name},
     .hover\:border-theme-#{$name}:hover,

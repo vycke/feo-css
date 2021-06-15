@@ -1,5 +1,5 @@
 // Generate utility classes around colors
-@each $name, $color in $colors {
+@each $name, $color in $feo-colors {
   .text-#{$name},
   .hover\:text-#{$name}:hover,
   .focus\:text-#{$name}:focus,
@@ -9,7 +9,7 @@
 }
 
 // themes for [data-theme] attribute
-@each $tName, $theme in $themes {
+@each $tName, $theme in $feo-themes {
   @each $name, $color in $theme {
     .text-theme-#{$name},
     .hover\:text-theme-#{$name}:hover,
@@ -21,7 +21,7 @@
 }
 
 // Generate utility classes around font-size
-@each $name, $size in $font-sizes {
+@each $name, $size in $feo-font-sizes {
   .text-#{$name} {
     font-size: var(--text-#{$name});
   }

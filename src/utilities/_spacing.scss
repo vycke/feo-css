@@ -1,6 +1,6 @@
 // Create various padding and margin utility classes
 @each $typename, $type in ('m': 'margin', 'p': 'padding') {
-  @each $name, $value in $spacing {
+  @each $name, $value in $feo-spacing {
     .#{$typename}b-#{$name} {
       #{$type}-bottom: var(--spacing-#{$name});
     }

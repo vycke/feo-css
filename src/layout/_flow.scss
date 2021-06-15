@@ -1,6 +1,16 @@
 .flow-y,
 .flow-x {
-  --flow-gap: var(--spacing-0, 1rem);
+  --flow-gap: 0;
+}
+
+.flow-x {
+  display: flex;
+  flex-direction: row;
+}
+
+.flow-y {
+  display: flex;
+  flex-direction: column;
 }
 
 .flow-y > * {
@@ -21,7 +31,7 @@
   margin-left: var(--flow-gap);
 }
 
-@each $name, $space in $spacing {
+@each $name, $space in $feo-spacing {
   // Generate gap classes to be combined with 'flow'
   .flow-g-#{$name} {
     --flow-gap: var(--spacing-#{$name});

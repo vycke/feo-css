@@ -53,7 +53,7 @@ $themes: (
 @import '~@crinkles/feo/feo.scss';
 ```
 
-In the `src/_default-tokens.scss` file, lists of SCSS variables can be set overwritten to generate custom properties and utility classes that refer to these custom properties. Available SCSS variables that can be overwritten are: `$feo-colors`, `$feo-font-sizes`, `$feo-spacing`, `$feo-sizes`, and `$feo-spacing`.
+The `src/_default-tokens.scss` file holds the default values of all the available settings. You can overwrite these by creating your own definitions for: `$feo-colors`, `$feo-font-sizes`, `$feo-spacing`, `$feo-sizes`, and `$feo-spacing`.
 
 Based on these settings, utility classes, but also CSS custom properties are generated for you, in the structure outlined below.
 
@@ -122,10 +122,6 @@ vertical rhythm using the method of the [Owl Selector](https://crinkles.io/writi
 - `.flow-next-{name}`: can be set on a child. Alters the gap between chosen child and the next child (the effect is applied to the next child).
 - `.flow-self-{name}`: can be set on a child. Alters the gap between the chosen child and the previous child (the effect is applied to itself).
 
-### `.pancake`
-
-A default header-body-footer pattern, where the body takes all the available space. It has no additional utility classes linked to it.
-
 ### `.split-left` & `.split-right`
 
 A two-column responsive layout that becomes a one-column layout below a certain screen-width. Depending on the chosen mode, either the left, or right column is controllable through utility classes. When setting one column to a fixed width, the other column will automatically take the available space.
@@ -140,6 +136,10 @@ Responsive [tile system](https://crinkles.io/writing/css-layout-patterns#respons
 
 - `.tiles-g-{name}`: set the `gap` property, based on `$feo-spacing`.
 - `.tiles-w-{name}`: set the `min-width` of an individual item, based on `$feo-sizes`.
+
+### `.pancake`
+
+A default header-body-footer pattern, where the body takes all the available space. It has no additional utility classes linked to it.
 
 ### `grail`
 

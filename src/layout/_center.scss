@@ -17,7 +17,7 @@
 
 // Generate classes to set the padding of the .center
 @each $name, $space in $feo-spacing {
-  .center-g-#{$name} {
+  .center-g-#{$name} > * {
     --center-spacing: var(--spacing-#{$name});
   }
 }

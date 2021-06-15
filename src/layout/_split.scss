@@ -17,7 +17,7 @@
 .split > * {
   flex-basis: var(--split-width);
   flex-grow: 1;
-  min-width: var(--split-min-width);
+  min-width: min(100%, var(--split-min-width));
   margin: calc(var(--s1) / 2);
 }
 

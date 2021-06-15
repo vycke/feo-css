@@ -38,7 +38,7 @@
 
   // border-radius
   @each $name, $rad in $feo-spacing {
-    --radius-#{$name}: #{$rad} + rem;
+    --radius-#{$name}: #{$rad}rem;
   }
 
   // box-shadow

@@ -5,10 +5,10 @@
 
   width: 100%;
   max-width: var(--center-width);
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: var(--center-spacing);
-  padding-right: var(--center-spacing);
+  margin-inline-start: auto;
+  margin-inline-end: auto;
+  padding-inline-start: var(--center-spacing);
+  padding-inline-end: var(--center-spacing);
 }
 
 // Class that can be set on a child that needs to be full width and not centered

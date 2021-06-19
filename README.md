@@ -111,14 +111,14 @@ The above configuration will result in the below settings. It takes the theme na
 Horizontal centering of elements based on a configurable width, using CCSS grids under the hood. This allows individual elements to be taken out of the center flow and span the full width of the page (e.g. which comes in handy for images in articles). More explanation of this pattern can be found [here](https://crinkles.io/writing/css-layout-patterns#dynamic-centered-layout).
 
 - `.center-w-{name}`: set the `max-width` of the layout, based on `$feo-sizes`.
-- `.center-g-{name}`: set the padding on the aside, based on `$feo-spacing`.
+- `.center-g-{name}`: set the padding on the aside, based on `$feo-spacing`. Note, this setting works with `orientation` and `writing-direction` CSS properties.
 - `.center-exception`: an item that can flow outside the boundaries of the center content.
 
 ### `.flow-x` and `.flow-y`
 
 vertical rhythm using the method of the [Owl Selector](https://crinkles.io/writing/an-ode-to-the-css-owl-selector).It auto applies `display: flex`.
 
-- `.flow-g-{name}`: set the gap between the elements, based on `$feo-spacing`.
+- `.flow-g-{name}`: set the gap between the elements, based on `$feo-spacing`. Note, this setting works with `orientation` and `writing-direction` CSS properties.
 - `.flow-next-{name}`: can be set on a child. Alters the gap between chosen child and the next child (the effect is applied to the next child).
 - `.flow-self-{name}`: can be set on a child. Alters the gap between the chosen child and the previous child (the effect is applied to itself).
 
@@ -174,7 +174,6 @@ Based on the defined variables, many utility classes are generated, that refer t
 
 - `.bg-{name}`, `.hover:bg-{name}`, `.active:bg-{name}`, `.focus:bg-{name}`, `.checked:bg-{name}`: set the `background-color`, based on `$feo-colors`.
 - `.click-area`: makes a parent completely clickable, based on the presence of a single `<a>` tag in one of the children.
-- `.place-center`: places all children in the center of the screen.
 - `.visually-hidden`: visually hides an element of users, but not for screen readers.
 - `.m[xytlbr]-{name}`: set the `margin`, including a direction, based on `$feo-spacing`.
 - `.p[xytlbr]-{name}`: set the `padding`, including a direction, based on `$feo-spacing`.

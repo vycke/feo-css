@@ -84,8 +84,8 @@ $feo-themes: (
   'dark':
     (
       // theme-color name + a color name from $feo-colors
-      'bg': 'black',
-      'text': 'white'
+      'back': 'black',
+      'front': 'white'
     )
 );
 ```

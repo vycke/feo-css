@@ -10,7 +10,8 @@
 
 // themes for [data-theme] attribute
 @if length($feo-themes) > 0 {
-  @each $name, $color in nth($feo-themes, 1) {
+  $theme: nth(nth($feo-themes, 1), 2);
+  @each $name, $color in $theme {
     .text-#{$name},
     .hover\:text-#{$name}:hover,
     .focus\:text-#{$name}:focus,

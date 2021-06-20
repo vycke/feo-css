@@ -94,15 +94,19 @@ The above configuration will result in the below settings. It takes the theme na
 
 ```scss
 [data-theme='dark'] {
-  --theme-bg: var(--color-black);
-  --theme-text: var(--color-white);
+  --color-back: var(--color-black);
+  --color-front: var(--color-white);
 }
 
 // utility clases are also generated
-.bg-theme-bg {
-  background-color: var(--color-black);
+.bg-back {
+  background-color: var(--color-back);
 }
 ```
+
+> NOTE: Be careful with the names, as the same names of keys in a theme overwrites the custom properties based on the `$feo-colors` array.
+
+> NOTE: All utility classes are generated based on the first theme defined in the `$feo-themes` array. If not all themes use the same key-value pairs, the framework might break your theme.
 
 ## Available layout & layout utility classes
 

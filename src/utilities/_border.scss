@@ -9,12 +9,12 @@
 }
 
 // themes for [data-theme] attribute
-@each $tName, $theme in $feo-themes {
-  @each $name, $color in $theme {
-    .border-theme-#{$name},
-    .hover\:border-theme-#{$name}:hover,
-    .focus\:border-theme-#{$name}:focus {
-      border-color: var(--theme-#{$name});
+@if length($feo-themes) > 0 {
+  @each $name, $color in nth($feo-themes, 1) {
+    .border-#{$name},
+    .hover\:border-#{$name}:hover,
+    .focus\:border-#{$name}:focus {
+      border-color: var(--color-#{$name});
       border-style: solid;
     }
   }

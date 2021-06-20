@@ -1,6 +1,8 @@
 // List of colors that is used to generate utility classes, but also generate
 // CSS custom properties
-$feo-colors: () !default;
+$feo-colors: (
+  'black': #000,
+) !default;
 
 // Typography system (golden ratio)
 $feo-font-sizes: () !default;

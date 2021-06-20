@@ -10,14 +10,14 @@
 }
 
 // themes for [data-theme] attribute
-@each $tName, $theme in $feo-themes {
-  @each $name, $color in $theme {
-    .bg-theme-#{$name},
-    .hover\:bg-theme-#{$name}:hover,
-    .focus\:bg-theme-#{$name}:focus,
-    .active\:bg-theme-#{$name}:active,
-    .checked\:bg-theme-#{$name}:checked {
-      background-color: var(--theme-#{$name});
+@if length($feo-themes) > 0 {
+  @each $name, $color in nth($feo-themes, 1) {
+    .bg-#{$name},
+    .hover\:bg-#{$name}:hover,
+    .focus\:bg-#{$name}:focus,
+    .active\:bg-#{$name}:active,
+    .checked\:bg-#{$name}:checked {
+      background-color: var(--color-#{$name});
     }
   }
 }

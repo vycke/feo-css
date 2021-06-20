@@ -9,13 +9,13 @@
 }
 
 // themes for [data-theme] attribute
-@each $tName, $theme in $feo-themes {
-  @each $name, $color in $theme {
-    .text-theme-#{$name},
-    .hover\:text-theme-#{$name}:hover,
-    .focus\:text-theme-#{$name}:focus,
-    .active\:text-theme-#{$name}:active {
-      color: var(--theme-#{$name});
+@if length($feo-themes) > 0 {
+  @each $name, $color in nth($feo-themes, 1) {
+    .text-#{$name},
+    .hover\:text-#{$name}:hover,
+    .focus\:text-#{$name}:focus,
+    .active\:text-#{$name}:active {
+      color: var(--color-#{$name});
     }
   }
 }

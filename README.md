@@ -108,8 +108,6 @@ The above configuration will result in the below settings. It takes the theme na
 
 > NOTE: All utility classes are generated based on the first theme defined in the `$feo-themes` array. If not all themes use the same key-value pairs, the framework might break your theme.
 
-In case you have a theme called _dark_ defined, it will set the `prefers-color-scheme: dark` media query for user preferences.
-
 ## Available layout & layout utility classes
 
 ### `.center`

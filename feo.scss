@@ -44,16 +44,6 @@
 
 // themes for [data-theme] attribute
 @each $tName, $theme in $feo-themes {
-  @if $tName == 'dark' {
-    @media (prefers-color-scheme: dark) {
-      :root {
-        @each $cName, $color in $theme {
-          --color-#{$cName}: var(--color-#{$color});
-        }
-      }
-    }
-  }
-
   [data-theme='#{$tName}'] {
     @each $cName, $color in $theme {
       --color-#{$cName}: var(--color-#{$color});

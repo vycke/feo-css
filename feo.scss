@@ -40,6 +40,11 @@
   @each $name, $rad in $feo-spacing {
     --radius-#{$name}: #{$rad}rem;
   }
+
+  // font families
+  @each $name, $value in $feo-font-families {
+    --#{$name}: #{$value};
+  }
 }
 
 // themes for [data-theme] attribute
@@ -72,3 +77,4 @@
 @import './src/utilities/flexbox';
 @import './src/utilities/radius';
 @import './src/utilities/border';
+@import './src/utilities/transition';

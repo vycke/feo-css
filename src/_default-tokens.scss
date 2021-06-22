@@ -2,7 +2,7 @@
 // CSS custom properties
 $feo-colors: () !default;
 
-// Typography system (golden ratio)
+// Typography system
 $feo-font-sizes: () !default;
 
 // Spacing system: padding, margin, gap
@@ -11,22 +11,8 @@ $feo-spacing: () !default;
 // Size system
 $feo-sizes: () !default;
 
-// Default themes array
-$light-theme: (
-  'front': 'gray-500',
-  'back': 'gray-100',
-  'back-secondary': 'gray-200',
-  'transition': 'gray-400',
-);
+// Font families
+$feo-font-families: () !default;
 
-$dark-theme: (
-  'front': 'gray-100',
-  'back': 'gray-500',
-  'back-secondary': 'gray-400',
-  'transition': 'gray-300',
-);
-
-$feo-themes: (
-  'dark': $dark-theme,
-  'light': $light-theme,
-);
+// themes
+$feo-themes: () !default;

@@ -28,6 +28,13 @@
   }
 }
 
+// Generate utility classes around font-families
+@each $name, $size in $feo-font-families {
+  .#{$name} {
+    font-family: var(--#{$name});
+  }
+}
+
 .bold {
   font-weight: 600;
 }
@@ -50,4 +57,8 @@
 
 .text-center {
   text-align: center;
+}
+
+.no-decoration {
+  text-decoration: none;
 }

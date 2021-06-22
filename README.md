@@ -6,6 +6,8 @@ A tiny (S)CSS framework that implements parts of the [CUBE CSS](https://cube.fyi
 
 ## Gettings started
 
+> NOTE: the framework applies a mimimal CSS reset, including `prefers-reduced-motion`
+
 Import the `feo.scss` file from the package into the index of your `.scss` file, after defining your own token values.
 
 ```scss
@@ -60,19 +62,15 @@ Based on these settings, utility classes, but also CSS custom properties are gen
 ```scss
 $feo-colors: (
   'black': #000,
-  'white': #fff,
 );
 
+// creates
 :root {
-  @each $name, $color in $feo-colors {
-    --#{$name}: #{$color};
-  }
+  --color-black: #000;
 }
 
-@each $name, $color in $feo-colors {
-  .bg-#{$name} {
-    background-color: var(--#{$name});
-  }
+.bg-black {
+  background-color: var(--color-black);
 }
 ```
 
@@ -172,6 +170,31 @@ The holy grail requires specific usage of HTML-tags.
 </div>
 ```
 
+### `.table-responsive`
+
+Allows for a style-less, responsive (i.e. scrollable) table with fixed headers. Additional utility class allows for fixed first columns as well (`.table-fixed-column`). This requires the HTML structure shown below.
+
+```html
+<table>
+  <thead>
+    <tr>
+      <th />
+      <th>Col Header</th>
+      <th>Col Header</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Row Header</th>
+      <td>Cell Data</td>
+      <td>Cell Data</td>
+    </tr>
+  </tbody>
+</table>
+```
+
+> NOTE: the first `<th />` in the `thead`, and the `th` in the `tbody` are only required when working with the `.table-fixed-column` class.
+
 ## Utilities
 
 Based on the defined variables, many utility classes are generated, that refer to the corresponding custom property. Most of these utility classes alter a single property. Some utility classes alter more properties, but combined do one thing.
@@ -187,3 +210,8 @@ Based on the defined variables, many utility classes are generated, that refer t
 - `.text-{colorname}`, `.text-{fontsizename}`: sets the `color` and `font-size` properties, based on `$feo-colors` and `$feo-font-sizes`. Font-sizes are [fluid](https://crinkles.io/writing/fluid-interfaces-using-css)
 - Several classes altering typography properties, like text-decoration.
 - All combinations round flexboxes as utility classes.
+- `transition-{length}`: utility class to set transition to `all {length} ease-in-out`. Available lengths are: 100ms, 200ms, 300ms, 400ms, 500ms.
+
+```
+
+```

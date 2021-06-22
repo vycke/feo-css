@@ -2,6 +2,6 @@ $_transitions: (100, 200, 300, 400, 500);
 
 @each $length in $_transitions {
   .transition-#{$length} {
-    transition: all #{$length} ease-in-out;
+    transition: all #{$length}ms ease-in-out;
   }
 }

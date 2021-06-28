@@ -13,7 +13,7 @@
   gap: var(--split-gap);
   width: 100%;
 
-  & > {
+  & > * {
     flex-basis: var(--split-width);
     flex-grow: 1;
     /* Capital M to avoid build failures on some compilers */

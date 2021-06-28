@@ -2,8 +2,8 @@
 // Allows you to set one of the two columns to a controllable size (-left, -right)
 // allows you to set the width, of the controllable column, min-width of both columns
 // and horizontal/vertical gap.
-
-.split {
+.split-left,
+.split-right {
   --split-width: 50%;
   --split-min-width: 0;
   --split-gap: 0;
@@ -12,19 +12,14 @@
   flex-wrap: wrap;
   gap: var(--split-gap);
   width: 100%;
-}
 
-.split > * {
-  flex-basis: var(--split-width);
-  flex-grow: 1;
-  /* Capital M to avoid build failures on some compilers */
-  min-width: Min(100%, var(--split-min-width));
-  margin: calc(var(--s1) / 2);
-}
-
-.split-left,
-.split-right {
-  @extend .split;
+  & > {
+    flex-basis: var(--split-width);
+    flex-grow: 1;
+    /* Capital M to avoid build failures on some compilers */
+    min-width: Min(100%, var(--split-min-width));
+    margin: calc(var(--s1) / 2);
+  }
 }
 
 .split-left > :last-child,

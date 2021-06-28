@@ -1,0 +1,51 @@
+// Responsive 2-column layout with a default 50-50 split.
+// Allows you to set one of the two columns to a controllable size (-left, -right)
+// allows you to set the width, of the controllable column, min-width of both columns
+// and horizontal/vertical gap.
+.panel-l,
+.panel-r {
+  --panel-width: 50%;
+  --panel-wrapper-width: 0;
+  --panel-gap: 0;
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--panel-gap);
+  width: 100%;
+
+  & > * {
+    flex-basis: var(--panel-width);
+    flex-grow: 1;
+    /* Capital M to avoid build failures on some compilers */
+    min-width: Min(100%, var(--panel-width));
+    margin: calc(var(--s1) / 2);
+  }
+}
+
+.panel-l > :last-child,
+.panel-r > :first-child {
+  flex-basis: 0;
+  flex-grow: 999;
+  min-width: Min(100%, calc(var(--panel-wrapper-width) - var(--panel-width)));
+}
+
+// Generate classes to set the gap of .panel-lr
+@each $name, $space in $feo-spacing {
+  .panel-g-#{$name} {
+    --panel-gap: var(--spacing-#{$name});
+  }
+}
+
+// Generate classes to set the min-width of each half of .panel-lr
+@each $name, $size in $feo-sizes {
+  .panel-p-#{$name} {
+    --panel-width: var(--size-#{$name});
+  }
+}
+
+// Generate classes to set the min-width of each half of .panel-lr
+@each $name, $size in $feo-sizes {
+  .panel-w-#{$name} {
+    --panel-wrapper-width: var(--size-#{$name});
+  }
+}

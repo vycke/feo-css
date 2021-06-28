@@ -124,13 +124,13 @@ vertical rhythm using the method of the [Owl Selector](https://crinkles.io/writi
 - `.flow-next-{name}`: can be set on a child. Alters the gap between chosen child and the next child (the effect is applied to the next child).
 - `.flow-self-{name}`: can be set on a child. Alters the gap between the chosen child and the previous child (the effect is applied to itself).
 
-### `.split-left` & `.split-right`
+### `.panel-l` & `.panel-r`
 
 A two-column responsive layout that becomes a one-column layout below a certain screen-width. Depending on the chosen mode, either the left, or right column is controllable through utility classes. When setting one column to a fixed width, the other column will automatically take the available space.
 
-- `.split-g-{name}`: set the `gap` property, based on `$feo-spacing`. This applies it to the horizontal and vertical gap (on small screens).
-- `.split-w-{name}`: set the `width` of an controllable column, based on `$feo-sizes`.
-- `.split-min-w-{name}`: set the `min-width` of both columns based on `$feo-sizes`.
+- `.panel-g-{name}`: set the `gap` property, based on `$feo-spacing`. This applies it to the horizontal and vertical gap (on small screens).
+- `.panel-p-{name}`: set the `width` of the controllable panel, based on `$feo-sizes`.
+- `.panel-w-{name}`: set the `min-width` of the wrapper, based on `$feo-sizes`.
 
 ### `.tiles`
 

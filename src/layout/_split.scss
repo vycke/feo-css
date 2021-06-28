@@ -27,8 +27,8 @@
   @extend .split;
 }
 
-.split-left:last-child,
-.split-right:first-child {
+.split-left > :last-child,
+.split-right > :first-child {
   flex-basis: 0;
   flex-grow: 999;
 }

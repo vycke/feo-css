@@ -1,6 +1,8 @@
 @import './src/default-tokens';
 @import './src/reset';
 
+$fluid: true !default;
+
 /*******
 * Generate CSS custom properties
 *******/
@@ -12,23 +14,32 @@
 
   // create CSS variables around text-sizes
   // https://fluid-typography.netlify.app/
-  // Scales between 400px and 1000px for base values 1.125rem and 1.3rem
+  // Scales between 250px and 1000px for base values 1rem and 1.15rem
   @each $name, $size in $feo-font-sizes {
-    --text-#{$name}: clamp(
-      1.125rem * #{$size},
-      0.5vw * #{$size} + 1rem * #{$size},
-      1.3rem * #{$size}
-    );
+    @if $fluid {
+      --text-#{$name}: clamp(
+        1rem * #{$size},
+        0.3vw * #{$size} + 1rem * #{$size},
+        1.15rem * #{$size}
+      );
+    } @else {
+      --text-#{$name}: #{$size}rem;
+    }
   }
 
   // create CSS variables around spacing
   // Scales between 250px and 1000px for base values 1rem and 1.15rem
+
   @each $name, $space in $feo-spacing {
-    --spacing-#{$name}: clamp(
-      1rem * #{$space},
-      0.3vw * #{$space} + 1rem * #{$space},
-      1.15rem * #{$space}
-    );
+    @if $fluid {
+      --spacing-#{$name}: clamp(
+        1rem * #{$space},
+        0.3vw * #{$space} + 1rem * #{$space},
+        1.15rem * #{$space}
+      );
+    } @else {
+      --spacing-#{$name}: #{$space}rem;
+    }
   }
 
   // create CSS variables around sizes
@@ -37,8 +48,8 @@
   }
 
   // border-radius
-  @each $name, $rad in $feo-spacing {
-    --radius-#{$name}: #{$rad}rem;
+  @each $name, $space in $feo-spacing {
+    --radius-#{$name}: #{$space}rem;
   }
 
   // font families

@@ -57,6 +57,24 @@ $themes: (
 
 The `src/_default-tokens.scss` file holds the default values of all the available settings. You can overwrite these by creating your own definitions for: `$feo-colors`, `$feo-font-sizes`, `$feo-spacing`, `$feo-sizes`, and `$feo-spacing`.
 
+## Feature flags
+
+Feo CSS allows settings via the 'feature flag' pattern.
+
+```scss
+@use '~@crinkles/feo/feo.scss' with (
+  $fluid: false/true
+);
+```
+
+The available feature flags are:
+
+- `$fluid`: allows for fluid font-sizes and spacing values.
+
+> Note: this method does not work with `node-sass` as of now. If you are reliant on `node-sass` you could also set the values of these flags before you import the package. Or you can use the normal `sass` package instead.
+
+## How it works
+
 Based on these settings, utility classes, but also CSS custom properties are generated for you, in the structure outlined below.
 
 ```scss
@@ -211,7 +229,3 @@ Based on the defined variables, many utility classes are generated, that refer t
 - Several classes altering typography properties, like text-decoration.
 - All combinations round flexboxes as utility classes.
 - `transition-{length}`: utility class to set transition to `all {length} ease-in-out`. Available lengths are: 100ms, 200ms, 300ms, 400ms, 500ms.
-
-```
-
-```

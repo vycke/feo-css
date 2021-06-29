@@ -46,6 +46,7 @@ html:focus-within {
 /* Remove list styles on ul, ol elements with a class attribute */
 ul[role='list'],
 ol[role='list'] {
+  padding: 0;
   list-style: none;
 }
 

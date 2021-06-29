@@ -38,7 +38,7 @@
 
 // Generate classes to set the min-width of each half of .panel-lr
 @each $name, $size in $feo-sizes {
-  .panel-p-#{$name} {
+  .panel-s-#{$name} {
     --panel-width: var(--size-#{$name});
   }
 }

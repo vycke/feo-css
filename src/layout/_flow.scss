@@ -31,6 +31,14 @@
   margin-left: var(--flow-gap);
 }
 
+.flow-x > .flow-grow {
+  margin-left: auto;
+}
+
+.flow-y > .flow-grow {
+  margin-top: auto;
+}
+
 @each $name, $space in $feo-spacing {
   // Generate gap classes to be combined with 'flow'
   .flow-g-#{$name} {

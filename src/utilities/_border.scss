@@ -18,6 +18,7 @@
     .focus\:border-#{$name}:focus {
       border-color: var(--color-#{$name});
       border-style: solid;
+      border-width: 1px;
     }
   }
 }

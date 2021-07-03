@@ -16,8 +16,7 @@
   & > * {
     flex-basis: var(--panel-width);
     flex-grow: 1;
-    /* Capital M to avoid build failures on some compilers */
-    min-width: Min(100%, var(--panel-width));
+    min-width: min(100%, var(--panel-width));
     margin: calc(var(--s1) / 2);
   }
 }
@@ -26,7 +25,7 @@
 .panel-r > :first-child {
   flex-basis: 0;
   flex-grow: 999;
-  min-width: Min(100%, calc(var(--panel-wrapper-width) - var(--panel-width)));
+  min-width: min(100%, calc(var(--panel-wrapper-width) - var(--panel-width)));
 }
 
 // Generate classes to set the gap of .panel-lr

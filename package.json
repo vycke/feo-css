@@ -7,7 +7,7 @@
     "lint:fix": "yarn lint --fix"
   },
   "name": "@crinkles/feo",
-  "version": "1.12.4",
+  "version": "1.12.5",
   "main": "feo.scss",
   "description": "A tiny CSS framework",
   "repository": {

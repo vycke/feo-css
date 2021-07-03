@@ -1,7 +1,7 @@
 @import './src/default-tokens';
 @import './src/reset';
 
-$fluid: true !default;
+$feo-fluid: true !default;
 
 /*******
 * Generate CSS custom properties
@@ -16,7 +16,7 @@ $fluid: true !default;
   // https://fluid-typography.netlify.app/
   // Scales between 250px and 1000px for base values 1rem and 1.15rem
   @each $name, $size in $feo-font-sizes {
-    @if $fluid {
+    @if $feo-fluid {
       --text-#{$name}: clamp(
         1rem * #{$size},
         0.3vw * #{$size} + 1rem * #{$size},
@@ -31,7 +31,7 @@ $fluid: true !default;
   // Scales between 250px and 1000px for base values 1rem and 1.15rem
 
   @each $name, $space in $feo-spacing {
-    @if $fluid {
+    @if $feo-fluid {
       --spacing-#{$name}: clamp(
         1rem * #{$space},
         0.3vw * #{$space} + 1rem * #{$space},

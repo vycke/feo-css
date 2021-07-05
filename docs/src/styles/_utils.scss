@@ -1,0 +1,19 @@
+.no-underline {
+	text-decoration: none !important;
+}
+
+.shadow {
+	box-shadow: var(--elevation-1);
+}
+
+.transition {
+	transition: all 200ms ease-in-out;
+}
+
+.full-width {
+	width: 100%;
+}
+
+.lh-1 {
+	line-height: 1;
+}

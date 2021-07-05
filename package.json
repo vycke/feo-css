@@ -10,10 +10,7 @@
   "version": "1.12.6",
   "main": "feo.scss",
   "description": "A tiny CSS framework",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/crinklesio/feo-css.git"
-  },
+  "repository": "https://github.com/crinklesio/feo-css.git",
   "keywords": [
     "cube css",
     "scss",

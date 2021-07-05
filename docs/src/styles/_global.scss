@@ -1,0 +1,98 @@
+/*******
+* Generic styling
+*******/
+html,
+body {
+	visibility: visible !important; /* hack to avoid Flash Of Unstyled Content FOUC */
+	min-width: 15rem;
+	color: var(--color-gray-600);
+	font-family: var(--sans-serif);
+	font-size: var(--text-0);
+	background-color: var(--color-back);
+}
+
+// HEADINGS
+h1,
+h2,
+h3 {
+	width: 100%;
+	line-height: 1.4;
+}
+
+h1 {
+	font-size: var(--text-3);
+}
+
+h2 {
+	font-size: var(--text-2);
+}
+
+h3 {
+	font-size: var(--text-1);
+}
+
+// LINKS
+a,
+a > *,
+a:link,
+a:visited,
+a:active {
+	touch-action: manipulation;
+	text-decoration: underline;
+	text-decoration-color: var(--color-accent);
+}
+
+blockquote > p {
+	padding: var(--spacing-0);
+	margin-top: var(--spacing-0);
+	position: relative;
+	border-left: 5px solid var(--color-accent);
+	outline: 1px solid var(--color-accent);
+
+	&::before {
+		content: 'Note';
+		position: absolute;
+		top: -10px;
+		background-color: var(--color-back-secondary);
+		padding-left: var(--spacing-000);
+		padding-right: var(--spacing-000);
+		color: var(--color-accent);
+		font-size: var(--text-00);
+		font-family: var(--monospace);
+		text-transform: uppercase;
+	}
+}
+
+input {
+	width: 100%;
+	background-color: var(--color-back-secondary);
+	border: 1px solid var(--color-hover);
+	border-radius: var(--spacing-00);
+	padding: var(--spacing-0000) var(--spacing-00);
+	color: var(--color-front);
+}
+
+input:active,
+input:focus {
+	border: 1px solid var(--color-accent);
+	outline: none;
+}
+
+article h2 + p {
+	margin-top: var(--spacing-00) !important;
+}
+
+article img {
+	max-width: min(100%, var(--center-width));
+	padding-left: 0 !important;
+	padding-right: 0 !important;
+}
+
+article > :not(pre) {
+	padding-left: var(--spacing-1);
+	padding-right: var(--spacing-1);
+}
+
+article li {
+	margin-left: var(--spacing-2);
+}

@@ -4,8 +4,6 @@ category: Layout
 source: https://github.com/crinklesio/feo-css/blob/main/src/layout/_tiles.scss
 ---
 
-## Tile system
-
 The `.tiles` class allows for a responsive [tile system](https://crinkles.io/writing/css-layout-patterns#responsive-multi-column-grid-system). Based on the settings, the layout determines itself how many tiles fit horizontally, and scales the tiles in the available space.
 
 ![](/img/tiles.png)

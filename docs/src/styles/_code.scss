@@ -38,7 +38,7 @@
 .token.string,
 .token.number,
 .token.class-name {
-	color: var(--color-green-100);
+	color: var(--color-accent);
 }
 
 code {
@@ -88,7 +88,7 @@ pre[data-lang] > span {
 	right: 0;
 	font-size: var(--text-000);
 	font-family: var(--monospace);
-	color: var(--color-green-100);
+	color: var(--color-accent);
 	background-color: var(--color-gray-400);
 	text-transform: uppercase;
 	border-bottom-left-radius: var(--radius-000);

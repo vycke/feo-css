@@ -7,8 +7,8 @@ $colors: (
 	'gray-400': #77818c,
 	'gray-500': #242f3a,
 	'gray-600': #0e141e,
-	'green-100': #7dc4a8,
-	'green-200': #0e6469
+	'red': #fc0659,
+	'blue': #5765fc
 );
 
 // Typography system (golden ratio)
@@ -50,7 +50,7 @@ $font-families: (
 
 $themes: (
 	'light': (
-		'accent': 'green-200',
+		'accent': 'blue',
 		'back': 'gray-200',
 		'back-secondary': 'gray-100',
 		'code': 'gray-500',
@@ -58,7 +58,7 @@ $themes: (
 		'hover': 'gray-300'
 	),
 	'dark': (
-		'accent': 'green-100',
+		'accent': 'red',
 		'back': 'gray-600',
 		'back-secondary': 'gray-600',
 		'code': 'gray-500',

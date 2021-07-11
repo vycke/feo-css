@@ -7,7 +7,6 @@
 *::before,
 *::after {
   box-sizing: border-box;
-  overflow-wrap: break-word;
 }
 
 /* Remove default margin */
@@ -34,8 +33,9 @@ html {
 }
 
 body {
-  height: 100vh;
+  min-height: 100vh;
   font-weight: 400;
+  text-rendering: optimizeSpeed;
   line-height: 1.75;
 }
 
@@ -62,7 +62,8 @@ a:not([class]) {
 }
 
 /* Make images easier to work with */
-img {
+img,
+picture {
   display: block;
   max-width: 100%;
 }
@@ -91,11 +92,6 @@ button {
   cursor: pointer;
 }
 
-/* Natural flow and rhythm in articles by default */
-article > * + * {
-  margin-top: 1.25rem;
-}
-
 /* Inherit fonts for inputs and buttons */
 input,
 button,
@@ -119,10 +115,15 @@ select {
 
 /* Remove all animations and transitions for people that prefer not to see them */
 @media (prefers-reduced-motion: reduce) {
-  * {
-    transition-duration: 0.01ms !important;
+  html:focus-within {
+    scroll-behavior: auto !important;
+  }
+  *,
+  *::before,
+  *::after {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
 }

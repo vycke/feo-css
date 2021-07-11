@@ -1,34 +1,36 @@
+// Used for internal processing, added the 'none' flag.
+$_feo-sizes: append($feo-sizes, 'none');
 // Create various padding and margin utility classes
 @each $typename, $type in ('m': 'margin', 'p': 'padding') {
-  @each $name, $value in $feo-spacing {
+  @each $name, $value in $_feo-sizes {
     .#{$typename}b-#{$name} {
-      #{$type}-bottom: var(--spacing-#{$name});
+      #{$type}-bottom: var(--size-#{$name});
     }
 
     .#{$typename}t-#{$name} {
-      #{$type}-top: var(--spacing-#{$name});
+      #{$type}-top: var(--size-#{$name});
     }
 
     .#{$typename}l-#{$name} {
-      #{$type}-left: var(--spacing-#{$name});
+      #{$type}-left: var(--size-#{$name});
     }
 
     .#{$typename}r-#{$name} {
-      #{$type}-right: var(--spacing-#{$name});
+      #{$type}-right: var(--size-#{$name});
     }
 
     .#{$typename}x-#{$name} {
-      #{$type}-right: var(--spacing-#{$name});
-      #{$type}-left: var(--spacing-#{$name});
+      #{$type}-right: var(--size-#{$name});
+      #{$type}-left: var(--size-#{$name});
     }
 
     .#{$typename}y-#{$name} {
-      #{$type}-top: var(--spacing-#{$name});
-      #{$type}-bottom: var(--spacing-#{$name});
+      #{$type}-top: var(--size-#{$name});
+      #{$type}-bottom: var(--size-#{$name});
     }
 
     .#{$typename}-#{$name} {
-      #{$type}: var(--spacing-#{$name});
+      #{$type}: var(--size-#{$name});
     }
   }
 }

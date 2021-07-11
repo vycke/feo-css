@@ -12,8 +12,8 @@ source: https://github.com/crinklesio/feo-css/blob/main/src/layout/_pancake.scss
 
 As already hinted by the image above, there are several `.panel` linked utility classes that can be applied to alter how the layout behaves.
 
-- `.panel-s-<name>`: set the width (or size!) of the controllable panel, based on `$feo-sizes`.
-- `.panel-w-<name>`: set the min-width of the wrapper, based on `$feo-sizes`.
-- `.panel-g-<name>`: set the gap between the two columns. This gap is applied both horizontally and vertically. Based on the, based on `$feo-spacing`.
+- `.panel-s-<name>`: set the width (or size!) of the controllable panel, based on `$feo-breakpoints`.
+- `.panel-w-<name>`: set the min-width of the wrapper, based on `$feo-breakpoints`.
+- `.panel-g-<name>`: set the gap between the two columns. This gap is applied both horizontally and vertically. Based on the, based on `$feo-sizes`.
 
 > By default the value for `.panel-s-` is `50%`.

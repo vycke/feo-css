@@ -21,7 +21,6 @@
   },
   "type": "module",
   "dependencies": {
-    "@crinkles/feo": "^1.12.4",
     "@sveltejs/adapter-static": "^1.0.0-next.13",
     "feather-icons": "^4.28.0",
     "front-matter": "^4.0.2",

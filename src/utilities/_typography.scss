@@ -22,9 +22,9 @@
 }
 
 // Generate utility classes around font-size
-@each $name, $size in $feo-font-sizes {
+@each $name, $size in $feo-sizes {
   .text-#{$name} {
-    font-size: var(--text-#{$name});
+    font-size: var(--size-#{$name});
   }
 }
 
@@ -37,6 +37,10 @@
 
 .bold {
   font-weight: 600;
+}
+
+.regular {
+  font-weight: 400;
 }
 
 .italic {

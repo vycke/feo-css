@@ -1,0 +1,82 @@
+/*******
+* Generic styling
+*******/
+html,
+body {
+  visibility: visible !important; /* hack to avoid Flash Of Unstyled Content FOUC */
+  min-width: 15rem;
+  font-family: var(--sans-serif);
+  font-size: var(--size-0);
+}
+
+// HEADINGS
+h1,
+h2,
+h3 {
+  width: 100%;
+  line-height: 1.4;
+}
+
+h1 {
+  font-size: var(--size-3);
+}
+
+h2 {
+  font-size: var(--size-2);
+}
+
+h3 {
+  font-size: var(--size-1);
+}
+
+// TEXT
+p {
+  hyphens: auto;
+}
+
+// LINKS
+a,
+a > *,
+a:link,
+a:visited,
+a:active {
+  touch-action: manipulation;
+  text-decoration-line: underline;
+  text-decoration-thickness: 2px;
+}
+
+// CODE
+code {
+  font-size: 0.825em;
+  font-family: var(--monospace);
+  hyphens: none;
+}
+
+// INLINE CODE
+:not(pre) > code {
+  padding: 2px 6px;
+  display: inline-block;
+}
+
+pre,
+// added specificity
+pre:not([data-lang]),
+pre[data-lang] {
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  position: relative;
+  padding: 0;
+}
+
+pre > code {
+  padding: var(--size-1);
+  display: block;
+  overflow-x: auto;
+  line-height: 1.4;
+  tab-size: 2;
+  font-size: var(--size-00);
+  // fix for increased font-size safari iOS
+  -webkit-text-size-adjust: none;
+}

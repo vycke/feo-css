@@ -12,6 +12,6 @@ The `.center` class allows you to center elements on the screen. It is responsiv
 
 The available utility classes to alter the settings for `.center` are listed below.
 
-- `.center-w-<name>`: set the max-width of the layout, including any potential side-padding. Based on `$feo-sizes`.
-- `.center-g-<name>`: set the padding on each of the sides. The padding is applied to all direct children of the parent. Based on `$feo-spacing`.
+- `.center-w-<name>`: set the max-width of the layout, including any potential side-padding. Based on `$feo-breakpoints`.
+- `.center-g-<name>`: set the padding on each of the sides. The padding is applied to all direct children of the parent. Based on `$feo-sizes`.
 - `.center-exception`: allows children to flow outside the max-width set in the parent.

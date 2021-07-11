@@ -11,41 +11,13 @@ $colors: (
 	'blue': #5765fc
 );
 
-// Typography system (golden ratio)
-$font-sizes: (
-	'0': 1,
-	'00': 0.8,
-	'000': 0.64,
-	'1': 1.25,
-	'2': 1.563,
-	'3': 1.953
-);
-
-$spacing: (
-	'none': 0,
-	'0': 1,
-	'00': 0.75,
-	'000': 0.5,
-	'0000': 0.25,
-	'1': 1.25,
-	'2': 2,
-	'3': 3
-);
-
-$sizes: (
+$breakpoints: (
 	'00': 15rem,
 	'0': 20rem,
 	'1': 25rem,
 	'2': 40rem,
 	'3': 48.5rem,
 	'4': 65rem
-);
-
-$font-families: (
-	monospace: "Inconsolata, Menlo, Monaco, Consolas, 'Courier New', monospace",
-	serif: 'Georgia, serif',
-	sans-serif:
-		"system-ui, -apple-system, blinkmacsystemfont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif"
 );
 
 $themes: (
@@ -67,13 +39,9 @@ $themes: (
 	)
 );
 
-@use '../../node_modules/@crinkles/feo/feo.scss' with
+@use '../../../feo.scss' with
 	(
-		$feo-fluid: false,
 		$feo-colors: $colors,
-		$feo-font-sizes: $font-sizes,
-		$feo-spacing: $spacing,
-		$feo-sizes: $sizes,
-		$feo-font-families: $font-families,
+		$feo-breakpoints: $breakpoints,
 		$feo-themes: $themes
 	);

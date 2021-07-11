@@ -21,27 +21,15 @@ Based on the `$feo-colors` and `$feo-themes` settings from your [design tokens](
 - `.hover:border-<name>`
 - `.focus:border-<name>`
 
-In addition, several `.border-w-<name>` are available to give borders a different width. The available sizes are 1, 2, 3, 4 and 5, which translate to px`. 
+In addition, several `.border-w-<name>` are available to give borders a different width. The available sizes are 1, 2, 3, 4 and 5, which translate to `px`.
 
 ## Radius
 
-Based on the `$feo-spacing` array from your [design tokens](/themes), utility-classes for border radius are generated. These follow the structure of `.radius-<name>`. These classes set the `border-radius` property on the element, meaning *all* its corners.
-
-## Transition
-
-Classes that enable you to set CSS transitions on all transitional attributes of an element, as shown below. The available lengths are: 100, 200, 300, 400 and 500. 
-
-```css
-.transition-<length> {
-  transition: all <length>ms ease-in-out. 
-}
-```
-
-> The transition length are *not* configurable in *Feo*.
+Based on the `$feo-sizes` array from your [design tokens](/themes), utility-classes for border radius are generated. These follow the structure of `.radius-<name>`. These classes set the `border-radius` property on the element, meaning _all_ its corners.
 
 ## Margin and padding
 
-Based on the `$feo-spacing` array from your [design tokens](/themes), utility-classes for padding and margin are generated. The following classes are available: 
+Based on the `$feo-sizes` array from your [design tokens](/themes), utility-classes for padding and margin are generated. Next to the values from `$feo-sizes`, the 'name' `none` is also available, to overwrite standard set spacing. The following classes are available:
 
 - `.(p/m)-<name>`: sets the padding/margin on all sides.
 - `.(p/m)x-<name>`: sets the padding/margin on `-left` and `-right`.
@@ -60,8 +48,8 @@ Based on the `$feo-colors` and `$feo-themes` settings from your [design tokens](
 - `.focus:text-<name>`
 - `.active:test-<name>`
 
-In addition, based on the `$feo-font-sizes`, additional utility classes are generate, in the format `.text-<name>`.
+In addition, based on the `$feo-sizes`, additional utility classes are generate, in the format `.text-<name>`.
 
-> If names from `$feo-font-sizes` and `$feo-colors` collide, the former takes precedence. 
+> If names from `$feo-sizes` and `$feo-colors` collide, the former takes precedence.
 
-Lastly, based on `$feo-font-families`, utility classes are generated that allow you to set the font-family on an element. These classes follow the structure of `.<name>`. 
+Lastly, based on `$feo-font-families`, utility classes are generated that allow you to set the font-family on an element. These classes follow the structure of `.<name>`.

@@ -1,31 +1,33 @@
 <script>
-	import Icon from './Icon.svelte';
+	import * as feather from 'feather-icons';
 
 	let klass = '';
 	export { klass as class };
 	export let checked = false;
 	export let label = '';
+
+	$: close = feather.icons.x.toSvg();
+	$: open = feather.icons.check.toSvg();
 </script>
 
 <label html="toggle" class="switch flex-row items-center justify-between {klass}">
 	{label}
-	<button class="ml-000" type="button" id="toggle" role="switch" aria-checked={checked} on:click>
-		<span>
-			<Icon name="check" />
-		</span>
-		<span>
-			<Icon name="x" />
-		</span>
+	<button
+		class="ml-000 bg-gray-400 border-w-2 border-gray-400 radius-0 transition-400"
+		type="button"
+		id="toggle"
+		role="switch"
+		aria-checked={checked}
+		on:click
+	>
+		<span class="text-back-secondary">{@html open}</span>
+		<span class="text-back-secondary">{@html close}</span>
 	</button>
 </label>
 
 <style>
-	button[role='switch'] {
+	button {
 		height: calc(1.4rem + 4px);
-		background-color: var(--color-gray-400);
-		border: 2px solid var(--color-gray-400);
-		border-radius: 1rem;
-		transition: all 400ms ease-in-out;
 	}
 
 	button[role='switch'][aria-checked='true'] {
@@ -33,20 +35,19 @@
 		border-color: var(--color-accent);
 	}
 
-	button[role='switch'] span {
+	span {
 		display: inline-block;
 		font-size: 1.4rem;
 		line-height: 1.4rem;
 		height: 1.4rem;
 		min-width: 1.8rem;
-		color: var(--color-back-secondary);
 		border-radius: 2rem;
 		pointer-events: none;
-		transition: all 400ms ease-in-out;
+		transition: background-color 400ms ease;
 	}
 
 	button[role='switch'][aria-checked='true'] > :last-child,
 	button[role='switch'][aria-checked='false'] > :first-child {
-		background: var(--color-back-secondary);
+		background-color: var(--color-back-secondary);
 	}
 </style>

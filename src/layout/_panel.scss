@@ -29,22 +29,19 @@
 }
 
 // Generate classes to set the gap of .panel-lr
-@each $name, $space in $feo-spacing {
+@each $name, $space in $feo-sizes {
   .panel-g-#{$name} {
-    --panel-gap: var(--spacing-#{$name});
+    --panel-gap: var(--size-#{$name});
   }
 }
 
 // Generate classes to set the min-width of each half of .panel-lr
-@each $name, $size in $feo-sizes {
+@each $name, $size in $feo-breakpoints {
   .panel-s-#{$name} {
-    --panel-width: var(--size-#{$name});
+    --panel-width: var(--bp-#{$name});
   }
-}
 
-// Generate classes to set the min-width of each half of .panel-lr
-@each $name, $size in $feo-sizes {
   .panel-w-#{$name} {
-    --panel-wrapper-width: var(--size-#{$name});
+    --panel-wrapper-width: var(--bp-#{$name});
   }
 }

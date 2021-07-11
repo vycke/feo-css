@@ -17,11 +17,11 @@
 
 	onMount(() => {
 		let _theme = 'dark';
-		if ('theme' in localStorage) _theme = localStorage.getItem('theme');
-		else if (window.matchMedia('(prefers-color-scheme: light)').matches) _theme = 'light';
-
+		if (!'theme' in localStorage) {
+			_theme = localStorage.getItem('theme');
+			document.documentElement.dataset.theme = _theme;
+		} else if (window.matchMedia('(prefers-color-scheme: light)').matches) _theme = 'light';
 		theme.update(() => _theme);
-		document.documentElement.dataset.theme = _theme;
 	});
 </script>
 

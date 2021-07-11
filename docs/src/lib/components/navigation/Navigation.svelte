@@ -5,7 +5,6 @@
 	import NavItem from './NavItem.svelte';
 	import ThemeSwitch from './ThemeSwitch.svelte';
 	import { page } from '$app/stores';
-	import { debug } from 'svelte/internal';
 
 	// Properties
 	export let docs;
@@ -18,7 +17,7 @@
 	$: path = $page.path === '' ? '/' : $page.path;
 </script>
 
-<nav class="p-1 flex-col items-start bg-back text-front" data-open={open}>
+<nav class="sticky post-0 p-1 flex-col items-start bg-back text-front" data-open={open}>
 	<div class="flex-row items-center full-width">
 		<button
 			class="text-front flex-grow text-left flex-row items-center"
@@ -59,14 +58,14 @@
 			</a>
 			<a
 				href={source}
-				class="monospace lh-1 text-000 p-000 radius-000 border-hover border-w-1 ml-0"
+				class="monospace lh-1 text-000 p-000 radius-0000 border-hover border-w-1 ml-0"
 			>
 				v{version}
 			</a>
 		</div>
 	</div>
 
-	<ul role="list" class="pt-2 flow-y flow-g-000 full-width bg-back">
+	<ul role="list" class="pt-2 flow-y flow-g-0000 full-width bg-back">
 		<input bind:value={term} placeholder="Search..." class="mb-2" />
 
 		{#each Object.keys(filteredDocs) as category, i}
@@ -81,7 +80,7 @@
 					href="/{slug}"
 					{icon}
 					on:click={() => (open = false)}
-					selected={(i === 0 && j === 0 && path === '/') || path === `/${slug}`}
+					selected={(i === 0 && j === 0 && path === '/' && term === '') || path === `/${slug}`}
 				/>
 			{/each}
 		{/each}
@@ -94,17 +93,11 @@
 </nav>
 
 <style>
-	.name {
-		text-transform: capitalize;
-	}
-
 	li {
 		border-bottom: 1px solid var(--color-hover);
 	}
 
 	nav {
-		position: sticky;
-		top: 0;
 		z-index: 100;
 	}
 
@@ -142,7 +135,7 @@
 			left: 0;
 			max-height: 0;
 			overflow-y: hidden;
-			width: 100%;
+			/* width: 100%; */
 		}
 
 		nav[data-open='true'] ul {
@@ -150,7 +143,7 @@
 			height: 100%;
 			overflow-y: auto;
 			border-bottom: 1px solid var(--color-hover);
-			padding: var(--spacing-0);
+			padding: var(--size-0);
 		}
 	}
 </style>

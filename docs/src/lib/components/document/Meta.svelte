@@ -6,12 +6,12 @@
 	$: modifiedAt = new Date(doc.modifiedAt).toLocaleString();
 </script>
 
-<aside class="p-1 flex-col mb-1">
+<aside class="sticky post-0 p-1 flex-col mb-1 self-start">
 	{#if doc.headers.length}
 		<div class="mb-2 flex-col">
 			<span class="monospace text-00 uppercase text-accent">Outline:</span>
 			{#each doc.headers as header}
-				<a class="header" href="#{header.id}">» {header.label}</a>
+				<a class="header hover:text-accent" href="#{header.id}">» {header.label}</a>
 			{/each}
 		</div>
 	{/if}
@@ -23,7 +23,7 @@
 			name={categories[doc.category] || 'circle'}
 			attrs={{ height: 18 }}
 		/>
-		<span class="capitalize ml-00">{doc.category}</span>
+		<span class="ml-00">{doc.category}</span>
 	</div>
 
 	{#if doc.source}
@@ -39,13 +39,3 @@
 		<span class="capitalize ml-00">{modifiedAt}</span>
 	</div>
 </aside>
-
-<style>
-	a.header:hover {
-		font-weight: 600;
-	}
-
-	.capitalize {
-		text-transform: capitalize;
-	}
-</style>

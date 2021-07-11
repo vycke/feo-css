@@ -41,57 +41,29 @@
 	color: var(--color-accent);
 }
 
-code {
-	font-size: 0.825em;
-	font-family: var(--monospace);
-	hyphens: none;
-}
-
 // INLINE CODE
 :not(pre) > code {
-	padding: 3px 6px;
-	display: inline-block;
 	color: var(--color-accent);
 	background-color: var(--color-hover);
-	border-radius: var(--radius-000);
-}
-
-pre,
-// added specificity
-pre:not([data-lang]),
-pre[data-lang] {
-	white-space: pre;
-	word-spacing: normal;
-	word-break: normal;
-	word-wrap: normal;
-	position: relative;
-	padding: 0;
+	border-radius: var(--size-0000);
 }
 
 pre > code {
-	display: block;
-	overflow-x: auto;
-	line-height: 1.4;
 	color: var(--color-gray-100);
-	tab-size: 2;
-	font-size: var(--text-00);
 	background-color: var(--color-code);
 	outline: 1px solid var(--color-hover);
-	// fix for increased font-size safari iOS
-	-webkit-text-size-adjust: none;
-	padding: var(--spacing-1);
 }
 
 pre[data-lang] > span {
 	position: absolute;
 	top: 0;
 	right: 0;
-	font-size: var(--text-000);
+	font-size: var(--size-000);
 	font-family: var(--monospace);
-	color: var(--color-accent);
+	color: var(--color-gray-100);
 	background-color: var(--color-gray-400);
 	text-transform: uppercase;
-	border-bottom-left-radius: var(--radius-000);
-	padding: 0 var(--spacing-00);
+	border-bottom-left-radius: var(--size-000);
+	padding: 0 var(--size-00);
 	line-height: 1.7;
 }

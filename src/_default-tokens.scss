@@ -2,17 +2,27 @@
 // CSS custom properties
 $feo-colors: () !default;
 
-// Typography system
-$feo-font-sizes: () !default;
-
-// Spacing system: padding, margin, gap
-$feo-spacing: () !default;
+// Sizing for font-sizes, padding, margin and gap
+$feo-sizes: (
+  '0000': 0.4,
+  '000': 0.64,
+  '00': 0.8,
+  '0': 1,
+  '1': 1.25,
+  '2': 1.563,
+  '3': 1.953,
+  '4': 3,
+) !default;
 
 // Size system
-$feo-sizes: () !default;
+$feo-breakpoints: () !default;
 
 // Font families
-$feo-font-families: () !default;
-
+$feo-font-families: (
+  monospace: "Inconsolata, Menlo, Monaco, Consolas, 'Courier New', monospace",
+  serif: 'Georgia, serif',
+  sans-serif:
+    "system-ui, -apple-system, blinkmacsystemfont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif",
+) !default;
 // themes
 $feo-themes: () !default;

@@ -1,7 +1,6 @@
+@use "sass:list";
 @import './src/default-tokens';
 @import './src/reset';
-
-$feo-fluid: true !default;
 
 /*******
 * Generate CSS custom properties
@@ -12,44 +11,16 @@ $feo-fluid: true !default;
     --color-#{$name}: #{$color};
   }
 
-  // create CSS variables around text-sizes
-  // https://fluid-typography.netlify.app/
-  // Scales between 250px and 1000px for base values 1rem and 1.15rem
-  @each $name, $size in $feo-font-sizes {
-    @if $feo-fluid {
-      --text-#{$name}: clamp(
-        1rem * #{$size},
-        0.3vw * #{$size} + 1rem * #{$size},
-        1.15rem * #{$size}
-      );
-    } @else {
-      --text-#{$name}: #{$size}rem;
-    }
-  }
-
   // create CSS variables around spacing
   // Scales between 250px and 1000px for base values 1rem and 1.15rem
-
-  @each $name, $space in $feo-spacing {
-    @if $feo-fluid {
-      --spacing-#{$name}: clamp(
-        1rem * #{$space},
-        0.3vw * #{$space} + 1rem * #{$space},
-        1.15rem * #{$space}
-      );
-    } @else {
-      --spacing-#{$name}: #{$space}rem;
-    }
-  }
-
-  // create CSS variables around sizes
+  --size-none: 0;
   @each $name, $size in $feo-sizes {
-    --size-#{$name}: #{$size};
+    --size-#{$name}: #{$size}rem;
   }
 
-  // border-radius
-  @each $name, $space in $feo-spacing {
-    --radius-#{$name}: #{$space}rem;
+  // create CSS variables around breakpoints
+  @each $name, $size in $feo-breakpoints {
+    --bp-#{$name}: #{$size};
   }
 
   // font families
@@ -59,13 +30,36 @@ $feo-fluid: true !default;
 }
 
 // themes for [data-theme] attribute
+$_: (light, dark);
 @each $tName, $theme in $feo-themes {
+  // if prefered color-scheme, use this
+  @if (list.index($_, $tName)) {
+    @media (prefers-color-scheme: #{$tName}) {
+      :root:not([data-theme]) {
+        @each $cName, $color in $theme {
+          --color-#{$cName}: var(--color-#{$color});
+        }
+
+        color-scheme: unquote($tName);
+      }
+    }
+  }
+
   [data-theme='#{$tName}'] {
     @each $cName, $color in $theme {
       --color-#{$cName}: var(--color-#{$color});
     }
+
+    @if (list.index($_, $tName)) {
+      color-scheme: unquote($tName);
+    }
   }
 }
+
+/*******
+* Global
+*******/
+@import './src/global';
 
 /*******
 * Layout classes
@@ -90,3 +84,4 @@ $feo-fluid: true !default;
 @import './src/utilities/radius';
 @import './src/utilities/border';
 @import './src/utilities/transition';
+@import './src/utilities/position';

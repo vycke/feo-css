@@ -1,0 +1,39 @@
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.fixed {
+  position: fixed;
+}
+
+.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+}
+
+.posb-0 {
+  bottom: 0;
+}
+
+.post-0 {
+  top: 0;
+}
+
+.posl-0 {
+  left: 0;
+}
+
+.posr-0 {
+  right: 0;
+}
+
+.pos-0 {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}

@@ -1,4 +1,5 @@
 <script>
+	import { createEventDispatcher } from 'svelte';
 	import { categories, name, source, version } from '$lib/constants';
 	import { search, group } from '$lib/search';
 	import Icon from '../layout/Icon.svelte';
@@ -6,10 +7,12 @@
 	import ThemeSwitch from './ThemeSwitch.svelte';
 	import { page } from '$app/stores';
 
+	const dispatch = createEventDispatcher();
 	// Properties
 	export let docs;
-	// Internal statae
-	let open = false;
+	export let open = false;
+
+	// Internal state
 	let term = '';
 	// Derived state
 	$: icon = open ? 'x' : 'menu';
@@ -21,7 +24,7 @@
 	<div class="flex-row items-center full-width">
 		<button
 			class="text-front flex-grow text-left flex-row items-center"
-			on:click={() => (open = !open)}
+			on:click={() => dispatch('toggle')}
 		>
 			<Icon name={icon} />
 		</button>

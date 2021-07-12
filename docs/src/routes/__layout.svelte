@@ -14,6 +14,7 @@
 
 	export let path = '';
 	export let docs;
+	export let menu = false;
 
 	onMount(() => {
 		let _theme = 'dark';
@@ -29,7 +30,14 @@
 	<meta name="color-scheme" content={$theme} />
 </svelte:head>
 
-<div class="bg-back panel-l panel-s-0 panel-w-3">
-	<Navigation {path} {docs} />
+<div class="bg-back panel-l panel-s-0 panel-w-3" data-menu-open={menu}>
+	<Navigation {path} {docs} open={menu} on:toggle={() => (menu = !menu)} />
 	<slot />
 </div>
+
+<style>
+	[data-menu-open='true'] {
+		overflow: hidden;
+		height: 100vh;
+	}
+</style>

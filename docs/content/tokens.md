@@ -26,14 +26,14 @@ Generates CSS custom properties: `--size-<name>`. Values are converted towards `
 
 ```scss
 $feo-sizes: (
-	'0000': 0.4,
-	'000': 0.64,
-	'00': 0.8,
-	'0': 1,
-	'1': 1.25,
-	'2': 1.563,
-	'3': 1.953,
-	'4': 3
+	'0000': 0.4rem,
+	'000': 0.64rem,
+	'00': 0.8rem,
+	'0': 1rem,
+	'1': 1.25rem,
+	'2': 1.563rem,
+	'3': 1.953rem,
+	'4': 3rem
 );
 ```
 

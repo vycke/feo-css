@@ -40,7 +40,7 @@ $feo-colors: (
 );
 
 $feo-sizes: (
-	'default': 1
+	'default': 1rem
 );
 ```
 

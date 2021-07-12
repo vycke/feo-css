@@ -11,16 +11,15 @@
     --color-#{$name}: #{$color};
   }
 
-  // create CSS variables around spacing
-  // Scales between 250px and 1000px for base values 1rem and 1.15rem
+  // create CSS variables around spacing, font-sizes etc.
   --size-none: 0;
   @each $name, $size in $feo-sizes {
-    --size-#{$name}: #{$size}rem;
+    --size-#{$name}: #{$size};
   }
 
   // create CSS variables around breakpoints
-  @each $name, $size in $feo-breakpoints {
-    --bp-#{$name}: #{$size};
+  @each $name, $bp in $feo-breakpoints {
+    --bp-#{$name}: #{$bp};
   }
 
   // font families

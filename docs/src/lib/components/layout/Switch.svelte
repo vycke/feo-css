@@ -27,7 +27,7 @@
 
 <style>
 	button {
-		height: calc(1.4rem + 4px);
+		height: calc(1.5rem + 4px);
 	}
 
 	button[role='switch'][aria-checked='true'] {

@@ -30,7 +30,7 @@
 	<meta name="color-scheme" content={$theme} />
 </svelte:head>
 
-<div class="bg-back panel-l panel-s-0 panel-w-3" data-menu-open={menu}>
+<div class="bg-back panel-l panel-f-0 panel-w-3" data-menu-open={menu}>
 	<Navigation {path} {docs} open={menu} on:toggle={() => (menu = !menu)} />
 	<slot />
 </div>

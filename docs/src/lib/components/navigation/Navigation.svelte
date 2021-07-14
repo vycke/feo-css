@@ -29,7 +29,7 @@
 			<Icon name={icon} />
 		</button>
 		<div class="flex-row items-center">
-			<a href="/" class="name | no-underline bold text-1 flex-row items-center">
+			<a href="/" class="name | no-decoration bold text-1 flex-row items-center">
 				<svg
 					width="26"
 					height="31"
@@ -61,14 +61,14 @@
 			</a>
 			<a
 				href={source}
-				class="monospace lh-1 text-000 p-000 radius-0000 border-hover border-w-1 ml-0"
+				class="monospace lh-1 text-000 p-000 radius-000 border-hover border-w-1 ml-0"
 			>
 				v{version}
 			</a>
 		</div>
 	</div>
 
-	<ul role="list" class="pt-2 flow-y flow-g-0000 full-width bg-back">
+	<ul role="list" class="pt-2 flow-y flow-g-000 full-width bg-back">
 		<input bind:value={term} placeholder="Search..." class="mb-2" />
 
 		{#each Object.keys(filteredDocs) as category, i}
@@ -102,10 +102,6 @@
 
 	nav {
 		z-index: 100;
-	}
-
-	ul {
-		list-style: none;
 	}
 
 	@media (min-width: 50rem) {

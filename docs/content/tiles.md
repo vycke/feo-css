@@ -14,3 +14,5 @@ The available utility classes to alter the settings for `.tiles` are listed belo
 
 - `.tiles-g-<name>`: set the `gap` property, which defines the gap both vertically and horizontally between items in the tile system. Based on `$feo-sizes`.
 - `.tiles-w-<name>`: set the `min-width` of an individual item in the tile system, based on `$feo-breakpoints`.
+
+> If the utility classes are not flexible enough and you want to adjust the way the layout pattern behaves, adjust the `--tiles-gap`, and/or `--tiles-width` custom properties on the element you are applying this pattern to.

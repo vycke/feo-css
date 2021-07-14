@@ -10,15 +10,13 @@
 <li
 	class:selected
 	class:bg-hover={selected}
-	class:py-000={icon}
-	class:py-0000={!icon}
-	class="nav-item | px-00 radius-000 hover:bg-hover transition"
+	class="nav-item | px-00 py-000 lh-000 radius-000 hover:bg-hover transition-200"
 >
-	<a {href} class="no-underline flow-x flow-g-0 items-center" on:click sveltekit:prefetch>
+	<a {href} class="no-decoration flow-x flow-g-0 items-center" on:click sveltekit:prefetch>
 		{#if icon}
-			<Icon name={icon} class="transition text-gray-400" />
+			<Icon name={icon} class="transition-200 text-gray-400" />
 		{/if}
-		<span class="no-underline">{title}</span>
+		<span class="no-decoration">{title}</span>
 	</a>
 </li>
 

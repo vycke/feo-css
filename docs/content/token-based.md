@@ -53,3 +53,11 @@ In addition, based on the `$feo-sizes`, additional utility classes are generate,
 > If names from `$feo-sizes` and `$feo-colors` collide, the former takes precedence.
 
 Lastly, based on `$feo-font-families`, utility classes are generated that allow you to set the font-family on an element. These classes follow the structure of `.<name>`.
+
+## Width, min-width, and max-width
+
+Based on the `$feo-breakpoints` settings from your [design tokens](/themes), utility classes around width are generated.
+
+- `.w-<name>`
+- `.minw-<name>`
+- `.maxw-<name>` (also applies `width: 100%`)

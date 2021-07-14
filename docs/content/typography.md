@@ -23,3 +23,9 @@ These classes set the `text-align` on the element, based on the value in the nam
 - `.regular`: sets the font-weight to 400.
 - `.italic`: makes the text italic.
 - `.no-decoration`: removes any decoration in the `text-decoration` property.
+
+## Line height
+
+- `.lh-0`: sets the line height to 1.75.
+- `.lh-00`: sets the line height to 1.3.
+- `.lh-000`: sets the line height to 1.

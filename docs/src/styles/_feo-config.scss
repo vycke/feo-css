@@ -11,14 +11,7 @@ $colors: (
 	'blue': #5765fc
 );
 
-$breakpoints: (
-	'00': 15rem,
-	'0': 20rem,
-	'1': 25rem,
-	'2': 40rem,
-	'3': 48.5rem,
-	'4': 65rem
-);
+// $breakpoints: ();
 
 $themes: (
 	'light': (
@@ -42,6 +35,6 @@ $themes: (
 @use '../../../feo.scss' with
 	(
 		$feo-colors: $colors,
-		$feo-breakpoints: $breakpoints,
+		// $feo-breakpoints: $breakpoints,
 		$feo-themes: $themes
 	);

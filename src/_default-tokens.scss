@@ -3,19 +3,30 @@
 $feo-colors: () !default;
 
 // Sizing for font-sizes, padding, margin and gap
+// based on: f_i = f_0 * r ^ (i / n)
+// where r = golden ratio, and n = 2 (you can play with f_0 to get
+// different values
+
 $feo-sizes: (
-  '0000': 0.4rem,
-  '000': 0.64rem,
-  '00': 0.8rem,
+  '000': 0.6181rem,
+  '00': 0.7862rem,
   '0': 1rem,
-  '1': 1.25rem,
-  '2': 1.563rem,
-  '3': 1.953rem,
-  '4': 3rem,
+  '1': 1.272rem,
+  '2': 1.618rem,
+  '3': 2.0582rem,
 ) !default;
 
-// Size system
-$feo-breakpoints: () !default;
+// Breakpoint system.
+// Idea: f_i = f_0 * 1.333 ^ (i)
+$feo-breakpoints: (
+  '00': 15rem,
+  '0': 20rem,
+  '1': 26.66rem,
+  '2': 35.54rem,
+  '3': 47.37rem,
+  '4': 63.15rem,
+  '5': 84.17rem,
+) !default;
 
 // Font families
 $feo-font-families: (

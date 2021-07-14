@@ -37,9 +37,9 @@
 
 	span {
 		display: inline-block;
-		font-size: 1.4rem;
-		line-height: 1.4rem;
-		height: 1.4rem;
+		font-size: 1.5rem;
+		line-height: 1.5rem;
+		height: 1.5rem;
 		min-width: 1.8rem;
 		border-radius: 2rem;
 		pointer-events: none;

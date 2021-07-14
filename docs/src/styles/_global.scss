@@ -43,10 +43,11 @@ blockquote > p {
 
 input {
 	width: 100%;
+	line-height: var(--lb-00);
 	background-color: var(--color-back-secondary);
 	border: 1px solid var(--color-hover);
 	border-radius: var(--size-000);
-	padding: var(--size-0000) var(--size-00);
+	padding: var(--size-000) var(--size-00);
 	color: var(--color-front);
 }
 

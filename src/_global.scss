@@ -1,9 +1,18 @@
 /*******
 * Generic styling
 *******/
+
+// The visibility is a hack to avoid Flash of Unstyled Content (FOUC)
+// Requires the following in the <head> of your html
+// <style>
+//   html {
+//     visibility: hidden;
+// 	}
+// </style>
+
 html,
 body {
-  visibility: visible !important; /* hack to avoid Flash Of Unstyled Content FOUC */
+  visibility: visible !important;
   min-width: 15rem;
   font-family: var(--sans-serif);
 }
@@ -13,7 +22,7 @@ h1,
 h2,
 h3 {
   width: 100%;
-  line-height: 1.4;
+  line-height: var(--lb-00, 1.3);
 }
 
 h1 {
@@ -73,7 +82,7 @@ pre > code {
   padding: var(--size-1);
   display: block;
   overflow-x: auto;
-  line-height: 1.4;
+  line-height: var(--lb-00);
   tab-size: 2;
   font-size: var(--size-00);
   // fix for increased font-size safari iOS

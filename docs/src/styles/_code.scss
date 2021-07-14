@@ -45,7 +45,7 @@
 :not(pre) > code {
 	color: var(--color-accent);
 	background-color: var(--color-hover);
-	border-radius: var(--size-0000);
+	border-radius: var(--size-000);
 }
 
 pre > code {
@@ -65,5 +65,5 @@ pre[data-lang] > span {
 	text-transform: uppercase;
 	border-bottom-left-radius: var(--size-000);
 	padding: 0 var(--size-00);
-	line-height: 1.7;
+	line-height: var(--lh-000);
 }

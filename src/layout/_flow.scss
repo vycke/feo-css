@@ -1,5 +1,5 @@
-.flow-y > *,
-.flow-x > * {
+.flow-y,
+.flow-x {
   --flow-gap: 0;
 }
 
@@ -31,17 +31,26 @@
   margin-left: var(--flow-gap);
 }
 
-.flow-x > .flow-grow {
-  margin-left: auto;
+.flow-grow {
+  --flow-gap: auto;
 }
 
-.flow-y > .flow-grow {
-  margin-top: auto;
+// Remove gap where possible
+.flow-g-none {
+  --flow-gap: 0;
+}
+
+.flow-self-none {
+  --flow-gap: 0;
+}
+
+.flow-next-none + * {
+  --flow-gap: 0;
 }
 
 @each $name, $space in $feo-sizes {
   // Generate gap classes to be combined with 'flow'
-  .flow-g-#{$name} > * {
+  .flow-g-#{$name} {
     --flow-gap: var(--size-#{$name});
   }
 

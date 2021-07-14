@@ -15,3 +15,5 @@ The available utility classes to alter the settings for `.center` are listed bel
 - `.center-w-<name>`: set the max-width of the layout, including any potential side-padding. Based on `$feo-breakpoints`.
 - `.center-g-<name>`: set the padding on each of the sides. The padding is applied to all direct children of the parent. Based on `$feo-sizes`.
 - `.center-exception`: allows children to flow outside the max-width set in the parent.
+
+> If the utility classes are not flexible enough and you want to adjust the way the layout pattern behaves, adjust the `--center-spacing`, and/or `--center-width` custom properties on the element you are applying this pattern to.

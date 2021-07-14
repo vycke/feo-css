@@ -14,7 +14,7 @@
 </script>
 
 <Page title="{doc.category} > {doc.title}">
-	<div class="panel-r panel-s-00 panel-w-3 panel-g-1">
+	<div class="panel-r panel-f-00 panel-w-3 panel-g-1">
 		<Article {doc} />
 		<Meta {doc} />
 	</div>

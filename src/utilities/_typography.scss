@@ -80,3 +80,15 @@ a.no-decoration,
 a.no-decoration > * {
   text-decoration: none;
 }
+
+.lh-0 {
+  lineheight: var(--lb-0);
+}
+
+.lh-00 {
+  lineheight: var(--lb-00);
+}
+
+.lh-000 {
+  lineheight: var(--lh-000);
+}

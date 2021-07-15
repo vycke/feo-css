@@ -8,7 +8,7 @@ $feo-colors: () !default;
 // Typography system (golden ratio)
 @function size($size) {
   @if $feo-fluid {
-    $reducer: if(0.8 * $size < 1, 1, 0.8);
+    $reducer: if($size <= 1, 1.1, 0.9);
     $min: $reducer * $size;
     @return clamp(#{$min}rem, #{$size} * 2vw, #{$size} * 1.2rem);
   } @else {

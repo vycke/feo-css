@@ -43,7 +43,7 @@ $feo-sizes: (
 
 > The default values for `$feo-sizes` are based on [type-scale](https://type-scale.com/). This allows for harmonic UIs. NOTE:`-000` SHOULD NOT BE USED AS A FONT-SIZE, due to it leading to accessibility issues. This size should solely be used for spacing etc.
 
-When you want fluid sizes (sizes that scale based on the screen-width), you can simply set `$feo-fluid: true`. This will scale the above sizes between the ratios `1` and `1.2` for the small values (smaller or equal to 1), and between `0.8` and `1.2` for the larger values.
+When you want fluid sizes (sizes that scale based on the screen-width), you can simply set `$feo-fluid: true`. This will scale the above sizes between the ratios `1.1` and `1.2` for the small values (smaller or equal to 1), and between `0.9` and `1.2` for the larger values.
 
 > Fluid sizing is opt-in. This means that you have to set `$feo-fluid:true`. In addition, you have to apply the tokens to the elements you want fluidity. If you don't provide this on an element or any of the parent elements, it will fallback to the default of `16px` as the base font-size.
 

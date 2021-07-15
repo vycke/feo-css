@@ -104,7 +104,7 @@
 		z-index: 100;
 	}
 
-	@media (min-width: 50rem) {
+	@media (min-width: 773px) {
 		nav {
 			height: 100vh;
 			overflow-y: auto;
@@ -119,7 +119,7 @@
 		}
 	}
 
-	@media (max-width: 50rem) {
+	@media (max-width: 772px) {
 		nav {
 			border-bottom: 1px solid var(--color-hover);
 		}

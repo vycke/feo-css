@@ -1,23 +1,34 @@
+// Allow fluid sizes
+$feo-fluid: false !default;
+
 // List of colors that is used to generate utility classes, but also generate
 // CSS custom properties
 $feo-colors: () !default;
 
-// Sizing for font-sizes, padding, margin and gap
-// based on: f_i = f_0 * r ^ (i / n)
-// where r = golden ratio, and n = 2 (you can play with f_0 to get
-// different values
+// Typography system (golden ratio)
+@function size($size) {
+  @if $feo-fluid {
+    $reducer: if(0.8 * $size < 1, 1, 0.8);
+    $min: $reducer * $size;
+    @return clamp(#{$min}rem, #{$size} * 2vw, #{$size} * 1.2rem);
+  } @else {
+    @return #{$size}rem;
+  }
+}
 
+// Sizing for font-sizes, padding, margin and gap
+// Based on type-scale.com: scale 1.333
 $feo-sizes: (
-  '000': 0.6181rem,
-  '00': 0.7862rem,
-  '0': 1rem,
-  '1': 1.272rem,
-  '2': 1.618rem,
-  '3': 2.0582rem,
+  '000': size(0.563),
+  '00': size(0.75),
+  '0': size(1),
+  '1': size(1.333),
+  '2': size(1.777),
+  '3': size(2.369),
 ) !default;
 
 // Breakpoint system.
-// Idea: f_i = f_0 * 1.333 ^ (i)
+// Based on type-scale.com: scale 1.333
 $feo-breakpoints: (
   '00': 15rem,
   '0': 20rem,

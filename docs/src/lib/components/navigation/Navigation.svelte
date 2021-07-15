@@ -20,7 +20,10 @@
 	$: path = $page.path === '' ? '/' : $page.path;
 </script>
 
-<nav class="sticky post-0 p-1 flex-col items-start bg-back text-front" data-open={open}>
+<nav
+	class="sticky post-0 p-1 flex-col items-start bg-back text-front hide-scrollbar"
+	data-open={open}
+>
 	<div class="flex-row items-center full-width">
 		<button
 			class="text-front flex-grow text-left flex-row items-center"
@@ -68,7 +71,7 @@
 		</div>
 	</div>
 
-	<ul role="list" class="pt-2 flow-y flow-g-000 full-width bg-back">
+	<ul role="list" class="pt-2 flow-y flow-g-000 full-width bg-back hide-scrollbar">
 		<input bind:value={term} placeholder="Search..." class="mb-2" />
 
 		{#each Object.keys(filteredDocs) as category, i}
@@ -104,7 +107,7 @@
 		z-index: 100;
 	}
 
-	@media (min-width: 773px) {
+	@media (min-width: 47.37rem) {
 		nav {
 			height: 100vh;
 			overflow-y: auto;
@@ -119,7 +122,7 @@
 		}
 	}
 
-	@media (max-width: 772px) {
+	@media (max-width: 47.37rem) {
 		nav {
 			border-bottom: 1px solid var(--color-hover);
 		}

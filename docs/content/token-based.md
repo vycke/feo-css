@@ -61,3 +61,4 @@ Based on the `$feo-breakpoints` settings from your [design tokens](/themes), uti
 - `.w-<name>`
 - `.minw-<name>`
 - `.maxw-<name>` (also applies `width: 100%`)
+- `.w-full` (sets `width: 100%`)

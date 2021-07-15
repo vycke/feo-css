@@ -26,22 +26,24 @@ Used in:
 - [Border color](/token-based#border)
 - [Text color](/token-based#text-color-font-sizes-and-font-family)
 
-## Size
+## Size & fluidity
 
 Based on `$feo-sizes`, CSS custom properties are generated: `--size-<name>`. Below are the default values of _Feo_ which can be overwritten.
 
 ```scss
 $feo-sizes: (
-	'000': 0.6181rem,
-	'00': 0.7862rem,
+	'000': 0.64rem,
+	'00': 0.8rem,
 	'0': 1rem,
-	'1': 1.272rem,
-	'2': 1.618rem,
-	'3': 2.0582rem
+	'1': 1.25rem,
+	'2': 1.563rem,
+	'3': 1.953rem
 );
 ```
 
-> The default values for `$feo-sizes` are based on the golden-ratio formula outlined in [this article](https://spencermortensen.com/articles/typographic-scale/). This allows for harmonic UIs.
+> The default values for `$feo-sizes` are based on [type-scale](https://type-scale.com/). This allows for harmonic UIs.
+
+When you want fluid sizes (sizes that scale based on the screen-width), you can simply set `$feo-fluid: true`. This will scale the above sizes between the ratios `1` and `1.2` for the small values (smaller or equal to 1), and between `0.8` and `1.2` for the larger values.
 
 Used in:
 

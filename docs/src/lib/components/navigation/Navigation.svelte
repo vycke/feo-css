@@ -1,5 +1,4 @@
 <script>
-	import { createEventDispatcher } from 'svelte';
 	import { categories, name, source, version } from '$lib/constants';
 	import { search, group } from '$lib/search';
 	import Icon from '../layout/Icon.svelte';
@@ -7,7 +6,6 @@
 	import ThemeSwitch from './ThemeSwitch.svelte';
 	import { page } from '$app/stores';
 
-	const dispatch = createEventDispatcher();
 	// Properties
 	export let docs;
 	export let open = false;
@@ -20,14 +18,11 @@
 	$: path = $page.path === '' ? '/' : $page.path;
 </script>
 
-<nav
-	class="sticky post-0 p-1 flex-col items-start bg-back text-front hide-scrollbar"
-	data-open={open}
->
-	<div class="flex-row items-center full-width">
+<nav class="px-1 pb-1 flex-col items-start bg-back text-front" data-open={open}>
+	<div class="flex-row items-center full-width bg-back pt-1">
 		<button
 			class="text-front flex-grow text-left flex-row items-center"
-			on:click={() => dispatch('toggle')}
+			on:click={() => (open = !open)}
 		>
 			<Icon name={icon} />
 		</button>
@@ -109,16 +104,12 @@
 
 	@media (min-width: 47.37rem) {
 		nav {
-			height: 100vh;
+			max-height: 100vh;
 			overflow-y: auto;
 		}
 
 		button {
 			display: none;
-		}
-
-		ul {
-			height: 100%;
 		}
 	}
 
@@ -127,25 +118,12 @@
 			border-bottom: 1px solid var(--color-hover);
 		}
 
-		nav[data-open='true'] {
-			height: 100vh;
-		}
-
-		ul {
-			position: absolute;
-			top: 3.5rem;
-			left: 0;
-			max-height: 0;
-			overflow-y: hidden;
-			/* width: 100%; */
+		nav[data-open='false'] ul {
+			display: none;
 		}
 
 		nav[data-open='true'] ul {
-			max-height: calc(100vh - 4.5rem);
-			height: 100%;
-			overflow-y: auto;
-			border-bottom: 1px solid var(--color-hover);
-			padding: var(--size-0);
+			display: block;
 		}
 	}
 </style>

@@ -2,6 +2,12 @@
 * CSS Reset
 *******/
 
+/* Remove all default margin/border styles of the "User-Agent-Stylesheet" */
+*:where(:not(iframe, canvas, img, svg, video):not(svg *)) {
+  margin: 0;
+  border: 0;
+}
+
 /* Box sizing rules */
 *,
 *::before,
@@ -9,56 +15,30 @@
   box-sizing: border-box;
 }
 
-/* Remove default margin */
-body,
-h1,
-h2,
-h3,
-h4,
-p,
-li,
-figure,
-figcaption,
-blockquote,
-dl,
-dd {
-  margin: 0;
-}
-
-/* Set core body defaults */
-
+/* FOUC hack */
 html {
+  visibility: visible !important;
   font-size: 16px;
   font-size: 100%;
 }
 
-body {
-  min-height: 100vh;
-  font-weight: 400;
-  text-rendering: optimizeSpeed;
-  line-height: var(--lb-0, 1.75);
-}
-
+/* Set core root defaults */
 html:focus-within {
   scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.75;
 }
 
 /* Remove list styles on ul, ol elements with a class attribute */
 ul[role='list'],
 ol[role='list'] {
-  padding: 0;
   list-style: none;
-}
-
-/* A elements that don't have a class get default styles */
-a,
-a:visited {
-  color: inherit;
-}
-
-a:not([class]) {
-  text-decoration-skip-ink: auto;
-  text-decoration: underline;
+  padding: 0;
 }
 
 /* Make images easier to work with */
@@ -68,37 +48,26 @@ picture {
   max-width: 100%;
 }
 
-img[width] {
-  width: auto; /* Defer to max-width */
+/* default for tables */
+table {
+  border-collapse: collapse;
 }
 
-img[width][height] {
-  height: auto; /* Preserve aspect ratio */
-}
-
-/* Let SVG scale without boundaries */
-img[src$='.svg'] {
-  width: 100%;
-  max-width: none;
-  height: auto;
+/* Default accessible styling for links */
+a,
+a:visited {
+  color: inherit;
+  color: inherit;
+  touch-action: manipulation;
+  text-decoration-skip-ink: auto;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 1px;
 }
 
 /* buttons */
 button {
-  margin: 0;
-  padding: 0;
   background: transparent;
-  border: none;
   cursor: pointer;
-}
-
-/* Inherit fonts for inputs and buttons */
-input,
-button,
-textarea,
-select {
-  font: inherit;
-  line-height: var(--lb-00, 1.3);
 }
 
 /* Misc. */
@@ -110,6 +79,7 @@ select {
   cursor: not-allowed;
 }
 
+/* Removes outlines for mouse users */
 :focus:not(:focus-visible) {
   outline: none;
 }
@@ -119,6 +89,7 @@ select {
   html:focus-within {
     scroll-behavior: auto !important;
   }
+
   *,
   *::before,
   *::after {

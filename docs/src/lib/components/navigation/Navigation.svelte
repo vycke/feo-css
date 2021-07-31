@@ -67,7 +67,7 @@
 	</div>
 
 	<ul role="list" class="pt-2 flow-y flow-g-000 full-width bg-back hide-scrollbar">
-		<input bind:value={term} placeholder="Search..." class="mb-2" />
+		<input bind:value={term} placeholder="Search..." class="mt-0 mb-2" />
 
 		{#each Object.keys(filteredDocs) as category, i}
 			<li class:mt-2={i > 0} class="flow-x flow-g-00 items-center pb-000">

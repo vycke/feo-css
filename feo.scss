@@ -2,6 +2,8 @@
 @import './src/default-tokens';
 @import './src/reset';
 
+$_transitions: (100, 200, 300, 400, 500);
+
 /*******
 * Generate CSS custom properties
 *******/
@@ -25,6 +27,11 @@
   // font families
   @each $name, $value in $feo-font-families {
     --#{$name}: #{$value};
+  }
+
+  // transitions
+  @each $length in $_transitions {
+    --transition-#{$length}: all #{$length}ms ease;
   }
 
   // Lineheight values

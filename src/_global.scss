@@ -12,7 +12,6 @@
 
 html,
 body {
-  visibility: visible !important;
   min-width: 15rem;
   font-family: var(--sans-serif);
 }
@@ -46,17 +45,6 @@ h3,
 h4 {
   overflow-wrap: break-word;
   hyphens: auto;
-}
-
-// LINKS
-a,
-a > *,
-a:link,
-a:visited,
-a:active {
-  touch-action: manipulation;
-  text-decoration-line: underline;
-  text-decoration-thickness: 2px;
 }
 
 // CODE

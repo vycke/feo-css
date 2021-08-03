@@ -13,7 +13,7 @@
   grid-template-rows: auto 1fr auto;
   grid-template-columns: auto 1fr auto;
   width: 100vw;
-  height: 100vh;
+  height: calc(100vh - env(safe-area-inset-bottom));
   overflow: hidden;
 }
 

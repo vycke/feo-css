@@ -104,7 +104,7 @@
 
 	@media (min-width: 47.37rem) {
 		nav {
-			max-height: 100vh;
+			max-height: calc(100vh - env(safe-area-inset-bottom));
 			overflow-y: auto;
 		}
 

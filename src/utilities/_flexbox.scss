@@ -109,3 +109,10 @@
 .self-stretch {
   align-self: stretch;
 }
+
+// New Gap property
+@each $name, $space in $feo-sizes {
+  .flex-gap-#{$name} {
+    gap: var(--size-#{$name});
+  }
+}

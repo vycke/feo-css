@@ -17,9 +17,9 @@
 
 /* FOUC hack */
 html {
-  visibility: visible !important;
   font-size: 16px;
   font-size: 100%;
+  visibility: visible !important;
 }
 
 /* Set core root defaults */
@@ -37,8 +37,8 @@ body {
 /* Remove list styles on ul, ol elements with a class attribute */
 ul[role='list'],
 ol[role='list'] {
-  list-style: none;
   padding: 0;
+  list-style: none;
 }
 
 /* Make images easier to work with */
@@ -56,7 +56,6 @@ table {
 /* Default accessible styling for links */
 a,
 a:visited {
-  color: inherit;
   color: inherit;
   touch-action: manipulation;
   text-decoration-skip-ink: auto;
@@ -93,9 +92,9 @@ button {
   *,
   *::before,
   *::after {
+    transition-duration: 0.01ms !important;
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
 }

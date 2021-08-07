@@ -5,8 +5,8 @@
   }
 
   .maxw-#{$name} {
-    max-width: var(--bp-#{$name});
     width: 100%;
+    max-width: var(--bp-#{$name});
   }
 
   .w-#{$name} {

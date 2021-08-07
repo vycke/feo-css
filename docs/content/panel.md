@@ -1,7 +1,7 @@
 ---
 title: Panel
 category: Layout
-source: https://github.com/crinklesio/feo-css/blob/main/src/layout/_pancake.scss
+source: https://github.com/crinklesio/feo-css/blob/main/src/layout/_panel.scss
 ---
 
 `.panel-<l/r>` allow you to create a responsive two-column layout. One column has a fixed width, while the other column takes all the available space. The `l` or `r` indication determines which column will be fixed, the _left_ or _right_ column, respectively. Whenever the width of the parent container falls below a certain threshold, the layout moves to two rows, instead of two columns.

@@ -1,13 +1,16 @@
 // Class that creates a tile-based system that fills the space based on gap-size
 // and min-width for each individual tile
+// NOTE: tiles, just like in real-life, all have the same size.
 .tiles {
   --tiles-width: 0;
   --tiles-gap: 0;
 
   display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(min(var(--tiles-width), 100%), 1fr)
+  );
   gap: var(--tiles-gap);
-  grid-template-columns: repeat(auto-fit, minmax(var(--tiles-width), 1fr));
-  width: 100%;
 }
 
 // Generate classes to set the tile gap

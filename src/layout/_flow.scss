@@ -1,34 +1,17 @@
-.flow-y,
-.flow-x {
+.flow {
   --flow-gap: 0;
-}
 
-.flow-x {
-  display: flex;
-  flex-direction: row;
-}
-
-.flow-y {
   display: flex;
   flex-direction: column;
 }
 
-.flow-y > * {
+.flow > * {
   margin-block-start: 0;
   margin-block-end: 0;
 }
 
-.flow-y > * + * {
+.flow > * + * {
   margin-top: var(--flow-gap);
-}
-
-.flow-x > * {
-  margin-inline-end: 0;
-  margin-inline-start: 0;
-}
-
-.flow-x > * + * {
-  margin-left: var(--flow-gap);
 }
 
 .flow-grow {

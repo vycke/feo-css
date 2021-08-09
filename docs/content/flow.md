@@ -4,7 +4,7 @@ category: Layout
 source: https://github.com/crinklesio/feo-css/blob/main/src/layout/_flow.scss
 ---
 
-The `.flow-<x/y>` applies horizontal or vertical rhythm for elements. Based on the [Owl selector](https://crinkles.io/writing/an-ode-to-the-css-owl-selector), spacing between the elements is arranged.
+The `.flow` applies vertical rhythm for elements. Based on the [Owl selector](https://crinkles.io/writing/an-ode-to-the-css-owl-selector), spacing between the elements is arranged.
 
 ![](/img/flow.png)
 

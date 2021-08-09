@@ -35,9 +35,9 @@ $_transitions: (100, 200, 300, 400, 500);
   }
 
   // Lineheight values
-  --lh-0: 1.75;
-  --lh-00: 1.3;
-  --lh-000: 1;
+  --lh-bp2: 1.75;
+  --lh-bp1: 1.3;
+  --lh-base: 1;
 }
 
 // themes for [data-theme] attribute

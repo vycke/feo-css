@@ -66,11 +66,11 @@
 		</div>
 	</div>
 
-	<ul role="list" class="pt-2 flow-y flow-g-000 full-width bg-back hide-scrollbar">
+	<ul role="list" class="pt-2 flow flow-g-000 full-width bg-back hide-scrollbar">
 		<input bind:value={term} placeholder="Search..." class="mt-0 mb-2" />
 
 		{#each Object.keys(filteredDocs) as category, i}
-			<li class:mt-2={i > 0} class="flow-x flow-g-00 items-center pb-000">
+			<li class:mt-2={i > 0} class="cluster cluster-g-00 items-center pb-000">
 				<Icon name={categories[category] || 'circle'} class="text-accent" attrs={{ height: 20 }} />
 				<span class="text-00 monospace uppercase text-accent">{category}</span>
 			</li>

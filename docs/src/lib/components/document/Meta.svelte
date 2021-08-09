@@ -8,7 +8,7 @@
 
 <aside class="sticky post-0 p-1 flex-col mb-1 self-start">
 	{#if doc.headers.length}
-		<div class="mb-3 flow-y flow-g-00">
+		<div class="mb-3 flow flow-g-00">
 			<span class="monospace text-00 uppercase text-accent">Outline:</span>
 			{#each doc.headers as header}
 				<a class="no-decoration header hover:text-accent" href="#{header.id}">{header.label}</a>

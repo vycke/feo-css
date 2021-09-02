@@ -19,12 +19,12 @@ $feo-colors: () !default;
 // Sizing for font-sizes, padding, margin and gap
 // Based on type-scale.com: scale 1.333
 $feo-sizes: (
-  'ob2': size(0.563),
-  'ob1': size(0.75),
+  'ub2': size(0.563),
+  'ub1': size(0.75),
   'base': size(1),
-  'ub1': size(1.333),
-  'ub2': size(1.777),
-  'ub3': size(2.369),
+  'ob1': size(1.333),
+  'ob2': size(1.777),
+  'ob3': size(2.369),
 ) !default;
 
 // Breakpoint system.

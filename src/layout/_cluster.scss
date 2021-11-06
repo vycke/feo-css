@@ -27,6 +27,6 @@
 // Generate classes to set the cluster min-sizes
 @each $name, $size in $feo-breakpoints {
   .cluster-w-#{$name} {
-    --cluster-width: var(--bp-#{$name});
+    --cluster-width: var(--break-#{$name});
   }
 }

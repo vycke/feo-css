@@ -37,10 +37,10 @@
 // Generate classes to set the min-width of each half of .panel-lr
 @each $name, $size in $feo-breakpoints {
   .panel-f-#{$name} {
-    --panel-fixed: var(--bp-#{$name});
+    --panel-fixed: var(--break-#{$name});
   }
 
   .panel-w-#{$name} {
-    --panel-width: var(--bp-#{$name});
+    --panel-width: var(--break-#{$name});
   }
 }

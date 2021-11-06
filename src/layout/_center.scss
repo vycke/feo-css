@@ -26,6 +26,6 @@
 // Generate classes to set the width of the .center
 @each $name, $size in $feo-breakpoints {
   .center-w-#{$name} > * {
-    --center-width: var(--bp-#{$name});
+    --center-width: var(--break-#{$name});
   }
 }

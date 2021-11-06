@@ -1,19 +1,23 @@
 // Generate utility classes around font-size
 @each $name, $pb in $feo-breakpoints {
   .minw-#{$name} {
-    min-width: min(100vw, var(--bp-#{$name}));
+    min-width: min(100vw, var(--break-#{$name}));
   }
 
   .maxw-#{$name} {
     width: 100%;
-    max-width: var(--bp-#{$name});
+    max-width: var(--break-#{$name});
   }
 
   .w-#{$name} {
-    width: var(--bp-#{$name});
+    width: var(--break-#{$name});
   }
 }
 
 .w-full {
   width: 100%;
+}
+
+.h-full {
+  height: 100vh;
 }

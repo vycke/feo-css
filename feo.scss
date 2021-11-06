@@ -19,9 +19,10 @@ $_transitions: (100, 200, 300, 400, 500);
     --size-#{$name}: #{$size};
   }
 
+  // TODO: pb => break
   // create CSS variables around breakpoints
   @each $name, $bp in $feo-breakpoints {
-    --bp-#{$name}: #{$bp};
+    --break-#{$name}: #{$bp};
   }
 
   // font families
@@ -34,6 +35,7 @@ $_transitions: (100, 200, 300, 400, 500);
     --transition-#{$length}: all #{$length}ms ease;
   }
 
+  // TODO: volledige naam
   // Lineheight values
   --lh-0: 1.75;
   --lh-00: 1.3;

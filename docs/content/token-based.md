@@ -17,9 +17,9 @@ Based on the `$feo-colors` and `$feo-themes` settings from your [design tokens](
 
 Based on the `$feo-colors` and `$feo-themes` settings from your [design tokens](/themes), utility classes for borders are generated. These by default provide a `1px solid` border in the corresponding color. Utility classes that trigger when a pseudo-class is triggered, are also facilitated. The following classes are available:
 
-- `.border-<name>`
-- `.hover:border-<name>`
-- `.focus:border-<name>`
+- `.border-<t/r/b/l>-<name>`
+- `.hover:border-<t/r/b/l>-<name>`
+- `.focus:border-<t/r/b/l>-<name>`
 
 In addition, several `.border-w-<name>` are available to give borders a different width. The available sizes are 1, 2, 3, 4 and 5, which translate to `px`.
 

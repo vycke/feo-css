@@ -7,6 +7,38 @@
     border-style: solid;
     border-width: 1px;
   }
+
+  .border-t-#{$name},
+  .hover\:border-t-#{$name}:hover,
+  .focus\:border-t-#{$name}:focus {
+    border-top-color: var(--color-#{$name});
+    border-top-style: solid;
+    border-top-width: 1px;
+  }
+
+  .border-r-#{$name},
+  .hover\:border-r-#{$name}:hover,
+  .focus\:border-r-#{$name}:focus {
+    border-right-color: var(--color-#{$name});
+    border-right-style: solid;
+    border-right-width: 1px;
+  }
+
+  .border-b-#{$name},
+  .hover\:border-b-#{$name}:hover,
+  .focus\:border-b-#{$name}:focus {
+    border-bottom-color: var(--color-#{$name});
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+  }
+
+  .border-l-#{$name},
+  .hover\:border-l-#{$name}:hover,
+  .focus\:border-l-#{$name}:focus {
+    border-left-color: var(--color-#{$name});
+    border-left-style: solid;
+    border-left-width: 1px;
+  }
 }
 
 // themes for [data-theme] attribute
@@ -19,6 +51,38 @@
       border-color: var(--color-#{$name});
       border-style: solid;
       border-width: 1px;
+    }
+
+    .border-t-#{$name},
+    .hover\:border-t-#{$name}:hover,
+    .focus\:border-t-#{$name}:focus {
+      border-top-color: var(--color-#{$name});
+      border-top-style: solid;
+      border-top-width: 1px;
+    }
+
+    .border-r-#{$name},
+    .hover\:border-r-#{$name}:hover,
+    .focus\:border-r-#{$name}:focus {
+      border-right-color: var(--color-#{$name});
+      border-right-style: solid;
+      border-right-width: 1px;
+    }
+
+    .border-b-#{$name},
+    .hover\:border-b-#{$name}:hover,
+    .focus\:border-b-#{$name}:focus {
+      border-bottom-color: var(--color-#{$name});
+      border-bottom-style: solid;
+      border-bottom-width: 1px;
+    }
+
+    .border-l-#{$name},
+    .hover\:border-l-#{$name}:hover,
+    .focus\:border-l-#{$name}:focus {
+      border-left-color: var(--color-#{$name});
+      border-left-style: solid;
+      border-left-width: 1px;
     }
   }
 }

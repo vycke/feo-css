@@ -1,5 +1,5 @@
 @each $length in $_transitions {
   .transition-#{$length} {
-    transition: var(--transition#{$length});
+    transition: var(--transition-#{$length});
   }
 }

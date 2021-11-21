@@ -1,7 +1,7 @@
 ---
 title: Cluster
 category: Layout
-source: https://github.com/crinklesio/feo-css/blob/main/src/layout/_cluster.scss
+source: https://github.com/crinklesio/bace-css/blob/main/src/layout/_cluster.scss
 ---
 
 The `.cluster` class allows for a responsive cluster system of separate elements. It is closely related to the [flow pattern](/flow). However, the difference here is that `.cluster` assumes the child elements will span multiple rows.
@@ -16,7 +16,7 @@ The `.cluster-stretch` combines the `.cluster` with the ideas of `.tiles`. Based
 
 The available utility classes to alter the settings for `.tiles` are listed below.
 
-- `.cluster-g-<name>`: set the `gap` property, which defines the gap both vertically and horizontally between items in the cluster system. Based on `$feo-sizes`.
-- `.cluster-w-<name>`: set the `min-width` of an individual item in the cluster system, based on `$feo-breakpoints`.
+- `.cluster-g-<name>`: set the `gap` property, which defines the gap both vertically and horizontally between items in the cluster system. Based on `$bace-sizes`.
+- `.cluster-w-<name>`: set the `min-width` of an individual item in the cluster system, based on `$bace-breakpoints`.
 
 > If the utility classes are not flexible enough and you want to adjust the way the layout pattern behaves, adjust the `--cluster-gap`, and/or `--cluster-width` custom properties on the element you are applying this pattern to.

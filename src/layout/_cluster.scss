@@ -18,14 +18,14 @@
 }
 
 // Generate classes to set the cluster gap
-@each $name, $space in $feo-sizes {
+@each $name, $space in $bace-sizes {
   .cluster-g-#{$name} {
     --cluster-gap: var(--size-#{$name});
   }
 }
 
 // Generate classes to set the cluster min-sizes
-@each $name, $size in $feo-breakpoints {
+@each $name, $size in $bace-breakpoints {
   .cluster-w-#{$name} {
     --cluster-width: var(--break-#{$name});
   }

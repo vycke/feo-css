@@ -111,7 +111,7 @@
 }
 
 // New Gap property
-@each $name, $space in $feo-sizes {
+@each $name, $space in $bace-sizes {
   .flex-g-#{$name} {
     gap: var(--size-#{$name});
   }

@@ -9,24 +9,24 @@ $_transitions: (100, 200, 300, 400, 500);
 *******/
 :root {
   // create CSS variables around colors
-  @each $name, $color in $feo-colors {
+  @each $name, $color in $bace-colors {
     --color-#{$name}: #{$color};
   }
 
   // create CSS variables around spacing, font-sizes etc.
   --size-none: 0;
-  @each $name, $size in $feo-sizes {
+  @each $name, $size in $bace-sizes {
     --size-#{$name}: #{$size};
   }
 
   // TODO: pb => break
   // create CSS variables around breakpoints
-  @each $name, $bp in $feo-breakpoints {
+  @each $name, $bp in $bace-breakpoints {
     --break-#{$name}: #{$bp};
   }
 
   // font families
-  @each $name, $value in $feo-font-families {
+  @each $name, $value in $bace-font-families {
     --#{$name}: #{$value};
   }
 
@@ -44,7 +44,7 @@ $_transitions: (100, 200, 300, 400, 500);
 
 // themes for [data-theme] attribute
 $_: (light, dark);
-@each $tName, $theme in $feo-themes {
+@each $tName, $theme in $bace-themes {
   // if prefered color-scheme, use this
   @if (list.index($_, $tName)) {
     @media (prefers-color-scheme: #{$tName}) {

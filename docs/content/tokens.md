@@ -15,7 +15,7 @@ Every array has a baseline which flagged as `0`. every stage bigger adds `+1` to
 Generates CSS custom properties: `--color-<name>`.
 
 ```scss
-$feo-colors: (
+$bace-colors: (
 	'black': #000
 );
 ```
@@ -28,10 +28,10 @@ Used in:
 
 ## Size & fluidity
 
-Based on `$feo-sizes`, CSS custom properties are generated: `--size-<name>`. Below are the default values of _Feo_ which can be overwritten.
+Based on `$bace-sizes`, CSS custom properties are generated: `--size-<name>`. Below are the default values of _Feo_ which can be overwritten.
 
 ```scss
-$feo-sizes: (
+$bace-sizes: (
 	'000': 0.64rem,
 	'00': 0.8rem,
 	'0': 1rem,
@@ -41,11 +41,11 @@ $feo-sizes: (
 );
 ```
 
-> The default values for `$feo-sizes` are based on [type-scale](https://type-scale.com/). This allows for harmonic UIs. NOTE:`-000` SHOULD NOT BE USED AS A FONT-SIZE, due to it leading to accessibility issues. This size should solely be used for spacing etc.
+> The default values for `$bace-sizes` are based on [type-scale](https://type-scale.com/). This allows for harmonic UIs. NOTE:`-000` SHOULD NOT BE USED AS A FONT-SIZE, due to it leading to accessibility issues. This size should solely be used for spacing etc.
 
-When you want fluid sizes (sizes that scale based on the screen-width), you can simply set `$feo-fluid: true`. This will scale the above sizes between the ratios `1.1` and `1.2` for the small values (smaller or equal to 1), and between `0.9` and `1.2` for the larger values.
+When you want fluid sizes (sizes that scale based on the screen-width), you can simply set `$bace-fluid: true`. This will scale the above sizes between the ratios `1.1` and `1.2` for the small values (smaller or equal to 1), and between `0.9` and `1.2` for the larger values.
 
-> Fluid sizing is opt-in. This means that you have to set `$feo-fluid:true`. In addition, you have to apply the tokens to the elements you want fluidity. If you don't provide this on an element or any of the parent elements, it will fallback to the default of `16px` as the base font-size.
+> Fluid sizing is opt-in. This means that you have to set `$bace-fluid:true`. In addition, you have to apply the tokens to the elements you want fluidity. If you don't provide this on an element or any of the parent elements, it will fallback to the default of `16px` as the base font-size.
 
 Used in:
 
@@ -62,7 +62,7 @@ Used in:
 Generates CSS custom properties: `--<name>`. Below snippit shows the default values, which can be overwritten.
 
 ```scss
-$feo-font-families: (
+$bace-font-families: (
 	monospace: "Inconsolata, Menlo, Monaco, Consolas, 'Courier New', monospace",
 	serif: 'Georgia, serif',
 	sans-serif:
@@ -81,7 +81,7 @@ Used in:
 Generates CSS custom properties: `--break-<name>`. Below are the default values of _Feo_ which can be overwritten.
 
 ```scss
-$feo-breakpoints: (
+$bace-breakpoints: (
 	'00': 15rem,
 	'0': 20rem,
 	'1': 26.66rem,
@@ -92,7 +92,7 @@ $feo-breakpoints: (
 );
 ```
 
-> The values of `$feo-breakpoints` are based on the formula: `f_i = f_0 * (1.333 ^ i)`
+> The values of `$bace-breakpoints` are based on the formula: `f_i = f_0 * (1.333 ^ i)`
 
 Used in:
 

@@ -1,7 +1,7 @@
 ---
 title: Flexbox
 category: Utilities
-source: https://github.com/crinklesio/feo-css/blob/main/src/utilities/_flexbox.scss
+source: https://github.com/crinklesio/bace-css/blob/main/src/utilities/_flexbox.scss
 ---
 
 ## Direction
@@ -45,4 +45,4 @@ All these classes follow the same pattern: `.<type>-<value>`. Note that not all 
 
 ## Gap
 
-The new gap property can be accessed by using the `flex-g-<name>`, where name is based on `$feo-sizes`.
+The new gap property can be accessed by using the `flex-g-<name>`, where name is based on `$bace-sizes`.

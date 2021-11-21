@@ -14,14 +14,14 @@
 }
 
 // Generate classes to set the tile gap
-@each $name, $space in $feo-sizes {
+@each $name, $space in $bace-sizes {
   .tiles-g-#{$name} {
     --tiles-gap: var(--size-#{$name});
   }
 }
 
 // Generate classes to set the tile min-sizes
-@each $name, $size in $feo-breakpoints {
+@each $name, $size in $bace-breakpoints {
   .tiles-w-#{$name} {
     --tiles-width: var(--break-#{$name});
   }

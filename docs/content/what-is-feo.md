@@ -13,7 +13,7 @@ Compared to other frameworks, _Feo_ distinguishes itself by focusing on a few co
 - **Custom properties**: all configured design tokens are converted into CSS custom properties that can be changed in runtime. In addition, all utility classes point towards these custom properties, instead of using the SCSS variables during compile time.
 - **Layout driven**: a lot of the issues we face are all about layout. And CSS is good in layout. _Feo_ offers several standardized layout solutions that can be altered using additional utility classes for these layouts. Many of the layouts are inspired by [Every Layout](https://every-layout.dev/).
 - **Browser defaults**: browsers are implementing more and more default features. These are by default more accessible and usable for users, compared to solutions created by ourselves.
-- **Have a good starting point**: _Feo_ is opinionated. It applies a minimal [CSS reset](https://github.com/crinklesio/feo-css/blob/main/src/_reset.scss), some default [global styles](https://github.com/crinklesio/feo-css/blob/main/src/_global.scss) and sets some default [design tokens](/tokens). The default tokens can be overwritten, the rest not.
+- **Have a good starting point**: _Feo_ is opinionated. It applies a minimal [CSS reset](https://github.com/crinklesio/bace-css/blob/main/src/_reset.scss), some default [global styles](https://github.com/crinklesio/bace-css/blob/main/src/_global.scss) and sets some default [design tokens](/tokens). The default tokens can be overwritten, the rest not.
 
 ## What about CSS blocks/components/BEM?
 
@@ -35,12 +35,12 @@ _Feo_ transforms all configured design tokens from SCSS variables to CSS custom 
 
 ```scss
 // tokens.css
-$feo-colors: (
+$bace-colors: (
 	'black': #000,
 	'white': #fff
 );
 
-$feo-sizes: (
+$bace-sizes: (
 	'default': 1rem
 );
 ```

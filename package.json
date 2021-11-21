@@ -1,16 +1,16 @@
 {
   "dependencies": {},
   "scripts": {
-    "build": "npx sass feo.scss tmp/index.css",
-    "build:node": "npx node-sass feo.scss tmp/index.css",
+    "build": "npx sass bace.scss tmp/index.css",
+    "build:node": "npx node-sass bace.scss tmp/index.css",
     "lint": "stylelint '**/*.(s)css'",
     "lint:fix": "yarn lint --fix"
   },
-  "name": "@crinkles/feo",
-  "version": "2.2.4",
+  "name": "@crinkles/bace",
+  "version": "1.0.0",
   "main": "feo.scss",
   "description": "A tiny CSS framework",
-  "repository": "https://github.com/crinklesio/feo-css.git",
+  "repository": "https://github.com/crinklesio/bace-css.git",
   "keywords": [
     "cube css",
     "scss",
@@ -19,9 +19,9 @@
   "author": "Kevin Pennekamp <github@crinkles.io>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/crinklesio/feo-css/issues"
+    "url": "https://github.com/crinklesio/bace-css/issues"
   },
-  "homepage": "https://github.com/crinklesio/feo-css#readme",
+  "homepage": "https://github.com/crinklesio/bace-css#readme",
   "devDependencies": {
     "node-sass": "^6.0.0",
     "prettier": "^2.2.1",

@@ -34,8 +34,8 @@ $themes: (
 
 @use '../../../feo.scss' with
 	(
-		$feo-colors: $colors,
-		$feo-fluid: false,
-		// $feo-breakpoints: $breakpoints,
-		$feo-themes: $themes
+		$bace-colors: $colors,
+		$bace-fluid: false,
+		// $bace-breakpoints: $breakpoints,
+		$bace-themes: $themes
 	);

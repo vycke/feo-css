@@ -17,14 +17,14 @@
 }
 
 // Generate classes to set the padding of the .center
-@each $name, $space in $feo-sizes {
+@each $name, $space in $bace-sizes {
   .center-g-#{$name} > * {
     --center-spacing: var(--size-#{$name});
   }
 }
 
 // Generate classes to set the width of the .center
-@each $name, $size in $feo-breakpoints {
+@each $name, $size in $bace-breakpoints {
   .center-w-#{$name} > * {
     --center-width: var(--break-#{$name});
   }

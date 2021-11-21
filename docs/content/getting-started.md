@@ -18,7 +18,7 @@ yarn add @crinkles/feo
 Depending on the type of project you are running, _Feo_ can be added in several different ways to your project. In all cases, the _Feo_ file needs to be imported into your own `.scss` file. The first method is to use the `@import` function of SCSS.
 
 ```scss
-$feo-colors: (...);
+$bace-colors: (...);
 
 // Import via relative paths
 @import '../../path/to/node_modules/@crinkles/feo/feo.scss';
@@ -36,7 +36,7 @@ $colors: (...);
 @use '~@crinkles/feo/feo.scss';
 
 @use '../../path/to/node_modules/@crinkles/feo/feo.scss' with (
-  $feo-colors: $colors
+  $bace-colors: $colors
 );
 ```
 

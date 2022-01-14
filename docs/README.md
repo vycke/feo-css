@@ -1,3 +1,3 @@
-# Feo CSS documentation
+# Bace CSS documentation
 
-Site built width [DocKit](https://github.com/crinklesio/dockit)
+Site built width [DocKit](https://github.com/kevtiq/dockit)

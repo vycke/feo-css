@@ -11,31 +11,8 @@ $colors: (
 	'blue': #5765fc
 );
 
-// $breakpoints: ();
-
-$themes: (
-	'light': (
-		'accent': 'blue',
-		'back': 'gray-200',
-		'back-secondary': 'gray-100',
-		'code': 'gray-500',
-		'front': 'gray-600',
-		'hover': 'gray-300'
-	),
-	'dark': (
-		'accent': 'red',
-		'back': 'gray-600',
-		'back-secondary': 'gray-600',
-		'code': 'gray-500',
-		'front': 'gray-100',
-		'hover': 'gray-500'
-	)
-);
-
-@use '../../../feo.scss' with
+@use '../../../bace.scss' with
 	(
 		$bace-colors: $colors,
 		$bace-fluid: false,
-		// $bace-breakpoints: $breakpoints,
-		$bace-themes: $themes
 	);

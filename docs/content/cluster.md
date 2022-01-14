@@ -1,7 +1,7 @@
 ---
 title: Cluster
 category: Layout
-source: https://github.com/crinklesio/bace-css/blob/main/src/layout/_cluster.scss
+source: https://github.com/kevtiq/bace-css/blob/main/src/layout/_cluster.scss
 ---
 
 The `.cluster` class allows for a responsive cluster system of separate elements. It is closely related to the [flow pattern](/flow). However, the difference here is that `.cluster` assumes the child elements will span multiple rows.

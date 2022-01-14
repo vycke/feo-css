@@ -8,9 +8,9 @@
   },
   "name": "@crinkles/bace",
   "version": "1.0.0",
-  "main": "feo.scss",
+  "main": "bace.scss",
   "description": "A tiny CSS framework",
-  "repository": "https://github.com/crinklesio/bace-css.git",
+  "repository": "https://github.com/kevtiq/bace-css.git",
   "keywords": [
     "cube css",
     "scss",
@@ -19,9 +19,9 @@
   "author": "Kevin Pennekamp <github@crinkles.io>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/crinklesio/bace-css/issues"
+    "url": "https://github.com/kevtiq/bace-css/issues"
   },
-  "homepage": "https://github.com/crinklesio/bace-css#readme",
+  "homepage": "https://github.com/kevtiq/bace-css#readme",
   "devDependencies": {
     "node-sass": "^6.0.0",
     "prettier": "^2.2.1",

@@ -112,7 +112,7 @@
 
 // New Gap property
 @each $name, $space in $bace-sizes {
-  .flex-g-#{$name} {
+  .gap-#{$name} {
     gap: var(--size-#{$name});
   }
 }

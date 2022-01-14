@@ -1,7 +1,7 @@
 ---
 title: Holy grail
 category: Layout
-source: https://github.com/crinklesio/bace-css/blob/main/src/layout/_grail.scss
+source: https://github.com/kevtiq/bace-css/blob/main/src/layout/_grail.scss
 ---
 
 The holy grail of all (old-school) websites and applications: a sticky header and footer, sidebars on the side and a body that fills all the available space, as displayed below.

@@ -8,19 +8,6 @@
   }
 }
 
-// themes for [data-theme] attribute
-@if length($bace-themes) > 0 {
-  $theme: nth(nth($bace-themes, 1), 2);
-  @each $name, $color in $theme {
-    .text-#{$name},
-    .hover\:text-#{$name}:hover,
-    .focus\:text-#{$name}:focus,
-    .active\:text-#{$name}:active {
-      color: var(--color-#{$name});
-    }
-  }
-}
-
 // Generate utility classes around font-size
 @each $name, $size in $bace-sizes {
   .text-#{$name} {
@@ -81,14 +68,9 @@ a.no-decoration > * {
   text-decoration: none;
 }
 
-.lh-0 {
-  line-height: var(--lb-0);
-}
-
-.lh-00 {
-  line-height: var(--lb-00);
-}
-
-.lh-000 {
-  line-height: var(--lh-000);
+// line-height classes
+@each $name, $size in $bace-sizes {
+  .bg-#{$name} {
+    line-height: var(--lh-#{$name});
+  }
 }

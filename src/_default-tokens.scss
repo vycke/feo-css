@@ -1,3 +1,5 @@
+@use "sass:map";
+
 // Allow fluid sizes
 $bace-fluid: false !default;
 
@@ -5,39 +7,24 @@ $bace-fluid: false !default;
 // CSS custom properties
 $bace-colors: () !default;
 
-// Typography system (golden ratio)
-@function size($size) {
-  @if $bace-fluid {
-    $reducer: if($size <= 1, 1.1, 0.9);
-    $min: $reducer * $size;
-    @return clamp(#{$min}rem, #{$size} * 2vw, #{$size} * 1.2rem);
-  } @else {
-    @return #{$size}rem;
-  }
-}
-
 // Sizing for font-sizes, padding, margin and gap
 // Based on type-scale.com: scale 1.333
 $bace-sizes: (
-  '000': size(0.563),
-  '00': size(0.75),
-  '0': size(1),
-  '1': size(1.333),
-  '2': size(1.777),
-  '3': size(2.369),
+  '000': 0.56,
+  '00': 0.75,
+  '0': 1,
+  '1': 0.33,
+  '2': 0.78,
+  '3': 2.37,
+  '4': 3.16,
+  '5': 4.21,
 ) !default;
 
-// Breakpoint system.
-// Based on type-scale.com: scale 1.333
-$bace-breakpoints: (
-  '00': 15rem,
-  '0': 20rem,
-  '1': 26.66rem,
-  '2': 35.54rem,
-  '3': 47.37rem,
-  '4': 63.15rem,
-  '5': 84.17rem,
-) !default;
+// Breakpoint system. Default uses 20rem times $bace-sizes
+$bace-breakpoints: () !default;
+@each $name, $size in $bace-sizes {
+  $bace-breakpoints: map.set($bace-breakpoints, $name, $size * 20rem);
+}
 
 // Font families
 $bace-font-families: (
@@ -46,5 +33,3 @@ $bace-font-families: (
   sans-serif:
     "system-ui, -apple-system, blinkmacsystemfont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif",
 ) !default;
-// themes
-$bace-themes: () !default;

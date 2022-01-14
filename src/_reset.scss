@@ -2,17 +2,22 @@
 * CSS Reset
 *******/
 
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 /* Remove all default margin/border styles of the "User-Agent-Stylesheet" */
 *:where(:not(iframe, canvas, img, svg, video):not(svg *)) {
   margin: 0;
   border: 0;
 }
 
-/* Box sizing rules */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
+html,
+body {
+  height: 100%;
 }
 
 /* FOUC hack */
@@ -32,6 +37,7 @@ body {
   min-height: 100vh;
   text-rendering: optimizeSpeed;
   line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
 }
 
 /* Remove list styles on ul, ol elements with a class attribute */
@@ -43,9 +49,20 @@ ol[role='list'] {
 
 /* Make images easier to work with */
 img,
-picture {
+picture,
+video,
+canvas,
+svg {
   display: block;
   max-width: 100%;
+}
+
+/* default input style */
+input,
+button,
+textarea,
+select {
+  font: inherit;
 }
 
 /* default for tables */

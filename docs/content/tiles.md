@@ -1,7 +1,7 @@
 ---
 title: Tiles
 category: Layout
-source: https://github.com/crinklesio/bace-css/blob/main/src/layout/_tiles.scss
+source: https://github.com/kevtiq/bace-css/blob/main/src/layout/_tiles.scss
 ---
 
 The `.tiles` class allows for a responsive [tile system](https://crinkles.io/writing/css-layout-patterns#responsive-multi-column-grid-system). Based on the settings, the layout determines itself how many tiles fit horizontally, and scales the tiles in the available space.

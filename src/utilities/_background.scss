@@ -8,17 +8,3 @@
     background-color: var(--color-#{$name});
   }
 }
-
-// themes for [data-theme] attribute
-@if length($bace-themes) > 0 {
-  $theme: nth(nth($bace-themes, 1), 2);
-  @each $name, $color in $theme {
-    .bg-#{$name},
-    .hover\:bg-#{$name}:hover,
-    .focus\:bg-#{$name}:focus,
-    .active\:bg-#{$name}:active,
-    .checked\:bg-#{$name}:checked {
-      background-color: var(--color-#{$name});
-    }
-  }
-}

@@ -1,7 +1,7 @@
 ---
 title: Center
 category: Layout
-source: https://github.com/crinklesio/bace-css/blob/main/src/layout/_center.scss
+source: https://github.com/kevtiq/bace-css/blob/main/src/layout/_center.scss
 ---
 
 The `.center` class allows you to center elements on the screen. It is responsive by nature, as it allows you to set a max-width and side-paddings through utilities. It sets itself apart by allowing specific elements to break from the set max-width and (for instance) take the entire width of the page (e.g. hero images).

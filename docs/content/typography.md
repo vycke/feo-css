@@ -1,10 +1,10 @@
 ---
 title: Typography
 category: Utilities
-source: https://github.com/crinklesio/bace-css/blob/main/src/utilities/_typography.scss
+source: https://github.com/kevtiq/bace-css/blob/main/src/utilities/_typography.scss
 ---
 
-Next to the token-based font-sizes and text colors from the [token-based](/token-based) utilities, there are a few other typography utility classes present in _Feo_.
+Next to the token-based font-sizes and text colors from the [token-based](/token-based) utilities, there are a few other typography utility classes present in _Bace_.
 
 ## Text alignment
 

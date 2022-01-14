@@ -1,10 +1,10 @@
 ---
 title: Position
 category: Utilities
-source: https://github.com/crinklesio/bace-css/blob/main/src/utilities/_position.scss
+source: https://github.com/kevtiq/bace-css/blob/main/src/utilities/_position.scss
 ---
 
-_Feo_ facilitates a few utility classes around the position properties.
+_Bace_ facilitates a few utility classes around the position properties.
 
 - `.fixed`: sets `position: fixed;`.
 - `.absolute`: sets `position: absolute;`.

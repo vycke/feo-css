@@ -110,9 +110,15 @@
   align-self: stretch;
 }
 
-// New Gap property
-@each $name, $space in $bace-sizes {
-  .gap-#{$name} {
-    gap: var(--size-#{$name});
-  }
+// place items
+.place-center {
+  place-items: center;
+}
+
+.place-start {
+  place-items: flex-start;
+}
+
+.place-end {
+  place-items: flex-end;
 }

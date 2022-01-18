@@ -54,7 +54,13 @@ In addition, based on the `$bace-sizes`, additional utility classes are generate
 
 Lastly, based on `$bace-font-families`, utility classes are generated that allow you to set the font-family on an element. These classes follow the structure of `.<name>`.
 
-## Width, min-width, and max-width
+## Line-height
+
+Based on `$bace-lh`, line-height utility classes and CSS variables are generated. The base value of this array is equal to `$bace-sizes`, but can be set separately.
+
+- `.lh-<name>`
+
+## Width, min-width, max-width, `display:none` media queries
 
 Based on the `$bace-breakpoints` settings from your [design tokens](/themes), utility classes around width are generated.
 

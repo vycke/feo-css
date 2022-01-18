@@ -69,7 +69,7 @@ a.no-decoration > * {
 }
 
 // line-height classes
-@each $name, $size in $bace-sizes {
+@each $name, $size in $bace-lh {
   .bg-#{$name} {
     line-height: var(--lh-#{$name});
   }

@@ -1,31 +1,38 @@
 // standard centerin
 .center > * {
-  --center-spacing: 0;
+  --center-gutter: 0;
   --center-width: 0;
 
-  width: 100%;
-  max-width: var(--center-width);
-  margin-inline-start: auto;
-  margin-inline-end: auto;
-  padding-inline-start: var(--center-spacing);
-  padding-inline-end: var(--center-spacing);
+  box-sizing: content-box;
+  max-inline-size: var(--center-width);
+  margin-inline: auto;
+  padding-inline-start: var(--center-gutter);
+  padding-inline-end: var(--center-gutter);
+}
+
+// make content centered as well
+.center-inside {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
 // Class that can be set on a child that needs to be full width and not centered
 .center-exception {
-  max-width: none;
+  max-inline-size: none;
 }
 
 // Generate classes to set the padding of the .center
 @each $name, $space in $bace-sizes {
   .center-g-#{$name} > * {
-    --center-spacing: var(--size-#{$name});
+    --center-gutter: var(--size-#{$name});
   }
 }
 
 // Generate classes to set the width of the .center
 @each $name, $size in $bace-breakpoints {
   .center-w-#{$name} > * {
-    --center-width: var(--break-#{$name});
+    --center-width: var(--bp-#{$name});
   }
 }

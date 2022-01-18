@@ -2,7 +2,7 @@
 @import './src/default-tokens';
 @import './src/reset';
 
-$_transitions: (100, 200, 300, 400, 500);
+$bace-transitions: (100, 200, 300, 400, 500);
 
 // Typography system (golden ratio)
 @function size($size) {
@@ -25,7 +25,6 @@ $_transitions: (100, 200, 300, 400, 500);
   }
 
   // create CSS variables around spacing, font-sizes etc.
-  --size-none: 0;
   @each $name, $size in $bace-sizes {
     --size-#{$name}: #{size($size)};
   }
@@ -37,7 +36,7 @@ $_transitions: (100, 200, 300, 400, 500);
 
   // create CSS variables around breakpoints
   @each $name, $bp in $bace-breakpoints {
-    --break-#{$name}: #{$bp};
+    --bp-#{$name}: #{$bp};
   }
 
   // font families
@@ -46,7 +45,7 @@ $_transitions: (100, 200, 300, 400, 500);
   }
 
   // transitions
-  @each $length in $_transitions {
+  @each $length in $bace-transitions {
     --transition-#{$length}: all #{$length}ms ease;
   }
 }
@@ -60,13 +59,13 @@ $_transitions: (100, 200, 300, 400, 500);
 * Layout classes
 *******/
 @import './src/layout/center';
-@import './src/layout/flow';
+@import './src/layout/stack';
 @import './src/layout/pancake';
-@import './src/layout/panel';
-@import './src/layout/tiles';
+@import './src/layout/sidebar';
 @import './src/layout/grail';
-@import './src/layout/tables';
 @import './src/layout/cluster';
+@import './src/layout/tiles';
+@import './src/layout/switcher';
 
 /*******
 * Utility classes
@@ -77,6 +76,8 @@ $_transitions: (100, 200, 300, 400, 500);
 @import './src/utilities/hidden';
 @import './src/utilities/click-area';
 @import './src/utilities/flexbox';
+@import './src/utilities/grid';
+@import './src/utilities/gap';
 @import './src/utilities/radius';
 @import './src/utilities/border';
 @import './src/utilities/transition';

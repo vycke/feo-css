@@ -1,8 +1,6 @@
-// Used for internal processing, added the 'none' flag.
-$_bace-sizes: append($bace-sizes, 'none');
 // Create various padding and margin utility classes
 @each $typename, $type in ('m': 'margin', 'p': 'padding') {
-  @each $name, $value in $_bace-sizes {
+  @each $name, $value in $bace-sizes {
     .#{$typename}b-#{$name} {
       #{$type}-bottom: var(--size-#{$name});
     }

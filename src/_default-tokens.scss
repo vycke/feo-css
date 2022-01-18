@@ -3,27 +3,50 @@
 // Allow fluid sizes
 $bace-fluid: false !default;
 
+$gray-h: 215;
+$gray-s: 35%;
+
 // List of colors that is used to generate utility classes, but also generate
 // CSS custom properties
-$bace-colors: () !default;
+// Colors based on the notion of increasing or decreasing darkness
+$bace-colors: (
+  // grayscale
+  'gray-0': hsl($gray-h, $gray-s, 98%),
+  'gray-1': hsl($gray-h, $gray-s, 90%),
+  'gray-2': hsl($gray-h, $gray-s, 70%),
+  'gray-3': hsl($gray-h, $gray-s, 40%),
+  'gray-4': hsl($gray-h, $gray-s, 20%),
+  'gray-5': hsl($gray-h, $gray-s, 5%),
+  // bace-color-set
+  'bace-0': #11bace,
+  'bace-1': #baaace
+) !default;
 
 // Sizing for font-sizes, padding, margin and gap
 // Based on type-scale.com: scale 1.333
 $bace-sizes: (
+  'none': 0,
   '000': 0.56,
   '00': 0.75,
   '0': 1,
-  '1': 0.33,
-  '2': 0.78,
+  '1': 1.33,
+  '2': 1.78,
   '3': 2.37,
   '4': 3.16,
   '5': 4.21,
 ) !default;
 
+// Sizing for line-height, default same as sizes, but can be set separately
+// Based on type-scale.com: scale 1.333
+$bace-lh: $bace-sizes !default;
+
 // Breakpoint system. Default uses 20rem times $bace-sizes
 $bace-breakpoints: () !default;
-@each $name, $size in $bace-sizes {
-  $bace-breakpoints: map.set($bace-breakpoints, $name, $size * 20rem);
+// Fill when no breakpoints are set
+@if (length($bace-breakpoints) == 0) {
+  @each $name, $size in $bace-sizes {
+    $bace-breakpoints: map.set($bace-breakpoints, $name, $size * 20rem);
+  }
 }
 
 // Font families

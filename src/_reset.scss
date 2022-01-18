@@ -20,11 +20,15 @@ body {
   height: 100%;
 }
 
-/* FOUC hack */
 html {
-  font-size: 16px;
-  font-size: 100%;
+  /* Hack to allow 100vh properly on iOS Safari */
+  height: -webkit-fill-available;
+
+  /* FOUC hack */
   visibility: visible !important;
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
 }
 
 /* Set core root defaults */
@@ -34,10 +38,8 @@ html:focus-within {
 
 /* Set core body defaults */
 body {
-  min-height: 100vh;
   text-rendering: optimizeSpeed;
-  line-height: 1.75;
-  -webkit-font-smoothing: antialiased;
+  line-height: calc(1em + 0.5rem);
 }
 
 /* Remove list styles on ul, ol elements with a class attribute */
@@ -65,11 +67,6 @@ select {
   font: inherit;
 }
 
-/* default for tables */
-table {
-  border-collapse: collapse;
-}
-
 /* Default accessible styling for links */
 a,
 a:visited {
@@ -78,12 +75,6 @@ a:visited {
   text-decoration-skip-ink: auto;
   text-decoration-thickness: 2px;
   text-underline-offset: 1px;
-}
-
-/* buttons */
-button {
-  background: transparent;
-  cursor: pointer;
 }
 
 /* Misc. */
@@ -113,12 +104,5 @@ button {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     scroll-behavior: auto !important;
-  }
-}
-
-/* Hack to allow 100vh properly on iOS Safari */
-@supports (-webkit-touch-callout: none) {
-  body {
-    height: -webkit-fill-available;
   }
 }

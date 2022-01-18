@@ -78,7 +78,7 @@ Used in:
 
 > Breakpoints are _not_ used around media-queries in _Bace_. Within _Bace_ our opinion is that breakpoints should be used as their name suggests: when your layout breaks. These are not driven by standardized sizes (e.g. mobile `320px`). They are case-by-case driven. Good responsive design goes beyond fixed "breakpoints" set by other frameworks.
 
-Generates CSS custom properties: `--break-<name>`. Below are the default values of _Bace_ which can be overwritten.
+Generates CSS custom properties: `--bp-<name>`. Below are the default values of _Bace_ which can be overwritten.
 
 ```scss
 $bace-breakpoints: (

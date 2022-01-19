@@ -1,5 +1,5 @@
 // Utility classes for background colors and different pseudo-classes
-@each $name, $color in $bace-colors {
+@each $name, $color in $_colors {
   .bg-#{$name},
   .hover\:bg-#{$name}:hover,
   .focus\:bg-#{$name}:focus,

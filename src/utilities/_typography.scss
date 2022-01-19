@@ -1,5 +1,5 @@
 // Generate utility classes around colors
-@each $name, $color in $bace-colors {
+@each $name, $color in $_colors {
   .text-#{$name},
   .hover\:text-#{$name}:hover,
   .focus\:text-#{$name}:focus,

@@ -49,6 +49,19 @@ $bace-breakpoints: () !default;
   }
 }
 
+// basic setup for themes
+$bace-themes: () !default;
+
+// internal array used for generating all utility functions
+$_colors: $bace-colors;
+
+@if (length($bace-themes) > 0) {
+  $theme: nth(nth($bace-themes, 1), 2);
+  @each $name, $color in $theme {
+    $_colors: map.set($_colors, $name, var(--color-#{$color}));
+  }
+}
+
 // Font families
 $bace-font-families: (
   monospace: "Inconsolata, Menlo, Monaco, Consolas, 'Courier New', monospace",

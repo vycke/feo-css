@@ -2,8 +2,6 @@
 @import './src/default-tokens';
 @import './src/reset';
 
-$bace-transitions: (100, 200, 300, 400, 500);
-
 // Typography system (golden ratio)
 @function size($size) {
   @if $bace-fluid {
@@ -27,10 +25,6 @@ $bace-transitions: (100, 200, 300, 400, 500);
   // create CSS variables around spacing, font-sizes etc.
   @each $name, $size in $bace-sizes {
     --size-#{$name}: #{size($size)};
-  }
-
-  // line-height vars
-  @each $name, $size in $bace-sizes {
     --lh-#{$name}: #{$size};
   }
 
@@ -45,8 +39,17 @@ $bace-transitions: (100, 200, 300, 400, 500);
   }
 
   // transitions
-  @each $length in $bace-transitions {
-    --transition-#{$length}: all #{$length}ms ease;
+  @for $i from 1 through 5 {
+    --transition-#{$i * 100}: all #{$i * 100}ms ease;
+  }
+}
+
+// generate theme-based color variables, linking to base color variables
+@each $tName, $theme in $bace-themes {
+  [data-theme='#{$tName}'] {
+    @each $cName, $color in $theme {
+      --color-#{$cName}: var(--color-#{$color});
+    }
   }
 }
 

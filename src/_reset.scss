@@ -17,6 +17,7 @@
 
 html,
 body {
+  min-width: 15rem;
   height: 100%;
 }
 
@@ -84,6 +85,57 @@ a:visited {
 
 [disabled] {
   cursor: not-allowed;
+}
+
+/*******
+* Generic styling
+*******/
+h1 {
+  font-size: var(--size-3);
+}
+
+h2 {
+  font-size: var(--size-2);
+}
+
+h3 {
+  font-size: var(--size-1);
+}
+
+// TEXT
+p,
+li,
+h1,
+h2,
+h3,
+h4 {
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+
+// CODE
+code {
+  font-size: 0.825em;
+  font-family: var(--monospace);
+  hyphens: none;
+}
+
+pre,
+// added specificity
+pre:not([data-lang]),
+pre[data-lang] {
+  position: relative;
+  white-space: pre;
+  word-wrap: normal;
+  word-break: normal;
+  word-spacing: normal;
+}
+
+pre > code {
+  display: block;
+  overflow-x: auto;
+  // fix for increased font-size safari iOS
+  -webkit-text-size-adjust: none;
 }
 
 /* Removes outlines for mouse users */

@@ -15,6 +15,7 @@ The available utility classes to alter the settings for `.center` are listed bel
 - `.center-w-<name>`: set the max-width of the layout, including any potential side-padding. Based on `$bace-breakpoints`.
 - `.center-g-<name>`: set the padding on each of the sides. The padding is applied to all direct children of the parent. Based on `$bace-sizes`.
 - `.center-exception`: allows children to flow outside the max-width set in the parent.
-- `.center-inside`: class you can set on a child to make it 100% width.
+- `.center-stretch`: class that makes all the children 100% width as well.
+- `.center-inside`: class to center childeren.
 
 > If the utility classes are not flexible enough and you want to adjust the way the layout pattern behaves, adjust the `--center-gutter`, and/or `--center-width` custom properties on the element you are applying this pattern to.

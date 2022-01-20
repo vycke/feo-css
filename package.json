@@ -6,7 +6,7 @@
     "lint": "stylelint '**/*.(s)css'",
     "lint:fix": "yarn lint --fix"
   },
-  "name": "@crinkles/bace",
+  "name": "bace-css",
   "version": "1.0.0",
   "main": "bace.scss",
   "description": "A tiny CSS framework",

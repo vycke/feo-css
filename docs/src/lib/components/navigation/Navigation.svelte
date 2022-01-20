@@ -39,7 +39,7 @@
 		</div>
 	</div>
 
-	<ul role="list" class="pt-2 stack stack-g-000 w-full bg-back hide-scrollbar">
+	<ul role="list" class="pt-2 stack stack-g-000 w-full bg-back">
 		<input bind:value={term} placeholder="Search..." class="mt-0 mb-2" />
 
 		{#each Object.keys(filteredDocs) as category, i}
@@ -75,7 +75,7 @@
 		z-index: 100;
 	}
 
-	@media (min-width: 800px) {
+	@media (min-width: 816px) {
 		nav {
 			max-height: calc(100vh - env(safe-area-inset-bottom));
 			overflow-y: auto;
@@ -88,7 +88,7 @@
 		}
 	}
 
-	@media (max-width: 800px) {
+	@media (max-width: 816px) {
 		nav {
 			border-bottom: 1px solid var(--color-hover);
 		}

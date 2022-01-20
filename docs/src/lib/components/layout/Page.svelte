@@ -17,7 +17,7 @@
 	<meta property="og:description" content={description} />
 </svelte:head>
 
-<main class="center center-g-1 center-w-4 text-front {klass}">
-	<h1 class="my-1">{title}</h1>
+<main class="center center-g-1 center-w-4 text-front {klass} mt-1">
+	<h1 class="lh-2">{title}</h1>
 	<slot />
 </main>

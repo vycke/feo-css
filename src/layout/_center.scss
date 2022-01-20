@@ -23,6 +23,11 @@
   max-inline-size: none;
 }
 
+// Makes all the children stretch 100%
+.center-stretch > * {
+  width: 100%;
+}
+
 // Generate classes to set the padding of the .center
 @each $name, $space in $bace-sizes {
   .center-g-#{$name} > * {

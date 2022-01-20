@@ -4,7 +4,7 @@ category: Layout
 source: https://github.com/kevtiq/bace-css/blob/main/src/layout/_switcher_.scss
 ---
 
-The `.switcher` class allows for a responsive grouping of element to automatically switch from horizontal alignment to vertical alignment, based on the width of the elements.
+The `.switcher` class allows for a responsive grouping of element to automatically switch from horizontal alignment to vertical alignment, based on the width of the parent container.
 
 ![](/img/switcher.png)
 

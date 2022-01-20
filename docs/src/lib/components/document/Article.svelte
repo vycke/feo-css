@@ -3,7 +3,7 @@
 </script>
 
 <article
-	class="border-hover border-w-1 bg-back-secondary flow flow-g-1 radius-00 py-2 mb-1 hide-scrollbar"
+	class="border-hover border-w-1 bg-back-secondary stack stack-g-1 radius-00 py-2 mb-1 hide-scrollbar lh-2"
 >
 	{@html doc.html}
 </article>

@@ -13,7 +13,7 @@
 <label html="toggle" class="switch flex-row items-center justify-between {klass}">
 	{label}
 	<button
-		class="ml-000 bg-gray-400 border-w-2 border-gray-400 radius-0 transition-400"
+		class="ml-000 bg-gray-3 border-w-2 border-gray-3 radius-0 transition-400"
 		type="button"
 		id="toggle"
 		role="switch"

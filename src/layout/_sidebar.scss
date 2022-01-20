@@ -9,7 +9,6 @@
 
   display: flex;
   flex-wrap: wrap;
-  width: 100%;
 
   & > * {
     flex-basis: var(--sidebar-width);
@@ -24,7 +23,7 @@
   flex-grow: 999;
 
   /* wraps when both sides are equal */
-  min-inline-size: 50%;
+  min-inline-size: 60%;
 }
 
 // Generate classes to set the min-width of each half of .sidebar-lr

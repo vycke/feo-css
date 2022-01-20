@@ -6,6 +6,7 @@
 .sidebar-l,
 .sidebar-r {
   --sidebar-width: 0;
+  --sidebar-content: 50%;
 
   display: flex;
   flex-wrap: wrap;
@@ -23,12 +24,19 @@
   flex-grow: 999;
 
   /* wraps when both sides are equal */
-  min-inline-size: 60%;
+  min-inline-size: var(--sidebar-content);
 }
 
 // Generate classes to set the min-width of each half of .sidebar-lr
 @each $name, $size in $bace-breakpoints {
   .sidebar-w-#{$name} {
     --sidebar-width: var(--bp-#{$name});
+  }
+}
+
+// generates classes to set the main content area.
+@for $i from 1 through 9 {
+  .sidebar-c-#{$i * 10} {
+    --sidebar-content: #{$i * 10}%;
   }
 }

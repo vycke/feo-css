@@ -15,15 +15,8 @@
   border: 0;
 }
 
-html,
-body {
-  min-width: 15rem;
-  height: 100%;
-}
-
 html {
-  /* Hack to allow 100vh properly on iOS Safari */
-  height: -webkit-fill-available;
+  height: 100%;
 
   /* FOUC hack */
   visibility: visible !important;
@@ -41,6 +34,7 @@ html:focus-within {
 body {
   text-rendering: optimizeSpeed;
   line-height: calc(1em + 0.5rem);
+  min-height: 100%;
 }
 
 /* Remove list styles on ul, ol elements with a class attribute */
@@ -129,6 +123,7 @@ pre[data-lang] {
   word-wrap: normal;
   word-break: normal;
   word-spacing: normal;
+  padding: 0;
 }
 
 pre > code {

@@ -14,7 +14,7 @@
 </script>
 
 <Page title="{doc.category} > {doc.title}">
-	<div class="sidebar-r sidebar-w-00 gap-1">
+	<div class="sidebar-r sidebar-c-60 sidebar-w-00 gap-1">
 		<Article {doc} />
 		<Meta {doc} />
 	</div>

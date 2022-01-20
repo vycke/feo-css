@@ -21,3 +21,9 @@ Classes that enable you to set CSS transitions on all transitional attributes of
 	transition: all 100ms/200ms/300ms/400ms/500ms ease;
 }
 ```
+
+## Aspect ratio
+
+- `.ratio-vid`: sets the aspect ratio to 9/16.
+- `.ratio-auto`: sets the aspect ratio to `auto`.
+- `.ratio-square`: sets the aspect ratio to 1/1.

@@ -1,0 +1,45 @@
+// Generate utility classes around font-size
+@each $name, $pb in $bace-breakpoints {
+  .minw-#{$name} {
+    min-width: min(100vw, var(--bp-#{$name}));
+  }
+
+  .maxw-#{$name} {
+    width: 100%;
+    max-width: var(--bp-#{$name});
+  }
+
+  .w-#{$name} {
+    width: var(--bp-#{$name});
+  }
+}
+
+.w-full {
+  width: 100%;
+}
+
+.h-full {
+  min-height: 100vh;
+}
+
+// hide based on breakpoint value
+@each $name, $bp in $bace-breakpoints {
+  @media (max-width: #{$bp}) {
+    .hide-#{$name} {
+      display: none !important;
+    }
+  }
+}
+
+// aspect ratios
+.ratio-auto {
+  aspect-ratio: auto;
+}
+
+.ratio-square {
+  aspect-ratio: 1 / 1;
+}
+
+.ratio-vid {
+  aspect-ratio: 9 / 16;
+}

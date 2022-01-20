@@ -1,50 +1,88 @@
+@use "sass:map";
+
 // Allow fluid sizes
-$feo-fluid: false !default;
+$bace-fluid: false !default;
+
+$gray-h: 215;
+$gray-s: 35%;
 
 // List of colors that is used to generate utility classes, but also generate
 // CSS custom properties
-$feo-colors: () !default;
-
-// Typography system (golden ratio)
-@function size($size) {
-  @if $feo-fluid {
-    $reducer: if($size <= 1, 1.1, 0.9);
-    $min: $reducer * $size;
-    @return clamp(#{$min}rem, #{$size} * 2vw, #{$size} * 1.2rem);
-  } @else {
-    @return #{$size}rem;
-  }
-}
+// Colors based on the notion of increasing or decreasing darkness
+$bace-colors: (
+  // grayscale
+  'gray-0': hsl($gray-h, $gray-s, 98%),
+  'gray-1': hsl($gray-h, $gray-s, 90%),
+  'gray-2': hsl($gray-h, $gray-s, 70%),
+  'gray-3': hsl($gray-h, $gray-s, 40%),
+  'gray-4': hsl($gray-h, $gray-s, 20%),
+  'gray-5': hsl($gray-h, $gray-s, 5%),
+  // bace
+  'bace-0': lighten(#11bace, 25%),
+  'bace-1': #11bace,
+  'bacce-2': darken(#11bace, 20%),
+  // success
+  'success-0': lighten(#4ab57f, 20%),
+  'success-1': #4ab57f,
+  'success-2': darken(#4ab57f, 25%),
+  // error
+  'error-0': lighten(#ec1313, 20%),
+  'error-1': #ec1313,
+  'error-2': darken(#ec1313, 25%),
+  // warning
+  'warning-0': lighten(#d2c22d, 20%),
+  'warning-1': #d2c22d,
+  'warning-2': darken(#d2c22d, 25%),
+  // info
+  'info-0': lighten(#1380ec, 20%),
+  'info-1': #1380ec,
+  'info-2': darken(#1380ec, 25%)
+) !default;
 
 // Sizing for font-sizes, padding, margin and gap
 // Based on type-scale.com: scale 1.333
-$feo-sizes: (
-  '000': size(0.563),
-  '00': size(0.75),
-  '0': size(1),
-  '1': size(1.333),
-  '2': size(1.777),
-  '3': size(2.369),
+$bace-sizes: (
+  'none': 0,
+  '000': 0.56,
+  '00': 0.75,
+  '0': 1,
+  '1': 1.33,
+  '2': 1.78,
+  '3': 2.37,
+  '4': 3.16,
+  '5': 4.21,
 ) !default;
 
-// Breakpoint system.
+// Sizing for line-height, default same as sizes, but can be set separately
 // Based on type-scale.com: scale 1.333
-$feo-breakpoints: (
-  '00': 15rem,
-  '0': 20rem,
-  '1': 26.66rem,
-  '2': 35.54rem,
-  '3': 47.37rem,
-  '4': 63.15rem,
-  '5': 84.17rem,
-) !default;
+$bace-lh: $bace-sizes !default;
+
+// Breakpoint system. Default uses 20rem times $bace-sizes
+$bace-breakpoints: () !default;
+// Fill when no breakpoints are set
+@if (length($bace-breakpoints) == 0) {
+  @each $name, $size in $bace-sizes {
+    $bace-breakpoints: map.set($bace-breakpoints, $name, $size * 20rem);
+  }
+}
+
+// basic setup for themes
+$bace-themes: () !default;
+
+// internal array used for generating all utility functions
+$_colors: $bace-colors;
+
+@if (length($bace-themes) > 0) {
+  $theme: nth(nth($bace-themes, 1), 2);
+  @each $name, $color in $theme {
+    $_colors: map.set($_colors, $name, var(--color-#{$color}));
+  }
+}
 
 // Font families
-$feo-font-families: (
+$bace-font-families: (
   monospace: "Inconsolata, Menlo, Monaco, Consolas, 'Courier New', monospace",
   serif: 'ui-serif, Georgia, Cambria, serif',
   sans-serif:
     "system-ui, -apple-system, blinkmacsystemfont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif",
 ) !default;
-// themes
-$feo-themes: () !default;

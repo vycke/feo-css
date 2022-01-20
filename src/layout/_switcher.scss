@@ -1,0 +1,25 @@
+// NOTE: Can be combined with flex based utilities (e.g. .gap-00)
+// Layout pattern that allows all to move from horizontal to vertical at a
+// specific breakpoint
+.switcher {
+  --switcher-width: 0;
+
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.switcher > * {
+  flex-basis: calc((var(--switcher-width) - 100%) * 999);
+  flex-grow: 1;
+}
+
+.switcher-even > * > * {
+  max-inline-size: 100%;
+}
+
+// Generate classes to set the switcher min-sizes
+@each $name, $size in $bace-breakpoints {
+  .switcher-w-#{$name} {
+    --switcher-width: var(--bp-#{$name});
+  }
+}

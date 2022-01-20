@@ -1,28 +1,20 @@
 // Class that creates a tile-based system that fills the space based on gap-size
-// and min-width for each individual tile
-// NOTE: tiles, just like in real-life, all have the same size.
+// and min-width for each individual tile. Each tile in the cluster is of the
+// same size.
+// NOTE: can be combined with the .gap- classes (e.g. .gap-00)
 .tiles {
   --tiles-width: 0;
-  --tiles-gap: 0;
 
   display: grid;
   grid-template-columns: repeat(
     auto-fit,
     minmax(min(var(--tiles-width), 100%), 1fr)
   );
-  gap: var(--tiles-gap);
-}
-
-// Generate classes to set the tile gap
-@each $name, $space in $feo-sizes {
-  .tiles-g-#{$name} {
-    --tiles-gap: var(--size-#{$name});
-  }
 }
 
 // Generate classes to set the tile min-sizes
-@each $name, $size in $feo-breakpoints {
+@each $name, $size in $bace-breakpoints {
   .tiles-w-#{$name} {
-    --tiles-width: var(--break-#{$name});
+    --tiles-width: var(--bp-#{$name});
   }
 }

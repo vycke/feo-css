@@ -2,12 +2,6 @@
 * CSS Reset
 *******/
 
-/* Remove all default margin/border styles of the "User-Agent-Stylesheet" */
-*:where(:not(iframe, canvas, img, svg, video):not(svg *)) {
-  margin: 0;
-  border: 0;
-}
-
 /* Box sizing rules */
 *,
 *::before,
@@ -15,11 +9,27 @@
   box-sizing: border-box;
 }
 
-/* FOUC hack */
+/* Remove all default margin/border styles of the "User-Agent-Stylesheet" */
+*:where(:not(iframe, canvas, img, svg, video):not(svg *)) {
+  margin: 0;
+  border: 0;
+}
+
+html,
+body {
+  min-width: 15rem;
+  height: 100%;
+}
+
 html {
-  font-size: 16px;
-  font-size: 100%;
+  /* Hack to allow 100vh properly on iOS Safari */
+  height: -webkit-fill-available;
+
+  /* FOUC hack */
   visibility: visible !important;
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
 }
 
 /* Set core root defaults */
@@ -29,9 +39,8 @@ html:focus-within {
 
 /* Set core body defaults */
 body {
-  min-height: 100vh;
   text-rendering: optimizeSpeed;
-  line-height: 1.75;
+  line-height: calc(1em + 0.5rem);
 }
 
 /* Remove list styles on ul, ol elements with a class attribute */
@@ -43,14 +52,20 @@ ol[role='list'] {
 
 /* Make images easier to work with */
 img,
-picture {
+picture,
+video,
+canvas,
+svg {
   display: block;
   max-width: 100%;
 }
 
-/* default for tables */
-table {
-  border-collapse: collapse;
+/* default input style */
+input,
+button,
+textarea,
+select {
+  font: inherit;
 }
 
 /* Default accessible styling for links */
@@ -63,12 +78,6 @@ a:visited {
   text-underline-offset: 1px;
 }
 
-/* buttons */
-button {
-  background: transparent;
-  cursor: pointer;
-}
-
 /* Misc. */
 [hidden] {
   display: none !important;
@@ -76,6 +85,57 @@ button {
 
 [disabled] {
   cursor: not-allowed;
+}
+
+/*******
+* Generic styling
+*******/
+h1 {
+  font-size: var(--size-3);
+}
+
+h2 {
+  font-size: var(--size-2);
+}
+
+h3 {
+  font-size: var(--size-1);
+}
+
+// TEXT
+p,
+li,
+h1,
+h2,
+h3,
+h4 {
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+
+// CODE
+code {
+  font-size: 0.825em;
+  font-family: var(--monospace);
+  hyphens: none;
+}
+
+pre,
+// added specificity
+pre:not([data-lang]),
+pre[data-lang] {
+  position: relative;
+  white-space: pre;
+  word-wrap: normal;
+  word-break: normal;
+  word-spacing: normal;
+}
+
+pre > code {
+  display: block;
+  overflow-x: auto;
+  // fix for increased font-size safari iOS
+  -webkit-text-size-adjust: none;
 }
 
 /* Removes outlines for mouse users */
@@ -96,12 +156,5 @@ button {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     scroll-behavior: auto !important;
-  }
-}
-
-/* Hack to allow 100vh properly on iOS Safari */
-@supports (-webkit-touch-callout: none) {
-  body {
-    height: -webkit-fill-available;
   }
 }

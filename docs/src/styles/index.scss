@@ -1,5 +1,27 @@
 // reset, settings & generic styles
-@use 'feo-config';
+$themes: (
+	'light': (
+		'accent': 'info-1',
+		'back': 'gray-1',
+		'back-secondary': 'gray-0',
+		'code': 'gray-4',
+		'front': 'gray-5',
+		'hover': 'gray-2'
+	),
+	'dark': (
+		'accent': 'bace-1',
+		'back': 'gray-5',
+		'back-secondary': 'gray-5',
+		'code': 'gray-4',
+		'front': 'gray-0',
+		'hover': 'gray-4'
+	)
+);
+
+@use '../../../bace.scss' with (
+	$bace-themes: $themes
+);
+
 @use 'global';
 @use 'code';
 @use 'utils';

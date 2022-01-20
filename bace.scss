@@ -1,0 +1,83 @@
+@use "sass:list";
+@import './src/default-tokens';
+@import './src/reset';
+
+// Typography system (golden ratio)
+@function size($size) {
+  @if $bace-fluid {
+    $reducer: if($size <= 1, 1.1, 0.9);
+    $min: $reducer * $size;
+    @return clamp(#{$min}rem, #{$size} * 2vw, #{$size} * 1.2rem);
+  } @else {
+    @return #{$size}rem;
+  }
+}
+
+/*******
+* Generate CSS custom properties
+*******/
+:root {
+  // create CSS variables around colors
+  @each $name, $color in $bace-colors {
+    --color-#{$name}: #{$color};
+  }
+
+  // create CSS variables around spacing, font-sizes etc.
+  @each $name, $size in $bace-sizes {
+    --size-#{$name}: #{size($size)};
+    --lh-#{$name}: #{$size};
+  }
+
+  // create CSS variables around breakpoints
+  @each $name, $bp in $bace-breakpoints {
+    --bp-#{$name}: #{$bp};
+  }
+
+  // font families
+  @each $name, $value in $bace-font-families {
+    --#{$name}: #{$value};
+  }
+
+  // transitions
+  @for $i from 1 through 5 {
+    --transition-#{$i * 100}: all #{$i * 100}ms ease;
+  }
+}
+
+// generate theme-based color variables, linking to base color variables
+@each $tName, $theme in $bace-themes {
+  [data-theme='#{$tName}'] {
+    @each $cName, $color in $theme {
+      --color-#{$cName}: var(--color-#{$color});
+    }
+  }
+}
+
+/*******
+* Layout classes
+*******/
+@import './src/layout/center';
+@import './src/layout/stack';
+@import './src/layout/pancake';
+@import './src/layout/sidebar';
+@import './src/layout/grail';
+@import './src/layout/cluster';
+@import './src/layout/tiles';
+@import './src/layout/switcher';
+
+/*******
+* Utility classes
+*******/
+@import './src/utilities/background';
+@import './src/utilities/typography';
+@import './src/utilities/spacing';
+@import './src/utilities/hidden';
+@import './src/utilities/click-area';
+@import './src/utilities/flexbox';
+@import './src/utilities/grid';
+@import './src/utilities/gap';
+@import './src/utilities/radius';
+@import './src/utilities/border';
+@import './src/utilities/transition';
+@import './src/utilities/position';
+@import './src/utilities/dimensions';

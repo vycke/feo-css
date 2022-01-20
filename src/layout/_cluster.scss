@@ -1,32 +1,9 @@
 // Groups items in such a way that a 'cluster' is created that automatically
 // determines how many items can be on a single row (e.g. tag cloud).
-// Can be easily combined with the standard flex-box utilities for alignment,
-// and justification
+// NOTE: Can be combined with flex based utilities (e.g. .gap-00)
 .cluster {
-  --cluster-gap: 0;
-  --cluster-width: 0;
-
   display: flex;
   flex-wrap: wrap;
-  gap: var(--cluster-gap);
-}
-
-// makes all items in the cluster stretch for the available space
-// including asymmetrical rows
-.cluster-stretch > * {
-  flex: 1 1 var(--cluster-width);
-}
-
-// Generate classes to set the cluster gap
-@each $name, $space in $feo-sizes {
-  .cluster-g-#{$name} {
-    --cluster-gap: var(--size-#{$name});
-  }
-}
-
-// Generate classes to set the cluster min-sizes
-@each $name, $size in $feo-breakpoints {
-  .cluster-w-#{$name} {
-    --cluster-width: var(--break-#{$name});
-  }
+  align-items: flex-start;
+  justify-content: flex-start;
 }

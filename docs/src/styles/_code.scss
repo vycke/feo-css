@@ -7,8 +7,10 @@
 // string, number: primitives
 
 .token {
-	color: var(--color-gray-100);
+	color: var(--color-gray-0);
 }
+
+// .token.attr-name, .token.builtin, .token.char, .token.inserted, .token.selector, .token.string
 
 .token.builtin,
 .token.variable,
@@ -18,7 +20,7 @@
 .token.comment,
 .token.keyword,
 .token.important {
-	color: var(--color-gray-100);
+	color: var(--color-gray-2);
 }
 
 .token.comment,
@@ -32,24 +34,29 @@
 }
 
 .token.function,
+.token.class-name {
+	color: var(--color-bace-1);
+}
+
 .token.selector,
 .token.tag,
 .token.attr-value,
 .token.string,
-.token.number,
-.token.class-name {
-	color: var(--color-accent);
+.token.number {
+	color: var(--color-success-0);
 }
 
 // INLINE CODE
 :not(pre) > code {
 	color: var(--color-accent);
 	background-color: var(--color-hover);
-	border-radius: var(--size-000);
+	border-radius: 4px;
+	padding: 2px 6px;
 }
 
 pre > code {
-	color: var(--color-gray-100);
+	color: var(--color-gray-0);
+	padding: var(--size-0);
 	background-color: var(--color-code);
 	outline: 1px solid var(--color-hover);
 }
@@ -58,12 +65,12 @@ pre[data-lang] > span {
 	position: absolute;
 	top: 0;
 	right: 0;
-	font-size: var(--size-000);
+	font-size: var(--size-00);
 	font-family: var(--monospace);
-	color: var(--color-gray-100);
-	background-color: var(--color-gray-400);
+	color: var(--color-gray-0);
+	background-color: var(--color-gray-3);
 	text-transform: uppercase;
 	border-bottom-left-radius: var(--size-000);
-	padding: 0 var(--size-00);
-	line-height: var(--lh-000);
+	padding: 4px var(--size-00);
+	line-height: var(--size-000);
 }

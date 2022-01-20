@@ -29,7 +29,7 @@
 	<meta name="color-scheme" content={$theme} />
 </svelte:head>
 
-<div class="bg-back panel-l panel-f-0 panel-w-3">
+<div class="bg-back sidebar-l sidebar-w-0">
 	<Navigation {path} {docs} />
 	<slot />
 </div>

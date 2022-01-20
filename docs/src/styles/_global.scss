@@ -3,8 +3,9 @@
 *******/
 html,
 body {
-	color: var(--color-gray-600);
+	color: var(--color-gray-5);
 	background-color: var(--color-back);
+	font-family: var(--sans-serif);
 }
 
 h1,
@@ -49,7 +50,7 @@ blockquote > p {
 
 input {
 	width: 100%;
-	line-height: var(--lb-00);
+	line-height: var(--lh-00);
 	background-color: var(--color-back-secondary);
 	border: 1px solid var(--color-hover);
 	border-radius: var(--size-000);
@@ -80,14 +81,4 @@ article > :not(pre) {
 
 article li {
 	margin-left: var(--size-2);
-}
-
-.hide-scrollbar::-webkit-scrollbar {
-	display: none;
-}
-
-/* Hide scrollbar for IE, Edge and Firefox */
-.hide-scrollbar {
-	-ms-overflow-style: none; /* IE and Edge */
-	scrollbar-width: none; /* Firefox */
 }

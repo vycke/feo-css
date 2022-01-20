@@ -1,5 +1,5 @@
 // Generate utility classes around colors
-@each $name, $color in $feo-colors {
+@each $name, $color in $_colors {
   .text-#{$name},
   .hover\:text-#{$name}:hover,
   .focus\:text-#{$name}:focus,
@@ -8,28 +8,15 @@
   }
 }
 
-// themes for [data-theme] attribute
-@if length($feo-themes) > 0 {
-  $theme: nth(nth($feo-themes, 1), 2);
-  @each $name, $color in $theme {
-    .text-#{$name},
-    .hover\:text-#{$name}:hover,
-    .focus\:text-#{$name}:focus,
-    .active\:text-#{$name}:active {
-      color: var(--color-#{$name});
-    }
-  }
-}
-
 // Generate utility classes around font-size
-@each $name, $size in $feo-sizes {
+@each $name, $size in $bace-sizes {
   .text-#{$name} {
     font-size: var(--size-#{$name});
   }
 }
 
 // Generate utility classes around font-families
-@each $name, $size in $feo-font-families {
+@each $name, $size in $bace-font-families {
   .#{$name} {
     font-family: var(--#{$name});
   }
@@ -81,14 +68,9 @@ a.no-decoration > * {
   text-decoration: none;
 }
 
-.lh-0 {
-  line-height: var(--lb-0);
-}
-
-.lh-00 {
-  line-height: var(--lb-00);
-}
-
-.lh-000 {
-  line-height: var(--lh-000);
+// line-height classes
+@each $name, $size in $bace-lh {
+  .lh-#{$name} {
+    line-height: var(--lh-#{$name});
+  }
 }

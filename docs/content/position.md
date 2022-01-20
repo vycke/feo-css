@@ -4,7 +4,7 @@ category: Utilities
 source: https://github.com/kevtiq/bace-css/blob/main/src/utilities/_position.scss
 ---
 
-_Bace_ facilitates a few utility classes around the position properties.
+_Bace CSS_ facilitates a few utility classes around the position properties.
 
 - `.fixed`: sets `position: fixed;`.
 - `.absolute`: sets `position: absolute;`.

@@ -4,7 +4,7 @@ category: Introduction
 order: 4
 ---
 
-With _Bace_ it is possible to define multiple themes. Within a theme, color-based custom properties are generated. In `$bace-themes` you define lists similar to `$bace-colors`. The difference, however, is that you don't set the color, but you set a reference to a color in `$bace-colors`, as shown below. This results in themes being created that can be applied using `data-theme` on elements.
+With _Bace CSS_ it is possible to define multiple themes. Within a theme, color-based custom properties are generated. In `$bace-themes` you define lists similar to `$bace-colors`. The difference, however, is that you don't set the color, but you set a reference to a color in `$bace-colors`, as shown below. This results in themes being created that can be applied using `data-theme` on elements.
 
 > If you have a duplicate name between `$bace-colors` and `$bace-themes`, the `$bace-colors` one will take precedence.
 

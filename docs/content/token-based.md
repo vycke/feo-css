@@ -39,27 +39,6 @@ Based on the `$bace-sizes` array from your [design tokens](/themes), utility-cla
 - `.(p/m)t-<name>`: sets the padding/margin on `-top`.
 - `.(p/m)b-<name>`: sets the padding/margin on `-bottom`.
 
-## Text color, font-sizes and font family
-
-Based on the `$bace-colors` and `$bace-themes` settings from your [design tokens](/themes), utility classes for text colors are generated. Utility classes that trigger when a pseudo-class is triggered, are also facilitated. The following classes are available:
-
-- `.text-<name>`
-- `.hover:text-<name>`
-- `.focus:text-<name>`
-- `.active:test-<name>`
-
-In addition, based on the `$bace-sizes`, additional utility classes are generate, in the format `.text-<name>`.
-
-> If names from `$bace-sizes` and `$bace-colors` collide, the former takes precedence.
-
-Lastly, based on `$bace-font-families`, utility classes are generated that allow you to set the font-family on an element. These classes follow the structure of `.<name>`.
-
-## Line-height
-
-Based on `$bace-lh`, line-height utility classes and CSS variables are generated. The base value of this array is equal to `$bace-sizes`, but can be set separately.
-
-- `.lh-<name>`
-
 ## Width, min-width, max-width, `display:none` media queries
 
 Based on the `$bace-breakpoints` settings from your [design tokens](/themes), utility classes around width are generated.
@@ -67,4 +46,6 @@ Based on the `$bace-breakpoints` settings from your [design tokens](/themes), ut
 - `.w-<name>`
 - `.minw-<name>`
 - `.maxw-<name>` (also applies `width: 100%`)
+- `.hide-<name>` (sets a media-query for `max-width` and sets `display: none !important`)
 - `.w-full` (sets `width: 100%`)
+- `.h-full` (sets `min-height: 100vh`)

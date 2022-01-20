@@ -10,6 +10,8 @@
 	color: var(--color-gray-0);
 }
 
+// .token.attr-name, .token.builtin, .token.char, .token.inserted, .token.selector, .token.string
+
 .token.builtin,
 .token.variable,
 .token.operator,
@@ -18,7 +20,7 @@
 .token.comment,
 .token.keyword,
 .token.important {
-	color: var(--color-gray-0);
+	color: var(--color-gray-2);
 }
 
 .token.comment,
@@ -32,13 +34,16 @@
 }
 
 .token.function,
+.token.class-name {
+	color: var(--color-bace-1);
+}
+
 .token.selector,
 .token.tag,
 .token.attr-value,
 .token.string,
-.token.number,
-.token.class-name {
-	color: var(--color-accent);
+.token.number {
+	color: var(--color-success-0);
 }
 
 // INLINE CODE

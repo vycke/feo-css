@@ -1,5 +1,5 @@
 ---
-title: Flexbox
+title: Flexbox, grid and gap
 category: Utilities
 source: https://github.com/kevtiq/bace-css/blob/main/src/utilities/_flexbox.scss
 ---
@@ -31,6 +31,7 @@ The following classes set `display: flex` and set the `flex-direction` based on 
 - **Align content**: defines how _multi-line_ content aligns around the _main_ axis. Used with `.content-<value>`.
 - **Align items**: defines how content aligns around the _cross_ axis. Used with `.items-<value>`.
 - **Self align**: overwrites the default align items value set on the parent on individual elements within the Flexbox. Used with .self-<value>`.
+- **place items**: Used with `.place-<value>`.
 
 All these classes follow the same pattern: `.<type>-<value>`. Note that not all values are available for all types.
 
@@ -42,6 +43,14 @@ All these classes follow the same pattern: `.<type>-<value>`. Note that not all 
 - `.<type>-between` (space-between)
 - `.<type>-around` (space-around)
 - `.<type>-evenly` (space-evenly)
+
+## Grid
+
+Classes for CSS grids.
+
+- `.grid-<number>`: creates a grid with equal sized columns.
+- `.grid-col-<number>`: sets the `grid-column` property to the number.
+- `.grid-row-<number>`: sets ther `grid-row` property to the number.
 
 ## Gap
 

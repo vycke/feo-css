@@ -3,54 +3,52 @@
 // Allow fluid sizes
 $bace-fluid: false !default;
 
-$gray-h: 215;
-$gray-s: 35%;
-
 // List of colors that is used to generate utility classes, but also generate
 // CSS custom properties
 // Colors based on the notion of increasing or decreasing darkness
 $bace-colors: (
-  // grayscale
-  'gray-0': hsl($gray-h, $gray-s, 98%),
-  'gray-1': hsl($gray-h, $gray-s, 90%),
-  'gray-2': hsl($gray-h, $gray-s, 70%),
-  'gray-3': hsl($gray-h, $gray-s, 40%),
-  'gray-4': hsl($gray-h, $gray-s, 20%),
-  'gray-5': hsl($gray-h, $gray-s, 5%),
-  // bace
-  'bace-0': lighten(#11bace, 25%),
-  'bace-1': #11bace,
-  'bacce-2': darken(#11bace, 20%),
+  // grey-scale
+  'grey-0': hsl(215, 35%, 98%),
+  'grey-1': hsl(215, 35%, 90%),
+  'grey-2': hsl(215, 35%, 70%),
+  'grey-3': hsl(215, 35%, 40%),
+  'grey-4': hsl(215, 35%, 20%),
+  'grey-5': hsl(215, 35%, 5%),
+  // BRAND COLORS
+  'primary': #a6e3c8,
+  'secondary': hsl(215, 35%, 20%),
+  'accent': #11bace,
+  // FUNCTIONAL COLORS
   // success
-  'success-0': lighten(#4ab57f, 20%),
-  'success-1': #4ab57f,
-  'success-2': darken(#4ab57f, 25%),
-  // error
-  'error-0': lighten(#ec1313, 20%),
-  'error-1': #ec1313,
-  'error-2': darken(#ec1313, 25%),
+  'success-0': #a6e3c8,
+  'success-1': #3dc287,
+  'success-2': #257450,
+  // danger
+  'danger-0': #f7a1a1,
+  'danger-1': #ec1313,
+  'danger-2': #8d0c0c,
   // warning
-  'warning-0': lighten(#d2c22d, 20%),
+  'warning-0': #ede7ab,
   'warning-1': #d2c22d,
-  'warning-2': darken(#d2c22d, 25%),
+  'warning-2': #7e741b,
   // info
-  'info-0': lighten(#1380ec, 20%),
+  'info-0': #a1ccf7,
   'info-1': #1380ec,
-  'info-2': darken(#1380ec, 25%)
+  'info-2': #0c4d8d
 ) !default;
 
 // Sizing for font-sizes, padding, margin and gap
 // Based on type-scale.com: scale 1.333
 $bace-sizes: (
-  'none': 0,
-  '000': 0.56,
-  '00': 0.75,
-  '0': 1,
-  '1': 1.33,
-  '2': 1.78,
-  '3': 2.37,
-  '4': 3.16,
-  '5': 4.21,
+  '0': 0,
+  '1': 0.56,
+  '2': 0.75,
+  '3': 1,
+  '4': 1.33,
+  '5': 1.78,
+  '6': 2.37,
+  '7': 3.16,
+  '8': 4.21,
 ) !default;
 
 // Sizing for line-height, default same as sizes, but can be set separately

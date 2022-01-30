@@ -64,18 +64,22 @@
 @import './src/layout/cluster';
 @import './src/layout/tiles';
 @import './src/layout/switcher';
+@import './src/layout/gap';
+@import './src/layout/grid';
 
 /*******
-* Utility classes
+* static utility classes
+*******/
+@import './src/utilities/hidden';
+@import './src/utilities/click-area';
+
+/*******
+* generative utility classes
 *******/
 @import './src/utilities/background';
 @import './src/utilities/typography';
 @import './src/utilities/spacing';
-@import './src/utilities/hidden';
-@import './src/utilities/click-area';
 @import './src/utilities/flexbox';
-@import './src/utilities/grid';
-@import './src/utilities/gap';
 @import './src/utilities/radius';
 @import './src/utilities/border';
 @import './src/utilities/transition';

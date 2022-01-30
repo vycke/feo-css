@@ -1,4 +1,4 @@
-@for $i from 1 through 3 {
+@for $i from 1 through 12 {
   .grid-#{$i} {
     display: grid;
     grid-template-columns: repeat($i, 1fr);

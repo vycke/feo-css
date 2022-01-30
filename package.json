@@ -7,7 +7,7 @@
     "lint:fix": "yarn lint --fix"
   },
   "name": "bace-css",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "main": "bace.scss",
   "description": "A tiny CSS framework",
   "repository": "https://github.com/kevtiq/bace-css.git",

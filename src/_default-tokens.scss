@@ -5,37 +5,7 @@ $bace-fluid: false !default;
 
 // List of colors that is used to generate utility classes, but also generate
 // CSS custom properties
-// Colors based on the notion of increasing or decreasing darkness
-$bace-colors: (
-  // grey-scale
-  'grey-0': hsl(215, 35%, 98%),
-  'grey-1': hsl(215, 35%, 90%),
-  'grey-2': hsl(215, 35%, 70%),
-  'grey-3': hsl(215, 35%, 40%),
-  'grey-4': hsl(215, 35%, 20%),
-  'grey-5': hsl(215, 35%, 5%),
-  // BRAND COLORS
-  'primary': #a6e3c8,
-  'secondary': hsl(215, 35%, 20%),
-  'accent': #11bace,
-  // FUNCTIONAL COLORS
-  // success
-  'success-0': #a6e3c8,
-  'success-1': #3dc287,
-  'success-2': #257450,
-  // danger
-  'danger-0': #f7a1a1,
-  'danger-1': #ec1313,
-  'danger-2': #8d0c0c,
-  // warning
-  'warning-0': #ede7ab,
-  'warning-1': #d2c22d,
-  'warning-2': #7e741b,
-  // info
-  'info-0': #a1ccf7,
-  'info-1': #1380ec,
-  'info-2': #0c4d8d
-) !default;
+$bace-colors: () !default;
 
 // Sizing for font-sizes, padding, margin and gap
 // Based on type-scale.com: scale 1.333
@@ -67,7 +37,7 @@ $bace-breakpoints: () !default;
 // basic setup for themes
 $bace-themes: () !default;
 
-// internal array used for generating all utility functions
+// internal array used for generating all utilit#282a3ay functions
 $_colors: $bace-colors;
 
 @if (length($bace-themes) > 0) {

@@ -12,42 +12,7 @@ Every array has a baseline which flagged as `0`. every stage bigger adds `+1` to
 
 ## Colors
 
-Generates CSS custom properties: `--color-<name>`. By default _Bace CSS_ ships with gray-scale colors, system colors, and of course `#11BACE`.
-
-```scss
-$gray-h: 215;
-$gray-s: 35%;
-
-$bace-colors: (
-	// grayscale
-	'gray-0': hsl($gray-h, $gray-s, 98%),
-	'gray-1': hsl($gray-h, $gray-s, 90%),
-	'gray-2': hsl($gray-h, $gray-s, 70%),
-	'gray-3': hsl($gray-h, $gray-s, 40%),
-	'gray-4': hsl($gray-h, $gray-s, 20%),
-	'gray-5': hsl($gray-h, $gray-s, 5%),
-	// bace
-	'bace-0': lighten(#11bace, 25%),
-	'bace-1': #11bace,
-	'bacce-2': darken(#11bace, 20%),
-	// success
-	'success-0': lighten(#4ab57f, 20%),
-	'success-1': #4ab57f,
-	'success-2': darken(#4ab57f, 25%),
-	// error
-	'error-0': lighten(#ec1313, 20%),
-	'error-1': #ec1313,
-	'error-2': darken(#ec1313, 25%),
-	// warning
-	'warning-0': lighten(#d2c22d, 20%),
-	'warning-1': #d2c22d,
-	'warning-2': darken(#d2c22d, 25%),
-	// info
-	'info-0': lighten(#1380ec, 20%),
-	'info-1': #1380ec,
-	'info-2': darken(#1380ec, 25%)
-);
-```
+Generates CSS custom properties: `--color-<name>`.
 
 Used in:
 

@@ -1,24 +1,37 @@
 // reset, settings & generic styles
+$colors: (
+	'grey-0': hsl(215, 35%, 98%),
+	'grey-1': hsl(215, 35%, 90%),
+	'grey-2': hsl(215, 35%, 70%),
+	'grey-3': hsl(215, 35%, 40%),
+	'grey-4': hsl(215, 35%, 15%),
+	'grey-5': hsl(215, 35%, 10%),
+	'primary': #a6e3c8,
+	'secondary': hsl(215, 35%, 15%),
+	'accent-1': #11bace
+);
+
 $themes: (
 	'light': (
 		'accent': 'info-1',
-		'back': 'gray-1',
-		'back-secondary': 'gray-0',
-		'code': 'gray-4',
-		'front': 'gray-5',
-		'hover': 'gray-2'
+		'back': 'grey-1',
+		'back-secondary': 'grey-0',
+		'code': 'grey-4',
+		'front': 'grey-5',
+		'hover': 'grey-2'
 	),
 	'dark': (
-		'accent': 'bace-1',
-		'back': 'gray-5',
-		'back-secondary': 'gray-5',
-		'code': 'gray-4',
-		'front': 'gray-0',
-		'hover': 'gray-4'
+		'accent': 'accent-1',
+		'back': 'grey-5',
+		'back-secondary': 'grey-5',
+		'code': 'grey-4',
+		'front': 'grey-0',
+		'hover': 'grey-4'
 	)
 );
 
 @use '../../../bace.scss' with (
+	$bace-colors: $colors,
 	$bace-themes: $themes
 );
 

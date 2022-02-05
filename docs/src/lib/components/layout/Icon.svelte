@@ -9,4 +9,4 @@
 	$: svg = name ? feather.icons[name].toSvg({ ...attrs, class: klass }) : '';
 </script>
 
-<span class="lh-000 {klass}">{@html svg}</span>
+<span class="lh-1 {klass}">{@html svg}</span>

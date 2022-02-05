@@ -6,6 +6,6 @@
 	<title>🙈🙉🙊</title>
 </svelte:head>
 
-<Page title="🙈🙉🙊" class="text-center mt-3">
+<Page title="🙈🙉🙊" class="text-center mt-6">
 	<h2>It appears this page does not exist</h2>
 </Page>

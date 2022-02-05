@@ -3,7 +3,7 @@
 *******/
 html,
 body {
-	color: var(--color-gray-5);
+	color: var(--color-grey-5);
 	background-color: var(--color-back);
 	font-family: var(--sans-serif);
 }
@@ -28,8 +28,8 @@ a:hover {
 }
 
 blockquote > p {
-	padding: var(--size-0);
-	margin-top: var(--size-0);
+	padding: var(--size-3);
+	margin-top: var(--size-3);
 	position: relative;
 	border-left: 5px solid var(--color-accent);
 	outline: 1px solid var(--color-accent);
@@ -39,10 +39,10 @@ blockquote > p {
 		position: absolute;
 		top: -10px;
 		background-color: var(--color-back-secondary);
-		padding-left: var(--size-000);
-		padding-right: var(--size-000);
+		padding-left: var(--size-2);
+		padding-right: var(--size-2);
 		color: var(--color-accent);
-		font-size: var(--size-00);
+		font-size: var(--size-3);
 		font-family: var(--monospace);
 		text-transform: uppercase;
 	}
@@ -53,8 +53,8 @@ input {
 	line-height: var(--lh-00);
 	background-color: var(--color-back-secondary);
 	border: 1px solid var(--color-hover);
-	border-radius: var(--size-000);
-	padding: var(--size-000) var(--size-00);
+	border-radius: var(--size-w);
+	padding: var(--size-2) var(--size-3);
 	color: var(--color-front);
 }
 
@@ -65,7 +65,7 @@ input:focus {
 }
 
 article h2 + p {
-	margin-top: var(--size-00) !important;
+	margin-top: var(--size-3) !important;
 }
 
 article img {
@@ -75,10 +75,10 @@ article img {
 }
 
 article > :not(pre) {
-	padding-left: var(--size-1);
-	padding-right: var(--size-1);
+	padding-left: var(--size-4);
+	padding-right: var(--size-4);
 }
 
 article li {
-	margin-left: var(--size-2);
+	margin-left: var(--size-5);
 }

@@ -1,6 +1,5 @@
 // Responsive 2-column layout with a default 50-50 split.
 // Allows you to set one of the two columns to a controllable size (-left, -right)
-// allows you to set the width, of the controllable column, min-width of both columns
 // and horizontal/vertical gap.
 // NOTE: can be combined with the .gap- class.
 .sidebar-l,
@@ -28,7 +27,7 @@
 }
 
 // Generate classes to set the min-width of each half of .sidebar-lr
-@each $name, $size in $bace-breakpoints {
+@each $name, $size in $feo-breakpoints {
   .sidebar-w-#{$name} {
     --sidebar-width: var(--bp-#{$name});
   }

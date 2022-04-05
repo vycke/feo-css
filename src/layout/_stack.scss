@@ -21,7 +21,7 @@
   --stack-gap: auto;
 }
 
-@each $name, $space in $bace-sizes {
+@each $name, $space in $feo-sizes {
   // Generate gap classes to be combined with 'stack'
   // can be applied to child elements to impact the space between the applied
   // element and the preceding element.

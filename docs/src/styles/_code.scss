@@ -56,7 +56,7 @@
 
 pre > code {
 	color: var(--color-gray-0);
-	padding: var(--size-3);
+	padding: var(--size-0);
 	background-color: var(--color-code);
 	outline: 1px solid var(--color-hover);
 }
@@ -65,12 +65,12 @@ pre[data-lang] > span {
 	position: absolute;
 	top: 0;
 	right: 0;
-	font-size: var(--size-30);
+	font-size: var(--size-0);
 	font-family: var(--monospace);
 	color: var(--color-gray-0);
 	background-color: var(--color-gray-3);
 	text-transform: uppercase;
-	border-bottom-left-radius: var(--size-2);
-	padding: 4px var(--size-30);
-	line-height: var(--size-2);
+	border-bottom-left-radius: var(--size-00);
+	padding: 4px var(--size-0);
+	line-height: var(--size-00);
 }

@@ -4,7 +4,7 @@
 
 // Typography system (golden ratio)
 @function size($size) {
-  @if $bace-fluid {
+  @if $feo-fluid {
     $reducer: if($size <= 1, 1.1, 0.9);
     $min: $reducer * $size;
     @return clamp(#{$min}rem, #{$size} * 2vw, #{$size} * 1.2rem);
@@ -18,23 +18,23 @@
 *******/
 :root {
   // create CSS variables around colors
-  @each $name, $color in $bace-colors {
+  @each $name, $color in $feo-colors {
     --color-#{$name}: #{$color};
   }
 
   // create CSS variables around spacing, font-sizes etc.
-  @each $name, $size in $bace-sizes {
+  @each $name, $size in $feo-sizes {
     --size-#{$name}: #{size($size)};
     --lh-#{$name}: #{$size};
   }
 
   // create CSS variables around breakpoints
-  @each $name, $bp in $bace-breakpoints {
+  @each $name, $bp in $feo-breakpoints {
     --bp-#{$name}: #{$bp};
   }
 
   // font families
-  @each $name, $value in $bace-font-families {
+  @each $name, $value in $feo-font-families {
     --#{$name}: #{$value};
   }
 
@@ -45,7 +45,7 @@
 }
 
 // generate theme-based color variables, linking to base color variables
-@each $tName, $theme in $bace-themes {
+@each $tName, $theme in $feo-themes {
   [data-theme='#{$tName}'] {
     @each $cName, $color in $theme {
       --color-#{$cName}: var(--color-#{$color});

@@ -2,8 +2,6 @@
 	export let doc;
 </script>
 
-<article
-	class="border-hover border-w-1 bg-back-secondary stack stack-g-4 radius-2 py-5 mb-4 lh-5"
->
+<article class="border-hover border-w-1 bg-back-secondary stack stack-g-1 radius-00 py-2 mb-1 lh-2">
 	{@html doc.html}
 </article>

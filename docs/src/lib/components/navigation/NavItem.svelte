@@ -10,9 +10,9 @@
 <li
 	class:selected
 	class:bg-hover={selected}
-	class="nav-item | px-2 py-1 lh-2 radius-1 hover:bg-hover transition-200"
+	class="nav-item | px-00 py-000 lh-00 radius-000 hover:bg-hover transition-200"
 >
-	<a {href} class="no-decoration cluster gap-3 items-center" on:click sveltekit:prefetch>
+	<a {href} class="no-decoration cluster gap-0 items-center" on:click sveltekit:prefetch>
 		{#if icon}
 			<Icon name={icon} class="transition-200 text-grey-3" />
 		{/if}

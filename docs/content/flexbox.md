@@ -1,7 +1,7 @@
 ---
 title: Flexbox, grid and gap
 category: Utilities
-source: https://github.com/kevtiq/bace-css/blob/main/src/utilities/_flexbox.scss
+source: https://github.com/kevtiq/feo-css/blob/main/src/utilities/_flexbox.scss
 ---
 
 ## Direction
@@ -54,4 +54,4 @@ Classes for CSS grids.
 
 ## Gap
 
-The new gap property can be accessed by using the `gap-<name>`, where name is based on `$bace-sizes`.
+The new gap property can be accessed by using the `gap-<name>`, where name is based on `$feo-sizes`.

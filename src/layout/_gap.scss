@@ -1,5 +1,5 @@
 // New gap property
-@each $name, $space in $bace-sizes {
+@each $name, $space in $feo-sizes {
   .gap-#{$name} {
     gap: var(--size-#{$name});
   }

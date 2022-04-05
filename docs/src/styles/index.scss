@@ -6,9 +6,8 @@ $colors: (
 	'grey-3': hsl(215, 35%, 40%),
 	'grey-4': hsl(215, 35%, 15%),
 	'grey-5': hsl(215, 35%, 10%),
-	'primary': #a6e3c8,
+	'primary': #11bace,
 	'secondary': hsl(215, 35%, 15%),
-	'accent-1': #11bace
 );
 
 $themes: (
@@ -21,7 +20,7 @@ $themes: (
 		'hover': 'grey-2'
 	),
 	'dark': (
-		'accent': 'accent-1',
+		'accent': 'primary',
 		'back': 'grey-5',
 		'back-secondary': 'grey-5',
 		'code': 'grey-4',
@@ -30,9 +29,9 @@ $themes: (
 	)
 );
 
-@use '../../../bace.scss' with (
-	$bace-colors: $colors,
-	$bace-themes: $themes
+@use '../../../feo.scss' with (
+	$feo-colors: $colors,
+	$feo-themes: $themes
 );
 
 @use 'global';

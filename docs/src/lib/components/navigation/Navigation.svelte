@@ -3,7 +3,6 @@
 	import { search, group } from '$lib/search';
 	import Icon from '../layout/Icon.svelte';
 	import NavItem from './NavItem.svelte';
-	import ThemeSwitch from './ThemeSwitch.svelte';
 	import { page } from '$app/stores';
 
 	// Properties
@@ -18,8 +17,8 @@
 	$: path = $page.path === '' ? '/' : $page.path;
 </script>
 
-<nav class="px-4 pb-4 flex-col items-start bg-back text-front" data-open={open}>
-	<div class="flex-row items-center w-full bg-back pt-4">
+<nav class="px-1 pb-1 flex-col items-start bg-back text-front" data-open={open}>
+	<div class="flex-row items-center w-full bg-back pt-1">
 		<button
 			class="text-front flex-grow text-left flex-row items-center bg-back"
 			on:click={() => (open = !open)}
@@ -27,25 +26,25 @@
 			<Icon name={icon} />
 		</button>
 		<div class="flex-row items-center">
-			<a href="/" class="name | no-decoration bold text-4 flex-row items-center">
+			<a href="/" class="name | no-decoration bold text-1 flex-row items-center">
 				{name}
 			</a>
 			<a
 				href={source}
-				class="monospace lh-6 text-1 px-1 radius-1 border-hover border-w-1 ml-3"
+				class="monospace lh-3 text-000 px-000 radius-000 border-hover border-w-1 ml-0"
 			>
 				v{version}
 			</a>
 		</div>
 	</div>
 
-	<ul role="list" class="pt-5 stack stack-g-1 w-full bg-back">
-		<input bind:value={term} placeholder="Search..." class="mt-0 mb-2" />
+	<ul role="list" class="pt-2 stack gap-000 w-full bg-back">
+		<input bind:value={term} placeholder="Search..." class="mt-none mb-00" />
 
 		{#each Object.keys(filteredDocs) as category, i}
-			<li class:mt-2={i > 0} class="cluster gap-2 items-center pb-1">
+			<li class:mt-2={i > 0} class="cluster gap-00 items-center pb-000">
 				<Icon name={categories[category] || 'circle'} class="text-accent" attrs={{ height: 20 }} />
-				<span class="text-00 monospace uppercase text-accent">{category}</span>
+				<span class="text-0 monospace uppercase text-accent">{category}</span>
 			</li>
 
 			{#each filteredDocs[category] as { title, slug, icon }, j}
@@ -60,7 +59,7 @@
 		{/each}
 
 		<!-- <ThemeSwitch class={open ? 'mt-2' : 'stack-grow pt-2'} /> -->
-		<li class="text-2 text-left py-4">
+		<li class="text-00 text-left py-1">
 			Made with ♥️ by <a href="https://crinkles.io">Crinkles</a>
 		</li>
 	</ul>

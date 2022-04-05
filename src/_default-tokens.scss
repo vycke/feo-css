@@ -1,54 +1,54 @@
 @use "sass:map";
 
 // Allow fluid sizes
-$bace-fluid: false !default;
+$feo-fluid: false !default;
 
 // List of colors that is used to generate utility classes, but also generate
 // CSS custom properties
-$bace-colors: () !default;
+$feo-colors: () !default;
 
 // Sizing for font-sizes, padding, margin and gap
 // Based on type-scale.com: scale 1.333
-$bace-sizes: (
-  '0': 0,
-  '1': 0.56,
-  '2': 0.75,
-  '3': 1,
-  '4': 1.33,
-  '5': 1.78,
-  '6': 2.37,
-  '7': 3.16,
-  '8': 4.21,
+$feo-sizes: (
+  'none': 0,
+  '000': 0.56,
+  '00': 0.75,
+  '0': 1,
+  '1': 1.33,
+  '2': 1.78,
+  '3': 2.37,
+  '4': 3.16,
+  '5': 4.21,
 ) !default;
 
 // Sizing for line-height, default same as sizes, but can be set separately
 // Based on type-scale.com: scale 1.333
-$bace-lh: $bace-sizes !default;
+$feo-lh: $feo-sizes !default;
 
-// Breakpoint system. Default uses 20rem times $bace-sizes
-$bace-breakpoints: () !default;
+// Breakpoint system. Default uses 20rem times $feo-sizes
+$feo-breakpoints: () !default;
 // Fill when no breakpoints are set
-@if (length($bace-breakpoints) == 0) {
-  @each $name, $size in $bace-sizes {
-    $bace-breakpoints: map.set($bace-breakpoints, $name, $size * 20rem);
+@if (length($feo-breakpoints) == 0) {
+  @each $name, $size in $feo-sizes {
+    $feo-breakpoints: map.set($feo-breakpoints, $name, $size * 20rem);
   }
 }
 
-// basic setup for themes
-$bace-themes: () !default;
+// basic setup for 4themes
+$feo-themes: () !default;
 
 // internal array used for generating all utilit#282a3ay functions
-$_colors: $bace-colors;
+$_colors: $feo-colors;
 
-@if (length($bace-themes) > 0) {
-  $theme: nth(nth($bace-themes, 1), 2);
+@if (length($feo-themes) > 0) {
+  $theme: nth(nth($feo-themes, 1), 2);
   @each $name, $color in $theme {
     $_colors: map.set($_colors, $name, var(--color-#{$color}));
   }
 }
 
 // Font families
-$bace-font-families: (
+$feo-font-families: (
   monospace: "Inconsolata, Menlo, Monaco, Consolas, 'Courier New', monospace",
   serif: 'ui-serif, Georgia, Cambria, serif',
   sans-serif:

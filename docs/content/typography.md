@@ -1,27 +1,27 @@
 ---
 title: Typography
 category: Utilities
-source: https://github.com/kevtiq/bace-css/blob/main/src/utilities/_typography.scss
+source: https://github.com/kevtiq/feo-css/blob/main/src/utilities/_typography.scss
 ---
 
 ## Text color, font-sizes and font family
 
-Based on the `$bace-colors` and `$bace-themes` settings from your [design tokens](/themes), utility classes for text colors are generated. Utility classes that trigger when a pseudo-class is triggered, are also facilitated. The following classes are available:
+Based on the `$feo-colors` and `$feo-themes` settings from your [design tokens](/themes), utility classes for text colors are generated. Utility classes that trigger when a pseudo-class is triggered, are also facilitated. The following classes are available:
 
 - `.text-<name>`
 - `.hover:text-<name>`
 - `.focus:text-<name>`
 - `.active:test-<name>`
 
-In addition, based on the `$bace-sizes`, additional utility classes are generate, in the format `.text-<name>`.
+In addition, based on the `$feo-sizes`, additional utility classes are generate, in the format `.text-<name>`.
 
-> If names from `$bace-sizes` and `$bace-colors` collide, the former takes precedence.
+> If names from `$feo-sizes` and `$feo-colors` collide, the former takes precedence.
 
-Lastly, based on `$bace-font-families`, utility classes are generated that allow you to set the font-family on an element. These classes follow the structure of `.<name>`.
+Lastly, based on `$feo-font-families`, utility classes are generated that allow you to set the font-family on an element. These classes follow the structure of `.<name>`.
 
 ## Line-height
 
-Based on `$bace-sizes`, line-height utility classes and CSS variables are generated. The base value of this array is equal to `$bace-sizes`, but can be set separately.
+Based on `$feo-sizes`, line-height utility classes and CSS variables are generated. The base value of this array is equal to `$feo-sizes`, but can be set separately.
 
 - `.lh-<name>`
 

@@ -18,7 +18,7 @@
 }
 
 // Generate classes to set the switcher min-sizes
-@each $name, $size in $bace-breakpoints {
+@each $name, $size in $feo-breakpoints {
   .switcher-w-#{$name} {
     --switcher-width: var(--bp-#{$name});
   }

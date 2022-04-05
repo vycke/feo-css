@@ -1,5 +1,5 @@
 // Generate utility classes around font-size
-@each $name, $pb in $bace-breakpoints {
+@each $name, $pb in $feo-breakpoints {
   .minw-#{$name} {
     min-width: min(100vw, var(--bp-#{$name}));
   }
@@ -23,7 +23,7 @@
 }
 
 // hide based on breakpoint value
-@each $name, $bp in $bace-breakpoints {
+@each $name, $bp in $feo-breakpoints {
   @media (max-width: #{$bp}) {
     .hide-#{$name} {
       display: none !important;

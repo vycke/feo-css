@@ -13,7 +13,7 @@
 }
 
 // Generate classes to set the tile min-sizes
-@each $name, $size in $bace-breakpoints {
+@each $name, $size in $feo-breakpoints {
   .tiles-w-#{$name} {
     --tiles-width: var(--bp-#{$name});
   }

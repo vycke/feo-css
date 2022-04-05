@@ -6,37 +6,37 @@ order: 2
 
 ## Installation
 
-_Bace CSS_ is distributed as an NPM package through the NPM Registry. In can be added to your project by using `npm` or `yarn`.
+_Feo CSS_ is distributed as an NPM package through the NPM Registry. In can be added to your project by using `npm` or `yarn`.
 
 ```bash
-npm install bace-css
-yarn add bace-css
+npm install feo-css
+yarn add feo-css
 ```
 
 ## @import
 
-Depending on the type of project you are running, _Bace CSS_ can be added in several different ways to your project. In all cases, the _Bace CSS_ file needs to be imported into your own `.scss` file. The first method is to use the `@import` function of SCSS.
+Depending on the type of project you are running, _Feo CSS_ can be added in several different ways to your project. In all cases, the _Feo CSS_ file needs to be imported into your own `.scss` file. The first method is to use the `@import` function of SCSS.
 
 ```scss
-$bace-colors: (...);
+$feo-colors: (...);
 
 // Import via relative paths
-@import '../../path/to/node_modules/bace-css/bace.scss';
-@import '~bace-css/bace.scss';
+@import '../../path/to/node_modules/feo-css/feo.scss';
+@import '~feo-css/feo.scss';
 ```
 
 ## @use
 
-The second method is to use the newer `@use` of SCSS. This allows you to define and use feature flags of _Bace CSS_. When using the `with` structure, ensure your SCSS variables are defined in the same file. Importing another file before `@use` statements is disallowed by SCSS.
+The second method is to use the newer `@use` of SCSS. This allows you to define and use feature flags of _Feo CSS_. When using the `with` structure, ensure your SCSS variables are defined in the same file. Importing another file before `@use` statements is disallowed by SCSS.
 
 ```scss
 $colors: (...);
 
-@use '../../path/to/node_modules/bace-css/bace.scss';
-@use '~bace-css/bace.scss';
+@use '../../path/to/node_modules/feo-css/feo.scss';
+@use '~feo-css/feo.scss';
 
-@use '../../path/to/node_modules/bace-css/bace.scss' with (
-  $bace-colors: $colors
+@use '../../path/to/node_modules/feo-css/feo.scss' with (
+  $feo-colors: $colors
 );
 ```
 
@@ -44,16 +44,16 @@ $colors: (...);
 
 ## How it works
 
-_Bace CSS_ transforms all configured design tokens from SCSS variables to CSS custom properties. These CSS custom properties are used in all utilities classes that are generated based on the configured design tokens. Let's look at the example color configuration below.
+_Feo CSS_ transforms all configured design tokens from SCSS variables to CSS custom properties. These CSS custom properties are used in all utilities classes that are generated based on the configured design tokens. Let's look at the example color configuration below.
 
 ```scss
 // tokens.css
-$bace-colors: (
+$feo-colors: (
 	'black': #000,
 	'white': #fff
 );
 
-$bace-sizes: (
+$feo-sizes: (
 	'default': 1rem
 );
 ```

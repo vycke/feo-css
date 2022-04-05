@@ -9,14 +9,14 @@
 }
 
 // Generate utility classes around font-size
-@each $name, $size in $bace-sizes {
+@each $name, $size in $feo-sizes {
   .text-#{$name} {
     font-size: var(--size-#{$name});
   }
 }
 
 // Generate utility classes around font-families
-@each $name, $size in $bace-font-families {
+@each $name, $size in $feo-font-families {
   .#{$name} {
     font-family: var(--#{$name});
   }
@@ -69,7 +69,7 @@ a.no-decoration > * {
 }
 
 // line-height classes
-@each $name, $size in $bace-lh {
+@each $name, $size in $feo-lh {
   .lh-#{$name} {
     line-height: var(--lh-#{$name});
   }

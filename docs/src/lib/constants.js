@@ -6,7 +6,7 @@ export const categories = {
 	Utilities: 'tool'
 };
 
-export const name = 'Bace CSS';
+export const name = 'Feo CSS';
 export const version = pkg.version;
 export const source = pkg.repository;
 export const description = `Complete documentation for ${name} (v${version})`;

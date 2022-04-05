@@ -33,13 +33,13 @@ html:focus-within {
 /* Set core body defaults */
 body {
   text-rendering: optimizeSpeed;
-  line-height: calc(1em + 0.5rem);
   min-height: 100%;
+  line-height: calc(1em + 0.5rem);
 }
 
 /* Remove list styles on ul, ol elements with a class attribute */
-ul[role='list'],
-ol[role='list'] {
+ul[class],
+ol[class] {
   padding: 0;
   list-style: none;
 }
@@ -47,8 +47,6 @@ ol[role='list'] {
 /* Make images easier to work with */
 img,
 picture,
-video,
-canvas,
 svg {
   display: block;
   max-width: 100%;
@@ -85,15 +83,15 @@ a:visited {
 * Generic styling
 *******/
 h1 {
-  font-size: var(--size-6, 2.3rem);
+  font-size: var(--size-3, 2.3rem);
 }
 
 h2 {
-  font-size: var(--size-5, 1.8rem);
+  font-size: var(--size-2, 1.8rem);
 }
 
 h3 {
-  font-size: var(--size-4, 1.33rem);
+  font-size: var(--size-1, 1.33rem);
 }
 
 // TEXT
@@ -119,11 +117,11 @@ pre,
 pre:not([data-lang]),
 pre[data-lang] {
   position: relative;
+  padding: 0;
   white-space: pre;
   word-wrap: normal;
   word-break: normal;
   word-spacing: normal;
-  padding: 0;
 }
 
 pre > code {

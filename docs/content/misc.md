@@ -27,3 +27,7 @@ Classes that enable you to set CSS transitions on all transitional attributes of
 - `.ratio-vid`: sets the aspect ratio to 9/16.
 - `.ratio-auto`: sets the aspect ratio to `auto`.
 - `.ratio-square`: sets the aspect ratio to 1/1.
+
+## `nth-child`
+
+Feo CSS enables you to use the `--nth-child` custom property to determine the `nth-of-type` value. This is a numeric value going between 1 to 10, and can be used for various things. You will thank me later when you need it.

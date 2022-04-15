@@ -3,12 +3,10 @@
 // same size.
 // NOTE: can be combined with the .gap- classes (e.g. .gap-00)
 .tiles {
-  --tiles-width: 0;
-
   display: grid;
   grid-template-columns: repeat(
     auto-fit,
-    minmax(min(var(--tiles-width), 100%), 1fr)
+    minmax(min(var(--tiles-width, 0), 100%), 1fr)
   );
 }
 

@@ -2,14 +2,12 @@
 // Layout pattern that allows all to move from horizontal to vertical at a
 // specific breakpoint
 .switcher {
-  --switcher-width: 0;
-
   display: flex;
   flex-wrap: wrap;
 }
 
 .switcher > * {
-  flex-basis: calc((var(--switcher-width) - 100%) * 999);
+  flex-basis: calc((var(--switcher-width, 0) - 100%) * 999);
   flex-grow: 1;
 }
 

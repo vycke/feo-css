@@ -1,6 +1,4 @@
 .stack {
-  --stack-gap: 0;
-
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -12,7 +10,7 @@
 }
 
 .stack > * + * {
-  margin-block-start: var(--stack-gap);
+  margin-block-start: var(--stack-gap, 0);
 }
 
 // allows you to break the stack and fill the avaiable space above the applied

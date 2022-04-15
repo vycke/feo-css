@@ -4,16 +4,13 @@
 // NOTE: can be combined with the .gap- class.
 .sidebar-l,
 .sidebar-r {
-  --sidebar-width: 0;
-  --sidebar-content: 50%;
-
   display: flex;
   flex-wrap: wrap;
 
   & > * {
-    flex-basis: var(--sidebar-width);
+    flex-basis: var(--sidebar-width, 0);
     flex-grow: 1;
-    min-width: min(100%, var(--sidebar-width));
+    min-width: min(100%, var(--sidebar-width, 50%));
   }
 }
 
@@ -23,7 +20,7 @@
   flex-grow: 999;
 
   /* wraps when both sides are equal */
-  min-inline-size: var(--sidebar-content);
+  min-inline-size: var(--sidebar-content, 50%);
 }
 
 // Generate classes to set the min-width of each half of .sidebar-lr

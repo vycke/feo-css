@@ -1,9 +1,6 @@
 // standard centering
 .center > * {
-  --center-gutter: 0px;
-  --center-width: 0;
-
-  width: min(100% - 2 * var(--center-gutter), var(--center-width));
+  width: min(100% - 2 * var(--center-gutter, 0px), var(--center-width, 0px));
   margin-inline: auto; 
 }
 

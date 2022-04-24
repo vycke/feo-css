@@ -7,7 +7,7 @@
     "lint:fix": "yarn lint --fix"
   },
   "name": "feo-css",
-  "version": "2.2.0",
+  "version": "2.3.0",
   "main": "feo.scss",
   "description": "A tiny CSS framework",
   "repository": "https://github.com/kevtiq/feo-css.git",

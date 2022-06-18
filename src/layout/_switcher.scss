@@ -16,3 +16,11 @@
     --switcher-width: var(--bp-#{$name});
   }
 }
+
+.switcher-reverse {
+  flex-direction:row-reverse;
+}
+
+.switcher-reverse > * {
+  order: calc(-1 * var(--nth-child));
+}

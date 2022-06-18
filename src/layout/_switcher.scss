@@ -7,7 +7,8 @@
 }
 
 .switcher > * {
-  min-width: clamp(0px, (var(--switcher-width, 0) - 100%) * 999, 100%)
+  flex-basis: calc((var(--switcher-width, 0) * var(--switcher-amount, 1) - 100%) * 999);
+  flex-grow: 1;
 }
 
 // Generate classes to set the switcher min-sizes
@@ -17,10 +18,9 @@
   }
 }
 
-.switcher-reverse {
-  flex-direction:row-reverse;
-}
-
-.switcher-reverse > * {
-  order: calc(-1 * var(--nth-child));
+// Generate classes to alter the amount
+@for $i from 1 through 12 {
+  .switcher-a-#{$i} {
+    --switcher-amount: #{$i};
+  }
 }

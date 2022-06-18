@@ -7,31 +7,12 @@
 }
 
 .switcher > * {
-  flex-basis: calc((var(--switcher-width, 0) * var(--switcher-amount, 1) - 100%) * 999);
-  flex-grow: 1;
-}
-
-.switcher-even > * > * {
-  max-inline-size: 100%;
+  min-width: clamp(0px, (var(--switcher-width, 0) - 100%) * 999, 100%)
 }
 
 // Generate classes to set the switcher min-sizes
 @each $name, $size in $feo-breakpoints {
   .switcher-w-#{$name} {
     --switcher-width: var(--bp-#{$name});
-  }
-}
-
-// Generate classes to set the switcher min-sizes
-@each $name, $size in $feo-breakpoints {
-  .switcher-w-#{$name} {
-    --switcher-width: var(--bp-#{$name});
-  }
-}
-
-// Generate classes to alter the amount
-@for $i from 1 through 12 {
-  .switcher-a-#{$i} {
-    --switcher-amount: #{$i};
   }
 }

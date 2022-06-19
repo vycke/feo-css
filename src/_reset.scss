@@ -17,10 +17,9 @@
 
 html {
   height: 100%;
-
   /* FOUC hack */
   visibility: visible !important;
-  -moz-text-size-adjust: none;
+  /* avoid scaling on mobile */
   -webkit-text-size-adjust: none;
   text-size-adjust: none;
 }
@@ -33,14 +32,13 @@ html:focus-within {
 /* Set core body defaults */
 body {
   text-rendering: optimizeSpeed;
-  min-height: 100%;
+  min-height: 100vh;
   line-height: calc(1em + 0.5rem);
 }
 
-/* Remove list styles on ul, ol elements with a class attribute */
-ul[class],
-ol[class] {
-  padding: 0;
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
   list-style: none;
 }
 
@@ -66,33 +64,10 @@ a:visited {
   color: inherit;
   touch-action: manipulation;
   text-decoration-skip-ink: auto;
-  text-decoration-thickness: 2px;
+  text-decoration-thickness: 1px;
   text-underline-offset: 1px;
 }
 
-/* Misc. */
-[hidden] {
-  display: none !important;
-}
-
-[disabled] {
-  cursor: not-allowed;
-}
-
-/*******
-* Generic styling
-*******/
-h1 {
-  font-size: var(--size-3, 2.3rem);
-}
-
-h2 {
-  font-size: var(--size-2, 1.8rem);
-}
-
-h3 {
-  font-size: var(--size-1, 1.33rem);
-}
 
 // TEXT
 p,
@@ -102,7 +77,6 @@ h2,
 h3,
 h4 {
   overflow-wrap: break-word;
-  hyphens: auto;
 }
 
 // CODE
@@ -112,24 +86,6 @@ code {
   hyphens: none;
 }
 
-pre,
-// added specificity
-pre:not([data-lang]),
-pre[data-lang] {
-  position: relative;
-  padding: 0;
-  white-space: pre;
-  word-wrap: normal;
-  word-break: normal;
-  word-spacing: normal;
-}
-
-pre > code {
-  display: block;
-  overflow-x: auto;
-  // fix for increased font-size safari iOS
-  -webkit-text-size-adjust: none;
-}
 
 /* Removes outlines for mouse users */
 :focus:not(:focus-visible) {

@@ -6,12 +6,12 @@ order: 1
 
 ## Background-color
 
-Based on the `$feo-colors` and `$feo-themes` settings from your [design tokens](/themes), utility classes for background-color are generated. Utility classes that trigger when a pseudo-class is triggered, are also facilitated. The following classes are available:
+Based on the `$feo-colors` and `$feo-themes` settings from your [design tokens](/themes), utility classes for background-color are generated. Utility classes that trigger when a pseudo-class is triggered, are also facilitated. The classes with `-ext-` can be used to add a background spanning the entire width of the screen. The following classes are available:
 
-- `.bg-<name>`
-- `.hover:bg-<name>`
-- `.focus:bg-<name>`
-- `.active:bg-<name>`
+- `.[bg-/bg-ext-]<name>`
+- `.hover:[bg-/bg-ext-]<name>`
+- `.focus:[bg-/bg-ext-]<name>`
+- `.active:[bg-/bg-ext-]<name>`
 
 ## Border
 

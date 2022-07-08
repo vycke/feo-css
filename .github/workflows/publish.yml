@@ -1,21 +1,18 @@
 name: publish
-
 on:
-  release:
-    types: [created]
-
+  push:
+    tags:
+      - 'v[0-9]+.[0-9]+.[0-9]+*'
 jobs:
-  publish-npm:
+  build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
         with:
-          node-version: 12
-          registry-url: https://registry.npmjs.org/
-      - name: yarn publish
-        run: |
-          yarn config set //registry.npmjs.org/:_authToken=$NODE_AUTOMATION_TOKEN
-          npm publish --access public
+          node-version: 14
+          registry-url: 'https://registry.npmjs.org'
+      - run: npm ci
+      - run: npm publish
         env:
-          NODE_AUTOMATION_TOKEN: ${{ secrets.NPM_AUTOMATION_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTOMATION_TOKEN }}

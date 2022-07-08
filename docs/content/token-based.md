@@ -46,6 +46,7 @@ Based on the `$feo-breakpoints` settings from your [design tokens](/themes), uti
 - `.w-<name>`
 - `.minw-<name>`
 - `.maxw-<name>` (also applies `width: 100%`)
-- `.hide-<name>` (sets a media-query for `max-width` and sets `display: none !important`)
+- `.hidden-<name>` make an element hidden (`display: none !important`) above the `<name>`
+- `.show-<name>` make an element hidden (`display: none !important`) below the `<name>`
 - `.w-full` (sets `width: 100%`)
 - `.h-full` (sets `min-height: 100vh`)

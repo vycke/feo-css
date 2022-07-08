@@ -10,3 +10,22 @@
   border: 0;
   clip: rect(0 0 0 0);
 }
+
+.hidden {
+  display: none !important;
+}
+
+// Utilities to remove something completely from the screen based on breakpoints
+@each $name, $pb in $feo-breakpoints {
+  @media (max-width: $pb) {
+    .show-#{$name} {
+      display: none !important;
+    }
+  }
+
+  @media (min-width: $pb) {
+    .hidden-#{$name} {
+      display: none !important;
+    }
+  }
+}

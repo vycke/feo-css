@@ -1,5 +1,5 @@
 documentation:
-- any: ['docs/*']
+- any: ['docs/**/*']
 
 enhancement:
-- any: ['src/*']
+- any: ['src/**/*']

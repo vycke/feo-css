@@ -1,76 +1,19 @@
-// keyword: const, return, etc.
-// operator: ==, >=, etc.
-// punctuation: (, ), [, ], etc.
-// parameter: inside function
-// tag: <html tag/>
-// function: object.fn
-// string, number: primitives
-
-.token {
-	color: var(--color-grey-0);
-}
-
-// .token.attr-name, .token.builtin, .token.char, .token.inserted, .token.selector, .token.string
-
-.token.builtin,
-.token.variable,
-.token.operator,
-.token.punctuation,
-.token.attr-name,
-.token.comment,
-.token.keyword,
-.token.important {
-	color: var(--color-grey-2);
-}
-
-.token.comment,
-.token.attr-name,
-.token.italic {
-	font-style: italic;
-}
-
-.token.bold {
-	font-weight: bold;
-}
-
-.token.function,
-.token.class-name {
-	color: var(--color-accent);
-}
-
-.token.selector,
-.token.tag,
-.token.attr-value,
-.token.string,
-.token.number {
-	color: var(--color-success-0);
-}
-
 // INLINE CODE
 :not(pre) > code {
-	color: var(--color-primary);
+	color: var(--color-front);
 	background-color: var(--color-hover);
 	border-radius: 4px;
 	padding: 2px 6px;
 }
 
-pre > code {
-	color: var(--color-gray-0);
-	padding: var(--size-0);
-	background-color: var(--color-code);
-	outline: 1px solid var(--color-hover);
+pre {
+	background-color: var(--color-grey-4) !important;
+	overflow-x: scroll;
+	overflow-y: hidden;
 }
 
-pre[data-lang] > span {
-	position: absolute;
-	top: 0;
-	right: 0;
-	font-size: var(--size-0);
-	font-family: var(--monospace);
-	color: var(--color-gray-0);
-	background-color: var(--color-gray-3);
-	text-transform: uppercase;
-	border-bottom-left-radius: var(--size-00);
-	padding: 4px var(--size-0);
-	line-height: var(--size-00);
+pre > code {
+	padding: var(--size-1);
+	font-size: var(--size-00);
+	line-height: var(--lh-2);
 }

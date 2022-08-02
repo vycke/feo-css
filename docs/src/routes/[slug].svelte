@@ -20,6 +20,12 @@
 	export let doc;
 </script>
 
+<svelte:head>
+	<link
+		href="https://cdnjs.cloudflare.com/ajax/libs/prism-themes/1.5.0/prism-atom-dark.min.css"
+		rel="stylesheet"
+	/>
+</svelte:head>
 <Page title="{doc.category} > {doc.title}">
 	<div class="sidebar-r sidebar-c-60 sidebar-w-000 gap-1">
 		<Article {doc} />

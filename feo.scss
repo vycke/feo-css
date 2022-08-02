@@ -44,11 +44,22 @@
   }
 }
 
-// generate theme-based color variables, linking to base color variables
-@each $tName, $theme in $feo-themes {
-  [data-theme='#{$tName}'] {
-    @each $cName, $color in $theme {
-      --color-#{$cName}: var(--color-#{$color});
+// Dark theme
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+    @each $name, $color in $feo-dark-theme {
+      --color-#{$name}: var(--color-#{$color});
+    }
+  }
+}
+
+// Light theme
+@media (prefers-color-scheme: light) {
+  :root {
+    color-scheme: light;
+    @each $name, $color in $feo-light-theme {
+      --color-#{$name}: var(--color-#{$color});
     }
   }
 }

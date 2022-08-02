@@ -1,37 +1,37 @@
 // reset, settings & generic styles
 $colors: (
-	'grey-0': hsl(215, 35%, 98%),
-	'grey-1': hsl(215, 35%, 90%),
-	'grey-2': hsl(215, 35%, 70%),
-	'grey-3': hsl(215, 35%, 40%),
-	'grey-4': hsl(215, 35%, 15%),
-	'grey-5': hsl(215, 35%, 10%),
-	'primary': #11bace,
-	'secondary': hsl(215, 35%, 15%),
+        'grey-0': hsl(215, 35%, 98%),
+        'grey-1': hsl(215, 35%, 90%),
+        'grey-2': hsl(215, 35%, 70%),
+        'grey-3': hsl(215, 35%, 40%),
+        'grey-4': hsl(215, 35%, 15%),
+        'grey-5': hsl(215, 35%, 10%),
+        'primary': #11bace,
+        'secondary': hsl(215, 35%, 15%),
 );
 
-$themes: (
-	'light': (
-		'accent': 'info-1',
-		'back': 'grey-1',
-		'back-secondary': 'grey-0',
-		'code': 'grey-4',
-		'front': 'grey-5',
-		'hover': 'grey-2'
-	),
-	'dark': (
-		'accent': 'primary',
-		'back': 'grey-5',
-		'back-secondary': 'grey-5',
-		'code': 'grey-4',
-		'front': 'grey-0',
-		'hover': 'grey-4'
-	)
+$dark: (
+        'accent': 'primary',
+        'back': 'grey-5',
+        'back-secondary': 'grey-5',
+        'code': 'grey-4',
+        'front': 'grey-0',
+        'hover': 'grey-4'
+);
+
+$light: (
+        'accent': 'info-1',
+        'back': 'grey-1',
+        'back-secondary': 'grey-0',
+        'code': 'grey-4',
+        'front': 'grey-5',
+        'hover': 'grey-2'
 );
 
 @use '../../../feo.scss' with (
 	$feo-colors: $colors,
-	$feo-themes: $themes
+	$feo-dark-theme: $dark,
+	$feo-light-theme: $light
 );
 
 @use 'global';
@@ -39,8 +39,8 @@ $themes: (
 @use 'utils';
 
 :root {
-	// box-shadow
-	--elevation-1: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
-	--elevation-2: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-	--elevation-3: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  // box-shadow
+  --elevation-1: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  --elevation-2: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --elevation-3: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
 }

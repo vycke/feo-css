@@ -1,0 +1,5 @@
+docs:
+- any: ['documentation/*']
+
+src:
+- any: ['enhancement/*']

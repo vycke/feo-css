@@ -22,6 +22,8 @@ html {
   /* avoid scaling on mobile */
   -webkit-text-size-adjust: none;
   text-size-adjust: none;
+  // iOS webkit fix
+  height: -webkit-fill-available;
 }
 
 /* Set core root defaults */
@@ -33,6 +35,8 @@ html:focus-within {
 body {
   text-rendering: optimizeSpeed;
   min-height: 100vh;
+  // iOS webkit fix
+  min-height: -webkit-fill-available;
   line-height: calc(1em + 0.5rem);
 }
 
@@ -106,4 +110,9 @@ code {
     animation-iteration-count: 1 !important;
     scroll-behavior: auto !important;
   }
+}
+
+
+html {
+  height: -webkit-fill-available;
 }

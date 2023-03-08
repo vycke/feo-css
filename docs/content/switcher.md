@@ -1,7 +1,7 @@
 ---
 title: Switcher
 category: Layout
-source: https://github.com/kevtiq/feo-css/blob/main/src/layout/_switcher_.scss
+source: https://github.com/kevtiq/feo-css/blob/main/src/layout/_switcher.scss
 ---
 
 The `.switcher` class allows for a responsive grouping of element to automatically switch from horizontal alignment to vertical alignment, based on the width of the parent container.

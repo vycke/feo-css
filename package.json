@@ -1,11 +1,13 @@
 {
   "dependencies": {},
   "scripts": {
-    "build": "lightningcss --bundle --nesting --minify --targets '> 0.25%, not IE 11' src/index.css -o feo.min.css"
+    "build:full": "lightningcss --bundle --nesting  --targets '> 0.25%, not IE 11' src/index.css -o feo.css",
+    "build:min": "lightningcss --bundle --nesting --minify --targets '> 0.25%, not IE 11' src/index.css -o feo.min.css",
+    "build": "yarn build:min && yarn build:full"
   },
   "name": "feo-css",
   "version": "4.0.1",
-  "main": "build/index.css",
+  "main": "feo.css",
   "description": "A tiny CSS framework",
   "repository": "https://github.com/vyckes/feo-css.git",
   "keywords": [

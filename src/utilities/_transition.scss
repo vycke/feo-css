@@ -1,6 +1,0 @@
-@for $i from 1 through 5s {
-  $length: $i * 100;
-  .transition-#{$length} {
-    transition: var(--transition-#{$length});
-  }
-}

@@ -1,6 +1,0 @@
-// Generate utility classes around radius
-@each $name, $rad in $feo-sizes {
-  .radius-#{$name} {
-    border-radius: var(--size-#{$name});
-  }
-}

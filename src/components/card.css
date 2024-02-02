@@ -1,0 +1,14 @@
+.card {
+    background: var(--color-surface-1);
+    padding: var(--token-size-0);
+    border: 1px solid var(--color-surface-1);
+    border-radius: var(--token-radius-0);
+}
+
+.card:hover {
+    border-color: var(--color-primary);
+}
+
+.card p {
+    line-height: 1.3;
+}

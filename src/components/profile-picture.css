@@ -1,0 +1,3 @@
+.profile-picture {
+    max-width: min(35vw, 150px);
+}

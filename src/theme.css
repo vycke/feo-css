@@ -1,0 +1,94 @@
+:root {
+  /**
+   * COLORS
+   */
+  --hue: 215;
+  /** Dark colors */
+  --token-color-dark-0: hsl(var(--hue), 30%, 8%);
+  --token-color-dark-1: hsl(var(--hue), 30%, 24%);
+  --token-color-dark-2: hsl(var(--hue), 30%, 40%);
+  --token-color-dark-3: hsl(var(--hue), 30%, 50%);
+  /** Light colors */
+  --token-color-light-0: hsl(var(--hue), 36%, 98%);
+  --token-color-light-1: hsl(var(--hue), 36%, 92%);
+  --token-color-light-2: hsl(var(--hue), 36%, 78%);
+  --token-color-light-3: hsl(var(--hue), 36%, 68%);
+
+  /**
+   * BREAK POINTS
+   */
+  --token-bp-0: 20rem;
+  --token-bp-000: calc(var(--token-bp-00) / 1.33);
+  --token-bp-00: calc(var(--token-bp-0) / 1.33);
+  --token-bp-1: calc(var(--token-bp-0) * 1.33);
+  --token-bp-2: calc(var(--token-bp-1) * 1.33);
+  --token-bp-3: calc(var(--token-bp-2) * 1.33);
+  --token-bp-4: calc(var(--token-bp-3) * 1.33);
+  --token-bp-5: calc(var(--token-bp-4) * 1.33);
+
+  /**
+   * SPACING & SIZING
+   */
+
+  /* Value between 0px and 5px, equal to 20% increase of 1rem */
+  --ratio: calc(5 * (min(100vw, 1240px) - 320px) / 920);
+
+  /* Scale of 1.333 */
+  --token-size-none: 0;
+  --token-size-000: calc(0.65rem + 0.65 * var(--ratio));
+  --token-size-00: calc(0.8125rem + 0.8125 * var(--ratio));
+  --token-size-0: calc(1rem + var(--ratio));
+  --token-size-1: calc(1.33rem + 1.33 * var(--ratio));
+  --token-size-2: calc(1.78rem + 1.78 * var(--ratio));
+  --token-size-3: calc(2.37rem + 2.37 * var(--ratio));
+  --token-size-4: calc(3.16rem + 3.16 * var(--ratio));
+  --token-size-5: calc(4.21rem + 4.21 * var(--ratio));
+
+  /**
+   * FONT FAMILY
+   */
+  --monospace: ui-monospace, "Cascadia Code", "Source Code Pro", Menlo, Consolas,
+    "DejaVu Sans Mono", monospace;
+  --serif: Charter, "Bitstream Charter", "Sitka Text", Cambria, serif;
+  --sans-serif: Seravek, "Gill Sans Nova", Ubuntu, Calibri, "DejaVu Sans",
+    system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol";
+
+  /**
+   * RADIUS & ELEVATION
+   */
+  --token-radius-0: 0.25rem;
+  --token-radius-1: 0.75rem;
+  --token-elevation-0: 0 1px 1px hsl(0deg 0% 0% / 0.075),
+    0 2px 2px hsl(0deg 0% 0% / 0.075), 0 4px 4px hsl(0deg 0% 0% / 0.075);
+  --token-elevation-1: 0 4px 4px hsl(0deg 0% 0% / 0.075),
+    0 8px 8px hsl(0deg 0% 0% / 0.075), 0 16px 16px hsl(0deg 0% 0% / 0.075);
+}
+
+/**
+ * LIGHT THEME
+ */
+:root {
+  color-scheme: light;
+  --color-foreground-0: var(--token-color-dark-0);
+  --color-foreground-1: var(--token-color-dark-2);
+  --color-foreground-2: var(--token-color-dark-3);
+  --color-surface-0: var(--token-color-light-0);
+  --color-surface-1: var(--token-color-light-1);
+  --color-surface-2: var(--token-color-light-2);
+}
+
+/**
+ * DARK THEME
+ */
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+    --color-foreground-0: var(--token-color-light-0);
+    --color-foreground-1: var(--token-color-light-2);
+    --color-foreground-2: var(--token-color-light-3);
+    --color-surface-0: var(--token-color-dark-0);
+    --color-surface-1: var(--token-color-dark-1);
+    --color-surface-2: var(--token-color-dark-2);
+  }
+}

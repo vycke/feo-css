@@ -1,0 +1,100 @@
+/**
+ *  Utility classes to control the shared --layout-X properties amongst the
+ *  layout classes
+ */
+
+/* Control the amount API */
+.--amount-1 {
+  --layout-amount: 1;
+}
+.--amount-2 {
+  --layout-amount: 2;
+}
+.--amount-3 {
+  --layout-amount: 3;
+}
+.--amount-4 {
+  --layout-amount: 4;
+}
+.--amount-5 {
+  --layout-amount: 5;
+}
+.--amount-6 {
+  --layout-amount: 6;
+}
+.--amount-7 {
+  --layout-amount: 7;
+}
+.--amount-8 {
+  --layout-amount: 8;
+}
+.--amount-9 {
+  --layout-amount: 9;
+}
+.--amount-10 {
+  --layout-amount: 10;
+}
+.--amount-11 {
+  --layout-amount: 11;
+}
+.--amount-12 {
+  --layout-amount: 12;
+}
+
+/* Control the gap API */
+.--gap-none {
+  --layout-gap: none;
+}
+.--gap-auto {
+  --layout-gap: auto;
+}
+.--gap-000 {
+  --layout-gap: var(--token-size-000);
+}
+.--gap-00 {
+  --layout-gap: var(--token-size-00);
+}
+.--gap-0 {
+  --layout-gap: var(--token-size-0);
+}
+.--gap-1 {
+  --layout-gap: var(--token-size-1);
+}
+.--gap-2 {
+  --layout-gap: var(--token-size-2);
+}
+.--gap-3 {
+  --layout-gap: var(--token-size-3);
+}
+.--gap-4 {
+  --layout-gap: var(--token-size-4);
+}
+.--gap-5 {
+  --layout-gap: var(--token-size-5);
+}
+
+/* Control the width API */
+.--width-000 {
+  --layout-width: var(--token-bp-000);
+}
+.--width-00 {
+  --layout-width: var(--token-bp-00);
+}
+.--width-0 {
+  --layout-width: var(--token-bp-0);
+}
+.--width-1 {
+  --layout-width: var(--token-bp-1);
+}
+.--width-2 {
+  --layout-width: var(--token-bp-2);
+}
+.--width-3 {
+  --layout-width: var(--token-bp-3);
+}
+.--width-4 {
+  --layout-width: var(--token-bp-4);
+}
+.--width-5 {
+  --layout-width: var(--token-bp-5);
+}

@@ -1,0 +1,18 @@
+/**
+ * tile-based sytem that determines the amount of columns based on a min-width
+ * for each tile. The wrapper fills the entire available horizonal space
+ *
+ * --layout-width: sets the minimum width of each tile
+ * --layout-gap: set the gap between the child elements (horizontal & vertical)
+ */
+.tiles {
+  --layout-width: ;
+  --layout-gap: 0;
+
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(min(var(--layout-width), 100%), 1fr)
+  );
+  gap: var(--layout-gap);
+}

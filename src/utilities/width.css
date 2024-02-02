@@ -1,0 +1,31 @@
+.maxw-000 {
+  max-width: var(--token-bp-000);
+}
+
+.maxw-00 {
+  max-width: var(--token-bp-00);
+}
+
+.maxw-0 {
+  max-width: var(--token-bp-0);
+}
+
+.maxw-1 {
+  max-width: var(--token-bp-1);
+}
+
+.maxw-2 {
+  max-width: var(--token-bp-2);
+}
+
+.maxw-3 {
+  max-width: var(--token-bp-3);
+}
+
+.maxw-4 {
+  max-width: var(--token-bp-4);
+}
+
+.maxw-5 {
+  max-width: var(--token-bp-5);
+}

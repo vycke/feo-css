@@ -1,0 +1,48 @@
+/**
+ * A layout of X columns that switches from horizontal to vertical the moment
+ * the width of a child element becomes less than a set value. Assumes that
+ * columns are of the same size.
+ * child element
+ *
+ * --layout-gap: set the gap between the child elements (horizontal & vertical)
+ * --layout-width: the min-width of a single child elements
+ * --layout-amount: the amount of child elements on a single row
+ *
+ * NOTE: the :has selector is not supported in FireFox (). This means that
+ * --layout-amount is not automatically set by the class, and needs to be set
+ * manually
+ */
+
+.switcher {
+  --layout-gap: 0;
+  --layout-width: 0;
+  --layout-amount: 2;
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--layout-gap);
+}
+
+.switcher > * {
+  flex-basis: calc(
+    (var(--layout-width) * var(--layout-amount) - 100%) * 999
+  );
+  flex-grow: 1;
+}
+
+/* uses the :has selector to set the number of children */
+.switcher:has(> *:nth-child(3)) {
+  --layout-amount: 3;
+}
+
+.switcher:has(> *:nth-child(4)) {
+  --layout-amount: 4;
+}
+
+.switcher:has(> *:nth-child(5)) {
+  --layout-amount: 5;
+}
+
+.switcher:has(> *:nth-child(6)) {
+  --layout-amount: 6;
+}

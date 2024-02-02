@@ -1,0 +1,110 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove all default margin/border styles of the "User-Agent-Stylesheet" */
+*:where(:not(iframe, canvas, img, svg, video):not(svg *)) {
+  margin: 0;
+  border: 0;
+}
+
+html {
+  height: 100%;
+  /* avoid scaling on mobile */
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+  /* iOS webkit fix */
+  height: -webkit-fill-available;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  text-rendering: optimizeSpeed;
+  min-height: 100vh;
+  /* iOS webkit fix */
+  min-height: -webkit-fill-available;
+  line-height: 1.78;
+}
+
+/* Remove list styles on ul, ol elements with a list role,
+  which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+  padding-left: 0;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+:where(h1, h2, h3, button, input, label) {
+  line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+:where(h1, h2, h3) {
+  text-wrap: balance;
+}
+
+/* Baseline for default links */
+:where(a, a:visited):not([class]) {
+  touch-action: manipulation;
+  text-decoration-thickness: max(0.08em, 2px);
+  text-decoration-skip-ink: auto;
+  text-underline-offset: 0.1em;
+}
+
+/* Make images easier to work with */
+:where(img, picture, svg) {
+  display: block;
+  max-width: 100%;
+}
+
+/* default input style */
+:where(input, button, textarea, select) {
+  font: inherit;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
+
+/* Removes outlines for mouse users */
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* Makes focus through keyboard better */
+:focus-visible {
+  --outline-size: max(1.5px, 0.1em);
+
+  border-radius: 0.1em;
+  outline: var(--outline-width, var(--outline-size)) var(--outline-style, solid)
+    var(--outline-color, currentColor);
+  outline-offset: var(--outline-offset, var(--outline-size));
+}
+
+/* Remove all animations and transitions for
+  people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto !important;
+  }
+
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+  }
+}

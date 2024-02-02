@@ -1,0 +1,20 @@
+/**
+ * horizontal center of layout elements
+ *
+ * --layout-width: sets the width of the element that is centered
+ *
+ * NOTE: exceptions in child elements can be made width:
+ * [class~="center"] > * {
+ *   margin-left: 50%;
+ *   transform: translateX(-50%);
+ *   width: 100vw;
+ *   max-width: X;
+ * }
+ */
+.center {
+  --layout-width: 100%;
+
+  margin-left: auto;
+  margin-right: auto;
+  width: min(100%, var(--layout-width));
+}

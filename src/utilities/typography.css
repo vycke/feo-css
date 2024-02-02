@@ -1,0 +1,61 @@
+/* Font-size */
+.size-000 {
+  font-size: var(--token-size-000);
+}
+.size-00 {
+  font-size: var(--token-size-00);
+}
+.size-0 {
+  font-size: var(--token-size-0);
+}
+.size-1 {
+  font-size: var(--token-size-1);
+}
+.size-2 {
+  font-size: var(--token-size-2);
+}
+.size-3 {
+  font-size: var(--token-size-3);
+}
+.size-4 {
+  font-size: var(--token-size-4);
+}
+.size-5 {
+  font-size: var(--token-size-5);
+}
+.monospace {
+  font-family: var(--monospace);
+}
+.serif {
+  font-family: var(--serif);
+}
+.sans-serif {
+  font-family: var(--sans-serif);
+}
+.bold {
+  font-weight: 600;
+}
+.regular {
+  font-weight: 400;
+}
+.italic {
+  font-style: italic;
+}
+.uppercase {
+  text-transform: uppercase;
+}
+.no-decoration {
+  text-decoration: none;
+}
+.text-right {
+  text-align: right;
+}
+.text-left {
+  text-align: left;
+}
+.text-center {
+  text-align: center;
+}
+.lh-1 {
+  line-height: 1;
+}

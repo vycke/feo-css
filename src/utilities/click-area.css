@@ -1,0 +1,14 @@
+/* Makes an entire box clickable based on a single child anchor */
+.click-area {
+  position: relative;
+}
+
+.click-area a {
+  cursor: pointer;
+}
+
+.click-area a::after {
+  position: absolute;
+  inset: 0;
+  content: "";
+}

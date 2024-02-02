@@ -1,0 +1,14 @@
+/**
+ * Default grid layout with equal columns.
+ *
+ * --layout-gap: set the gap between the child elements (horizontal & vertical)
+ * --layout-amount: sets a fixed number of columns
+ */
+.grid {
+  --layout-amount: 2;
+  --layout-gap: 0;
+
+  display: grid;
+  grid-template-columns: repeat(var(--layout-amount), 1fr);
+  gap: var(--layout-gap);
+}

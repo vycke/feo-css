@@ -1,0 +1,36 @@
+/**
+ * A responsive 2-column layout with one fixed width column, and one flexible
+ * column. It switches from vertical to horizontal when the flexible column
+ * becomes less than --content of the total (i.e. a bit more than
+ * )
+ *
+ * --layout-gap: set the gap between the child elements (horizontal & vertical)
+ * --layout-width: sets the absolute value of the fixed-width column
+ * --min-inline-size: the minimum size of the responsive column
+ *
+ * NOTE: use the --left and --right classes to set which column is the fixed bar
+ */
+.sidebar {
+  --layout-gap: 0;
+  --layout-width: 0;
+  --min-inline-size: 60%;
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--layout-gap);
+}
+
+.sidebar > * {
+  flex-basis: var(--layout-width);
+  flex-grow: 1;
+  min-width: min(100%, var(--layout-width));
+}
+
+.sidebar.--left > :last-child,
+.sidebar.--right > :first-child {
+  flex-basis: 0;
+  flex-grow: 999;
+
+  /* wraps when content becomes less than X */
+  min-inline-size: var(--min-inline-size);
+}

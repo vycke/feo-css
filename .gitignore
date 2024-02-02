@@ -6,12 +6,5 @@ npm-debug.*
 .DS_Store
 .sass-cache
 node_modules
-test.html
-tmp
 
-/.svelte
-/.svelte-kit
-/build
-/.idea
-/functions
 yarn-error.log

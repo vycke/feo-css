@@ -28,7 +28,7 @@ a:hover,
 a:visited:hover,
 a:focus {
   color: var(--color-primary);
-  text-decoration-color: var(--color-primary);
+  text-decoration-color: var(--color-foreground-2);
 }
 
 /**

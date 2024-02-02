@@ -177,8 +177,8 @@
 
   a:hover, a:visited:hover, a:focus {
     color: var(--color-primary);
-    -webkit-text-decoration-color: var(--color-primary);
-    text-decoration-color: var(--color-primary);
+    -webkit-text-decoration-color: var(--color-foreground-2);
+    text-decoration-color: var(--color-foreground-2);
   }
 
   :where(h1, h2, h3) {

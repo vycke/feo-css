@@ -39,43 +39,119 @@
       you see, the <code>&lt;z&gt;</code> is a placeholder for the number
       corresponding to the correct design token.
     </p>
-    <h2 class="mt-1">Padding & margin</h2>
-    <p>
-      Classes based on the <code>--token-size-&lt;z&gt;</code>
-      <a href="tokens.html">tokens</a>.
-    </p>
-    <ul>
-      <li>
-        <code>m-&lt;z&gt;</code> & <code>p-&lt;z&gt;</code>: set the
-        margin/padding on all sides.
-      </li>
-      <li>
-        <code>m&lt;b/t/l/r&gt;-&lt;z&gt;</code> &
-        <code>p&lt;b/t/l/r&gt;-&lt;z&gt;</code>: set the margin/padding on the
-        &lt;bottom/top/left/right&gt; respectively.
-      </li>
-    </ul>
+    <!-- MARGIN -->
+    <h2 class="mt-1">Margin</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Class</th>
+          <th><a href="tokens.html">Design token</a></th>
+          <th>CSS property</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><code>m-&lt;z&gt;</code></td>
+          <td><code>--token-size-&lt;z&gt;</code></td>
+          <td><code>margin</code></td>
+        </tr>
+        <tr>
+          <td><code>mt-&lt;z&gt;</code></td>
+          <td><code>--token-size-&lt;z&gt;</code></td>
+          <td><code>margin-top</code></td>
+        </tr>
+        <tr>
+          <td><code>mr-&lt;z&gt;</code></td>
+          <td><code>--token-size-&lt;z&gt;</code></td>
+          <td><code>margin-right</code></td>
+        </tr>
+        <tr>
+          <td><code>mb-&lt;z&gt;</code></td>
+          <td><code>--token-size-&lt;z&gt;</code></td>
+          <td><code>margin-bottom</code></td>
+        </tr>
+        <tr>
+          <td><code>ml-&lt;z&gt;</code></td>
+          <td><code>--token-size-&lt;z&gt;</code></td>
+          <td><code>margin-left</code></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- PADDING -->
+    <h2 class="mt-1">Padding</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Class</th>
+          <th><a href="tokens.html">Design token</a></th>
+          <th>CSS property</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><code>p-&lt;z&gt;</code></td>
+          <td><code>--token-size-&lt;z&gt;</code></td>
+          <td><code>padding</code></td>
+        </tr>
+        <tr>
+          <td><code>pt-&lt;z&gt;</code></td>
+          <td><code>--token-size-&lt;z&gt;</code></td>
+          <td><code>padding-top</code></td>
+        </tr>
+        <tr>
+          <td><code>pr-&lt;z&gt;</code></td>
+          <td><code>--token-size-&lt;z&gt;</code></td>
+          <td><code>padding-right</code></td>
+        </tr>
+        <tr>
+          <td><code>pb-&lt;z&gt;</code></td>
+          <td><code>--token-size-&lt;z&gt;</code></td>
+          <td><code>padding-bottom</code></td>
+        </tr>
+        <tr>
+          <td><code>pl-&lt;z&gt;</code></td>
+          <td><code>--token-size-&lt;z&gt;</code></td>
+          <td><code>padding-left</code></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- TYPOGRAPHY -->
     <h2 class="mt-1">Typography</h2>
-    <p>
-      Classes based on the <code>--token-size-&lt;z&gt;</code>
-      <a href="tokens.html">tokens</a>.
-    </p>
-    <ul>
-      <li>
-        <code>size-&lt;z&gt;</code>: set the <code>font-size</code> property.
-      </li>
-      <li>
-        <code>monospace/serif/sans-serif</code>: controls the
-        <code>font-family</code> property.
-      </li>
-      <li>
-        <code>bold/regular/italc/uppercase</code>: controls how text looks.
-      </li>
-      <li>
-        <code>text-left/right/center</code>: controls the
-        <code>text-align</code> property.
-      </li>
-    </ul>
+    <table>
+      <thead>
+        <tr>
+          <th>Class</th>
+          <th><a href="tokens.html">Design token</a></th>
+          <th>CSS property</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><code>size-&lt;z&gt;</code></td>
+          <td><code>--token-size-&lt;z&gt;</code></td>
+          <td><code>font-size</code></td>
+        </tr>
+        <tr>
+          <td><code>monospace/serif/sans-serif</code></td>
+          <td>-</td>
+          <td><code>font-family</code></td>
+        </tr>
+        <tr>
+          <td><code>bold/regular/italc/uppercase</code></td>
+          <td>-</td>
+          <td>Various</td>
+        </tr>
+        <tr>
+          <td><code>text-left/right/center</code></td>
+          <td>-</td>
+          <td><code>text-align</code></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- MAX-WIDTH -->
     <h2 class="mt-1"><code>maxw-&lt;z&gt;</code></h2>
     <p>
       Based on the

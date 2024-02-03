@@ -15,6 +15,7 @@
     <meta name="theme-color" content="#F9FAFB" />
     <meta name="view-transition" content="same-origin" />
     <link rel="stylesheet" href="feo.min.css" />
+    <link rel="stylesheet" href="demo.css" />
     <!-- assets -->
     <link rel="icon" href="/favicon.ico" sizes="any" />
     <!-- 32×32 -->
@@ -26,9 +27,9 @@
   </head>
 
   <body class="p-0">
-    <div class="sidebar --left --width-000">
+    <div class="sidebar --left --width-000 relative">
       <!-- NAVIGATION -->
-      <nav>
+      <nav class="sticky">
         <ul role="list" class="flex-col --gap-000 | mt-4 pt-0000 | size-00">
           <li><a href="index.html">Homepage</a></li>
           <li>
@@ -206,6 +207,37 @@
               <code>&lt;a /&gt;</code> it can find in its (sub-)DOM. It does not
               have to be a direct descender.
             </p>
+          </section>
+          <!-- POSITION -->
+          <section class="flex-col --gap-0">
+            <h2>Position</h2>
+            <div>
+              <table>
+                <thead>
+                  <tr>
+                    <th>Class</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><code>relative</code></td>
+                    <td>Sets the position property</td>
+                  </tr>
+                  <tr>
+                    <td><code>absolute</code></td>
+                    <td>Sets the position property</td>
+                  </tr>
+                  <tr>
+                    <td><code>sticky</code></td>
+                    <td>
+                      Sets the position property. In addition sets
+                      <code>top: 0</code>.
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </section>
         </main>
         <!-- FOOTER -->

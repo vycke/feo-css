@@ -15,6 +15,7 @@
     <meta name="theme-color" content="#F9FAFB" />
     <meta name="view-transition" content="same-origin" />
     <link rel="stylesheet" href="feo.min.css" />
+    <link rel="stylesheet" href="demo.css" />
     <!-- assets -->
     <link rel="icon" href="/favicon.ico" sizes="any" />
     <!-- 32×32 -->
@@ -26,9 +27,9 @@
   </head>
 
   <body class="p-0">
-    <div class="sidebar --left --width-000">
+    <div class="sidebar --left --width-000 relative">
       <!-- NAVIGATION -->
-      <nav>
+      <nav class="sticky">
         <ul role="list" class="flex-col --gap-000 | mt-4 pt-0000 | size-00">
           <li><a href="index.html">Homepage</a></li>
           <li>
@@ -206,10 +207,103 @@
           <!-- COLORS -->
           <section class="flex-col --gap-0">
             <h2>Colors</h2>
+            <p>
+              A set of dark and light colors are present in Feo.css, that can be
+              used as a base for your application in greyscale
+            </p>
+            <div>
+              <table>
+                <thead>
+                  <tr>
+                    <th>Token name</th>
+                    <th>RGB value</th>
+                    <th>HSL value</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><code>--token-color-light-0</code></td>
+                    <td>#F7F9FB</td>
+                    <td><code>hsl(215, 36%, 98%)</code></td>
+                  </tr>
+                  <tr>
+                    <td><code>--token-color-light-1</code></td>
+                    <td>#E3E9F2</td>
+                    <td><code>hsl(215, 36%, 92%)</code></td>
+                  </tr>
+                  <tr>
+                    <td><code>--token-color-light-2</code></td>
+                    <td>#C8D4E5</td>
+                    <td><code>hsl(215, 36%, 78%)</code></td>
+                  </tr>
+                  <tr>
+                    <td><code>--token-color-dark-0</code></td>
+                    <td>#0E131B</td>
+                    <td><code>hsl(215, 30%, 8%)</code></td>
+                  </tr>
+                  <tr>
+                    <td><code>--token-color-dark-1</code></td>
+                    <td>#2B3A50</td>
+                    <td><code>hsl(215, 30%, 24%)</code></td>
+                  </tr>
+                  <tr>
+                    <td><code>--token-color-dark-2</code></td>
+                    <td>#476185</td>
+                    <td><code>hsl(215, 30%, 40%)</code></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </section>
           <!-- THEMES -->
           <section class="flex-col --gap-0">
             <h2>Light & dark theme</h2>
+            <p>
+              A simple light & dark theme is constructed, that is automatically
+              selected based on the user device preferences. The theme colors
+              are picked from the light/dark color tokens.
+            </p>
+            <div>
+              <table>
+                <thead>
+                  <tr>
+                    <th>Token name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><code>--color-surface-0</code></td>
+                    <td>The main background of the page</td>
+                  </tr>
+                  <tr>
+                    <td><code>--color-surface-1</code></td>
+                    <td>
+                      A secondary color that can be used on different surfaces,
+                      such as tables, cards, etc.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><code>--color-foreground-0</code></td>
+                    <td>
+                      The color of primary elements, such as text, to create the
+                      biggest contrast with the background.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><code>--color-foreground-1</code></td>
+                    <td>
+                      A softer foreground color with a little less contract. Can
+                      be used for less important text, borders, etc.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><code>--color-link</code></td>
+                    <td>The color of unstyled links.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </section>
         </main>
         <!-- FOOTER -->

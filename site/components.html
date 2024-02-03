@@ -15,6 +15,7 @@
     <meta name="theme-color" content="#F9FAFB" />
     <meta name="view-transition" content="same-origin" />
     <link rel="stylesheet" href="feo.min.css" />
+    <link rel="stylesheet" href="demo.css" />
     <!-- assets -->
     <link rel="icon" href="/favicon.ico" sizes="any" />
     <!-- 32×32 -->
@@ -26,9 +27,9 @@
   </head>
 
   <body class="p-0">
-    <div class="sidebar --left --width-000">
+    <div class="sidebar --left --width-000 relative">
       <!-- NAVIGATION -->
-      <nav>
+      <nav class="sticky">
         <ul role="list" class="flex-col --gap-000 | mt-4 pt-0000 | size-00">
           <li><a href="index.html">Homepage</a></li>
           <li>
@@ -62,36 +63,30 @@
           <!-- XYZ -->
           <section class="flex-col --gap-0">
             <h2>Tables</h2>
-            <p>This is how it looks.</p>
             <div>
               <table>
                 <thead>
                   <tr>
                     <th>Name</th>
-                    <th>Home Runs</th>
-                    <th>AVG</th>
+                    <th>Length (m)</th>
+                    <th>Weight (kg)</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <td>Mike Trout</td>
-                    <td>45</td>
-                    <td>.291</td>
+                    <td>John Doe</td>
+                    <td>1.72</td>
+                    <td>68</td>
                   </tr>
                   <tr>
-                    <td>Christian Yelich</td>
-                    <td>44</td>
-                    <td>.329</td>
+                    <td>John Doe</td>
+                    <td>1.72</td>
+                    <td>68</td>
                   </tr>
                   <tr>
-                    <td>Mookie Betts</td>
-                    <td>29</td>
-                    <td>.295</td>
-                  </tr>
-                  <tr>
-                    <td>Cody Bellinger</td>
-                    <td>47</td>
-                    <td>.305</td>
+                    <td>John Doe</td>
+                    <td>1.72</td>
+                    <td>68</td>
                   </tr>
                 </tbody>
               </table>
@@ -116,6 +111,62 @@
   &lt;/table&gt;
 &lt;/div&gt;
 </code></pre>
+            <p>
+              There are several custom properties available that can be
+              overwritten to control the looks of the table.
+            </p>
+            <div>
+            <table>
+              <thead>
+                <tr>
+                  <th>Custom property</th>
+                  <th>Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><code>--table-radius</code></td>
+                  <td>Sets the radius of the corners</td>
+                </tr>
+                <tr>
+                  <td><code>--table-color</code></td>
+                  <td>Sets the color of the borders and header</td>
+                </tr>
+              </tbody>
+            </table>
+            <div>
+              <table>
+                <thead>
+                  <tr>
+                    <th>Class</th>
+                    <th><a href="tokens.html">Design token</a></th>
+                    <th>CSS property</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><code>size-&lt;z&gt;</code></td>
+                    <td><code>--token-size-&lt;z&gt;</code></td>
+                    <td><code>font-size</code></td>
+                  </tr>
+                  <tr>
+                    <td><code>monospace/serif/sans-serif</code></td>
+                    <td>-</td>
+                    <td><code>font-family</code></td>
+                  </tr>
+                  <tr>
+                    <td><code>bold/regular/italc/uppercase</code></td>
+                    <td>-</td>
+                    <td>Various</td>
+                  </tr>
+                  <tr>
+                    <td><code>text-left/right/center</code></td>
+                    <td>-</td>
+                    <td><code>text-align</code></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </section>
         </main>
         <!-- FOOTER -->

@@ -3,31 +3,34 @@ div:has(> table) {
 }
 
 table {
+  --table-radius: 6px;
+  --table-color: var(--color-surface-1);
+
   width: 100%;
   overflow-x: auto;
-  border: 1px solid var(--color-surface-1);
-  background: var(--color-surface-1);
-  border-radius: 11px;
+  border: 1px solid var(--table-color);
+  background: var(--table-color);
+  border-radius: calc(var(--table-radius) * 1.3);
 }
 
 table tr:last-child td:first-child {
-  border-bottom-left-radius: 8px;
+  border-bottom-left-radius: var(--table-radius);
 }
 
 table tr:last-child td:last-child {
-  border-bottom-right-radius: 8px;
+  border-bottom-right-radius: var(--table-radius);
 }
 
 table tr:first-child th:first-child {
-  border-top-left-radius: 8px;
+  border-top-left-radius: var(--table-radius);
 }
 
 table tr:first-child th:last-child {
-  border-top-right-radius: 8px;
+  border-top-right-radius: var(--table-radius);
 }
 
 th {
-  background-color: var(--color-surface-1);
+  background-color: var(--table-color);
 }
 
 td {
@@ -37,10 +40,9 @@ td {
 td,
 th {
   text-align: left;
-  white-space: nowrap;
   padding: var(--token-size-0000);
 }
 
 table tr:hover td {
-  background-color: var(--color-surface-1);
+  background-color: var(--table-color);
 }

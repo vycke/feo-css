@@ -25,73 +25,110 @@
     <link rel="manifest" href="/site.webmanifest" />
   </head>
 
-  <body class="center --width-3 | flex-col --gap-0 | p-0">
-    <h1>Feo.css - v4.1.0</h1>
-    <p>
-      Feo.css is a small CSS library that gives you a good starting point on any
-      project. It provides you with sensible defaults for standard HTML
-      elements, and some CSS classes around layout patterns and simple utility
-      classes.
-    </p>
-    <p class="italic">
-      <span class="uppercase">Note:</span> everything on this site, is purely
-      based on the library.
-    </p>
-    <!-- WHY -->
-    <h2 class="mt-1">Why?</h2>
-    <p>
-      I find myself always copying over the basic CSS to get started on
-      development. It does not matter if it is a B2B application, a demo, a
-      content website, or a side project. A solid CSS foundation and
-      architecture speeds up everything. Feo.css provides that.
-    </p>
-    <!-- HOW TO USE IT -->
-    <h2 class="mt-1">How to use it</h2>
-    <p>
-      Use the <span class="italic">unpkg.com</span> CDN directly in your
-      <code>head</code> of your HTML page:
-    </p>
-    <pre><code>&lt;link rel="stylesheet" href="https://unpkg.com/feo-css/feo.min.css"&gt;</code></pre>
+  <body class="center --width-4 | p-0">
+    <main class="sidebar --left --width-00">
+      <!-- NAVIGATION -->
+      <nav>
+        <ul role="list" class="flex-col --gap-000 | mt-4 pt-0000 | size-00">
+          <li class="bold"><a href="index.html">Homepage</a></li>
+          <li>
+            <a href="https://github.com/vyckes/feo-css/blob/main/src/reset.css"
+              >CSS reset</a
+            >
+          </li>
+          <li><a href="tokens.html">Design tokens</a></li>
+          <li>
+            <a href="https://github.com/vyckes/feo-css/blob/main/src/global.css"
+              >Global CSS</a
+            >
+          </li>
+          <li><a href="layouts.html">Layout patterns</a></li>
+          <li><a href="utilities.html">Utilities</a></li>
+          <li><a href="components.html">Components</a></li>
+        </ul>
+      </nav>
+      <article class="flex-col --gap-2">
+        <!-- INTRODUCTION -->
+        <section class="flex-col --gap-0">
+          <h1>Feo.css - v4.1.0</h1>
+          <p>
+            Feo.css is a small CSS library that gives you a good starting point
+            on any project. It provides you with sensible defaults for standard
+            HTML elements, and some CSS classes around layout patterns and
+            simple utility classes.
+          </p>
+          <p class="italic">
+            <span class="uppercase">Note:</span> everything on this site, is
+            purely based on the library.
+          </p>
+        </section>
+        <!-- WHY -->
+        <section class="flex-col --gap-0">
+          <h2>Why?</h2>
+          <p>
+            I find myself always copying over the basic CSS to get started on
+            development. It does not matter if it is a B2B application, a demo,
+            a content website, or a side project. A solid CSS foundation and
+            architecture speeds up everything. Feo.css provides that.
+          </p>
+        </section>
+        <!-- HOW TO USE -->
+        <section class="flex-col --gap-0">
+          <h2>How to use it</h2>
+          <p>
+            Use the <span class="italic">unpkg.com</span> CDN directly in your
+            <code>head</code> of your HTML page:
+          </p>
+          <pre><code>&lt;link rel="stylesheet" href="https://unpkg.com/feo-css/feo.min.css"&gt;</code></pre>
 
-    <p>Or install it via NPM using your package manager of choice:</p>
-    <pre><code>npm install feo-css<br />yarn add feo-css</code></pre>
-    <!-- ARCHITECTURE -->
-    <h2 class="mt-1">Setup and architecture</h2>
-    <p>
-      The architecture of Feo.css is in line with
-      <a href="https://cube.fyi">CUBE CSS</a> and implements
-      <a href="https://every-layout.dev">generic layout patterns</a>. By
-      combines modern CSS techniques like <code>@layer</code> and CSS custom
-      properties, it is fully <i>extensible</i>.
-    </p>
-    <pre><code>@layer reset, theme, global, layout, utilities, components;</code></pre>
-    <p>
-      The layers indicate the level of importance, meaning: try to solve things
-      with HTML elements first. If that is not enough, use generic layout
-      patterns, and some utilities. In more complex settings, use components.
-    </p>
-    <ol>
-      <li>
-        <a href="https://github.com/vyckes/feo-css/blob/main/src/reset.css"
-          >CSS reset</a
-        >
-      </li>
-      <li><a href="tokens.html">Design tokens and theming</a></li>
-      <li>
-        <a href="https://github.com/vyckes/feo-css/blob/main/src/global.css"
-          >Global CSS for HTML elements</a
-        >
-      </li>
-      <li><a href="layouts.html">Layout patterns</a></li>
-      <li><a href="utilities.html">Utilities</a></li>
-      <li><a href="components.html">Components</a></li>
-    </ol>
-    <p>
-      Because Feo.css is build using <code>@layer</code>, you can easily extend
-      and avoid cascading issues, by including your own CSS in the proper layer.
-    </p>
+          <p>Or install it via NPM using your package manager of choice:</p>
+          <pre><code>npm install feo-css<br />yarn add feo-css</code></pre>
+        </section>
+        <!-- ARCHITECTURE -->
+        <section class="flex-col --gap-0">
+          <h2>Setup and architecture</h2>
+          <p>
+            The architecture of Feo.css is in line with
+            <a href="https://cube.fyi">CUBE CSS</a> and implements
+            <a href="https://every-layout.dev">generic layout patterns</a>. By
+            combines modern CSS techniques like <code>@layer</code> and CSS
+            custom properties, it is fully <i>extensible</i>.
+          </p>
+          <pre><code>@layer reset, theme, global, layout, utilities, components;</code></pre>
+          <p>
+            The layers indicate the level of importance, meaning: try to solve
+            things with HTML elements first. If that is not enough, use generic
+            layout patterns, and some utilities. In more complex settings, use
+            components.
+          </p>
+          <ol>
+            <li>
+              <a
+                href="https://github.com/vyckes/feo-css/blob/main/src/reset.css"
+                >CSS reset</a
+              >
+            </li>
+            <li><a href="tokens.html">Design tokens</a></li>
+            <li>
+              <a
+                href="https://github.com/vyckes/feo-css/blob/main/src/global.css"
+                >Global CSS for HTML elements</a
+              >
+            </li>
+            <li><a href="layouts.html">Layout patterns</a></li>
+            <li><a href="utilities.html">Utilities</a></li>
+            <li><a href="components.html">Components</a></li>
+          </ol>
+          <p>
+            Because Feo.css is build using <code>@layer</code>, you can easily
+            extend and avoid cascading issues, by including your own CSS in the
+            proper layer.
+          </p>
+        </section>
+      </article>
+    </main>
     <!-- FOOTER -->
-    <div class="cluster --gap-000 | size-00 italic | mt-00">
+    <div class="cluster --gap-000 justify-end | size-00 italic | mt-00">
       <a href="index.html" class="italic">Homepage</a>
       <span>|</span>
       <a href="https://github.com/vyckes/feo-css">Github</a>

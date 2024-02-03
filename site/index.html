@@ -58,10 +58,10 @@
       <a href="https://cube.fyi">CUBE CSS</a> and implements
       <a href="https://every-layout.dev">generic layout patterns</a>. By
       combines modern CSS techniques like <code>@layout</code> and CSS custom
-      properties, it is fully <span class="italic">extensible</span>.
+      properties, it is fully <i>extensible</i>.
     </p>
     <pre><code>@layer reset, theme, global, layout, utilities, components;</code></pre>
-    
+    <p>The layers indicate the level of importance, meaning: try to solve things with HTML elements first. If that is not enough, use generic layout patterns, and some utilities. In more complex settings, use components.</p>
     <ol>
       <li><a href="https://github.com/vyckes/feo-css/blob/main/src/reset.css">CSS reset</li>
       <li><a href="tokens.html">Design tokens and theming</li>

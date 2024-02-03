@@ -27,6 +27,72 @@
 
   <body class="center --width-3 | flex-col --gap-0 | p-0">
     <h1>Feo.css - Utilities</h1>
-    <p>WIP</p>
+    <span class="italic size-00"
+      >Back to the <a href="index.html">homepage</a>.</span
+    >
+    <p>
+      There is nothing wrong with utility-first CSS. It only becomes a problem
+      when it is <i>utility-only</i>. If you looked at the
+      <a href="layouts.html">layouts layer</a>, utilities there are used to
+      control layout settings. It is an incredible scalable setup.
+    </p>
+    <p>
+      Feo.css offers a very limited set of utility classes, mostly based on the
+      available <a href="tokens.html">design tokens</a>. In all the classes that
+      you see, the <code>&lt;z&gt;</code> is a placeholder for the number
+      corresponding to the correct design token.
+    </p>
+    <h2 class="mt-1">Padding & margin</h2>
+    <p>
+      Classes based on the <code>--token-size-&lt;z&gt;</code>
+      <a href="tokens.html">tokens</a>.
+    </p>
+    <ul>
+      <li>
+        <code>m-&lt;z&gt;</code> & <code>p-&lt;z&gt;</code>: set the
+        margin/padding on all sides.
+      </li>
+      <li>
+        <code>m&lt;b/t/l/r&gt;-&lt;z&gt;</code> &
+        <code>p&lt;b/t/l/r&gt;-&lt;z&gt;</code>: set the margin/padding on the
+        &lt;bottom/top/left/right&gt; respectively.
+      </li>
+    </ul>
+    <h2 class="mt-1">Typography</h2>
+    <p>
+      Classes based on the <code>--token-size-&lt;z&gt;</code>
+      <a href="tokens.html">tokens</a>.
+    </p>
+    <ul>
+      <li>
+        <code>size-&lt;z&gt;</code>: set the <code>font-size</code> property.
+      </li>
+      <li>
+        <code>monospace/serif/sans-serif</code>: controls the
+        <code>font-family</code> property.
+      </li>
+      <li>
+        <code>bold/regular/italc/uppercase</code>: controls how text looks.
+      </li>
+      <li>
+        <code>text-left/right/center</code>: controls the
+        <code>text-align</code> property.
+      </li>
+    </ul>
+    <h2 class="mt-1"><code>maxw-&lt;z&gt;</code></h2>
+    <p>
+      Based on the
+      <code>--token-bp-&lt;z&gt;</code> <a href="tokens.html">tokens</a>,
+      control the <code>max-width</code> property.
+    </p>
+    <h2 class="mt-1"><code>click-area</code></h2>
+    <p>
+      Makes the entire element with this class clickable, based on the first
+      <code>&lt;a /&gt;</code> it can find in its (sub-)DOM. It does not have to
+      be a direct descender.
+    </p>
+    <span class="italic size-00"
+      >Back to the <a href="index.html">homepage</a>.</span
+    >
   </body>
 </html>

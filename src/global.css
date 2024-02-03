@@ -21,14 +21,13 @@ a,
 a:visited {
   transition: all 200ms ease;
   color: var(--color-foreground-0);
-  text-decoration-color: var(--color-foreground-1);
+  text-decoration-color: var(--color-link);
 }
 
 a:hover,
 a:visited:hover,
 a:focus {
-  color: var(--color-primary);
-  text-decoration-color: var(--color-foreground-2);
+  color: var(--color-link);
 }
 
 /**
@@ -41,13 +40,13 @@ a:focus {
 }
 
 h1 {
-  font-size: var(--token-size-2);
+  font-size: var(--token-size-3);
 }
 h2 {
-  font-size: var(--token-size-1);
+  font-size: var(--token-size-2);
 }
 h3 {
-  font-size: var(--token-size-0);
+  font-size: var(--token-size-1);
 }
 
 /**
@@ -56,4 +55,42 @@ h3 {
 ::selection {
   color: var(--color-surface-0) !important;
   background: var(--color-foreground-0) !important;
+}
+
+/**
+ * CODE
+ */
+code {
+  font-family: var(--monospace);
+  font-size: 0.85em;
+  hyphens: none;
+}
+
+:not(pre) > code {
+  border: 1px solid var(--color-foreground-1);
+  border-radius: 4px;
+  padding: 2px;
+  background-color: var(--color-surface-1);
+}
+
+pre {
+  border: 2px solid var(--color-foreground-1);
+  border-radius: var(--token-size-00);
+  background-color: var(--color-surface-1);
+  position: relative;
+  padding: 0;
+  white-space: pre;
+  word-wrap: normal;
+  word-break: normal;
+  word-spacing: normal;
+}
+
+pre > code {
+  padding: var(--token-size-0) var(--token-size-1);
+  font-size: var(--token-size-00);
+  display: block;
+  overflow-x: auto;
+  tab-size: 2;
+  /* fix for increased font-size safari iOS */
+  -webkit-text-size-adjust: none;
 }

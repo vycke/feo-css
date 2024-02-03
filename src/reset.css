@@ -36,8 +36,8 @@ body {
 }
 
 /* Remove list styles on ul, ol elements, if they have any other class */
-ul:not(class),
-ol:not(class) {
+ul[class],
+ol[class] {
   list-style: none;
   padding-left: 0;
 }

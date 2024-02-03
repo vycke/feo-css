@@ -15,6 +15,7 @@
     <meta name="theme-color" content="#F9FAFB" />
     <meta name="view-transition" content="same-origin" />
     <link rel="stylesheet" href="feo.min.css" />
+    <link rel="stylesheet" href="demo.css" />
     <!-- assets -->
     <link rel="icon" href="/favicon.ico" sizes="any" />
     <!-- 32×32 -->
@@ -25,21 +26,21 @@
     <link rel="manifest" href="/site.webmanifest" />
   </head>
 
-  <body class="center --width-4 | flex-col --gap-0 | p-0">
-    <main class="sidebar --left --width-00">
+  <body class="p-0">
+    <div class="sidebar --left --width-000 relative">
       <!-- NAVIGATION -->
-      <nav>
+      <nav class="sticky">
         <ul role="list" class="flex-col --gap-000 | mt-4 pt-0000 | size-00">
           <li><a href="index.html">Homepage</a></li>
           <li>
             <a href="https://github.com/vyckes/feo-css/blob/main/src/reset.css"
-              >CSS reset</a
+              >CSS reset 🔗</a
             >
           </li>
           <li><a href="tokens.html">Design tokens</a></li>
           <li>
             <a href="https://github.com/vyckes/feo-css/blob/main/src/global.css"
-              >Global CSS</a
+              >Global CSS 🔗</a
             >
           </li>
           <li><a href="layouts.html">Layout patterns</a></li>
@@ -47,166 +48,207 @@
           <li><a href="components.html">Components</a></li>
         </ul>
       </nav>
-      <article class="flex-col --gap-2">
-        <!-- INTRODUCTION -->
-        <section class="flex-col --gap-0">
-          <h1>Feo.css - Utilities</h1>
-          <p>
-            There is nothing wrong with utility-first CSS. It only becomes a
-            problem when it is <i>utility-only</i>. If you looked at the
-            <a href="layouts.html">layouts layer</a>, utilities there are used
-            to control layout settings. It is an incredible scalable setup.
-          </p>
-          <p>
-            Feo.css offers a very limited set of utility classes, mostly based
-            on the available <a href="tokens.html">design tokens</a>. In all the
-            classes that you see, the <code>&lt;z&gt;</code> is a placeholder
-            for the number corresponding to the correct design token.
-          </p>
-        </section>
-        <!-- MARGIN -->
-        <section class="flex-col --gap-0">
-          <h2>Margin</h2>
-          <table>
-            <thead>
-              <tr>
-                <th>Class</th>
-                <th><a href="tokens.html">Design token</a></th>
-                <th>CSS property</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><code>m-&lt;z&gt;</code></td>
-                <td><code>--token-size-&lt;z&gt;</code></td>
-                <td><code>margin</code></td>
-              </tr>
-              <tr>
-                <td><code>mt-&lt;z&gt;</code></td>
-                <td><code>--token-size-&lt;z&gt;</code></td>
-                <td><code>margin-top</code></td>
-              </tr>
-              <tr>
-                <td><code>mr-&lt;z&gt;</code></td>
-                <td><code>--token-size-&lt;z&gt;</code></td>
-                <td><code>margin-right</code></td>
-              </tr>
-              <tr>
-                <td><code>mb-&lt;z&gt;</code></td>
-                <td><code>--token-size-&lt;z&gt;</code></td>
-                <td><code>margin-bottom</code></td>
-              </tr>
-              <tr>
-                <td><code>ml-&lt;z&gt;</code></td>
-                <td><code>--token-size-&lt;z&gt;</code></td>
-                <td><code>margin-left</code></td>
-              </tr>
-            </tbody>
-          </table>
-        </section>
-        <!-- PADDING -->
-        <section class="flex-col --gap-0">
-          <h2>Padding</h2>
-          <table>
-            <thead>
-              <tr>
-                <th>Class</th>
-                <th><a href="tokens.html">Design token</a></th>
-                <th>CSS property</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><code>p-&lt;z&gt;</code></td>
-                <td><code>--token-size-&lt;z&gt;</code></td>
-                <td><code>padding</code></td>
-              </tr>
-              <tr>
-                <td><code>pt-&lt;z&gt;</code></td>
-                <td><code>--token-size-&lt;z&gt;</code></td>
-                <td><code>padding-top</code></td>
-              </tr>
-              <tr>
-                <td><code>pr-&lt;z&gt;</code></td>
-                <td><code>--token-size-&lt;z&gt;</code></td>
-                <td><code>padding-right</code></td>
-              </tr>
-              <tr>
-                <td><code>pb-&lt;z&gt;</code></td>
-                <td><code>--token-size-&lt;z&gt;</code></td>
-                <td><code>padding-bottom</code></td>
-              </tr>
-              <tr>
-                <td><code>pl-&lt;z&gt;</code></td>
-                <td><code>--token-size-&lt;z&gt;</code></td>
-                <td><code>padding-left</code></td>
-              </tr>
-            </tbody>
-          </table>
-        </section>
-        <!-- TYPOGRAPHY -->
-        <section class="flex-col --gap-0">
-          <h2>Typography</h2>
-          <table>
-            <thead>
-              <tr>
-                <th>Class</th>
-                <th><a href="tokens.html">Design token</a></th>
-                <th>CSS property</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><code>size-&lt;z&gt;</code></td>
-                <td><code>--token-size-&lt;z&gt;</code></td>
-                <td><code>font-size</code></td>
-              </tr>
-              <tr>
-                <td><code>monospace/serif/sans-serif</code></td>
-                <td>-</td>
-                <td><code>font-family</code></td>
-              </tr>
-              <tr>
-                <td><code>bold/regular/italc/uppercase</code></td>
-                <td>-</td>
-                <td>Various</td>
-              </tr>
-              <tr>
-                <td><code>text-left/right/center</code></td>
-                <td>-</td>
-                <td><code>text-align</code></td>
-              </tr>
-            </tbody>
-          </table>
-        </section>
-        <!-- WIDTH -->
-        <section class="flex-col --gap-0">
-          <h2><code>maxw-&lt;z&gt;</code></h2>
-          <p>
-            Based on the
-            <code>--token-bp-&lt;z&gt;</code> <a href="tokens.html">tokens</a>,
-            control the <code>max-width</code> property.
-          </p>
-        </section>
-        <!-- CLICK-AREA -->
-        <section class="flex-col --gap-0">
-          <h2><code>click-area</code></h2>
-          <p>
-            Makes the entire element with this class clickable, based on the
-            first
-            <code>&lt;a /&gt;</code> it can find in its (sub-)DOM. It does not
-            have to be a direct descender.
-          </p>
-        </section>
-      </article>
-    </main>
-    <!-- FOOTER -->
-    <div class="cluster --gap-000 justify-end | size-00 italic | mt-00">
-      <a href="index.html" class="italic">Homepage</a>
-      <span>|</span>
-      <a href="https://github.com/vyckes/feo-css">Github</a>
-      <span>|</span>
-      <a href="https://vyckes.dev">Made by Vyckes</a>
+      <div>
+        <main class="center --width-3 | flex-col --gap-2">
+          <!-- INTRODUCTION -->
+          <section class="flex-col --gap-0">
+            <h1>Feo.css - Utilities</h1>
+            <p>
+              There is nothing wrong with utility-first CSS. It only becomes a
+              problem when it is <i>utility-only</i>. If you looked at the
+              <a href="layouts.html">layouts layer</a>, utilities there are used
+              to control layout settings. It is an incredible scalable setup.
+            </p>
+            <p>
+              Feo.css offers a very limited set of utility classes, mostly based
+              on the available <a href="tokens.html">design tokens</a>. In all
+              the classes that you see, the <code>&lt;z&gt;</code> is a
+              placeholder for the number corresponding to the correct design
+              token.
+            </p>
+          </section>
+          <!-- MARGIN -->
+          <section class="flex-col --gap-0">
+            <h2>Margin</h2>
+            <div>
+              <table>
+                <thead>
+                  <tr>
+                    <th>Class</th>
+                    <th><a href="tokens.html">Design token</a></th>
+                    <th>CSS property</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><code>m-&lt;z&gt;</code></td>
+                    <td><code>--token-size-&lt;z&gt;</code></td>
+                    <td><code>margin</code></td>
+                  </tr>
+                  <tr>
+                    <td><code>mt-&lt;z&gt;</code></td>
+                    <td><code>--token-size-&lt;z&gt;</code></td>
+                    <td><code>margin-top</code></td>
+                  </tr>
+                  <tr>
+                    <td><code>mr-&lt;z&gt;</code></td>
+                    <td><code>--token-size-&lt;z&gt;</code></td>
+                    <td><code>margin-right</code></td>
+                  </tr>
+                  <tr>
+                    <td><code>mb-&lt;z&gt;</code></td>
+                    <td><code>--token-size-&lt;z&gt;</code></td>
+                    <td><code>margin-bottom</code></td>
+                  </tr>
+                  <tr>
+                    <td><code>ml-&lt;z&gt;</code></td>
+                    <td><code>--token-size-&lt;z&gt;</code></td>
+                    <td><code>margin-left</code></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+          <!-- PADDING -->
+          <section class="flex-col --gap-0">
+            <h2>Padding</h2>
+            <div>
+              <table>
+                <thead>
+                  <tr>
+                    <th>Class</th>
+                    <th><a href="tokens.html">Design token</a></th>
+                    <th>CSS property</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><code>p-&lt;z&gt;</code></td>
+                    <td><code>--token-size-&lt;z&gt;</code></td>
+                    <td><code>padding</code></td>
+                  </tr>
+                  <tr>
+                    <td><code>pt-&lt;z&gt;</code></td>
+                    <td><code>--token-size-&lt;z&gt;</code></td>
+                    <td><code>padding-top</code></td>
+                  </tr>
+                  <tr>
+                    <td><code>pr-&lt;z&gt;</code></td>
+                    <td><code>--token-size-&lt;z&gt;</code></td>
+                    <td><code>padding-right</code></td>
+                  </tr>
+                  <tr>
+                    <td><code>pb-&lt;z&gt;</code></td>
+                    <td><code>--token-size-&lt;z&gt;</code></td>
+                    <td><code>padding-bottom</code></td>
+                  </tr>
+                  <tr>
+                    <td><code>pl-&lt;z&gt;</code></td>
+                    <td><code>--token-size-&lt;z&gt;</code></td>
+                    <td><code>padding-left</code></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+          <!-- TYPOGRAPHY -->
+          <section class="flex-col --gap-0">
+            <h2>Typography</h2>
+            <div>
+              <table>
+                <thead>
+                  <tr>
+                    <th>Class</th>
+                    <th><a href="tokens.html">Design token</a></th>
+                    <th>CSS property</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><code>size-&lt;z&gt;</code></td>
+                    <td><code>--token-size-&lt;z&gt;</code></td>
+                    <td><code>font-size</code></td>
+                  </tr>
+                  <tr>
+                    <td><code>monospace/serif/sans-serif</code></td>
+                    <td>-</td>
+                    <td><code>font-family</code></td>
+                  </tr>
+                  <tr>
+                    <td><code>bold/regular/italc/uppercase</code></td>
+                    <td>-</td>
+                    <td>Various</td>
+                  </tr>
+                  <tr>
+                    <td><code>text-left/right/center</code></td>
+                    <td>-</td>
+                    <td><code>text-align</code></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+          <!-- WIDTH -->
+          <section class="flex-col --gap-0">
+            <h2><code>maxw-&lt;z&gt;</code></h2>
+            <p>
+              Based on the
+              <code>--token-bp-&lt;z&gt;</code>
+              <a href="tokens.html">tokens</a>, control the
+              <code>max-width</code> property.
+            </p>
+          </section>
+          <!-- CLICK-AREA -->
+          <section class="flex-col --gap-0">
+            <h2><code>click-area</code></h2>
+            <p>
+              Makes the entire element with this class clickable, based on the
+              first
+              <code>&lt;a /&gt;</code> it can find in its (sub-)DOM. It does not
+              have to be a direct descender.
+            </p>
+          </section>
+          <!-- POSITION -->
+          <section class="flex-col --gap-0">
+            <h2>Position</h2>
+            <div>
+              <table>
+                <thead>
+                  <tr>
+                    <th>Class</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><code>relative</code></td>
+                    <td>Sets the position property</td>
+                  </tr>
+                  <tr>
+                    <td><code>absolute</code></td>
+                    <td>Sets the position property</td>
+                  </tr>
+                  <tr>
+                    <td><code>sticky</code></td>
+                    <td>
+                      Sets the position property. In addition sets
+                      <code>top: 0</code>.
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+        </main>
+        <!-- FOOTER -->
+        <footer class="cluster --gap-000 justify-end | size-00 italic | mt-1">
+          <a href="index.html" class="italic">Homepage</a>
+          <span>|</span>
+          <a href="https://github.com/vyckes/feo-css">Github</a>
+          <span>|</span>
+          <a href="https://vyckes.dev">Made by Vyckes</a>
+        </footer>
+      </div>
     </div>
   </body>
 </html>

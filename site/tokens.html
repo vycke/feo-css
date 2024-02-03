@@ -15,6 +15,7 @@
     <meta name="theme-color" content="#F9FAFB" />
     <meta name="view-transition" content="same-origin" />
     <link rel="stylesheet" href="feo.min.css" />
+    <link rel="stylesheet" href="demo.css" />
     <!-- assets -->
     <link rel="icon" href="/favicon.ico" sizes="any" />
     <!-- 32×32 -->
@@ -25,15 +26,15 @@
     <link rel="manifest" href="/site.webmanifest" />
   </head>
 
-  <body class="center --width-4 | flex-col --gap-0 | p-0">
-    <main class="sidebar --left --width-00">
+  <body class="p-0">
+    <div class="sidebar --left --width-000 relative">
       <!-- NAVIGATION -->
-      <nav>
+      <nav class="sticky">
         <ul role="list" class="flex-col --gap-000 | mt-4 pt-0000 | size-00">
           <li><a href="index.html">Homepage</a></li>
           <li>
             <a href="https://github.com/vyckes/feo-css/blob/main/src/reset.css">
-              CSS reset
+              CSS reset 🔗
             </a>
           </li>
           <li class="bold"><a href="tokens.html">Design tokens</a></li>
@@ -41,7 +42,7 @@
             <a
               href="https://github.com/vyckes/feo-css/blob/main/src/global.css"
             >
-              Global CSS
+              Global CSS 🔗
             </a>
           </li>
           <li><a href="layouts.html">Layout patterns</a></li>
@@ -49,171 +50,271 @@
           <li><a href="components.html">Components</a></li>
         </ul>
       </nav>
-      <article class="flex-col --gap-2">
-        <!-- INTRODUCTION -->
-        <section class="flex-col --gap-0">
-          <h1>Feo.css - Design tokens</h1>
-          <p>
-            Feo.css offers a limited set of design tokens, implemented in
-            <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/--*"
-              >CSS Custom Properties</a
-            >
-            (<code>--*</code>). These design tokens are used throughout all the
-            different layers of Feo.css. For example, several layout patterns
-            allow you to set the <code>gap</code> between columns and rows,
-            through <i>class ulilities</i>. These classes directly use the
-            defined tokens.
-          </p>
-        </section>
-        <!-- NAMING CONVENTINO -->
-        <section class="flex-col --gap-0">
-          <h2>Naming convention</h2>
-          <p>
-            Tokens like sizing and breakpoints are considered to have a
-            "baseline". The most common value for the design token. Those tokens
-            always have a <code>-0</code> as the post-fix. In the sequence of
-            tokens, if you want to go up a value, you increase the value. If you
-            want to go down a value, you decrease the value, or add a 0 (e.g.
-            <code>-00</code>).
-          </p>
-        </section>
-        <!-- SIZING -->
-        <section class="flex-col --gap-0">
-          <h2>Sizing</h2>
-          <p>
-            The sizing tokens are based on a
-            <a
-              href="https://vyckes.dev/writing/different-approaches-to-fluid-typography-and-layouts/"
-              >fluid</a
-            >
-            scale (larger screens mean larger values). In addition, the majority
-            of them are scaled with a value of <code>1.33</code> to the previous
-            token.
-          </p>
-        </section>
-        <table>
-          <thead>
-            <tr>
-              <th>Token name</th>
-              <th>Value at 320px</th>
-              <th>Value at 1240px</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><code>--token-size-0000</code></td>
-              <td>0.5rem</td>
-              <td>0.5rem + 2.5px</td>
-            </tr>
-            <tr>
-              <td><code>--token-size-000</code></td>
-              <td>0.65rem</td>
-              <td>0.65rem + 3.25px</td>
-            </tr>
-            <tr>
-              <td><code>--token-size-00</code></td>
-              <td>0.8125rem</td>
-              <td>0.8125rem + 4px</td>
-            </tr>
-            <tr>
-              <td><code>--token-size-0</code></td>
-              <td>1rem</td>
-              <td>1rem + 5px</td>
-            </tr>
-            <tr>
-              <td><code>--token-size-1</code></td>
-              <td>1.33rem</td>
-              <td>1.33rem + 6.65px</td>
-            </tr>
-            <tr>
-              <td><code>--token-size-2</code></td>
-              <td>1.78rem</td>
-              <td>1.78rem + 8.9px</td>
-            </tr>
-            <tr>
-              <td><code>--token-size-3</code></td>
-              <td>2.37rem</td>
-              <td>2.37rem + 11.85px</td>
-            </tr>
-            <tr>
-              <td><code>--token-size-4</code></td>
-              <td>3.16rem</td>
-              <td>3.16rem + 15.7px</td>
-            </tr>
-            <tr>
-              <td><code>--token-size-5</code></td>
-              <td>4.21rem</td>
-              <td>4.21rem + 21.05px</td>
-            </tr>
-          </tbody>
-        </table>
-        <!-- BREAKPOINTS -->
-        <section class="flex-col --gap-0">
-          <h2>Breakpoints</h2>
-          <p>
-            Tokens used as points that can be used, whenever your UI is
-            breaking. Scaling between the values is based on <code>1.33</code>.
-          </p>
-          <table>
-            <thead>
-              <tr>
-                <th>Token name</th>
-                <th>Value</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><code>--token-bp-000</code></td>
-                <td>11.31rem</td>
-              </tr>
-              <tr>
-                <td><code>--token-bp-00</code></td>
-                <td>15.04rem</td>
-              </tr>
-              <tr>
-                <td><code>--token-bp-0</code></td>
-                <td>20rem</td>
-              </tr>
-              <tr>
-                <td><code>--token-bp-1</code></td>
-                <td>20rem</td>
-              </tr>
-              <tr>
-                <td><code>--token-bp-2</code></td>
-                <td>26.6rem</td>
-              </tr>
-              <tr>
-                <td><code>--token-bp-3</code></td>
-                <td>35.38rem</td>
-              </tr>
-              <tr>
-                <td><code>--token-bp-4</code></td>
-                <td>47.05rem</td>
-              </tr>
-              <tr>
-                <td><code>--token-bp-5</code></td>
-                <td>62.58rem</td>
-              </tr>
-            </tbody>
-          </table>
-        </section>
-        <!-- COLORS -->
-        <section class="flex-col --gap-0">
-          <h2>Colors</h2>
-        </section>
-        <!-- THEMES -->
-        <section class="flex-col --gap-0">
-          <h2>Light & dark theme</h2>
-        </section>
-      </article>
-    </main>
-    <!-- FOOTER -->
-    <div class="cluster --gap-000 justify-end | size-00 italic | mt-00">
-      <a href="index.html" class="italic">Homepage</a>
-      <span>|</span>
-      <a href="https://github.com/vyckes/feo-css">Github</a>
-      <span>|</span>
-      <a href="https://vyckes.dev">Made by Vyckes</a>
+      <div>
+        <main class="center --width-3 | flex-col --gap-2">
+          <!-- INTRODUCTION -->
+          <section class="flex-col --gap-0">
+            <h1>Feo.css - Design tokens</h1>
+            <p>
+              Feo.css offers a limited set of design tokens, implemented in
+              <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/--*"
+                >CSS Custom Properties</a
+              >
+              (<code>--*</code>). These design tokens are used throughout all
+              the different layers of Feo.css. For example, several layout
+              patterns allow you to set the <code>gap</code> between columns and
+              rows, through <i>class ulilities</i>. These classes directly use
+              the defined tokens.
+            </p>
+          </section>
+          <!-- NAMING CONVENTINO -->
+          <section class="flex-col --gap-0">
+            <h2>Naming convention</h2>
+            <p>
+              Tokens like sizing and breakpoints are considered to have a
+              "baseline". The most common value for the design token. Those
+              tokens always have a <code>-0</code> as the post-fix. In the
+              sequence of tokens, if you want to go up a value, you increase the
+              value. If you want to go down a value, you decrease the value, or
+              add a 0 (e.g. <code>-00</code>).
+            </p>
+          </section>
+          <!-- SIZING -->
+          <section class="flex-col --gap-0">
+            <h2>Sizing</h2>
+            <p>
+              The sizing tokens are based on a
+              <a
+                href="https://vyckes.dev/writing/different-approaches-to-fluid-typography-and-layouts/"
+                >fluid</a
+              >
+              scale (larger screens mean larger values). In addition, the
+              majority of them are scaled with a value of <code>1.33</code> to
+              the previous token.
+            </p>
+          </section>
+          <div>
+            <table>
+              <thead>
+                <tr>
+                  <th>Token name</th>
+                  <th>Value at 320px</th>
+                  <th>Value at 1240px</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><code>--token-size-0000</code></td>
+                  <td>0.5rem</td>
+                  <td>0.5rem + 2.5px</td>
+                </tr>
+                <tr>
+                  <td><code>--token-size-000</code></td>
+                  <td>0.65rem</td>
+                  <td>0.65rem + 3.25px</td>
+                </tr>
+                <tr>
+                  <td><code>--token-size-00</code></td>
+                  <td>0.8125rem</td>
+                  <td>0.8125rem + 4px</td>
+                </tr>
+                <tr>
+                  <td><code>--token-size-0</code></td>
+                  <td>1rem</td>
+                  <td>1rem + 5px</td>
+                </tr>
+                <tr>
+                  <td><code>--token-size-1</code></td>
+                  <td>1.33rem</td>
+                  <td>1.33rem + 6.65px</td>
+                </tr>
+                <tr>
+                  <td><code>--token-size-2</code></td>
+                  <td>1.78rem</td>
+                  <td>1.78rem + 8.9px</td>
+                </tr>
+                <tr>
+                  <td><code>--token-size-3</code></td>
+                  <td>2.37rem</td>
+                  <td>2.37rem + 11.85px</td>
+                </tr>
+                <tr>
+                  <td><code>--token-size-4</code></td>
+                  <td>3.16rem</td>
+                  <td>3.16rem + 15.7px</td>
+                </tr>
+                <tr>
+                  <td><code>--token-size-5</code></td>
+                  <td>4.21rem</td>
+                  <td>4.21rem + 21.05px</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!-- BREAKPOINTS -->
+          <section class="flex-col --gap-0">
+            <h2>Breakpoints</h2>
+            <p>
+              Tokens used as points that can be used, whenever your UI is
+              breaking. Scaling between the values is based on
+              <code>1.33</code>.
+            </p>
+            <div>
+              <table>
+                <thead>
+                  <tr>
+                    <th>Token name</th>
+                    <th>Value</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><code>--token-bp-000</code></td>
+                    <td>11.31rem</td>
+                  </tr>
+                  <tr>
+                    <td><code>--token-bp-00</code></td>
+                    <td>15.04rem</td>
+                  </tr>
+                  <tr>
+                    <td><code>--token-bp-0</code></td>
+                    <td>20rem</td>
+                  </tr>
+                  <tr>
+                    <td><code>--token-bp-1</code></td>
+                    <td>20rem</td>
+                  </tr>
+                  <tr>
+                    <td><code>--token-bp-2</code></td>
+                    <td>26.6rem</td>
+                  </tr>
+                  <tr>
+                    <td><code>--token-bp-3</code></td>
+                    <td>35.38rem</td>
+                  </tr>
+                  <tr>
+                    <td><code>--token-bp-4</code></td>
+                    <td>47.05rem</td>
+                  </tr>
+                  <tr>
+                    <td><code>--token-bp-5</code></td>
+                    <td>62.58rem</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+          <!-- COLORS -->
+          <section class="flex-col --gap-0">
+            <h2>Colors</h2>
+            <p>
+              A set of dark and light colors are present in Feo.css, that can be
+              used as a base for your application in greyscale
+            </p>
+            <div>
+              <table>
+                <thead>
+                  <tr>
+                    <th>Token name</th>
+                    <th>RGB value</th>
+                    <th>HSL value</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><code>--token-color-light-0</code></td>
+                    <td>#F7F9FB</td>
+                    <td><code>hsl(215, 36%, 98%)</code></td>
+                  </tr>
+                  <tr>
+                    <td><code>--token-color-light-1</code></td>
+                    <td>#E3E9F2</td>
+                    <td><code>hsl(215, 36%, 92%)</code></td>
+                  </tr>
+                  <tr>
+                    <td><code>--token-color-light-2</code></td>
+                    <td>#C8D4E5</td>
+                    <td><code>hsl(215, 36%, 78%)</code></td>
+                  </tr>
+                  <tr>
+                    <td><code>--token-color-dark-0</code></td>
+                    <td>#0E131B</td>
+                    <td><code>hsl(215, 30%, 8%)</code></td>
+                  </tr>
+                  <tr>
+                    <td><code>--token-color-dark-1</code></td>
+                    <td>#2B3A50</td>
+                    <td><code>hsl(215, 30%, 24%)</code></td>
+                  </tr>
+                  <tr>
+                    <td><code>--token-color-dark-2</code></td>
+                    <td>#476185</td>
+                    <td><code>hsl(215, 30%, 40%)</code></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+          <!-- THEMES -->
+          <section class="flex-col --gap-0">
+            <h2>Light & dark theme</h2>
+            <p>
+              A simple light & dark theme is constructed, that is automatically
+              selected based on the user device preferences. The theme colors
+              are picked from the light/dark color tokens.
+            </p>
+            <div>
+              <table>
+                <thead>
+                  <tr>
+                    <th>Token name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><code>--color-surface-0</code></td>
+                    <td>The main background of the page</td>
+                  </tr>
+                  <tr>
+                    <td><code>--color-surface-1</code></td>
+                    <td>
+                      A secondary color that can be used on different surfaces,
+                      such as tables, cards, etc.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><code>--color-foreground-0</code></td>
+                    <td>
+                      The color of primary elements, such as text, to create the
+                      biggest contrast with the background.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><code>--color-foreground-1</code></td>
+                    <td>
+                      A softer foreground color with a little less contract. Can
+                      be used for less important text, borders, etc.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><code>--color-link</code></td>
+                    <td>The color of unstyled links.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+        </main>
+        <!-- FOOTER -->
+        <footer class="cluster --gap-000 justify-end | size-00 italic | mt-1">
+          <a href="index.html" class="italic">Homepage</a>
+          <span>|</span>
+          <a href="https://github.com/vyckes/feo-css">Github</a>
+          <span>|</span>
+          <a href="https://vyckes.dev">Made by Vyckes</a>
+        </footer>
+      </div>
     </div>
   </body>
 </html>

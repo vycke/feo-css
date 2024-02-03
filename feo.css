@@ -32,7 +32,7 @@
     line-height: 1.78;
   }
 
-  ul:not(class), ol:not(class) {
+  ul[class], ol[class] {
     padding-left: 0;
     list-style: none;
   }
@@ -93,17 +93,15 @@
   }
 }
 
-@layer theme {
+@layer tokens {
   :root {
     --hue: 215;
     --token-color-dark-0: hsl(var(--hue), 30%, 8%);
     --token-color-dark-1: hsl(var(--hue), 30%, 24%);
     --token-color-dark-2: hsl(var(--hue), 30%, 40%);
-    --token-color-dark-3: hsl(var(--hue), 30%, 50%);
     --token-color-light-0: hsl(var(--hue), 36%, 98%);
     --token-color-light-1: hsl(var(--hue), 36%, 92%);
     --token-color-light-2: hsl(var(--hue), 36%, 78%);
-    --token-color-light-3: hsl(var(--hue), 36%, 68%);
     --token-bp-0: 20rem;
     --token-bp-000: calc(var(--token-bp-00) / 1.33);
     --token-bp-00: calc(var(--token-bp-0) / 1.33);
@@ -133,11 +131,9 @@
     color-scheme: light;
     --color-foreground-0: var(--token-color-dark-0);
     --color-foreground-1: var(--token-color-dark-2);
-    --color-foreground-2: var(--token-color-dark-3);
     --color-surface-0: var(--token-color-light-0);
     --color-surface-1: var(--token-color-light-1);
-    --color-surface-2: var(--token-color-light-2);
-    --color-link: blue;
+    --color-link: green;
   }
 
   @media (prefers-color-scheme: dark) {
@@ -145,11 +141,9 @@
       color-scheme: dark;
       --color-foreground-0: var(--token-color-light-0);
       --color-foreground-1: var(--token-color-light-2);
-      --color-foreground-2: var(--token-color-light-3);
       --color-surface-0: var(--token-color-dark-0);
       --color-surface-1: var(--token-color-dark-1);
-      --color-surface-2: var(--token-color-dark-2);
-      --color-link: yellow;
+      --color-link: lime;
     }
   }
 }
@@ -175,11 +169,13 @@
     color: var(--color-foreground-0);
     -webkit-text-decoration-color: var(--color-link);
     text-decoration-color: var(--color-link);
+    text-decoration-thickness: 2px;
     transition: all .2s;
   }
 
   a:hover, a:visited:hover, a:focus {
     color: var(--color-link);
+    text-decoration-thickness: 2px;
   }
 
   :where(h1, h2, h3) {
@@ -214,6 +210,7 @@
 
   :not(pre) > code {
     border: 1px solid var(--color-foreground-1);
+    white-space: nowrap;
     background-color: var(--color-surface-1);
     border-radius: 4px;
     padding: 2px;
@@ -609,6 +606,21 @@
     bottom: 0;
     left: 0;
     right: 0;
+  }
+
+  .relative {
+    position: relative;
+  }
+
+  .absolute {
+    position: absolute;
+  }
+
+  .sticky {
+    align-self: flex-start;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
   }
 
   .m-0000 {
@@ -1085,31 +1097,38 @@
 }
 
 @layer components {
+  div:has( > table) {
+    overflow-x: auto;
+  }
+
   table {
-    border: 1px solid var(--color-surface-1);
-    background: var(--color-surface-1);
-    border-radius: 11px;
+    --table-radius: 6px;
+    --table-color: var(--color-surface-1);
+    border: 1px solid var(--table-color);
+    background: var(--table-color);
+    border-radius: calc(var(--table-radius) * 1.3);
     width: 100%;
+    overflow-x: auto;
   }
 
   table tr:last-child td:first-child {
-    border-bottom-left-radius: 8px;
+    border-bottom-left-radius: var(--table-radius);
   }
 
   table tr:last-child td:last-child {
-    border-bottom-right-radius: 8px;
+    border-bottom-right-radius: var(--table-radius);
   }
 
   table tr:first-child th:first-child {
-    border-top-left-radius: 8px;
+    border-top-left-radius: var(--table-radius);
   }
 
   table tr:first-child th:last-child {
-    border-top-right-radius: 8px;
+    border-top-right-radius: var(--table-radius);
   }
 
   th {
-    background-color: var(--color-surface-1);
+    background-color: var(--table-color);
   }
 
   td {
@@ -1122,6 +1141,6 @@
   }
 
   table tr:hover td {
-    background-color: var(--color-surface-1);
+    background-color: var(--table-color);
   }
 }

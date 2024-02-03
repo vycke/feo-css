@@ -5,3 +5,4 @@
 @import "global.css" layer(global);
 @import "layout/_layout.css" layer(layout);
 @import "utilities/_utilities.css" layer(utilities);
+@import "components/_components.css" layer(components);

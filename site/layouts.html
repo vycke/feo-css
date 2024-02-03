@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>Feo.css - layouts</title>
+    <title>Feo.css - Layouts</title>
     <meta name="robots" content="index,follow" />
     <meta
       name="description"
@@ -25,16 +25,51 @@
     <link rel="manifest" href="/site.webmanifest" />
   </head>
 
-  <body class="center --width-3 | flex-col --gap-0 | p-0">
-    <h1>Feo.css - Layouts</h1>
-    <p>WIP</p>
-    <!-- FOOTER -->
-    <div class="cluster --gap-000 | size-00 italic | mt-00">
-      <a href="index.html" class="italic">Homepage</a>
-      <span>|</span>
-      <a href="https://github.com/vyckes/feo-css">Github</a>
-      <span>|</span>
-      <a href="https://vyckes.dev">Made by Vyckes</a>
+  <body class="p-0">
+    <div class="sidebar --left --width-000">
+      <!-- NAVIGATION -->
+      <nav>
+        <ul role="list" class="flex-col --gap-000 | mt-4 pt-0000 | size-00">
+          <li><a href="index.html">Homepage</a></li>
+          <li>
+            <a href="https://github.com/vyckes/feo-css/blob/main/src/reset.css">
+              CSS reset 🔗
+            </a>
+          </li>
+          <li><a href="tokens.html">Design tokens</a></li>
+          <li>
+            <a
+              href="https://github.com/vyckes/feo-css/blob/main/src/global.css"
+            >
+              Global CSS 🔗
+            </a>
+          </li>
+          <li class="bold"><a href="layouts.html">Layout patterns</a></li>
+          <li><a href="utilities.html">Utilities</a></li>
+          <li><a href="components.html">Components</a></li>
+        </ul>
+      </nav>
+      <div>
+        <main class="center --width-3 | flex-col --gap-2">
+          <!-- INTRODUCTION -->
+          <section class="flex-col --gap-0">
+            <h1>Feo.css - Layouts</h1>
+            <p>W.I.P.</p>
+          </section>
+          <!-- XYZ -->
+          <section class="flex-col --gap-0">
+            <h2>XYZ</h2>
+          </section>
+        </main>
+        <!-- FOOTER -->
+        <footer class="cluster --gap-000 justify-end | size-00 italic | mt-1">
+          <a href="index.html" class="italic">Homepage</a>
+          <span>|</span>
+          <a href="https://github.com/vyckes/feo-css">Github</a>
+          <span>|</span>
+          <a href="https://vyckes.dev">Made by Vyckes</a>
+        </footer>
+      </div>
     </div>
   </body>
 </html>

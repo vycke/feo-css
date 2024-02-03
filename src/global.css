@@ -22,12 +22,14 @@ a:visited {
   transition: all 200ms ease;
   color: var(--color-foreground-0);
   text-decoration-color: var(--color-link);
+  text-decoration-thickness: 2px;
 }
 
 a:hover,
 a:visited:hover,
 a:focus {
   color: var(--color-link);
+  text-decoration-thickness: 2px;
 }
 
 /**

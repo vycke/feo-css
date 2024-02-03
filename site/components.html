@@ -25,15 +25,15 @@
     <link rel="manifest" href="/site.webmanifest" />
   </head>
 
-  <body class="center --width-4 | flex-col --gap-0 | p-0">
-    <main class="sidebar --left --width-00">
+  <body class="p-0">
+    <div class="sidebar --left --width-000">
       <!-- NAVIGATION -->
       <nav>
         <ul role="list" class="flex-col --gap-000 | mt-4 pt-0000 | size-00">
           <li><a href="index.html">Homepage</a></li>
           <li>
             <a href="https://github.com/vyckes/feo-css/blob/main/src/reset.css">
-              CSS reset
+              CSS reset 🔗
             </a>
           </li>
           <li><a href="tokens.html">Design tokens</a></li>
@@ -41,7 +41,7 @@
             <a
               href="https://github.com/vyckes/feo-css/blob/main/src/global.css"
             >
-              Global CSS
+              Global CSS 🔗
             </a>
           </li>
           <li><a href="layouts.html">Layout patterns</a></li>
@@ -49,74 +49,84 @@
           <li class="bold"><a href="components.html">Components</a></li>
         </ul>
       </nav>
-      <article class="flex-col --gap-2">
-        <!-- INTRODUCTION -->
-        <section class="flex-col --gap-0">
-          <h1>Feo.css - Components</h1>
-          <p>
-            A limited set of components (mostly based on basic HTML elements,
-            but are more complex in their implementation).
-          </p>
-        </section>
-        <!-- XYZ -->
-        <section class="flex-col --gap-0">
-          <h2>Tables</h2>
-          <p>This is how it looks.</p>
-          <table>
-            <thead>
-              <tr>
-                <th>Name</th>
-                <th>Home Runs</th>
-                <th>AVG</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Mike Trout</td>
-                <td>45</td>
-                <td>.291</td>
-              </tr>
-              <tr>
-                <td>Christian Yelich</td>
-                <td>44</td>
-                <td>.329</td>
-              </tr>
-              <tr>
-                <td>Mookie Betts</td>
-                <td>29</td>
-                <td>.295</td>
-              </tr>
-              <tr>
-                <td>Cody Bellinger</td>
-                <td>47</td>
-                <td>.305</td>
-              </tr>
-            </tbody>
-          </table>
-          <p>This is how You implement it.</p>
-          <pre><code>&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th&gt;&lt;/th&gt;&lt;th&gt;...&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;/td&gt;&lt;td&gt;...&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
+      <div>
+        <main class="center --width-3 | flex-col --gap-2">
+          <!-- INTRODUCTION -->
+          <section class="flex-col --gap-0">
+            <h1>Feo.css - Components</h1>
+            <p>
+              A limited set of components (mostly based on basic HTML elements,
+              but are more complex in their implementation).
+            </p>
+          </section>
+          <!-- XYZ -->
+          <section class="flex-col --gap-0">
+            <h2>Tables</h2>
+            <p>This is how it looks.</p>
+            <div>
+              <table>
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Home Runs</th>
+                    <th>AVG</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Mike Trout</td>
+                    <td>45</td>
+                    <td>.291</td>
+                  </tr>
+                  <tr>
+                    <td>Christian Yelich</td>
+                    <td>44</td>
+                    <td>.329</td>
+                  </tr>
+                  <tr>
+                    <td>Mookie Betts</td>
+                    <td>29</td>
+                    <td>.295</td>
+                  </tr>
+                  <tr>
+                    <td>Cody Bellinger</td>
+                    <td>47</td>
+                    <td>.305</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p>
+              This is how You implement it. <span class="bold">Note:</span> the
+              additional <code>div</code> is required to ensure the table is
+              sidescrollable and does not break layouts on small screens.
+            </p>
+            <pre><code>&lt;div&gt;
+  &lt;table&gt;
+    &lt;thead&gt;
+      &lt;tr&gt;
+        &lt;th&gt;&lt;/th&gt;&lt;th&gt;...&lt;/th&gt;
+      &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+      &lt;tr&gt;
+        &lt;td&gt;&lt;/td&gt;&lt;td&gt;...&lt;/td&gt;
+      &lt;/tr&gt;
+    &lt;/tbody&gt;
+  &lt;/table&gt;
+&lt;/div&gt;
 </code></pre>
-        </section>
-      </article>
-    </main>
-    <!-- FOOTER -->
-    <div class="cluster --gap-000 justify-end | size-00 italic | mt-00">
-      <a href="index.html" class="italic">Homepage</a>
-      <span>|</span>
-      <a href="https://github.com/vyckes/feo-css">Github</a>
-      <span>|</span>
-      <a href="https://vyckes.dev">Made by Vyckes</a>
+          </section>
+        </main>
+        <!-- FOOTER -->
+        <footer class="cluster --gap-000 justify-end | size-00 italic | mt-1">
+          <a href="index.html" class="italic">Homepage</a>
+          <span>|</span>
+          <a href="https://github.com/vyckes/feo-css">Github</a>
+          <span>|</span>
+          <a href="https://vyckes.dev">Made by Vyckes</a>
+        </footer>
+      </div>
     </div>
   </body>
 </html>

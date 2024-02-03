@@ -35,7 +35,7 @@
 
   /* Scale of 1.333 */
   --token-size-none: 0;
-  --token-size-0000: calc(0.48rem + 0.48 * var(--ratio));
+  --token-size-0000: calc(0.5rem + 0.5 * var(--ratio));
   --token-size-000: calc(0.65rem + 0.65 * var(--ratio));
   --token-size-00: calc(0.8125rem + 0.8125 * var(--ratio));
   --token-size-0: calc(1rem + var(--ratio));

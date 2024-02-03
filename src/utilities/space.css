@@ -1,3 +1,6 @@
+.m-0000 {
+  margin: var(--token-size-0000);
+}
 .m-000 {
   margin: var(--token-size-000);
 }
@@ -22,7 +25,9 @@
 .m-5 {
   margin: var(--token-size-5);
 }
-
+.mb-0000 {
+  margin-bottom: var(--token-size-0000);
+}
 .mb-000 {
   margin-bottom: var(--token-size-000);
 }
@@ -47,7 +52,9 @@
 .mb-5 {
   margin-bottom: var(--token-size-5);
 }
-
+.mt-0000 {
+  margin-top: var(--token-size-0000);
+}
 .mt-000 {
   margin-top: var(--token-size-000);
 }
@@ -72,7 +79,9 @@
 .mt-5 {
   margin-top: var(--token-size-5);
 }
-
+.ml-0000 {
+  margin-left: var(--token-size-0000);
+}
 .ml-000 {
   margin-left: var(--token-size-000);
 }
@@ -97,7 +106,9 @@
 .ml-5 {
   margin-left: var(--token-size-5);
 }
-
+.mr-0000 {
+  margin-right: var(--token-size-0000);
+}
 .mr-000 {
   margin-right: var(--token-size-000);
 }
@@ -122,7 +133,9 @@
 .mr-5 {
   margin-right: var(--token-size-5);
 }
-
+.p-0000 {
+  padding: var(--token-size-0000);
+}
 .p-000 {
   padding: var(--token-size-000);
 }
@@ -147,7 +160,9 @@
 .p-5 {
   padding: var(--token-size-5);
 }
-
+.pb-0000 {
+  padding-bottom: var(--token-size-0000);
+}
 .pb-000 {
   padding-bottom: var(--token-size-000);
 }
@@ -172,7 +187,9 @@
 .pb-5 {
   padding-bottom: var(--token-size-5);
 }
-
+.pt-0000 {
+  padding-top: var(--token-size-0000);
+}
 .pt-000 {
   padding-top: var(--token-size-000);
 }
@@ -197,7 +214,9 @@
 .pt-5 {
   padding-top: var(--token-size-5);
 }
-
+.pl-0000 {
+  padding-left: var(--token-size-0000);
+}
 .pl-000 {
   padding-left: var(--token-size-000);
 }
@@ -222,7 +241,9 @@
 .pl-5 {
   padding-left: var(--token-size-5);
 }
-
+.pr-0000 {
+  padding-right: var(--token-size-0000);
+}
 .pr-000 {
   padding-right: var(--token-size-000);
 }

@@ -136,6 +136,7 @@
     --color-surface-0: var(--token-color-light-0);
     --color-surface-1: var(--token-color-light-1);
     --color-surface-2: var(--token-color-light-2);
+    --color-link: blue;
   }
 
   @media (prefers-color-scheme: dark) {
@@ -147,6 +148,7 @@
       --color-surface-0: var(--token-color-dark-0);
       --color-surface-1: var(--token-color-dark-1);
       --color-surface-2: var(--token-color-dark-2);
+      --color-link: yellow;
     }
   }
 }
@@ -170,15 +172,13 @@
 
   a, a:visited {
     color: var(--color-foreground-0);
-    -webkit-text-decoration-color: var(--color-foreground-1);
-    text-decoration-color: var(--color-foreground-1);
+    -webkit-text-decoration-color: var(--color-link);
+    text-decoration-color: var(--color-link);
     transition: all .2s;
   }
 
   a:hover, a:visited:hover, a:focus {
-    color: var(--color-primary);
-    -webkit-text-decoration-color: var(--color-foreground-2);
-    text-decoration-color: var(--color-foreground-2);
+    color: var(--color-link);
   }
 
   :where(h1, h2, h3) {
@@ -188,20 +188,55 @@
   }
 
   h1 {
-    font-size: var(--token-size-2);
+    font-size: var(--token-size-3);
   }
 
   h2 {
-    font-size: var(--token-size-1);
+    font-size: var(--token-size-2);
   }
 
   h3 {
-    font-size: var(--token-size-0);
+    font-size: var(--token-size-1);
   }
 
   ::selection {
     color: var(--color-surface-0) !important;
     background: var(--color-foreground-0) !important;
+  }
+
+  code {
+    font-family: var(--monospace);
+    -webkit-hyphens: none;
+    hyphens: none;
+    font-size: .85em;
+  }
+
+  :not(pre) > code {
+    border: 1px solid var(--color-foreground-1);
+    background-color: var(--color-surface-1);
+    border-radius: 4px;
+    padding: 2px;
+  }
+
+  pre {
+    border: 2px solid var(--color-foreground-1);
+    border-radius: var(--token-size-00);
+    background-color: var(--color-surface-1);
+    white-space: pre;
+    word-wrap: normal;
+    word-break: normal;
+    word-spacing: normal;
+    padding: 0;
+    position: relative;
+  }
+
+  pre > code {
+    padding: var(--token-size-0) var(--token-size-1);
+    font-size: var(--token-size-00);
+    tab-size: 2;
+    -webkit-text-size-adjust: none;
+    display: block;
+    overflow-x: auto;
   }
 }
 

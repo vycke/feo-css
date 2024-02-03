@@ -4,7 +4,8 @@
     "build:full": "lightningcss --bundle --nesting  --targets '> 0.25%, not IE 11' src/index.css -o feo.css",
     "build:site": "lightningcss --bundle --nesting --minify --targets '> 0.25%, not IE 11' src/index.css -o site/feo.min.css",
     "build:min": "lightningcss --bundle --nesting --minify --targets '> 0.25%, not IE 11' src/index.css -o feo.min.css",
-    "build": "yarn build:min && yarn build:full && yarn build:site"
+    "build": "yarn build:min && yarn build:full && yarn build:site",
+    "start": "onchange 'src/**/*.css' -- yarn build"
   },
   "name": "feo-css",
   "version": "4.0.1",
@@ -22,6 +23,7 @@
   },
   "homepage": "https://github.com/vyckes/feo-css#readme",
   "devDependencies": {
-    "lightningcss-cli": "^1.18.0"
+    "lightningcss-cli": "^1.18.0",
+    "onchange": "^7.1.0"
   }
 }

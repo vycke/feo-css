@@ -26,12 +26,16 @@
   </head>
 
   <body class="center --width-3 | flex-col --gap-0 | p-0">
-    <h1>Feo.css overview</h1>
+    <h1>Feo.css - v4.0.1</h1>
     <p>
       Feo.css is a small CSS library that gives you a good starting point on any
       project. It provides you with sensible defaults for standard HTML
       elements, and some CSS classes around layout patterns and simple utility
       classes.
+    </p>
+    <p class="italic">
+      <span class="uppercase">Note:</span> everything on this site, is purely
+      based on the library.
     </p>
     <!-- WHY -->
     <h2 class="mt-1">Why?</h2>
@@ -57,18 +61,42 @@
       The architecture of Feo.css is in line with
       <a href="https://cube.fyi">CUBE CSS</a> and implements
       <a href="https://every-layout.dev">generic layout patterns</a>. By
-      combines modern CSS techniques like <code>@layout</code> and CSS custom
+      combines modern CSS techniques like <code>@layer</code> and CSS custom
       properties, it is fully <i>extensible</i>.
     </p>
     <pre><code>@layer reset, theme, global, layout, utilities, components;</code></pre>
-    <p>The layers indicate the level of importance, meaning: try to solve things with HTML elements first. If that is not enough, use generic layout patterns, and some utilities. In more complex settings, use components.</p>
+    <p>
+      The layers indicate the level of importance, meaning: try to solve things
+      with HTML elements first. If that is not enough, use generic layout
+      patterns, and some utilities. In more complex settings, use components.
+    </p>
     <ol>
-      <li><a href="https://github.com/vyckes/feo-css/blob/main/src/reset.css">CSS reset</li>
-      <li><a href="tokens.html">Design tokens and theming</li>
-      <li><a href="https://github.com/vyckes/feo-css/blob/main/src/global.css">Global CSS for HTML elements</li>
-      <li><a href="layouts.html">Layout patterns</li>
-      <li><a href="utilities.html">Utilities</li>
-      <li><a href="components.html">Components</li>
+      <li>
+        <a href="https://github.com/vyckes/feo-css/blob/main/src/reset.css"
+          >CSS reset</a
+        >
+      </li>
+      <li><a href="tokens.html">Design tokens and theming</a></li>
+      <li>
+        <a href="https://github.com/vyckes/feo-css/blob/main/src/global.css"
+          >Global CSS for HTML elements</a
+        >
+      </li>
+      <li><a href="layouts.html">Layout patterns</a></li>
+      <li><a href="utilities.html">Utilities</a></li>
+      <li><a href="components.html">Components</a></li>
     </ol>
+    <p>
+      Because Feo.css is build using <code>@layer</code>, you can easily extend
+      and avoid cascading issues, by including your own CSS in the proper layer.
+    </p>
+    <!-- FOOTER -->
+    <div class="cluster --gap-000 | size-00 italic | mt-00">
+      <a href="index.html" class="italic">Homepage</a>
+      <span>|</span>
+      <a href="https://github.com/vyckes/feo-css">Github</a>
+      <span>|</span>
+      <a href="https://vyckes.dev">Made by Vyckes</a>
+    </div>
   </body>
 </html>

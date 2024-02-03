@@ -8,7 +8,7 @@
     "start": "onchange 'src/**/*.css' -- yarn build"
   },
   "name": "feo-css",
-  "version": "4.0.1",
+  "version": "4.1.0",
   "main": "feo.css",
   "description": "A tiny CSS framework",
   "repository": "https://github.com/vyckes/feo-css.git",

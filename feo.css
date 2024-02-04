@@ -66,15 +66,16 @@
     scroll-margin-block: 5ex;
   }
 
+  :active:not(:focus-visible) {
+    outline: none;
+  }
+
   :focus:not(:focus-visible) {
     outline: none;
   }
 
   :focus-visible {
-    --outline-size: max(1.5px, .1em);
-    outline: var(--outline-width, var(--outline-size)) var(--outline-style, solid) var(--outline-color, currentColor);
-    outline-offset: var(--outline-offset, var(--outline-size));
-    border-radius: .1em;
+    outline: 1px solid;
   }
 
   @media (prefers-reduced-motion: reduce) {
@@ -133,6 +134,7 @@
     --color-foreground-1: var(--token-color-dark-2);
     --color-surface-0: var(--token-color-light-0);
     --color-surface-1: var(--token-color-light-1);
+    --color-surface-2: var(--token-color-light-2);
     --color-link: green;
   }
 
@@ -143,6 +145,7 @@
       --color-foreground-1: var(--token-color-light-2);
       --color-surface-0: var(--token-color-dark-0);
       --color-surface-1: var(--token-color-dark-1);
+      --color-surface-2: var(--token-color-dark-2);
       --color-link: lime;
     }
   }
@@ -1097,6 +1100,122 @@
 }
 
 @layer components {
+  label {
+    color: var(--color-foreground-1);
+    font-size: var(--token-size-00);
+    flex-direction: column;
+    gap: 4px;
+    display: flex;
+  }
+
+  select, textarea {
+    padding: var(--token-size-0000) var(--token-size-000);
+    background-color: var(--token-surface-0);
+    font-size: var(--token-size-00);
+    border: 1px solid var(--color-foreground-1);
+    border-radius: var(--token-size-0000);
+    width: 100%;
+    transition: all .1s;
+  }
+
+  input:not([type="checkbox"]) {
+    padding: var(--token-size-0000) var(--token-size-000);
+    background-color: var(--token-surface-0);
+    font-size: var(--token-size-00);
+    border: 1px solid var(--color-foreground-1);
+    border-radius: var(--token-size-0000);
+    width: 100%;
+    transition: all .1s;
+  }
+
+  input:not(:disabled):not([type="checkbox"]):where(:hover, :focus) {
+    border: 1px solid var(--color-foreground-0);
+    outline: 1px solid var(--color-foreground-0);
+  }
+
+  select:not(:disabled):where(:hover, :focus) {
+    border: 1px solid var(--color-foreground-0);
+    outline: 1px solid var(--color-foreground-0);
+  }
+
+  textarea:not(:disabled):where(:hover, :focus) {
+    border: 1px solid var(--color-foreground-0);
+    outline: 1px solid var(--color-foreground-0);
+  }
+
+  input:disabled, textarea:disabled, select:disabled {
+    cursor: not-allowed;
+    background-color: var(--color-surface-1);
+  }
+
+  textarea {
+    min-height: 8em;
+  }
+
+  select, input[list] {
+    -webkit-appearance: none;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg width='14' height='9' viewBox='0 0 14 9' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Cpath id='Path' fill='var(--color-foreground-1)' d='M7 9L13.0622 0H0.937822L7 9Z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat, repeat;
+    background-position: right var(--token-size-000) top 50%, 0 0;
+    background-size: .8em, 100%;
+    display: block;
+  }
+
+  label:has(input[type="checkbox"]) {
+    gap: var(--token-size-00);
+    flex-direction: row;
+  }
+
+  input[type="checkbox"] {
+    --input-color: green;
+    -webkit-appearance: none;
+    appearance: none;
+    background: var(--color-surface-2);
+    vertical-align: middle;
+    border-radius: 1rem;
+    width: 2.2rem;
+    height: 1.2rem;
+    transition: background .25s linear;
+    display: inline-block;
+    position: relative;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, .2);
+  }
+
+  input[type="checkbox"]:before {
+    content: "";
+    background: #fff;
+    border-radius: .5rem;
+    width: .8rem;
+    height: .8rem;
+    transition: -webkit-transform .25s linear, transform .25s linear;
+    display: block;
+    position: absolute;
+    top: .2rem;
+    left: .2rem;
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, .2);
+  }
+
+  input[type="checkbox"]:checked {
+    background: var(--input-color);
+  }
+
+  input[type="checkbox"]:checked:before {
+    -webkit-transform: translateX(1rem);
+    transform: translateX(1rem);
+  }
+
+  input[type="checkbox"]:focus {
+    outline: none;
+  }
+
+  input[type="checkbox"]:focus-visible {
+    outline-offset: 2px;
+    outline: 2px solid #1e90ff;
+  }
+
   div:has( > table) {
     overflow-x: auto;
   }

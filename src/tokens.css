@@ -73,6 +73,7 @@
   --color-foreground-1: var(--token-color-dark-2);
   --color-surface-0: var(--token-color-light-0);
   --color-surface-1: var(--token-color-light-1);
+  --color-surface-2: var(--token-color-light-2);
   --color-link: green;
 }
 
@@ -86,6 +87,7 @@
     --color-foreground-1: var(--token-color-light-2);
     --color-surface-0: var(--token-color-dark-0);
     --color-surface-1: var(--token-color-dark-1);
+    --color-surface-2: var(--token-color-dark-2);
     --color-link: lime;
   }
 }

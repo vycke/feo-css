@@ -11,19 +11,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="color-scheme" content="light dark" />
-    <meta name="msapplication-TileColor" content="#F9FAFB" />
-    <meta name="theme-color" content="#F9FAFB" />
+    <meta
+      name="theme-color"
+      media="(prefers-color-scheme: light)"
+      content="white"
+    />
+    <meta
+      name="theme-color"
+      media="(prefers-color-scheme: dark)"
+      content="black"
+    />
     <meta name="view-transition" content="same-origin" />
     <link rel="stylesheet" href="feo.min.css" />
     <link rel="stylesheet" href="demo.css" />
-    <!-- assets -->
     <link rel="icon" href="/favicon.ico" sizes="any" />
-    <!-- 32×32 -->
-    <link rel="icon" href="/icon.svg" type="image/svg+xml" />
-    <link rel="mask-icon" href="/icon.svg" type="image/svg+xml" />
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-    <!-- 180×180 -->
-    <link rel="manifest" href="/site.webmanifest" />
   </head>
 
   <body class="p-0">
@@ -281,6 +282,14 @@
                     <td>
                       A secondary color that can be used on different surfaces,
                       such as tables, cards, etc.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><code>--color-surface-2</code></td>
+                    <td>
+                      A tertiary color should be only used in smaller elements
+                      where the background needs a bit more contrast (e.g.
+                      switch)
                     </td>
                   </tr>
                   <tr>

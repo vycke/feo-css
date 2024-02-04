@@ -77,18 +77,18 @@ ol[class] {
 }
 
 /* Removes outlines for mouse users */
+:active:not(:focus-visible) {
+  outline: none;
+}
+
+/* Removes outlines for mouse users */
 :focus:not(:focus-visible) {
   outline: none;
 }
 
 /* Makes focus through keyboard better */
 :focus-visible {
-  --outline-size: max(1.5px, 0.1em);
-
-  border-radius: 0.1em;
-  outline: var(--outline-width, var(--outline-size)) var(--outline-style, solid)
-    var(--outline-color, currentColor);
-  outline-offset: var(--outline-offset, var(--outline-size));
+  outline: 1px solid currentColor;
 }
 
 /* Remove all animations and transitions for

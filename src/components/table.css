@@ -1,4 +1,4 @@
-div:has(> table) {
+div:has(> tabl:first-child) {
   overflow-x: auto;
 }
 
@@ -7,7 +7,6 @@ table {
   --table-color: var(--color-surface-1);
 
   width: 100%;
-  overflow-x: auto;
   border: 1px solid var(--table-color);
   background: var(--table-color);
   border-radius: calc(var(--table-radius) * 1.3);

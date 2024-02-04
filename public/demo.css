@@ -1,0 +1,26 @@
+nav {
+  top: 1rem;
+}
+
+@media (max-width: 637px) {
+  nav {
+    position: relative;
+  }
+
+  nav ul {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  nav li {
+    white-space: nowrap;
+  }
+}
+
+article > * + * {
+  margin-top: var(--token-size-0);
+}
+
+article > * + h2 {
+  margin-top: var(--token-size-3);
+}

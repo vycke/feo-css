@@ -89,7 +89,7 @@ pre {
 }
 
 pre > code {
-  padding: var(--token-size-0) var(--token-size-1);
+  padding: var(--token-size-00) var(--token-size-0);
   font-size: var(--token-size-00);
   display: block;
   overflow-x: auto;

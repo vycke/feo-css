@@ -2,7 +2,7 @@ label {
   display: flex;
   flex-direction: column;
   color: var(--color-foreground-1);
-  font-size: var(--token-size-00);
+  font-size: var(--token-size-0);
   gap: 4px;
 }
 

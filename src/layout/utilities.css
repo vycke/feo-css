@@ -48,6 +48,9 @@
 .--gap-auto {
   --layout-gap: auto;
 }
+.--gap-0000 {
+  --layout-gap: var(--token-size-0000);
+}
 .--gap-000 {
   --layout-gap: var(--token-size-000);
 }

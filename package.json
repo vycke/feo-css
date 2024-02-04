@@ -6,7 +6,7 @@
     "css:docs": "lightningcss --bundle --nesting --minify --targets '> 0.25%, not IE 11' src/index.css -o public/feo.min.css",
     "build": "yarn css:bundle && yarn css:minified && yarn css:docs",
     "start": "eleventy --serve && onchange 'src/**/*.css' -- yarn build",
-    "build:11ty": "npx @11ty/eleventy onchange 'src/**/*.css' -- yarn css:docs"
+    "build:11ty": "npx @11ty/eleventy && yarn css:docs"
   },
   "name": "feo-css",
   "version": "4.2.0",

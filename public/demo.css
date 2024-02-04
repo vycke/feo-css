@@ -5,6 +5,7 @@ nav {
 @media (max-width: 637px) {
   nav {
     position: relative;
+    margin-bottom: var(--token-size-2);
   }
 
   nav ul {

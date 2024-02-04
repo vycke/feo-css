@@ -116,53 +116,124 @@
               overwritten to control the looks of the table.
             </p>
             <div>
-            <table>
-              <thead>
-                <tr>
-                  <th>Custom property</th>
-                  <th>Description</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td><code>--table-radius</code></td>
-                  <td>Sets the radius of the corners</td>
-                </tr>
-                <tr>
-                  <td><code>--table-color</code></td>
-                  <td>Sets the color of the borders and header</td>
-                </tr>
-              </tbody>
-            </table>
-            <div>
               <table>
                 <thead>
                   <tr>
-                    <th>Class</th>
-                    <th><a href="tokens.html">Design token</a></th>
-                    <th>CSS property</th>
+                    <th>Custom property</th>
+                    <th>Selector</th>
+                    <th>Description</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><code>size-&lt;z&gt;</code></td>
-                    <td><code>--token-size-&lt;z&gt;</code></td>
-                    <td><code>font-size</code></td>
+                    <td><code>--table-radius</code></td>
+                    <td><code>table</code></td>
+                    <td>Sets the radius of the corners</td>
                   </tr>
+
                   <tr>
-                    <td><code>monospace/serif/sans-serif</code></td>
-                    <td>-</td>
-                    <td><code>font-family</code></td>
+                    <td><code>--table-color</code></td>
+                    <td><code>table</code></td>
+                    <td>Sets the color of the borders and header</td>
                   </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+          <!-- FORMS -->
+          <section class="flex-col --gap-0">
+            <h2>Form elements</h2>
+            <p>
+              Consistent styling is available for the most common form elements:
+              input fields, text-areas, and two kinds of dropdowns. In addition,
+              various states like <code>:hover</code> and
+              <code>:disabled</code> are covered.
+            </p>
+
+            <form class="flex-col --gap-0 maxw-1">
+              <label>
+                <span>Input field</span>
+                <input placeholder="placeholder" />
+              </label>
+              <label>
+                <span>Disabled field</span>
+                <input placeholder="placeholder" disabled />
+              </label>
+              <label>
+                <span>Dropdown (<code>select</code>)</span>
+                <select>
+                  <option value="dog">Dog</option>
+                  <option value="cat">Cat</option>
+                  <option value="hamster">Hamster</option>
+                  <option value="parrot">Parrot</option>
+                  <option value="spider">Spider</option>
+                  <option value="goldfish">Goldfish</option>
+                </select>
+              </label>
+              <label>
+                <span>Typeable dropdown (<code>input[list]</code>)</span>
+                <input list="options" placeholder="Type or click" />
+                <datalist id="options">
+                  <option value="dog">Dog</option>
+                  <option value="cat">Cat</option>
+                  <option value="hamster">Hamster</option>
+                  <option value="parrot">Parrot</option>
+                  <option value="spider">Spider</option>
+                  <option value="goldfish">Goldfish</option>
+                </datalist>
+              </label>
+              <label>
+                My text-area
+                <textarea placeholder="placeholder"></textarea>
+              </label>
+            </form>
+            <p>
+              All the fields in the form follow a specific implementation for
+              the styling.
+            </p>
+            <pre><code>&lt;label&gt;
+  Field label
+  &lt;[element] ... /&gt;
+&lt;/label&gt;</code></pre>
+          </section>
+          <!-- SWITCH -->
+          <section class="flex-col --gap-0">
+            <h2>Switch</h2>
+            <p>
+              A switch is a specific component that can be used as a solitary
+              checkbox, or for something else.
+            </p>
+            <form>
+              <label>
+                <input type="checkbox" />
+                My Switch
+              </label>
+            </form>
+            <p>
+              The implementation is a slightly different from the form elements,
+              as you will put the label text after the switch in most cases.
+            </p>
+            <pre><code>&lt;label&gt;
+  &lt;input type="checkbox" ... /&gt;
+  Switch label
+&lt;/label&gt;</code></pre>
+            <div>
+              <table>
+                <thead>
                   <tr>
-                    <td><code>bold/regular/italc/uppercase</code></td>
-                    <td>-</td>
-                    <td>Various</td>
+                    <th>Custom property</th>
+                    <th>Selector</th>
+                    <th>Description</th>
                   </tr>
+                </thead>
+                <tbody>
                   <tr>
-                    <td><code>text-left/right/center</code></td>
-                    <td>-</td>
-                    <td><code>text-align</code></td>
+                    <td><code>--switch-color</code></td>
+                    <td><code>input[type="checkbox"]</code></td>
+                    <td>
+                      Sets the background color of the switch on
+                      <code>:checked</code>. Default is <code>green</code>.
+                    </td>
                   </tr>
                 </tbody>
               </table>

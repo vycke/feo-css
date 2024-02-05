@@ -33,7 +33,7 @@
   <body class="p-0 flex-col">
     <main class="sidebar --left --width-000 --gap-0 | relative flex-grow">
       <!-- NAVIGATION -->
-      <nav class="sticky">
+      <nav class="sticky | mb-2">
         <div class="flex-row --gap-000 items-center">
           <svg height="32" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path fill-rule="evenodd" clip-rule="evenodd" d="M15 25C15 30.5228 19.4772 35 25 35C30.5228 35 35 30.5229 35 25C35 19.4772 30.5228 15 25 15C19.4772 15 15 19.4772 15 25ZM25 20C22.2386 20 20 22.2386 20 25C20 27.7614 22.2386 30 25 30C27.7614 30 30 27.7614 30 25C30 22.2386 27.7614 20 25 20Z" fill="var(--color-foreground-0)"/>
@@ -42,7 +42,7 @@
           <span class="size-1 bold">Feo.css</span> 
         </div>
         
-        <ul role="list" class="flex-col --gap-000 | mt-0 pt-0000 | size-00">
+        <ul role="list" class=" switcher --width-00 --gap-000 | mt-0 pt-0000 | size-00">
           <span>v4.2.1</span>
           <li {% if key == "home" %} class="bold"{% endif %}><a href="/">Homepage</a></li>
           <li {% if key == "tokens" %} class="bold"{% endif %}><a href="/tokens">Design tokens</a></li>
@@ -53,7 +53,7 @@
         </ul>
       </nav>
       <div class="flex-col">
-        <article class="center --width-3 | flex-grow">
+        <article class="center --width-3 | flex-grow flex-col --gap-0">
           <h1>{{title}}</h1>
           {{ content | safe }}
         </article>

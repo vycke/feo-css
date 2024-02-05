@@ -6,7 +6,7 @@ key: home
 
 Feo.css is a small CSS library that gives you a good starting point on any project. It provides you with sensible defaults for standard HTML elements, and some CSS classes around layout patterns and simple utility classes.
 
-_NOTE: everything on this site, is purely based on the library._
+_NOTE: everything on this site, is purely based on the library. Ok, almost [everything](https://github.com/vyckes/feo-css/blob/main/public/demo.css)._
 
 ## Why?
 

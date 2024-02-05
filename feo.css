@@ -439,31 +439,17 @@
   .switcher {
     --layout-gap: 0;
     --layout-width: 0;
-    --layout-amount: 2;
     gap: var(--layout-gap);
     flex-wrap: wrap;
     display: flex;
   }
 
   .switcher > * {
-    flex-basis: calc((var(--layout-width) * var(--layout-amount)  - 100%) * 999);
+    flex-basis: calc((var(--layout-width)  - 100%) * 999);
+  }
+
+  .switcher.--grow > * {
     flex-grow: 1;
-  }
-
-  .switcher:has( > :nth-child(3)) {
-    --layout-amount: 3;
-  }
-
-  .switcher:has( > :nth-child(4)) {
-    --layout-amount: 4;
-  }
-
-  .switcher:has( > :nth-child(5)) {
-    --layout-amount: 5;
-  }
-
-  .switcher:has( > :nth-child(6)) {
-    --layout-amount: 6;
   }
 
   .tiles {

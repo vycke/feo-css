@@ -2,27 +2,16 @@ nav {
   top: 1rem;
 }
 
+nav li {
+  white-space: nowrap;
+}
+
 @media (max-width: 637px) {
   nav {
     position: relative;
-    margin-bottom: var(--token-size-2);
-  }
-
-  nav ul {
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-  }
-
-  nav li {
-    white-space: nowrap;
   }
 }
 
-article > * + * {
+h2 {
   margin-top: var(--token-size-0);
-}
-
-article > * + h2 {
-  margin-top: var(--token-size-3);
 }

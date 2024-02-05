@@ -1,16 +1,12 @@
 /**
  * A layout of X columns that switches from horizontal to vertical the moment
- * the width of a child element becomes less than a set value. Assumes that
- * columns are of the same size.
- * child element
+ * the width of parent becomes less than a set value. 
  *
  * --layout-gap: set the gap between the child elements (horizontal & vertical)
  * --layout-width: the min-width of a single child elements
- * --layout-amount: the amount of child elements on a single row
  *
- * NOTE: the :has selector is not supported in FireFox (). This means that
- * --layout-amount is not automatically set by the class, and needs to be set
- * manually
+ * NOTE: if you want the columns to have the same size, apply "switcher --grow" as
+ * as the classes
  */
 
 .switcher {

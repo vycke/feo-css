@@ -1,4 +1,4 @@
-div:has(> tabl:first-child) {
+div:has(> table:only-child) {
   overflow-x: auto;
 }
 

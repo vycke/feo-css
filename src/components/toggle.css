@@ -1,5 +1,5 @@
 /**
- * A switch (because, who needs checkboxes?)
+ * A toggle (because, who needs checkboxes?)
  */
 label:has(input[type="checkbox"]) {
   flex-direction: row;
@@ -8,16 +8,19 @@ label:has(input[type="checkbox"]) {
 }
 
 input[type="checkbox"] {
-  --input-color: green;
+  --toggle-dot-color: white;
+  --toggle-checked-color: green;
+  --toggle-size: var(--token-size-0);
+  --toggle-space: 3px;
 
   appearance: none;
   position: relative;
   display: inline-block;
   background: var(--color-surface-2);
-  height: 1.2rem;
-  width: 2.2rem;
+  height: calc(var(--toggle-size) + 2 * var(--toggle-space));
+  width: calc(2 * var(--toggle-size) + 2 * var(--toggle-space));
   vertical-align: middle;
-  border-radius: 1rem;
+  border-radius: var(--toggle-size);
   box-shadow: 0px 1px 3px #0003 inset;
   transition: 0.25s linear background;
 }
@@ -25,23 +28,23 @@ input[type="checkbox"] {
 input[type="checkbox"]::before {
   content: "";
   display: block;
-  width: 0.8rem;
-  height: 0.8rem;
-  background: white;
-  border-radius: 0.5rem;
+  width: var(--toggle-size);
+  height: var(--toggle-size);
+  background: var(--toggle-dot-color);
+  border-radius: calc(var(--toggle-size) * 0.5);
   position: absolute;
-  top: 0.2rem;
-  left: 0.2rem;
+  top: var(--toggle-space);
+  left: var(--toggle-space);
   box-shadow: 0px 1px 3px #0003;
   transition: 0.25s linear transform;
   transform: translateX(0rem);
 }
 
 input[type="checkbox"]:checked {
-  background: var(--input-color);
+  background: var(--toggle-checked-color);
 }
 input[type="checkbox"]:checked::before {
-  transform: translateX(1rem);
+  transform: translateX(var(--toggle-size));
 }
 
 input[type="checkbox"]:focus {

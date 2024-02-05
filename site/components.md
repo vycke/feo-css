@@ -7,6 +7,10 @@ key: components
 A limited set of components (mostly based on basic HTML elements,
 but are more complex in their implementation).
 
+## Component APIs
+
+Several of the below components have an "API". These are defined CSS custom properties specified for these components. By only altering these properties in your own CSS, you can change some of the looks of the components.
+
 ## Tables
 
 <div>
@@ -38,9 +42,7 @@ but are more complex in their implementation).
   </table>
 </div>
 
-This is how You implement it. **Note:** the
-additional `div` is required to ensure the table is
-sidescrollable and does not break layouts on small screens. Feo.css is built in such a way to determine automatically if the `first-child` of the `div` is the table, using the `:has` selector.
+**Note:** the additional `div` wrapping the `table` in the below implementation is required if you want the table to horizontal scroll on smaller screens. The `table` needs to be the `:only-child` of this div.
 
 ```
 <div>
@@ -56,26 +58,23 @@ sidescrollable and does not break layouts on small screens. Feo.css is built in 
 ```
 
 There are several custom properties available that can be
-overwritten to control the looks of the table.
+overwritten to control the looks of the table. You can change these properties on the `table` selector.
 
 <div>
   <table>
     <thead>
       <tr>
         <th>Custom property</th>
-        <th>Selector</th>
         <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><code>--table-radius</code></td>
-        <td><code>table</code></td>
         <td>Sets the radius of the corners</td>
       </tr>
       <tr>
         <td><code>--table-color</code></td>
-        <td><code>table</code></td>
         <td>Sets the color of the borders and header</td>
       </tr>
     </tbody>
@@ -136,20 +135,20 @@ the styling.
 </label>
 ```
 
-## Switch
+## Toggle
 
-A switch is a specific component that can be used as a solitary
+A toggle is a specific component that can be used as a solitary
 checkbox, or for something else.
 
 <form>
   <label>
     <input type="checkbox" />
-    My Switch
+    My toggle
   </label>
 </form>
 
 The implementation is a slightly different from the form elements,
-as you will put the label text after the switch in most cases.
+as you will put the label text after the toggle in most cases.
 
 ```
 <label>
@@ -159,24 +158,40 @@ as you will put the label text after the switch in most cases.
 ```
 
 The implementation is a slightly different from the form elements,
-as you will put the label text after the switch in most cases.
+as you will put the label text after the toggle in most cases. You can change these properties on the `input[type="checkbox"]` selector.
 
 <div>
   <table>
     <thead>
       <tr>
         <th>Custom property</th>
-        <th>Selector</th>
         <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><code>--switch-color</code></td>
-        <td><code>input[type="checkbox"]</code></td>
+        <td><code>--toggle-checked-color</code></td>
         <td>
-          Sets the background color of the switch on
+          Sets the background color of the toggle on
           <code>:checked</code>. Default is <code>green</code>.
+        </td>
+      </tr>
+      <tr>
+        <td><code>--toggle-dot-color</code></td>
+        <td>
+          Sets the dot color.
+        </td>
+      </tr>
+      <tr>
+        <td><code>--toggle-size</code></td>
+        <td>
+          Sets the size of the white "dot" of the toggle.
+        </td>
+      </tr>
+      <tr>
+        <td><code>--toggle-space</code></td>
+        <td>
+          Sets spacing around the white "dot" of the toggle.
         </td>
       </tr>
     </tbody>

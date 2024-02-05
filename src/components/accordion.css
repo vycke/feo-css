@@ -1,0 +1,38 @@
+details {
+  --accordion-border: var(--color-foreground-1);
+  --accordion-bg: var(--color-surface-1);
+
+  border: 2px solid var(--accordion-border);
+  border-radius: var(--token-size-000);
+  padding: 4px 12px;
+  font-size: var(--token-size-00);
+}
+
+summary {
+  font-weight: bold;
+  background-color: var(--accordion-bg);
+  margin: -4px -12px;
+  padding: 4px 12px;
+  border-radius: calc(var(--token-size-000) - 3px);
+}
+
+/* Changes in styling when opened */
+details[open] summary {
+  border-bottom-right-radius: 0px;
+  border-bottom-left-radius: 0px;
+  margin-bottom: 4px;
+  border-bottom: 1px solid var(--accordion-border);
+}
+
+/**
+ * Animation when opening the accordion
+ */
+@keyframes details-show {
+  from {
+    opacity: 0;
+    transform: translateY(-0.5em);
+  }
+}
+details[open] > *:not(summary) {
+  animation: details-show 250ms ease-in-out;
+}

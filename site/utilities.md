@@ -9,11 +9,14 @@ problem when it is _utility-only_. If you looked at the
 [layouts layer](/layouts), utilities there are used
 to control layout settings. It is an incredible scalable setup.
 
-Feo.css offers a very limited set of utility classes, mostly based
-on the available [design tokens](/tokens). In all
-the classes that you see, the `<z>` is a
-placeholder for the number corresponding to the correct design
-token.
+<details>
+  <summary>Naming convention</summary>
+  <p>Feo.css offers a very limited set of utility classes, mostly based
+  on the available <a href="/tokens">design tokens</a>. In all
+  he classes that you see, the <code>[z]</code> is a
+  placeholder for the number corresponding to the correct design
+  token.</p>
+</details>
 
 ## Margin
 
@@ -28,28 +31,28 @@ token.
     </thead>
     <tbody>
       <tr>
-        <td><code>m-&lt;z&gt;</code></td>
-        <td><code>--token-size-&lt;z&gt;</code></td>
+        <td><code>m-[z]</code></td>
+        <td><code>--token-size-[z]</code></td>
         <td><code>margin</code></td>
       </tr>
       <tr>
-        <td><code>mt-&lt;z&gt;</code></td>
-        <td><code>--token-size-&lt;z&gt;</code></td>
+        <td><code>mt-[z]</code></td>
+        <td><code>--token-size-[z]</code></td>
         <td><code>margin-top</code></td>
       </tr>
       <tr>
-        <td><code>mr-&lt;z&gt;</code></td>
-        <td><code>--token-size-&lt;z&gt;</code></td>
+        <td><code>mr-[z]</code></td>
+        <td><code>--token-size-[z]</code></td>
         <td><code>margin-right</code></td>
       </tr>
       <tr>
-        <td><code>mb-&lt;z&gt;</code></td>
-        <td><code>--token-size-&lt;z&gt;</code></td>
+        <td><code>mb-[z]</code></td>
+        <td><code>--token-size-[z]</code></td>
         <td><code>margin-bottom</code></td>
       </tr>
       <tr>
-        <td><code>ml-&lt;z&gt;</code></td>
-        <td><code>--token-size-&lt;z&gt;</code></td>
+        <td><code>ml-[z]</code></td>
+        <td><code>--token-size-[z]</code></td>
         <td><code>margin-left</code></td>
       </tr>
     </tbody>
@@ -69,28 +72,28 @@ token.
     </thead>
     <tbody>
       <tr>
-        <td><code>p-&lt;z&gt;</code></td>
-        <td><code>--token-size-&lt;z&gt;</code></td>
+        <td><code>p-[z]</code></td>
+        <td><code>--token-size-[z]</code></td>
         <td><code>padding</code></td>
       </tr>
       <tr>
-        <td><code>pt-&lt;z&gt;</code></td>
-        <td><code>--token-size-&lt;z&gt;</code></td>
+        <td><code>pt-[z]</code></td>
+        <td><code>--token-size-[z]</code></td>
         <td><code>padding-top</code></td>
       </tr>
       <tr>
-        <td><code>pr-&lt;z&gt;</code></td>
-        <td><code>--token-size-&lt;z&gt;</code></td>
+        <td><code>pr-[z]</code></td>
+        <td><code>--token-size-[z]</code></td>
         <td><code>padding-right</code></td>
       </tr>
       <tr>
-        <td><code>pb-&lt;z&gt;</code></td>
-        <td><code>--token-size-&lt;z&gt;</code></td>
+        <td><code>pb-[z]</code></td>
+        <td><code>--token-size-[z]</code></td>
         <td><code>padding-bottom</code></td>
       </tr>
       <tr>
-        <td><code>pl-&lt;z&gt;</code></td>
-        <td><code>--token-size-&lt;z&gt;</code></td>
+        <td><code>pl-[z]</code></td>
+        <td><code>--token-size-[z]</code></td>
         <td><code>padding-left</code></td>
       </tr>
     </tbody>
@@ -110,8 +113,8 @@ token.
     </thead>
     <tbody>
       <tr>
-        <td><code>size-&lt;z&gt;</code></td>
-        <td><code>--token-size-&lt;z&gt;</code></td>
+        <td><code>size-[z]</code></td>
+        <td><code>--token-size-[z]</code></td>
         <td><code>font-size</code></td>
       </tr>
       <tr>
@@ -138,9 +141,9 @@ token.
   </table>
 </div>
 
-## `maxw-<z>`
+## `maxw-[z]`
 
-Based on the `--token-bp-<z>` [tokens](/tokens), control the `max-width` property.
+Based on the `--token-bp-[z]` [tokens](/tokens), control the `max-width` property.
 
 ## `click-area`
 

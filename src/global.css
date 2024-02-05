@@ -78,7 +78,7 @@ code {
 
 pre {
   border: 2px solid var(--color-foreground-1);
-  border-radius: var(--token-size-00);
+  border-radius: var(--token-size-000);
   background-color: var(--color-surface-1);
   position: relative;
   padding: 0;

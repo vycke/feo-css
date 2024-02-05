@@ -17,6 +17,7 @@ input[type="checkbox"] {
   position: relative;
   display: inline-block;
   background: var(--color-surface-2);
+  /* Calculate the width and height based on the dot + spacing */
   height: calc(var(--toggle-size) + 2 * var(--toggle-space));
   width: calc(2 * var(--toggle-size) + 2 * var(--toggle-space));
   vertical-align: middle;
@@ -43,6 +44,8 @@ input[type="checkbox"]::before {
 input[type="checkbox"]:checked {
   background: var(--toggle-checked-color);
 }
+
+/* Assumes the dot moves the same amount as its own size */
 input[type="checkbox"]:checked::before {
   transform: translateX(var(--toggle-size));
 }

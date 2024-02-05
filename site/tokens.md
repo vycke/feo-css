@@ -7,14 +7,12 @@ key: tokens
 Feo.css offers a limited set of design tokens, implemented in [CSS Custom Properties](https://developer.mozilla.org/en-US/docs/Web/CSS/--*) (`--*`). These design tokens are used throughout all the different layers of Feo.css. For example, several layout
 patterns allow you to set the `gap` between columns and rows, through _class ulilities_. These classes directly use the defined tokens.
 
-## Naming convention
-
-Tokens like sizing and breakpoints are considered to have a
-"baseline". The most common value for the design token. Those
-tokens always have a `-0` as the post-fix. In the
-sequence of tokens, if you want to go up a value, you increase the
-value. If you want to go down a value, you decrease the value, or
-add a 0 (e.g. `-00`).
+<details>
+  <summary>Naming convention</summary>
+  <p>Tokens like sizing and breakpoints are considered to have a "baseline". The most common value for the design token. Those
+  tokens always have a <code>-0</code> as the post-fix. In the sequence of tokens, if you want to go up a value, you increase the value. 
+  If you want to go down a value, you decrease the value, or add a 0 (e.g. <code>-00</code>).</p>
+</details>
 
 ## Sizing
 

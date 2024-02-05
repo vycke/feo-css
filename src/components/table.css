@@ -3,7 +3,7 @@ div:has(> table:only-child) {
 }
 
 table {
-  --table-radius: 6px;
+  --table-radius: var(--token-size-0000);
   --table-color: var(--color-surface-1);
 
   width: 100%;

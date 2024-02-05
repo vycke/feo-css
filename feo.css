@@ -223,7 +223,7 @@
 
   pre {
     border: 2px solid var(--color-foreground-1);
-    border-radius: var(--token-size-00);
+    border-radius: var(--token-size-000);
     background-color: var(--color-surface-1);
     white-space: pre;
     word-wrap: normal;
@@ -1096,6 +1096,51 @@
 }
 
 @layer components {
+  details {
+    --accordion-border: var(--color-foreground-1);
+    --accordion-bg: var(--color-surface-1);
+    border: 2px solid var(--accordion-border);
+    border-radius: var(--token-size-000);
+    font-size: var(--token-size-00);
+    padding: 4px 12px;
+  }
+
+  summary {
+    background-color: var(--accordion-bg);
+    border-radius: calc(var(--token-size-000)  - 3px);
+    margin: -4px -12px;
+    padding: 4px 12px;
+    font-weight: bold;
+  }
+
+  details[open] summary {
+    border-bottom: 1px solid var(--accordion-border);
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    margin-bottom: 4px;
+  }
+
+  @-webkit-keyframes details-show {
+    from {
+      opacity: 0;
+      -webkit-transform: translateY(-.5em);
+      transform: translateY(-.5em);
+    }
+  }
+
+  @keyframes details-show {
+    from {
+      opacity: 0;
+      -webkit-transform: translateY(-.5em);
+      transform: translateY(-.5em);
+    }
+  }
+
+  details[open] > :not(summary) {
+    -webkit-animation: .25s ease-in-out details-show;
+    animation: .25s ease-in-out details-show;
+  }
+
   label {
     color: var(--color-foreground-1);
     font-size: var(--token-size-0);
@@ -1223,7 +1268,7 @@
   }
 
   table {
-    --table-radius: 6px;
+    --table-radius: var(--token-size-0000);
     --table-color: var(--color-surface-1);
     border: 1px solid var(--table-color);
     background: var(--table-color);

@@ -63,7 +63,7 @@ Generic table component.
 ```
 
 <details open style="--accordion-bg: indianred; --accordion-border: indianred;">
-  <summary>Important notice</summary>
+  <summary>About the wrapping div</summary>
   <div>the additional <code>div</code> wrapping the <code>table</code> in the below implementation is required if you want the table to horizontal scroll on smaller screens. The <code>table</code> needs to be the <code>:only-child</code> of this div.</div>
 </details>
 
@@ -240,7 +240,7 @@ An accordion or alert box that can be styled and used to provide more informatio
 ```
 
 <details open style="--accordion-bg: indianred; --accordion-border: indianred;">
-  <summary>Important notice</summary>
+  <summary>About the wrapping div</summary>
   <div>You should wrap the content that doess <i>not</i> to the header/summary, in an HTML tag (e.g. <code>p</code>, <code>div</code>) for the opening animation to work.</div>
 </details>
 

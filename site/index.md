@@ -28,6 +28,12 @@ Use the _unpkg.com_ CDN directly in your `head` of your HTML page:
 <link rel="stylesheet" href="https://unpkg.com/feo-css/feo.min.css">
 ```
 
+Import it in your (S)CSS:
+
+```
+@import "https://unpkg.com/feo-css/feo.min.css";
+```
+
 Or install it via NPM using your package manager of choice:
 
 ```

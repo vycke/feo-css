@@ -4,16 +4,14 @@ title: Utilities classes
 key: utilities
 ---
 
-There is nothing wrong with utility-first CSS. It only becomes a
-problem when it is _utility-only_. If you looked at the
-[layouts layer](/layouts), utilities there are used
-to control layout settings. It is an incredible scalable setup.
+Utility classes are classes that do one thing, and one thing well. They are different _class utilities_, like the one used in
+[layouts layer](/layouts).
 
 <details>
   <summary>Naming convention</summary>
   <p>Feo.css offers a very limited set of utility classes, mostly based
   on the available <a href="/tokens">design tokens</a>. In all
-  he classes that you see, the <code>[z]</code> is a
+  he classes that you see, the <code>{z}</code> is a
   placeholder for the number corresponding to the correct design
   token.</p>
 </details>
@@ -31,28 +29,28 @@ to control layout settings. It is an incredible scalable setup.
     </thead>
     <tbody>
       <tr>
-        <td><code>m-[z]</code></td>
-        <td><code>--token-size-[z]</code></td>
+        <td><code>m-{z}</code></td>
+        <td><code>--token-size-{z}</code></td>
         <td><code>margin</code></td>
       </tr>
       <tr>
-        <td><code>mt-[z]</code></td>
-        <td><code>--token-size-[z]</code></td>
+        <td><code>mt-{z}</code></td>
+        <td><code>--token-size-{z}</code></td>
         <td><code>margin-top</code></td>
       </tr>
       <tr>
-        <td><code>mr-[z]</code></td>
-        <td><code>--token-size-[z]</code></td>
+        <td><code>mr-{z}</code></td>
+        <td><code>--token-size-{z}</code></td>
         <td><code>margin-right</code></td>
       </tr>
       <tr>
-        <td><code>mb-[z]</code></td>
-        <td><code>--token-size-[z]</code></td>
+        <td><code>mb-{z}</code></td>
+        <td><code>--token-size-{z}</code></td>
         <td><code>margin-bottom</code></td>
       </tr>
       <tr>
-        <td><code>ml-[z]</code></td>
-        <td><code>--token-size-[z]</code></td>
+        <td><code>ml-{z}</code></td>
+        <td><code>--token-size-{z}</code></td>
         <td><code>margin-left</code></td>
       </tr>
     </tbody>
@@ -72,28 +70,28 @@ to control layout settings. It is an incredible scalable setup.
     </thead>
     <tbody>
       <tr>
-        <td><code>p-[z]</code></td>
-        <td><code>--token-size-[z]</code></td>
+        <td><code>p-{z}</code></td>
+        <td><code>--token-size-{z}</code></td>
         <td><code>padding</code></td>
       </tr>
       <tr>
-        <td><code>pt-[z]</code></td>
-        <td><code>--token-size-[z]</code></td>
+        <td><code>pt-{z}</code></td>
+        <td><code>--token-size-{z}</code></td>
         <td><code>padding-top</code></td>
       </tr>
       <tr>
-        <td><code>pr-[z]</code></td>
-        <td><code>--token-size-[z]</code></td>
+        <td><code>pr-{z}</code></td>
+        <td><code>--token-size-{z}</code></td>
         <td><code>padding-right</code></td>
       </tr>
       <tr>
-        <td><code>pb-[z]</code></td>
-        <td><code>--token-size-[z]</code></td>
+        <td><code>pb-{z}</code></td>
+        <td><code>--token-size-{z}</code></td>
         <td><code>padding-bottom</code></td>
       </tr>
       <tr>
-        <td><code>pl-[z]</code></td>
-        <td><code>--token-size-[z]</code></td>
+        <td><code>pl-{z}</code></td>
+        <td><code>--token-size-{z}</code></td>
         <td><code>padding-left</code></td>
       </tr>
     </tbody>
@@ -113,8 +111,8 @@ to control layout settings. It is an incredible scalable setup.
     </thead>
     <tbody>
       <tr>
-        <td><code>size-[z]</code></td>
-        <td><code>--token-size-[z]</code></td>
+        <td><code>size-{z}</code></td>
+        <td><code>--token-size-{z}</code></td>
         <td><code>font-size</code></td>
       </tr>
       <tr>
@@ -141,9 +139,9 @@ to control layout settings. It is an incredible scalable setup.
   </table>
 </div>
 
-## `maxw-[z]`
+## `maxw-{z}`
 
-Based on the `--token-bp-[z]` [tokens](/tokens), control the `max-width` property.
+Based on the `--token-bp-{z}` [tokens](/tokens), control the `max-width` property.
 
 ## `click-area`
 

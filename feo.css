@@ -32,9 +32,13 @@
     line-height: 1.78;
   }
 
-  ul[class], ol[class] {
+  :where(ul[class], ol[class]) {
     padding-left: 0;
     list-style: none;
+  }
+
+  :where(ul, ol):not([class]) li {
+    padding-left: .35em;
   }
 
   :where(h1, h2, h3, button, input, label) {
@@ -332,6 +336,10 @@
     justify-content: space-evenly;
   }
 
+  .justify-stretch > * {
+    flex-grow: 1;
+  }
+
   .content-center {
     align-content: center;
   }
@@ -446,10 +454,6 @@
 
   .switcher > * {
     flex-basis: calc((var(--layout-width)  - 100%) * 999);
-  }
-
-  .switcher.--grow > * {
-    flex-grow: 1;
   }
 
   .tiles {
@@ -601,6 +605,21 @@
     bottom: 0;
     left: 0;
     right: 0;
+  }
+
+  .hover-list {
+    --opacity: .4;
+    --transform: 1.075;
+  }
+
+  .hover-list > * {
+    transition: all .25s;
+  }
+
+  @media (hover: hover) {
+    .hover-list:hover > :not(:hover) {
+      opacity: var(--opacity);
+    }
   }
 
   .relative {
@@ -1102,14 +1121,15 @@
     border: 2px solid var(--accordion-border);
     border-radius: var(--token-size-000);
     font-size: var(--token-size-00);
+  }
+
+  details > * {
     padding: 4px 12px;
   }
 
   summary {
     background-color: var(--accordion-bg);
     border-radius: calc(var(--token-size-000)  - 3px);
-    margin: -4px -12px;
-    padding: 4px 12px;
     font-weight: bold;
   }
 
@@ -1117,7 +1137,6 @@
     border-bottom: 1px solid var(--accordion-border);
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0;
-    margin-bottom: 4px;
   }
 
   @-webkit-keyframes details-show {
@@ -1254,15 +1273,6 @@
     transform: translateX(var(--toggle-size));
   }
 
-  input[type="checkbox"]:focus {
-    outline: none;
-  }
-
-  input[type="checkbox"]:focus-visible {
-    outline-offset: 2px;
-    outline: 2px solid #1e90ff;
-  }
-
   div:has( > table:only-child) {
     overflow-x: auto;
   }
@@ -1290,10 +1300,6 @@
 
   table tr:first-child th:last-child {
     border-top-right-radius: var(--table-radius);
-  }
-
-  th {
-    background-color: var(--table-color);
   }
 
   td {

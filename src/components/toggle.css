@@ -49,12 +49,3 @@ input[type="checkbox"]:checked {
 input[type="checkbox"]:checked::before {
   transform: translateX(var(--toggle-size));
 }
-
-input[type="checkbox"]:focus {
-  outline: none;
-}
-
-input[type="checkbox"]:focus-visible {
-  outline: 2px solid dodgerblue;
-  outline-offset: 2px;
-}

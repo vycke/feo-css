@@ -67,6 +67,9 @@
 .justify-evenly {
   justify-content: space-evenly;
 }
+.justify-stretch > * {
+  flex-grow: 1;
+}
 
 /* align-content */
 .content-center {

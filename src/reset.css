@@ -36,10 +36,13 @@ body {
 }
 
 /* Remove list styles on ul, ol elements, if they have any other class */
-ul[class],
-ol[class] {
+:where(ul[class], ol[class]) {
   list-style: none;
   padding-left: 0;
+}
+
+:where(ul, ol):not([class]) li {
+  padding-left: 0.35em;
 }
 
 /* Set shorter line heights on headings and interactive elements */

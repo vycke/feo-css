@@ -10,16 +10,22 @@ patterns allow you to set the `gap` between columns and rows, through _class uli
 <details>
   <summary>Naming convention</summary>
   <p>Tokens like sizing and breakpoints are considered to have a "baseline". The most common value for the design token. Those
-  tokens always have a <code>-0</code> as the post-fix. In the sequence of tokens, if you want to go up a value, you increase the value. 
+  tokens always have a <code>-0</code> as the post-fix. In the sequence of tokens, if you want to go up a value, you increase the value.
   If you want to go down a value, you decrease the value, or add a 0 (e.g. <code>-00</code>).</p>
 </details>
 
 ## Sizing
 
-The sizing tokens are based on a [fluid](https://vyckes.dev/writing/different-approaches-to-fluid-typography-and-layouts/)
-scale (larger screens mean larger values). In addition, the
-majority of them are scaled with a value of `1.33` to
-the previous token.
+Feo.css offers design tokens on _sizing_ that can be used for spacing (e.g. margin and padding), font-sizes, or anything you can think of. The values are based on a combination of a few key principles:
+
+- [Fluid scaling](https://vyckes.dev/writing/different-approaches-to-fluid-typography-and-layouts/) based on screen size.
+- A ratio of `1.33` between two consecutive token values.
+- The mentioned naming convention outlined above. `1rem` is taken as the base value (`--size-0`).
+
+<details>
+  <summary>Note on fluid scaling</summary>
+  <p>If you do not want to use a fluid scaling of the <code>--size-{z}</code> tokens, you can overwrite the <code>--feo-scale</code> Custom Property in your own code, and set it to <code>0</code>.</p>
+</details>
 
 <div>
   <table>

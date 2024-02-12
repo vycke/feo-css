@@ -1,3 +1,9 @@
+:root {
+  --sans-serif: Seravek, "Gill Sans Nova", Ubuntu, Calibri, "DejaVu Sans",
+    system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol";
+}
+
 nav {
   top: 1rem;
 }

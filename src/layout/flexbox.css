@@ -121,14 +121,3 @@
 .self-stretch {
   align-self: stretch;
 }
-
-/* place items */
-.place-center {
-  place-items: center;
-}
-.place-start {
-  place-items: flex-start;
-}
-.place-end {
-  place-items: flex-end;
-}

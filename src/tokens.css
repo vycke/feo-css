@@ -29,19 +29,19 @@
    */
 
   /* Value between 0px and 5px, equal to 20% increase of 1rem */
-  --ratio: calc(5 * (min(100vw, 1240px) - 320px) / 920);
+  --feo-scale: calc(5 * (min(100vw, 1240px) - 320px) / 920);
 
   /* Scale of 1.333 */
   --token-size-none: 0;
-  --token-size-0000: calc(0.5rem + 0.5 * var(--ratio));
-  --token-size-000: calc(0.65rem + 0.65 * var(--ratio));
-  --token-size-00: calc(0.8125rem + 0.8125 * var(--ratio));
-  --token-size-0: calc(1rem + var(--ratio));
-  --token-size-1: calc(1.33rem + 1.33 * var(--ratio));
-  --token-size-2: calc(1.78rem + 1.78 * var(--ratio));
-  --token-size-3: calc(2.37rem + 2.37 * var(--ratio));
-  --token-size-4: calc(3.16rem + 3.16 * var(--ratio));
-  --token-size-5: calc(4.21rem + 4.21 * var(--ratio));
+  --token-size-0000: calc(0.5rem + 0.5 * var(--feo-scale));
+  --token-size-000: calc(0.65rem + 0.65 * var(--feo-scale));
+  --token-size-00: calc(0.8125rem + 0.8125 * var(--feo-scale));
+  --token-size-0: calc(1rem + var(--feo-scale));
+  --token-size-1: calc(1.33rem + 1.33 * var(--feo-scale));
+  --token-size-2: calc(1.78rem + 1.78 * var(--feo-scale));
+  --token-size-3: calc(2.37rem + 2.37 * var(--feo-scale));
+  --token-size-4: calc(3.16rem + 3.16 * var(--feo-scale));
+  --token-size-5: calc(4.21rem + 4.21 * var(--feo-scale));
 
   /**
    * FONT FAMILY
@@ -49,9 +49,8 @@
   --monospace: ui-monospace, "Cascadia Code", "Source Code Pro", Menlo, Consolas,
     "DejaVu Sans Mono", monospace;
   --serif: Charter, "Bitstream Charter", "Sitka Text", Cambria, serif;
-  --sans-serif: Seravek, "Gill Sans Nova", Ubuntu, Calibri, "DejaVu Sans",
-    system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
-    "Segoe UI Symbol";
+  --sans-serif: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 
   /**
    * RADIUS & ELEVATION

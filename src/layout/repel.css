@@ -1,0 +1,9 @@
+/**
+ * Layout to stretch items across the main axis and have the space in between
+ */
+.repel {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: var(--layout-gap);
+}

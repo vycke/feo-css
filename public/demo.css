@@ -16,6 +16,10 @@ nav li {
   nav {
     position: relative;
   }
+
+  nav ul ul {
+    display: none;
+  }
 }
 
 h2 {

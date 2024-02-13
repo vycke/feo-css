@@ -46,7 +46,19 @@
           <span>v4.3.0</span>
           <li {% if key == "home" %} class="bold"{% endif %}><a href="/">Homepage</a></li>
           <li {% if key == "tokens" %} class="bold"{% endif %}><a href="/tokens">Design tokens</a></li>
-          <li {% if key == "layouts" %} class="bold"{% endif %} ><a href="/layouts">Layout patterns</a></li>
+          <li>
+            <a {% if key == "layouts" %} class="bold"{% endif %} href="/layouts">Layout patterns</a>
+            {% if key == "layouts" %} <ul>
+              <li><a {% if subkey == "center" %} class="bold"{% endif %} href="/layouts/center">Center</a></li>
+              <li><a {% if subkey == "cluster" %} class="bold"{% endif %} href="/layouts/cluster">Cluster</a></li>
+              <li><a {% if subkey == "flexbox" %} class="bold"{% endif %} href="/layouts/flexbox">Flexbox</a></li>
+              <li><a {% if subkey == "grids" %} class="bold"{% endif %} href="/layouts/grid">Grids</a></li>
+              <li><a {% if subkey == "repel" %} class="bold"{% endif %} href="/layouts/repel">Repel</a></li>
+              <li><a {% if subkey == "sidebar" %} class="bold"{% endif %} href="/layouts/sidebar">Sidebar</a></li>
+              <li><a {% if subkey == "switcher" %} class="bold"{% endif %} href="/layouts/switcher">Switcher</a></li>
+              <li><a {% if subkey == "tiles" %} class="bold"{% endif %} href="/layouts/tiles">Tiles</a></li>
+            </ul>{% endif %}
+          </li>
           <li {% if key == "utilities" %} class="bold"{% endif %}><a href="/utilities">Utilities</a></li>
           <li {% if key == "components" %} class="bold"{% endif %}><a href="/components">Components</a></li>
         </ul>

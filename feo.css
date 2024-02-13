@@ -408,10 +408,17 @@
     display: grid;
   }
 
+  .repel {
+    justify-content: space-between;
+    gap: var(--layout-gap);
+    flex-wrap: wrap;
+    display: flex;
+  }
+
   .sidebar {
     --layout-gap: 0;
     --layout-width: 0;
-    --min-inline-size: 67%;
+    --layout-inline-size: 67%;
     gap: var(--layout-gap);
     flex-wrap: wrap;
     display: flex;
@@ -424,7 +431,7 @@
   }
 
   .sidebar.--left > :last-child, .sidebar.--right > :first-child {
-    min-width: var(--min-inline-size);
+    min-width: var(--layout-inline-size);
     flex-grow: 999;
     flex-basis: 0;
   }

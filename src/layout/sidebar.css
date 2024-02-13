@@ -13,7 +13,7 @@
 .sidebar {
   --layout-gap: 0;
   --layout-width: 0;
-  --min-inline-size: 67%;
+  --layout-inline-size: 67%;
 
   display: flex;
   flex-wrap: wrap;
@@ -32,5 +32,5 @@
   flex-grow: 999;
 
   /* wraps when content becomes less than X */
-  min-inline-size: var(--min-inline-size);
+  min-inline-size: var(--layout-inline-size);
 }

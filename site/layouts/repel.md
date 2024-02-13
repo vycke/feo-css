@@ -5,6 +5,8 @@ key: layouts
 subkey: repel
 ---
 
+[_Back to layouts overview_](/layouts)
+
 {% include "svg/repel.njk" %}
 
 ## Implementation

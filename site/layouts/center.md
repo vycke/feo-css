@@ -5,6 +5,8 @@ key: layouts
 subkey: center
 ---
 
+[_Back to layouts overview_](/layouts)
+
 Places the targeted element in the horizontal center. It takes the entire available horizontal space, until it hits its set `max-width` set through the `--width-{z}` class utilities.
 
 {% include "svg/center.njk" %}

@@ -60,7 +60,15 @@
             </ul>{% endif %}
           </li>
           <li {% if key == "utilities" %} class="bold"{% endif %}><a href="/utilities">Utilities</a></li>
-          <li {% if key == "components" %} class="bold"{% endif %}><a href="/components">Components</a></li>
+          <li>
+            <a {% if key == "components" %} class="bold"{% endif %} href="/components">Components</a>
+            {% if key == "components" %} <ul>
+              <li><a {% if subkey == "accordion" %} class="bold"{% endif %} href="/components/accordion">Accordion</a></li>
+              <li><a {% if subkey == "forms" %} class="bold"{% endif %} href="/components/forms">Forms</a></li>
+              <li><a {% if subkey == "table" %} class="bold"{% endif %} href="/components/table">Table</a></li>
+              <li><a {% if subkey == "toggle" %} class="bold"{% endif %} href="/components/toggle">Toggle</a></li>
+            </ul>{% endif %}
+          </li>
         </ul>
       </nav>
       <div class="flex-col">

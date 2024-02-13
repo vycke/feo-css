@@ -1,0 +1,10 @@
+/**
+ * A simple pattern on a three (or more) layer layout in which the second layer fills the available space
+ */
+.pancake {
+  --layout-gap: 0;
+
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  gap: var(--layout-gap);
+}

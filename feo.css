@@ -408,6 +408,13 @@
     display: grid;
   }
 
+  .pancake {
+    --layout-gap: 0;
+    gap: var(--layout-gap);
+    grid-template-rows: auto 1fr auto;
+    display: grid;
+  }
+
   .repel {
     justify-content: space-between;
     gap: var(--layout-gap);

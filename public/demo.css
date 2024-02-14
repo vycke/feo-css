@@ -5,7 +5,7 @@
 }
 
 nav {
-  top: 1rem;
+  z-index: 100;
   background-color: var(--color-surface-0);
   padding-bottom: var(--token-size-0);
 }
@@ -18,7 +18,7 @@ article svg {
   width: 100%;
 }
 
-@media (max-width: 637px) {
+@media (max-width: 785px) {
   nav {
     border-bottom: 1px solid var(--color-surface-1);
   }

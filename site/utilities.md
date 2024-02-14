@@ -121,7 +121,7 @@ Utility classes are classes that do one thing, and one thing well. They are diff
         <td><code>font-family</code></td>
       </tr>
       <tr>
-        <td><code>bold/regular/italc/uppercase</code></td>
+        <td><code>bold/regular/italic/uppercase</code></td>
         <td>-</td>
         <td>Various</td>
       </tr>

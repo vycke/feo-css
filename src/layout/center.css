@@ -13,8 +13,11 @@
  */
 .center {
   --layout-width: 100%;
+  --layout-gap: 0;
 
   margin-left: auto;
   margin-right: auto;
-  width: min(100%, var(--layout-width));
+  width: 100%;
+  /* required to ensure certain elements that should be side-scrollable don't push out the layout at 100% */
+  max-width: min(calc(100vw - 2 * var(--layout-gap)), var(--layout-width));
 }

@@ -73,6 +73,7 @@ code {
   border-radius: 4px;
   padding: 2px;
   white-space: nowrap;
+  word-break: break-all;
   background-color: var(--color-surface-1);
 }
 
@@ -82,7 +83,7 @@ pre {
   background-color: var(--color-surface-1);
   position: relative;
   padding: 0;
-  white-space: pre;
+  max-width: 100%;
   word-wrap: normal;
   word-break: normal;
   word-spacing: normal;
@@ -92,6 +93,7 @@ pre > code {
   padding: var(--token-size-00) var(--token-size-0);
   font-size: var(--token-size-00);
   display: block;
+  white-space: pre;
   overflow-x: auto;
   tab-size: 2;
   /* fix for increased font-size safari iOS */

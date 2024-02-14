@@ -220,6 +220,7 @@
   :not(pre) > code {
     border: 1px solid var(--color-foreground-1);
     white-space: nowrap;
+    word-break: break-all;
     background-color: var(--color-surface-1);
     border-radius: 4px;
     padding: 2px;
@@ -229,10 +230,10 @@
     border: 2px solid var(--color-foreground-1);
     border-radius: var(--token-size-000);
     background-color: var(--color-surface-1);
-    white-space: pre;
     word-wrap: normal;
     word-break: normal;
     word-spacing: normal;
+    max-width: 100%;
     padding: 0;
     position: relative;
   }
@@ -240,6 +241,7 @@
   pre > code {
     padding: var(--token-size-00) var(--token-size-0);
     font-size: var(--token-size-00);
+    white-space: pre;
     tab-size: 2;
     -webkit-text-size-adjust: none;
     display: block;
@@ -250,7 +252,9 @@
 @layer layout {
   .center {
     --layout-width: 100%;
-    width: min(100%, var(--layout-width));
+    --layout-gap: 0;
+    max-width: min(calc(100vw - 2 * var(--layout-gap)), var(--layout-width));
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
   }

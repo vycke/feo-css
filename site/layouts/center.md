@@ -28,6 +28,7 @@ Places the targeted element in the horizontal center. It takes the entire availa
     </thead>
     <tbody>
       <tr><td><code>--width-{z}</code></td><td><code>--layout-width</code></td><td>Required</td><td>Controls the <code>max-width</code> of the targeted element</tr>
+      <tr><td><code>--gap-{z}</code></td><td><code>--layout-gap</code></td><td></td><td>Some elements can push out the width, as they should have side-scrolling. The <code>center</code> has a build in mechanism to deal with this. This class utility should be used if one of the parent has a padding that should be taken into account with the max-width.</tr>
     </tbody>
   </table>
 </div>

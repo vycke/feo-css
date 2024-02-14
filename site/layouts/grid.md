@@ -5,8 +5,6 @@ key: layouts
 subkey: grids
 ---
 
-[_Back to layouts overview_](/layouts)
-
 A layout pattern to easily create a grid of equal columns.
 
 ## Implementation
@@ -30,3 +28,5 @@ A layout pattern to easily create a grid of equal columns.
     </tbody>
   </table>
 </div>
+
+[_Back to layouts overview_](/layouts)

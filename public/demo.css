@@ -6,15 +6,21 @@
 
 nav {
   top: 1rem;
+  background-color: var(--color-surface-0);
+  padding-bottom: var(--token-size-0);
 }
 
 nav li {
   white-space: nowrap;
 }
 
+article svg {
+  width: 100%;
+}
+
 @media (max-width: 637px) {
   nav {
-    position: relative;
+    border-bottom: 1px solid var(--color-surface-1);
   }
 
   nav ul ul {

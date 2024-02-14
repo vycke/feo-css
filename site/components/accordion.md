@@ -5,8 +5,6 @@ key: components
 subkey: accordion
 ---
 
-[_Back to components overview_](/components)
-
 An accordion or alert box that can be styled and used to provide more information to users.
 
 #### Example
@@ -59,3 +57,5 @@ overwritten to control the looks of the table. You can change these properties o
     </tbody>
   </table>
 </div>
+
+[_Back to components overview_](/components)

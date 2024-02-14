@@ -5,8 +5,6 @@ key: layouts
 subkey: switcher
 ---
 
-[_Back to layouts overview_](/layouts)
-
 A _responsive_ layout pattern that helps switching the orientation from horizontal to vertical if the _available width for the targeted (wrapper) element_ becomes less than the set width. Useful when the targeted element has >= 2 child elements.
 
 {% include "svg/switcher.njk" %}
@@ -38,3 +36,5 @@ A _responsive_ layout pattern that helps switching the orientation from horizont
     </tbody>
   </table>
 </div>
+
+[_Back to layouts overview_](/layouts)

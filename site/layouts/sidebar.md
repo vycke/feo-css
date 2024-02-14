@@ -5,8 +5,6 @@ key: layouts
 subkey: sidebar
 ---
 
-[_Back to layouts overview_](/layouts)
-
 A common responsive layout in which there is a "sidebar" of a _fixed_ width, and a content area that is flexible. This implementation switches to a vertical layout the moment the flexible content gets too little space left within the _targeted (wrapper) element_.
 
 {% include "svg/sidebar.njk" %}
@@ -39,3 +37,5 @@ A common responsive layout in which there is a "sidebar" of a _fixed_ width, and
     </tbody>
   </table>
 </div>
+
+[_Back to layouts overview_](/layouts)

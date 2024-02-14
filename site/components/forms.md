@@ -5,8 +5,6 @@ key: components
 subkey: forms
 ---
 
-[_Back to components overview_](/components)
-
 Generic form fields useful for all forms.
 
 ## Example
@@ -64,3 +62,5 @@ the styling.
   <[element] ... />
 </label>
 ```
+
+[_Back to components overview_](/components)

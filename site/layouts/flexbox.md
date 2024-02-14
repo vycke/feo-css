@@ -5,8 +5,6 @@ key: layouts
 subkey: flexbox
 ---
 
-[_Back to layouts overview_](/layouts)
-
 Although not really a layout pattern, Feo.css adds a set of classes to control flexbox properties on elements. As some of these classes use the generic "layout class utilities", they are grouped in Feo.css, under "layout".
 
 ## Classes
@@ -67,3 +65,5 @@ Although not really a layout pattern, Feo.css adds a set of classes to control f
     </tbody>
   </table>
 </div>
+
+[_Back to layouts overview_](/layouts)

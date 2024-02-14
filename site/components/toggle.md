@@ -5,8 +5,6 @@ key: components
 subkey: toggle
 ---
 
-[_Back to components overview_](/components)
-
 A toggle is a specific component that can be used as a solitary
 checkbox, or for something else.
 
@@ -70,3 +68,5 @@ as you will put the label text after the toggle in most cases. You can change th
     </tbody>
   </table>
 </div>
+
+[_Back to components overview_](/components)

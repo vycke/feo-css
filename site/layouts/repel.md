@@ -5,8 +5,6 @@ key: layouts
 subkey: repel
 ---
 
-[_Back to layouts overview_](/layouts)
-
 A simple layout pattern that pushes elements away from eachother, given the available space. Effectively implementing the `.justify-between`, `.--gap-{z}` and `.flex-row` classes.
 
 {% include "svg/repel.njk" %}
@@ -31,3 +29,5 @@ A simple layout pattern that pushes elements away from eachother, given the avai
     </tbody>
   </table>
 </div>
+
+[_Back to layouts overview_](/layouts)

@@ -1,20 +1,20 @@
 ---
 layout: base.njk
-title: Repel
+title: Pancake
 key: layouts
-subkey: repel
+subkey: pancake
 ---
 
 [_Back to layouts overview_](/layouts)
 
-A simple layout pattern that pushes elements away from eachother, given the available space. Effectively implementing the `.justify-between`, `.--gap-{z}` and `.flex-row` classes.
+A common vertical pattern where the center content should stretch the available space, pushing the top and bottom to, well, the top and bottom.
 
-{% include "svg/repel.njk" %}
+{% include "svg/pancake.njk" %}
 
 ## Implementation
 
 ```
-<div class="repel">
+<div class="pancake">
   ...
 </div>
 ```

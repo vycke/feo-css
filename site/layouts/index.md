@@ -21,6 +21,7 @@ The available layout classes in Feo.css are listed below.
 - [Cluster](/layouts/cluster)
 - [Flexbox](/layouts/flexbox)
 - [Equal column grid](/layouts/grid)
+- [Pancake](/layouts/pancake)
 - [Repel](/layouts/repel)
 - [Sidebar](/layouts/sidebar)
 - [Switcher](/layouts/switcher)

@@ -7,6 +7,10 @@ subkey: tiles
 
 [_Back to layouts overview_](/layouts)
 
+Also known as a RAM (repeat, auto, minmax) layout. It is a tile system in which the browser determines how many tiles fit in the avaiable space. It rounds down the number of tiles on a single row, and stretches the tiles to fit the space. When the screen shrinks, the amount of tiles on a row decreases automatically.
+
+{% include "svg/tiles.njk" %}
+
 ## Implementation
 
 ```

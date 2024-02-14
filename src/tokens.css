@@ -73,7 +73,7 @@
   --color-surface-0: var(--token-color-light-0);
   --color-surface-1: var(--token-color-light-1);
   --color-surface-2: var(--token-color-light-2);
-  --color-link: green;
+  --color-link: #617; /* GIT */
 
   --arrow-icon: url("data:image/svg+xml,%3Csvg width='14' height='9' viewBox='0 0 14 9' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Cpath id='Path' fill='%232B3A50' d='M7 9L13.0622 0H0.937822L7 9Z'/%3E%3C/svg%3E");
 }
@@ -89,7 +89,7 @@
     --color-surface-0: var(--token-color-dark-0);
     --color-surface-1: var(--token-color-dark-1);
     --color-surface-2: var(--token-color-dark-2);
-    --color-link: lime;
+    --color-link: #c0ffee; /* COFFEE */
 
     --arrow-icon: url("data:image/svg+xml,%3Csvg width='14' height='9' viewBox='0 0 14 9' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Cpath id='Path' fill='%23E3E9F2' d='M7 9L13.0622 0H0.937822L7 9Z'/%3E%3C/svg%3E");
   }

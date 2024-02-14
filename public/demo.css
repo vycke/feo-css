@@ -15,6 +15,7 @@ nav li {
 @media (max-width: 637px) {
   nav {
     position: relative;
+    display: none;
   }
 
   nav ul ul {

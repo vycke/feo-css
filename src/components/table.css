@@ -5,14 +5,16 @@
  */
 div:has(> table:only-child) {
   overflow-x: auto;
+  /* Ensure that even in flex-start on the parent, tables will be full width and scrollable */
+  width: 100%;
 }
 
 /**
  * Table component
  */
 table {
-  --table-radius: var(--token-size-0000);
-  --table-color: var(--color-surface-1);
+  --table-radius: 6px;
+  --table-color: var(--surface-1);
 
   /* Table fills always the available space */
   width: 100%;
@@ -39,13 +41,13 @@ table tr:first-child th:last-child {
 }
 
 td {
-  background-color: var(--color-surface-0);
+  background-color: var(--surface-0);
 }
 
 td,
 th {
   text-align: left;
-  padding: var(--token-size-0000);
+  padding: 4px var(--token-size-000);
 }
 
 table tr:hover td {

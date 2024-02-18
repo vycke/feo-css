@@ -1,6 +1,7 @@
 ---
 layout: base.njk
 title: Utilities classes
+order: 4
 key: utilities
 ---
 
@@ -148,6 +149,10 @@ Based on the `--token-bp-{z}` [tokens](/tokens), control the `max-width` propert
 Makes the entire element with this class clickable, based on the
 first `<a />` it can find in its (sub-)DOM. It does not
 have to be a direct descender.
+
+## `hover-group`
+
+Makes an entire group more interactive on hover, by making the non-hover times dissappear a bit (lowering their opacity). For an example, look at the navigation of this document website (on desktop).
 
 ## Position
 

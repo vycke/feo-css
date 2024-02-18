@@ -1,7 +1,16 @@
+form {
+  --form-radius: 8px;
+  --form-border: var(--text-2);
+  --form-focus: var(--text-0);
+  --form-disabled-surface: var(--surface-1);
+  --form-disabled-padding: var(--token-size-000);
+  --form-disabled-border: var(--text-2);
+}
+
 label {
   display: flex;
   flex-direction: column;
-  color: var(--color-foreground-1);
+  color: var(--text-2);
   font-size: var(--token-size-0);
   gap: 4px;
 }
@@ -13,27 +22,29 @@ input:not([type="checkbox"]),
 select,
 textarea {
   width: 100%;
-  padding: var(--token-size-0000) var(--token-size-000);
+  padding: 6px var(--token-size-000);
   background-color: var(--token-surface-0);
   font-size: var(--token-size-00);
-  border: 1px solid var(--color-foreground-1);
-  border-radius: var(--token-size-0000);
+  border: 1px solid var(--form-border);
+  border-radius: var(--form-radius, 4px);
   transition: all 100ms;
-  color: var(--color-foreground-0);
+  color: var(--text-0);
 }
 
 input:not(:disabled):not([type="checkbox"]):where(:hover, :focus),
 select:not(:disabled):where(:hover, :focus),
 textarea:not(:disabled):where(:hover, :focus) {
-  border: 1px solid var(--color-foreground-0);
-  outline: 1px solid var(--color-foreground-0);
+  border: 1px solid var(--form-focus);
+  outline: 1px solid var(--form-focus);
 }
 
 input:disabled,
 textarea:disabled,
 select:disabled {
   cursor: not-allowed;
-  background-color: var(--color-surface-1);
+  background-color: var(--form-disabled-surface);
+  border: 1px solid var(--form-disabled-border);
+  padding-left: var(--form-disabled-padding);
 }
 
 /**

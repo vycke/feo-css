@@ -1,6 +1,7 @@
 ---
 layout: base.njk
 title: Components
+order: 5
 key: components
 ---
 

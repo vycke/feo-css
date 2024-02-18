@@ -1,20 +1,19 @@
 /**
- * hover list
+ * HOVER GROUP
  * add interactive elements on hover. partly hides non-hover elements and
  * enlarges hover element
  */
-.hover-list {
+.hover-group {
   --opacity: 0.4;
-  --transform: 1.075;
 }
 
-.hover-list > * {
+.hover-group > * {
   transition: all 0.25s;
 }
 
 /** check if hover is available or not, is not available on mobile */
 @media (hover: hover) {
-  .hover-list:hover > *:not(:hover) {
+  .hover-group:hover > *:not(:hover) {
     opacity: var(--opacity);
   }
 }

@@ -2,24 +2,24 @@
  * Accordion component
  */
 details {
-  --accordion-border: var(--color-foreground-1);
-  --accordion-bg: var(--color-surface-1);
+  --accordion-border: var(--surface-1);
+  --accordion-radius: 8px;
+  --accordion-surface: var(--surface-1);
 
-  border: 2px solid var(--accordion-border);
-  border-radius: var(--token-size-000);
-  font-size: var(--token-size-00);
+  border: 3px solid var(--accordion-border);
+  border-radius: var(--accordion-radius);
 }
 
 /* Assumes only <summary> and one other div */
 details > * {
-  padding: 4px 12px;
+  padding: 2px 12px;
 }
 
 summary {
   font-weight: bold;
-  background-color: var(--accordion-bg);
+  background-color: var(--accordion-surface);
   /* Offset needed to make the borders play nice with the details */
-  border-radius: calc(var(--token-size-000) - 3px);
+  border-radius: calc(var(--accordion-radius) - 3px);
 }
 
 /* Changes in styling when opened */

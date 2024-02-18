@@ -32,52 +32,37 @@
 
   <body>
     <main class="sidebar --left --width-000 --gap-0 align-start | relative flex-grow">
-      <!-- NAVIGATION -->
+      <!-- SIDEBAR -->
       <nav class="sticky | repel items-center | p-0">
         <div class="flex-row --gap-000 items-center">
           <svg width="32" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg" class="flex-shrink-0">
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M15 25C15 30.5228 19.4772 35 25 35C30.5228 35 35 30.5229 35 25C35 19.4772 30.5228 15 25 15C19.4772 15 15 19.4772 15 25ZM25 20C22.2386 20 20 22.2386 20 25C20 27.7614 22.2386 30 25 30C27.7614 30 30 27.7614 30 25C30 22.2386 27.7614 20 25 20Z" fill="var(--color-foreground-0)"/>
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M43.1623 44.4868L28.1623 49.4868C26.1096 50.1711 23.8904 50.1711 21.8377 49.4868L6.83772 44.4868C2.7543 43.1257 0 39.3043 0 35L2.31474e-06 15C2.69103e-06 10.6957 2.7543 6.8743 6.83773 5.51316L21.8377 0.513167C23.8904 -0.171056 26.1096 -0.171055 28.1623 0.513167L43.1623 5.51317C47.2457 6.87431 50 10.6957 50 15L50 35C50 39.3043 47.2457 43.1257 43.1623 44.4868ZM25 5C24.466 5 23.932 5.08553 23.4189 5.25658L8.41886 10.2566C6.37715 10.9372 5 12.8478 5 15L5 35C5 37.1522 6.37715 39.0628 8.41886 39.7434L23.4189 44.7434C23.932 44.9145 24.466 45 25 45C25.534 45 26.068 44.9145 26.5811 44.7434L41.5811 39.7434C43.6228 39.0629 45 37.1522 45 35L45 15C45 12.8479 43.6229 10.9372 41.5811 10.2566L26.5811 5.25658C26.068 5.08553 25.534 5 25 5Z" fill="var(--color-foreground-0)"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M15 25C15 30.5228 19.4772 35 25 35C30.5228 35 35 30.5229 35 25C35 19.4772 30.5228 15 25 15C19.4772 15 15 19.4772 15 25ZM25 20C22.2386 20 20 22.2386 20 25C20 27.7614 22.2386 30 25 30C27.7614 30 30 27.7614 30 25C30 22.2386 27.7614 20 25 20Z" fill="var(--text-0)"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M43.1623 44.4868L28.1623 49.4868C26.1096 50.1711 23.8904 50.1711 21.8377 49.4868L6.83772 44.4868C2.7543 43.1257 0 39.3043 0 35L2.31474e-06 15C2.69103e-06 10.6957 2.7543 6.8743 6.83773 5.51316L21.8377 0.513167C23.8904 -0.171056 26.1096 -0.171055 28.1623 0.513167L43.1623 5.51317C47.2457 6.87431 50 10.6957 50 15L50 35C50 39.3043 47.2457 43.1257 43.1623 44.4868ZM25 5C24.466 5 23.932 5.08553 23.4189 5.25658L8.41886 10.2566C6.37715 10.9372 5 12.8478 5 15L5 35C5 37.1522 6.37715 39.0628 8.41886 39.7434L23.4189 44.7434C23.932 44.9145 24.466 45 25 45C25.534 45 26.068 44.9145 26.5811 44.7434L41.5811 39.7434C43.6228 39.0629 45 37.1522 45 35L45 15C45 12.8479 43.6229 10.9372 41.5811 10.2566L26.5811 5.25658C26.068 5.08553 25.534 5 25 5Z" fill="var(--text-0)"/>
           </svg>
           <div class="flex-col">
           <span class="size-1 bold lh-1">Feo.css</span>
           <span class="size-00 lh-1">(v{{ pkg.version }})</span>
           </div>
         </div>
-        
-        <ul role="list" class=" switcher --width-00 --gap-0000 | size-00">
-          <li {% if key == "home" %} class="bold"{% endif %}><a href="/">Homepage</a></li>
-          <li {% if key == "tokens" %} class="bold"{% endif %}><a href="/tokens">Design tokens</a></li>
-          <li>
-            <a {% if key == "layouts" %} class="bold"{% endif %} href="/layouts">Layout patterns</a>
-            {% if key == "layouts" %} <ul>
-              <li><a {% if subkey == "center" %} class="bold"{% endif %} href="/layouts/center">Center</a></li>
-              <li><a {% if subkey == "cluster" %} class="bold"{% endif %} href="/layouts/cluster">Cluster</a></li>
-              <li><a {% if subkey == "flexbox" %} class="bold"{% endif %} href="/layouts/flexbox">Flexbox</a></li>
-              <li><a {% if subkey == "grids" %} class="bold"{% endif %} href="/layouts/grid">Grids</a></li>
-              <li><a {% if subkey == "pancake" %} class="bold"{% endif %} href="/layouts/pancake">Pancake</a></li>
-              <li><a {% if subkey == "repel" %} class="bold"{% endif %} href="/layouts/repel">Repel</a></li>
-              <li><a {% if subkey == "sidebar" %} class="bold"{% endif %} href="/layouts/sidebar">Sidebar</a></li>
-              <li><a {% if subkey == "switcher" %} class="bold"{% endif %} href="/layouts/switcher">Switcher</a></li>
-              <li><a {% if subkey == "tiles" %} class="bold"{% endif %} href="/layouts/tiles">Tiles</a></li>
-            </ul>{% endif %}
-          </li>
-          <li {% if key == "utilities" %} class="bold"{% endif %}><a href="/utilities">Utilities</a></li>
-          <li>
-            <a {% if key == "components" %} class="bold"{% endif %} href="/components">Components</a>
-            {% if key == "components" %} <ul>
-              <li><a {% if subkey == "accordion" %} class="bold"{% endif %} href="/components/accordion">Accordion</a></li>
-              <li><a {% if subkey == "forms" %} class="bold"{% endif %} href="/components/forms">Forms</a></li>
-              <li><a {% if subkey == "table" %} class="bold"{% endif %} href="/components/table">Table</a></li>
-              <li><a {% if subkey == "toggle" %} class="bold"{% endif %} href="/components/toggle">Toggle</a></li>
-            </ul>{% endif %}
-          </li>
-          <li {% if key == "tips" %} class="bold"{% endif %}><a href="/">Tips!</a></li>
-        </ul>
+        <!-- NAVIGATION -->  
+        <ul role="list" class="switcher --width-00 --gap-000 | hover-group">
+          {% for itemKey, item in collections.all | navigation %}
+            <li>
+              <a {% if key == itemKey %} class="bold"{% endif %} href="{{ item.url }}">{{ item.title }}</a>
+              {% if item.sub.length > 0 and key == itemKey %}
+                <ul class="hover-group | pl-0">
+                  {% for subitem in item.sub %}
+                    <li><a {% if subkey == subitem.key %} class="bold"{% endif %} href="{{ subitem.url }}">{{ subitem.title }}</a></li>
+                  {% endfor %}
+                </ul>
+              {% endif %}
+            </li>
+          {% endfor %}  
+        </ul> 
       </nav>
       <!-- This DIV is required to let layout patterns play nice with eachother -->
       <div class="flex-col p-0"> 
-        <article class="center --width-3 --gap-0 | flex-col">
+        <article class="center --width-3 --gap-0 | flex-col items-start">
           <h1>{{title}}</h1>
           {{ content | safe }}
         </article>

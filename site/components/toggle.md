@@ -12,7 +12,7 @@ checkbox, or for something else.
 
 <form>
   <label>
-    <input type="checkbox" />
+    <input type="checkbox" class=toggle />
     My toggle
   </label>
 </form>
@@ -21,7 +21,7 @@ checkbox, or for something else.
 
 ```
 <label>
-  <input type="checkbox" ... />
+  <input type="checkbox" class="toggle" ... />
   [label text]
 </label>
 ```

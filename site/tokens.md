@@ -1,6 +1,7 @@
 ---
 layout: base.njk
 title: Design tokens
+order: 2
 key: tokens
 ---
 
@@ -37,11 +38,6 @@ Feo.css offers design tokens on _sizing_ that can be used for spacing (e.g. marg
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <td><code>--token-size-0000</code></td>
-        <td>0.5rem</td>
-        <td>0.5rem + 2.5px</td>
-      </tr>
       <tr>
         <td><code>--token-size-000</code></td>
         <td>0.65rem</td>
@@ -153,34 +149,34 @@ used as a base for your application in greyscale.
     </thead>
     <tbody>
       <tr>
-        <td><code>--token-color-light-0</code></td>
-        <td>#F7F9FB</td>
-        <td><code>hsl(215, 36%, 98%)</code></td>
-      </tr>
-      <tr>
-        <td><code>--token-color-light-1</code></td>
-        <td>#E3E9F2</td>
-        <td><code>hsl(215, 36%, 92%)</code></td>
-      </tr>
-      <tr>
-        <td><code>--token-color-light-2</code></td>
-        <td>#C8D4E5</td>
-        <td><code>hsl(215, 36%, 78%)</code></td>
-      </tr>
-      <tr>
-        <td><code>--token-color-dark-0</code></td>
+        <td><code>--token-neutral-0</code></td>
         <td>#0E131B</td>
         <td><code>hsl(215, 30%, 8%)</code></td>
       </tr>
       <tr>
-        <td><code>--token-color-dark-1</code></td>
+        <td><code>--token-neutral-1</code></td>
         <td>#2B3A50</td>
         <td><code>hsl(215, 30%, 24%)</code></td>
       </tr>
       <tr>
-        <td><code>--token-color-dark-2</code></td>
+        <td><code>--token-neutral-2</code></td>
         <td>#476185</td>
         <td><code>hsl(215, 30%, 40%)</code></td>
+      </tr>
+      <tr>
+        <td><code>--token-neutral-3</code></td>
+        <td>#C8D4E5</td>
+        <td><code>hsl(215, 36%, 78%)</code></td>
+      </tr>
+      <tr>
+        <td><code>--token-neutral-4</code></td>
+        <td>#E3E9F2</td>
+        <td><code>hsl(215, 36%, 92%)</code></td>
+      </tr>
+      <tr>
+        <td><code>--token-neutral-5</code></td>
+        <td>#F7F9FB</td>
+        <td><code>hsl(215, 36%, 98%)</code></td>
       </tr>
     </tbody>
   </table>
@@ -202,18 +198,18 @@ are picked from the light/dark color tokens.
     </thead>
     <tbody>
       <tr>
-        <td><code>--color-surface-0</code></td>
+        <td><code>--surface-0</code></td>
         <td>The main background of the page</td>
       </tr>
       <tr>
-        <td><code>--color-surface-1</code></td>
+        <td><code>--surface-1</code></td>
         <td>
           A secondary color that can be used on different surfaces,
           such as tables, cards, etc.
         </td>
       </tr>
       <tr>
-        <td><code>--color-surface-2</code></td>
+        <td><code>--surface-2</code></td>
         <td>
           A tertiary color should be only used in smaller elements
           where the background needs a bit more contrast (e.g.
@@ -221,14 +217,21 @@ are picked from the light/dark color tokens.
         </td>
       </tr>
       <tr>
-        <td><code>--color-foreground-0</code></td>
+        <td><code>--text-0</code></td>
         <td>
           The color of primary elements, such as text, to create the
           biggest contrast with the background.
         </td>
       </tr>
       <tr>
-        <td><code>--color-foreground-1</code></td>
+        <td><code>--text-1</code></td>
+        <td>
+          A softer foreground color with a little less contract. Can
+          be used for less important text, borders, etc.
+        </td>
+      </tr>
+      <tr>
+        <td><code>--text-2</code></td>
         <td>
           A softer foreground color with a little less contract. Can
           be used for less important text, borders, etc.

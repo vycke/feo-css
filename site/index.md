@@ -1,6 +1,7 @@
 ---
 layout: base.njk
-title: Overview
+title: Homepage
+order: 1
 key: home
 ---
 
@@ -50,20 +51,18 @@ combines modern CSS techniques like `@layer` and CSS
 custom properties, it is fully _extensible_.
 
 ```
-@layer reset, tokens, global, layout, utilities, components;
+@layer global, layout, utilities, components;
 ```
 
 The layers indicate the level of importance, meaning: try to solve
-things with HTML elements first. If that is not enough, use
+things with HTML elements first (based on a simple [reset & global css](https://github.com/vyckes/feo-css/blob/main/src/global/_global.css)). If that is not enough, use
 generic layout patterns, and some utilities. In more complex
 settings, use components.
 
-1. [CSS reset](https://github.com/vyckes/feo-css/blob/main/src/reset.css)
-2. [Design tokens](/tokens)
-3. [Global css for HTML elements](https://github.com/vyckes/feo-css/blob/main/src/global.css)
-4. [Layout patterns](/layouts)
-5. [Utility classes](/utilities)
-6. [Components](/components)
+1. [Design tokens](/tokens) (part of the `global` layer)
+2. [Layout patterns](/layouts)
+3. [Utility](/utilities)
+4. [Components](/components)
 
 Because Feo.css is build using `@layer`, you can easily
 extend and avoid cascading issues, by including your own CSS in

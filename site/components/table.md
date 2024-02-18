@@ -53,7 +53,7 @@ Generic table component.
 </div>
 ```
 
-<details open style="--accordion-bg: indianred; --accordion-border: indianred;">
+<details style="--accordion-surface: indianred; --accordion-border: indianred;">
   <summary>About the wrapping div</summary>
   <div>the additional <code>div</code> wrapping the <code>table</code> in the below implementation is required if you want the table to horizontal scroll on smaller screens. The <code>table</code> needs to be the <code>:only-child</code> of this div.</div>
 </details>

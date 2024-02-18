@@ -1,3 +1,12 @@
+/**
+ * First import the reset and tokens
+ */
+@import "reset.css";
+@import "tokens.css";
+
+/**
+ * Now do everything else
+ */
 html {
   overflow-x: hidden;
 }
@@ -9,8 +18,8 @@ body {
   max-width: 100vw;
   font-size: var(--token-size-0);
   font-family: var(--sans-serif);
-  background-color: var(--color-surface-0);
-  color: var(--color-foreground-0);
+  background-color: var(--surface-0);
+  color: var(--text-0);
   position: relative;
 }
 
@@ -20,7 +29,7 @@ body {
 a,
 a:visited {
   transition: all 200ms ease;
-  color: var(--color-foreground-0);
+  color: var(--text-0);
   text-decoration-color: var(--color-link);
   text-decoration-thickness: 2px;
 }
@@ -55,8 +64,12 @@ h3 {
  * TEXT SELECTION
  */
 ::selection {
-  color: var(--color-surface-0) !important;
-  background: var(--color-foreground-0) !important;
+  color: var(--surface-0) !important;
+  background: var(--text-0) !important;
+}
+
+::placeholder {
+  color: var(--text-0);
 }
 
 /**
@@ -69,20 +82,21 @@ code {
 }
 
 :not(pre) > code {
-  border: 1px solid var(--color-foreground-1);
+  border: 1px solid var(--text-2);
   border-radius: 4px;
   padding: 2px;
   white-space: nowrap;
   word-break: break-all;
-  background-color: var(--color-surface-1);
+  background-color: var(--surface-1);
 }
 
 pre {
-  border: 2px solid var(--color-foreground-1);
-  border-radius: var(--token-size-000);
-  background-color: var(--color-surface-1);
+  border: 2px solid var(--text-2);
+  border-radius: 8px;
+  background-color: var(--surface-1);
   position: relative;
   padding: 0;
+  width: 100%;
   max-width: 100%;
   word-wrap: normal;
   word-break: normal;
@@ -90,7 +104,7 @@ pre {
 }
 
 pre > code {
-  padding: var(--token-size-00) var(--token-size-0);
+  padding: var(--token-size-000) var(--token-size-00);
   font-size: var(--token-size-00);
   display: block;
   white-space: pre;

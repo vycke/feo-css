@@ -63,4 +63,58 @@ the styling.
 </label>
 ```
 
+#### Custom properties
+
+There are several custom properties available that can be
+overwritten to control the looks of the table. You can change these properties on the `details` selector.
+
+<div>
+  <table>
+    <thead>
+      <tr>
+        <th>Custom property</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code>--form-radius</code></td>
+        <td>
+          Sets the <code>border-radius</code> of the fields.
+        </td>
+      </tr>
+      <tr>
+        <td><code>--form-border</code></td>
+        <td>
+          Sets the <code>border-color</code> of the fields.
+        </td>
+      </tr>
+      <tr>
+        <td><code>--form-focus</code></td>
+        <td>
+          Sets the <code>border-radius</code> of the fields, on hover and focus.
+        </td>
+      </tr>
+      <tr>
+        <td><code>--form-disabled-surface</code></td>
+        <td>
+          Sets the <code>background-color</code> of disabled fields.
+        </td>
+      </tr>
+      <tr>
+        <td><code>--form-disabled-border</code></td>
+        <td>
+          Sets the <code>border-color</code> of disabled fields.
+        </td>
+      </tr>
+      <tr>
+        <td><code>--form-disabled-padding</code></td>
+        <td>
+          Sets the <code>padding-left</code> of disabled fields.
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
 [_Back to components overview_](/components)

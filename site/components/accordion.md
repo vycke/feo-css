@@ -49,9 +49,15 @@ overwritten to control the looks of the table. You can change these properties o
         </td>
       </tr>
       <tr>
-        <td><code>--accordion-bg</code></td>
+        <td><code>--accordion-surface</code></td>
         <td>
           Sets <code>background-color</code> property of the header (also known as the <code>summary</code>). 
+        </td>
+      </tr>
+      <tr>
+        <td><code>--accordion-radius</code></td>
+        <td>
+          Sets <code>border-radius</code> property. 
         </td>
       </tr>
     </tbody>

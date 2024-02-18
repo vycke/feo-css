@@ -1,13 +1,13 @@
 /**
  * A toggle (because, who needs checkboxes?)
  */
-label:has(input[type="checkbox"]) {
+label:has(.toggle) {
   flex-direction: row;
   align-items: center;
   gap: var(--token-size-00);
 }
 
-input[type="checkbox"] {
+input[type="checkbox"].toggle {
   --toggle-dot-color: white;
   --toggle-checked-color: green;
   --toggle-size: var(--token-size-0);
@@ -16,7 +16,7 @@ input[type="checkbox"] {
   appearance: none;
   position: relative;
   display: inline-block;
-  background: var(--color-surface-2);
+  background: var(--surface-2);
   /* Calculate the width and height based on the dot + spacing */
   height: calc(var(--toggle-size) + 2 * var(--toggle-space));
   width: calc(2 * var(--toggle-size) + 2 * var(--toggle-space));
@@ -26,7 +26,7 @@ input[type="checkbox"] {
   transition: 0.25s linear background;
 }
 
-input[type="checkbox"]::before {
+input[type="checkbox"].toggle::before {
   content: "";
   display: block;
   width: var(--toggle-size);
@@ -41,11 +41,11 @@ input[type="checkbox"]::before {
   transform: translateX(0rem);
 }
 
-input[type="checkbox"]:checked {
+input[type="checkbox"].toggle:checked {
   background: var(--toggle-checked-color);
 }
 
 /* Assumes the dot moves the same amount as its own size */
-input[type="checkbox"]:checked::before {
+input[type="checkbox"].toggle:checked::before {
   transform: translateX(var(--toggle-size));
 }

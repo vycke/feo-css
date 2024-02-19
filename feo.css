@@ -217,7 +217,7 @@
   }
 
   :not(pre) > code {
-    border: 1px solid var(--text-2);
+    border: 1px solid var(--surface-2);
     white-space: nowrap;
     word-break: break-all;
     background-color: var(--surface-1);
@@ -252,8 +252,7 @@
 @layer layout {
   .center {
     --layout-width: 100%;
-    --layout-gap: 0;
-    max-width: min(calc(100vw - 2 * var(--layout-gap)), var(--layout-width));
+    max-width: var(--layout-width);
     width: 100%;
     margin-left: auto;
     margin-right: auto;

@@ -82,7 +82,7 @@ code {
 }
 
 :not(pre) > code {
-  border: 1px solid var(--text-2);
+  border: 1px solid var(--surface-2);
   border-radius: 4px;
   padding: 2px;
   white-space: nowrap;

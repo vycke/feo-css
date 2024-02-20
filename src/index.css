@@ -1,6 +1,34 @@
-@layer global, layout, utilities, components;
+@layer global, layout, utilities, blocks;
 
-@import "global/_global.css" layer(global);
-@import "layout/_layout.css" layer(layout);
-@import "utilities/_utilities.css" layer(utilities);
-@import "components/_components.css" layer(components);
+/** global */
+@import "global/reset.css" layer(global);
+@import "global/tokens.css" layer(global);
+@import "global/global.css" layer(global);
+
+/** layout */
+@import "layout/center.css" layer(layout);
+@import "layout/cluster.css" layer(layout);
+@import "layout/flexbox.css" layer(layout);
+@import "layout/grid.css" layer(layout);
+@import "layout/pancake.css" layer(layout);
+@import "layout/repel.css" layer(layout);
+@import "layout/sidebar.css" layer(layout);
+@import "layout/switcher.css" layer(layout);
+@import "layout/tiles.css" layer(layout);
+@import "layout/utilities.css" layer(layout);
+
+/** utilities */
+@import "utilities/animations.css" layer(utilities);
+@import "utilities/click-area.css" layer(utilities);
+@import "utilities/hidden.css" layer(utilities);
+@import "utilities/hover-group.css" layer(utilities);
+@import "utilities/position.css" layer(utilities);
+@import "utilities/space.css" layer(utilities);
+@import "utilities/typography.css" layer(utilities);
+@import "utilities/width.css" layer(utilities);
+
+/** blocks */
+@import "blocks/accordion.css" layer(blocks);
+@import "blocks/form.css" layer(blocks);
+@import "blocks/toggle.css" layer(blocks);
+@import "blocks/table.css" layer(blocks);

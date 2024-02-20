@@ -237,10 +237,6 @@ are picked from the light/dark color tokens.
           be used for less important text, borders, etc.
         </td>
       </tr>
-      <tr>
-        <td><code>--color-link</code></td>
-        <td>The color of unstyled links.</td>
-      </tr>
     </tbody>
   </table>
 </div>

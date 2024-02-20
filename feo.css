@@ -131,7 +131,6 @@
     --surface-0: var(--token-neutral-5);
     --surface-1: var(--token-neutral-4);
     --surface-2: var(--token-neutral-3);
-    --color-link: #617;
     --arrow-icon: url("data:image/svg+xml,%3Csvg width='14' height='9' viewBox='0 0 14 9' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Cpath id='Path' fill='%232B3A50' d='M7 9L13.0622 0H0.937822L7 9Z'/%3E%3C/svg%3E");
   }
 
@@ -144,7 +143,6 @@
       --surface-0: var(--token-neutral-0);
       --surface-1: var(--token-neutral-1);
       --surface-2: var(--token-neutral-2);
-      --color-link: #c0ffee;
       --arrow-icon: url("data:image/svg+xml,%3Csvg width='14' height='9' viewBox='0 0 14 9' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Cpath id='Path' fill='%23E3E9F2' d='M7 9L13.0622 0H0.937822L7 9Z'/%3E%3C/svg%3E");
     }
   }
@@ -159,22 +157,19 @@
     font-family: var(--sans-serif);
     background-color: var(--surface-0);
     color: var(--text-0);
-    flex-direction: column;
     max-width: 100vw;
-    display: flex;
     position: relative;
   }
 
   a, a:visited {
     color: var(--text-0);
-    -webkit-text-decoration-color: var(--color-link);
-    text-decoration-color: var(--color-link);
+    text-decoration-color: #00f;
     text-decoration-thickness: 2px;
     transition: all .2s;
   }
 
   a:hover, a:visited:hover, a:focus {
-    color: var(--color-link);
+    color: #00f;
     text-decoration-thickness: 2px;
   }
 
@@ -518,10 +513,6 @@
     --layout-gap: none;
   }
 
-  .--gap-auto {
-    --layout-gap: auto;
-  }
-
   .--gap-000 {
     --layout-gap: var(--token-size-000);
   }
@@ -588,6 +579,108 @@
 }
 
 @layer utilities {
+  @-webkit-keyframes wiggle {
+    0% {
+      -webkit-transform: rotate(0);
+      transform: rotate(0);
+    }
+
+    30% {
+      -webkit-transform: rotate(60deg);
+      transform: rotate(60deg);
+    }
+
+    60% {
+      -webkit-transform: rotate(-45deg);
+      transform: rotate(-45deg);
+    }
+
+    80% {
+      -webkit-transform: rotate(15deg);
+      transform: rotate(15deg);
+    }
+
+    100% {
+      -webkit-transform: rotate(0);
+      transform: rotate(0);
+    }
+  }
+
+  @keyframes wiggle {
+    0% {
+      -webkit-transform: rotate(0);
+      transform: rotate(0);
+    }
+
+    30% {
+      -webkit-transform: rotate(60deg);
+      transform: rotate(60deg);
+    }
+
+    60% {
+      -webkit-transform: rotate(-45deg);
+      transform: rotate(-45deg);
+    }
+
+    80% {
+      -webkit-transform: rotate(15deg);
+      transform: rotate(15deg);
+    }
+
+    100% {
+      -webkit-transform: rotate(0);
+      transform: rotate(0);
+    }
+  }
+
+  @-webkit-keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+
+  @-webkit-keyframes slide-up {
+    from {
+      -webkit-transform: translateY(1rem);
+      transform: translateY(1rem);
+    }
+  }
+
+  @keyframes slide-up {
+    from {
+      -webkit-transform: translateY(1rem);
+      transform: translateY(1rem);
+    }
+  }
+
+  @-webkit-keyframes slide-down {
+    from {
+      -webkit-transform: translateY(-1rem);
+      transform: translateY(-1rem);
+    }
+  }
+
+  @keyframes slide-down {
+    from {
+      -webkit-transform: translateY(-1rem);
+      transform: translateY(-1rem);
+    }
+  }
+
   .click-area {
     position: relative;
   }
@@ -603,6 +696,18 @@
     bottom: 0;
     left: 0;
     right: 0;
+  }
+
+  .visually-hidden {
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+    border: 0;
+    width: 1px;
+    height: 0;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    overflow: hidden;
   }
 
   .hover-group {
@@ -1067,7 +1172,7 @@
   }
 }
 
-@layer components {
+@layer blocks {
   details {
     --accordion-border: var(--surface-1);
     --accordion-radius: 8px;
@@ -1109,8 +1214,8 @@
   }
 
   details[open] > :not(summary) {
-    -webkit-animation: .25s ease-in-out details-show;
-    animation: .25s ease-in-out details-show;
+    -webkit-animation: .25s ease-in-out slide-down;
+    animation: .25s ease-in-out slide-down;
   }
 
   form {

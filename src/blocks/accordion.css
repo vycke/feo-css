@@ -39,5 +39,5 @@ details[open] summary {
   }
 }
 details[open] > *:not(summary) {
-  animation: details-show 250ms ease-in-out;
+  animation: slide-down-1 250ms ease-in-out;
 }

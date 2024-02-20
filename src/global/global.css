@@ -12,8 +12,6 @@ html {
 }
 
 body {
-  display: flex;
-  flex-direction: column;
   min-width: var(--token-bp-0);
   max-width: 100vw;
   font-size: var(--token-size-0);
@@ -30,14 +28,14 @@ a,
 a:visited {
   transition: all 200ms ease;
   color: var(--text-0);
-  text-decoration-color: var(--color-link);
+  text-decoration-color: blue;
   text-decoration-thickness: 2px;
 }
 
 a:hover,
 a:visited:hover,
 a:focus {
-  color: var(--color-link);
+  color: blue;
   text-decoration-thickness: 2px;
 }
 

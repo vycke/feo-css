@@ -20,11 +20,10 @@
 /** utilities */
 @import "utilities/animations.css" layer(utilities);
 @import "utilities/click-area.css" layer(utilities);
-@import "utilities/hidden.css" layer(utilities);
 @import "utilities/hover-group.css" layer(utilities);
-@import "utilities/position.css" layer(utilities);
-@import "utilities/space.css" layer(utilities);
+@import "utilities/margin.css" layer(utilities);
 @import "utilities/typography.css" layer(utilities);
+@import "utilities/visually-hidden.css" layer(utilities);
 @import "utilities/width.css" layer(utilities);
 
 /** blocks */

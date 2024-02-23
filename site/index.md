@@ -12,7 +12,7 @@ Feo.css is a small CSS library that gives you a good starting point on any proje
   <p>The name Feo means "front-end optimized". It also happens to mean "ugly" in Spanish. Happy coincidence, don't you think?</p>
 </details>
 
-_NOTE: everything on this site, is purely based on the library. Ok, almost [everything](https://github.com/vyckes/feo-css/blob/main/public/demo.css)._
+_NOTE: everything on this site, is purely based on the library. Ok, almost [everything](https://github.com/vyckes/feo-css/blob/main/public/demo.css)_ (less than 100 lines of CSS required).
 
 ## Why?
 

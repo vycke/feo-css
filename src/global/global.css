@@ -16,35 +16,15 @@ body {
   max-width: 100vw;
   font-size: var(--token-size-0);
   font-family: var(--sans-serif);
-  background-color: var(--surface-0);
-  color: var(--text-0);
   position: relative;
-}
-
-/**
- * LINKS
- */
-a,
-a:visited {
-  transition: all 200ms ease;
   color: var(--text-0);
-  text-decoration-color: blue;
-  text-decoration-thickness: 2px;
-}
-
-a:hover,
-a:visited:hover,
-a:focus {
-  color: blue;
-  text-decoration-thickness: 2px;
+  background-color: var(--surface-0);
 }
 
 /**
  * HEADERS
  */
 :where(h1, h2, h3) {
-  font-family: var(--sans-serif);
-  width: 100%;
   font-weight: 600;
 }
 
@@ -59,16 +39,8 @@ h3 {
 }
 
 /**
- * TEXT SELECTION
+ * LINKS
  */
-::selection {
-  color: var(--surface-0) !important;
-  background: var(--text-0) !important;
-}
-
-::placeholder {
-  color: var(--text-0);
-}
 
 /**
  * CODE
@@ -81,15 +53,14 @@ code {
 
 :not(pre) > code {
   border: 1px solid var(--surface-2);
+  background-color: var(--surface-1);
   border-radius: 4px;
   padding: 2px;
   white-space: nowrap;
   word-break: break-all;
-  background-color: var(--surface-1);
 }
 
 pre {
-  border: 2px solid var(--text-2);
   border-radius: 8px;
   background-color: var(--surface-1);
   position: relative;
@@ -110,4 +81,12 @@ pre > code {
   tab-size: 2;
   /* fix for increased font-size safari iOS */
   -webkit-text-size-adjust: none;
+}
+
+/** 
+ * SELECTION
+ */
+::selection {
+  color: var(--surface-0) !important;
+  background: var(--text-0) !important;
 }

@@ -8,16 +8,9 @@ key: utilities
 Utility classes are classes that do one thing, and one thing well. They are different _class utilities_, like the one used in
 [layouts layer](/layouts).
 
-<details>
-  <summary>Naming convention</summary>
-  <p>Feo.css offers a very limited set of utility classes, mostly based
-  on the available <a href="/tokens">design tokens</a>. In all
-  he classes that you see, the <code>{z}</code> is a
-  placeholder for the number corresponding to the correct design
-  token.</p>
-</details>
+**Note:** Feo.css offers a very limited set of utility classes. The expectation is that most design tokens will not remain, especially colors. Therefor, only common utility classes unrelated to design tokens are given, and a limited set of utility classes based on the `--token-size-{z}` and `--token-bp-{z}` tokens.
 
-## Margin
+## Margins
 
 <div>
   <table>
@@ -58,46 +51,10 @@ Utility classes are classes that do one thing, and one thing well. They are diff
   </table>
 </div>
 
-## Padding
-
-<div>
-  <table>
-    <thead>
-      <tr>
-        <th>Class</th>
-        <th><a href="tokens.html">Design token</a></th>
-        <th>CSS property</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><code>p-{z}</code></td>
-        <td><code>--token-size-{z}</code></td>
-        <td><code>padding</code></td>
-      </tr>
-      <tr>
-        <td><code>pt-{z}</code></td>
-        <td><code>--token-size-{z}</code></td>
-        <td><code>padding-top</code></td>
-      </tr>
-      <tr>
-        <td><code>pr-{z}</code></td>
-        <td><code>--token-size-{z}</code></td>
-        <td><code>padding-right</code></td>
-      </tr>
-      <tr>
-        <td><code>pb-{z}</code></td>
-        <td><code>--token-size-{z}</code></td>
-        <td><code>padding-bottom</code></td>
-      </tr>
-      <tr>
-        <td><code>pl-{z}</code></td>
-        <td><code>--token-size-{z}</code></td>
-        <td><code>padding-left</code></td>
-      </tr>
-    </tbody>
-  </table>
-</div>
+<details>
+  <summary>Were is my padding?!</summary>
+  <p>You might be wondering, where are the padding classes? Well Feo.css is a little opinionated. The layers are build with 'layout' being the most important layer. Layout is about how elements are positioned in relation to eachother. Margin has an impact on that, padding, does not. If you want padding, copy over the <code>src/utilities/margin.css</code> and replace <code>margin</code> with <code>padding</code>.</p>
+</details>
 
 ## Typography
 
@@ -117,69 +74,28 @@ Utility classes are classes that do one thing, and one thing well. They are diff
         <td><code>font-size</code></td>
       </tr>
       <tr>
-        <td><code>monospace/serif/sans-serif</code></td>
-        <td>-</td>
-        <td><code>font-family</code></td>
-      </tr>
-      <tr>
-        <td><code>bold/regular/italic/uppercase</code></td>
+        <td><code>bold/regular/italic</code></td>
         <td>-</td>
         <td>Various</td>
-      </tr>
-      <tr>
-        <td><code>text-left/right/center</code></td>
-        <td>-</td>
-        <td><code>text-align</code></td>
-      </tr>
-      <tr>
-        <td><code>lh-1</code></td>
-        <td>-</td>
-        <td><code>line-height: 1</code></td>
       </tr>
     </tbody>
   </table>
 </div>
 
-## `maxw-{z}`
+## `.maxw-{z}`
 
 Based on the `--token-bp-{z}` [tokens](/tokens), control the `max-width` property.
 
-## `click-area`
+## `.click-area`
 
 Makes the entire element with this class clickable, based on the
 first `<a />` it can find in its (sub-)DOM. It does not
 have to be a direct descender.
 
-## `hover-group`
+## `.hover-group`
 
 Makes an entire group more interactive on hover, by making the non-hover times dissappear a bit (lowering their opacity). For an example, look at the navigation of this document website (on desktop).
 
-## Position
+## `.visually-hidden`
 
-<div>
-  <table>
-    <thead>
-      <tr>
-        <th>Class</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><code>relative</code></td>
-        <td>Sets the position property</td>
-      </tr>
-      <tr>
-        <td><code>absolute</code></td>
-        <td>Sets the position property</td>
-      </tr>
-      <tr>
-        <td><code>sticky</code></td>
-        <td>
-          Sets the position property. In addition sets
-          <code>top: 0</code>.
-        </td>
-      </tr>
-    </tbody>
-  </table>
-</div>
+Makes the element visually hidden for users, but accessible for screen-readers, etc.

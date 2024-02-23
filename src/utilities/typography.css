@@ -1,4 +1,4 @@
-/* Font-size */
+/** Font-sizes */
 .size-000 {
   font-size: var(--token-size-000);
 }
@@ -23,15 +23,7 @@
 .size-5 {
   font-size: var(--token-size-5);
 }
-.monospace {
-  font-family: var(--monospace);
-}
-.serif {
-  font-family: var(--serif);
-}
-.sans-serif {
-  font-family: var(--sans-serif);
-}
+/** Styles */
 .bold {
   font-weight: 600;
 }
@@ -40,22 +32,4 @@
 }
 .italic {
   font-style: italic;
-}
-.uppercase {
-  text-transform: uppercase;
-}
-.no-decoration {
-  text-decoration: none;
-}
-.text-right {
-  text-align: right;
-}
-.text-left {
-  text-align: left;
-}
-.text-center {
-  text-align: center;
-}
-.lh-1 {
-  line-height: 1;
 }

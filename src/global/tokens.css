@@ -47,12 +47,10 @@
   --serif: Charter, "Bitstream Charter", "Sitka Text", Cambria, serif;
   --sans-serif: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif,
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-}
 
-/**
- * LIGHT THEME
- */
-:root {
+  /**
+   * THEME
+   */
   color-scheme: light;
   --text-0: var(--token-neutral-0);
   --text-1: var(--token-neutral-1);
@@ -60,23 +58,4 @@
   --surface-0: var(--token-neutral-5);
   --surface-1: var(--token-neutral-4);
   --surface-2: var(--token-neutral-3);
-
-  --arrow-icon: url("data:image/svg+xml,%3Csvg width='14' height='9' viewBox='0 0 14 9' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Cpath id='Path' fill='%232B3A50' d='M7 9L13.0622 0H0.937822L7 9Z'/%3E%3C/svg%3E");
-}
-
-/**
- * DARK THEME
- */
-@media (prefers-color-scheme: dark) {
-  :root {
-    color-scheme: dark;
-    --text-0: var(--token-neutral-5);
-    --text-1: var(--token-neutral-4);
-    --text-2: var(--token-neutral-3);
-    --surface-0: var(--token-neutral-0);
-    --surface-1: var(--token-neutral-1);
-    --surface-2: var(--token-neutral-2);
-
-    --arrow-icon: url("data:image/svg+xml,%3Csvg width='14' height='9' viewBox='0 0 14 9' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Cpath id='Path' fill='%23E3E9F2' d='M7 9L13.0622 0H0.937822L7 9Z'/%3E%3C/svg%3E");
-  }
 }

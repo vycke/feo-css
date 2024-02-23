@@ -35,6 +35,13 @@ body {
   line-height: 1.78;
 }
 
+/* Removes link colors, need to be explicitly set! */
+a,
+a:visited {
+  color: inherit;
+  text-decoration-color: inherit;
+}
+
 /* Remove list styles on ul, ol elements, if they have any other class */
 :where(ul[class], ol[class]) {
   list-style: none;
@@ -58,7 +65,7 @@ body {
 /* Baseline for default links */
 :where(a, a:visited):not([class]) {
   touch-action: manipulation;
-  text-decoration-thickness: max(0.08em, 2px);
+  text-decoration-thickness: 1px;
   text-decoration-skip-ink: auto;
   text-underline-offset: 0.1em;
 }

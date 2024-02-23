@@ -182,61 +182,55 @@ used as a base for your application in greyscale.
   </table>
 </div>
 
-## Light & dark theme
+## Themes
 
-A simple light & dark theme is constructed, that is automatically
-selected based on the user device preferences. The theme colors
-are picked from the light/dark color tokens.
+Feo.css does not offer multiple themes out of the box, but offers a basic _light_, as shown below. The tokens defined in the light theme are used throughout Feo.css (e.g. forms-component). Feo.css does not offer auto-themes out of the box, as these should be _opt-in_ for developers. By offering one theme, consistent application of theme related tokens (through custom properties) can be achieved.
 
 <div>
   <table>
     <thead>
       <tr>
-        <th>Token name</th>
+        <th>Color</th>
+        <th>Design token</th>
         <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><code>--surface-0</code></td>
-        <td>The main background of the page</td>
+        <td><code>--token-neutral-0</code></td>
+        <td>Main background color</td>
       </tr>
       <tr>
         <td><code>--surface-1</code></td>
-        <td>
-          A secondary color that can be used on different surfaces,
-          such as tables, cards, etc.
-        </td>
+        <td><code>--token-neutral-1</code></td>
+        <td>Background color for surfaces that need to stand out a little on the main background (e.g. cards, code-blocks)</td>
       </tr>
       <tr>
         <td><code>--surface-2</code></td>
-        <td>
-          A tertiary color should be only used in smaller elements
-          where the background needs a bit more contrast (e.g.
-          switch)
-        </td>
+        <td><code>--token-neutral-2</code></td>
+        <td>Surface color for specific elements or properties that need a little more emphasize (e.g. border colors)</td>
       </tr>
       <tr>
         <td><code>--text-0</code></td>
-        <td>
-          The color of primary elements, such as text, to create the
-          biggest contrast with the background.
-        </td>
+        <td><code>--token-neutral-5</code></td>
+        <td>Main text color</td>
       </tr>
       <tr>
         <td><code>--text-1</code></td>
-        <td>
-          A softer foreground color with a little less contract. Can
-          be used for less important text, borders, etc.
-        </td>
+        <td><code>--token-neutral-4</code></td>
+        <td>Text color for elements that need a little less high-light</td>
       </tr>
       <tr>
         <td><code>--text-2</code></td>
-        <td>
-          A softer foreground color with a little less contract. Can
-          be used for less important text, borders, etc.
-        </td>
+        <td><code>--token-neutral-3</code></td>
+        <td>Text color for elements with less emphasize</td>
       </tr>
     </tbody>
   </table>
 </div>
+
+<details>
+  <summary>About contrasts</summary>
+  <p>The selected theme colors, if combined with <code>--surface-{z}</code> and <code>--text-{z}</code> have a contrast score of AAA (> 7) and can be used freely. Except when you combine <code>--surface-2</code> and <code>--text-2</code>. That combination has a AA+ (4.25) score. So it should only be used with larger text.</p>
+</details>

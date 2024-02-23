@@ -1,13 +1,49 @@
 :root {
-  --sans-serif: Seravek, "Gill Sans Nova", Ubuntu, Calibri, "DejaVu Sans",
-    system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
-    "Segoe UI Symbol";
+  --accent: blueviolet;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+    --text-0: var(--token-neutral-5);
+    --text-1: var(--token-neutral-4);
+    --text-2: var(--token-neutral-3);
+    --surface-0: var(--token-neutral-0);
+    --surface-1: var(--token-neutral-1);
+    --surface-2: var(--token-neutral-2);
+  }
+}
+
+a,
+a:visited {
+  transition: all 200ms;
+}
+
+a:hover {
+  text-decoration-thickness: 2px;
+  color: blueviolet;
+  text-decoration-color: blueviolet;
+}
+
+main {
+  position: relative;
 }
 
 nav {
+  position: sticky;
+  top: 0;
+  align-self: flex-start;
   z-index: 100;
   background-color: var(--surface-0);
-  padding-bottom: var(--token-size-0);
+  padding: var(--token-size-0);
+}
+
+nav span {
+  line-height: 1;
+}
+
+footer {
+  padding: var(--token-size-0);
 }
 
 nav ul ul {
@@ -16,6 +52,10 @@ nav ul ul {
 
 nav li {
   white-space: nowrap;
+}
+
+.wrapper {
+  padding: var(--token-size-0);
 }
 
 article svg {

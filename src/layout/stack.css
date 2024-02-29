@@ -1,0 +1,12 @@
+/**
+ * A stack of position items on top of eachother (depth)
+ */
+.stack {
+  display: grid;
+  grid-template-areas: "stack";
+  aspect-ratio: var(--layout-ratio);
+}
+
+.stack > * {
+  grid-area: "stack";
+}

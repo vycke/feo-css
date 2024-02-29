@@ -410,6 +410,16 @@
     flex-basis: 0;
   }
 
+  .stack {
+    aspect-ratio: var(--layout-ratio);
+    grid-template-areas: "stack";
+    display: grid;
+  }
+
+  .stack > * {
+    grid-area: "stack";
+  }
+
   .switcher {
     --layout-gap: 0;
     --layout-width: 0;

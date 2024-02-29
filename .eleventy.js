@@ -1,3 +1,9 @@
+function sort(key) {
+  return function (a, b) {
+    return a.data[key] < b.data[key] ? -1 : 1;
+  };
+}
+
 function getNavigation(collection) {
   const items = {};
 
@@ -14,7 +20,7 @@ function getNavigation(collection) {
   }
 
   // sub items
-  _c = collection.filter((c) => c.data.subkey);
+  _c = collection.filter((c) => c.data.subkey).sort(sort("title"));
   for (let i in _c) {
     const item = _c[i].data;
     items[item.key].sub.push({
@@ -23,7 +29,9 @@ function getNavigation(collection) {
       key: item.subkey,
     });
   }
-  return Object.entries(items).sort((a, b) => a[1].order - b[1].order);
+  return Object.entries(items).sort((a, b) =>
+    Math.sign(a[1].order - b[1].order)
+  );
 }
 
 module.exports = (config) => {

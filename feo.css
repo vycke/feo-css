@@ -1157,4 +1157,70 @@
   table tr:hover td {
     background-color: var(--table-color);
   }
+
+  [data-tooltip] {
+    --tooltip-surface: var(--token-neutral-1);
+    --tooltip-color: var(--token-neutral-5);
+    --tooltip-decoration: underline dotted var(--text-2);
+    --tooltip-top: initial;
+    --tooltip-bottom: ;
+    -webkit-text-decoration: var(--tooltip-decoration);
+    text-decoration: var(--tooltip-decoration);
+    -webkit-text-decoration: var(--tooltip-decoration);
+    position: relative;
+  }
+
+  [data-tooltip]:before {
+    content: attr(data-tooltip);
+    top: var(--tooltip-bottom, 115%);
+    bottom: var(--tooltip-top, 120%);
+    z-index: 100;
+    background-color: var(--tooltip-surface);
+    color: var(--tooltip-color);
+    text-align: center;
+    font-size: var(--token-size-00);
+    border-radius: 4px;
+    width: -webkit-max-content;
+    width: max-content;
+    max-width: 250px;
+    padding: 6px;
+    line-height: 1.1;
+    transition: all .2s;
+    position: absolute;
+    left: 50%;
+    translate: -50%;
+    scale: 0;
+    box-shadow: 0 10px 38px -10px rgba(14, 18, 22, .35), 0 10px 20px -15px rgba(14, 18, 22, .2);
+  }
+
+  [data-tooltip]:hover:before {
+    scale: 1;
+  }
+
+  [data-tooltip]:after {
+    content: "";
+    z-index: 100;
+    translate: -50%;
+    rotate: var(--tooltip-bottom, 180deg);
+    left: 50%;
+    top: var(--tooltip-top, -200%);
+    bottom: var(--tooltip-bottom, -200%);
+    opacity: 0;
+    border-style: solid;
+    border-width: 7px;
+    border-color: var(--tooltip-surface) transparent transparent transparent;
+    transition: all .2s;
+    position: absolute;
+  }
+
+  [data-tooltip]:hover:after {
+    opacity: 1;
+    top: var(--tooltip-top, calc(-15% - 2px));
+    bottom: var(--tooltip-bottom, -20%);
+  }
+
+  [data-tooltip-bottom] {
+    --tooltip-top: ;
+    --tooltip-bottom: initial;
+  }
 }

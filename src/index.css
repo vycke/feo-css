@@ -31,3 +31,4 @@
 @import "blocks/form.css" layer(blocks);
 @import "blocks/toggle.css" layer(blocks);
 @import "blocks/table.css" layer(blocks);
+@import "blocks/tooltip.css" layer(blocks);

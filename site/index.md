@@ -45,7 +45,7 @@ yarn add feo-css
 ## Setup and architecture
 
 The architecture of Feo.css is in line with
-[CUBE CSS](https://cube.fyi) and implements
+[CUBE CSS](https://cube.fyi) and [OOCSS](https://www.slideshare.net/stubbornella/object-oriented-css) (separate skin from structure) and implements
 [generic layout patterns](https://every-layout.dev). By
 combines modern CSS techniques like `@layer` and CSS
 custom properties, it is fully _extensible_.

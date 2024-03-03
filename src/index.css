@@ -5,6 +5,39 @@
 @import "global/tokens.css" layer(global);
 @import "global/global.css" layer(global);
 
+@layer global {
+  :nth-child(1) {
+    --index: 1;
+  }
+  :nth-child(2) {
+    --index: 2;
+  }
+  :nth-child(3) {
+    --index: 3;
+  }
+  :nth-child(4) {
+    --index: 4;
+  }
+  :nth-child(5) {
+    --index: 5;
+  }
+  :nth-child(6) {
+    --index: 6;
+  }
+  :nth-child(7) {
+    --index: 7;
+  }
+  :nth-child(8) {
+    --index: 8;
+  }
+  :nth-child(9) {
+    --index: 9;
+  }
+  :nth-child(10) {
+    --index: 10;
+  }
+}
+
 /** layout */
 @import "layout/center.css" layer(layout);
 @import "layout/cluster.css" layer(layout);

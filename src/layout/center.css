@@ -14,8 +14,7 @@
 .center {
   --layout-width: 100%;
 
-  margin-left: auto;
-  margin-right: auto;
+  margin-inline: auto;
   width: 100%;
   /* required to ensure certain elements that should be side-scrollable don't push out the layout at 100% */
   max-width: var(--layout-width);

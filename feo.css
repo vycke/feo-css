@@ -29,7 +29,7 @@
     text-rendering: optimizespeed;
     min-height: 100vh;
     min-height: -webkit-fill-available;
-    line-height: 1.78;
+    line-height: 1.4;
   }
 
   a, a:visited {
@@ -1233,4 +1233,44 @@
     --tooltip-top: ;
     --tooltip-bottom: initial;
   }
+}
+
+:first-child {
+  --index: 1;
+}
+
+:nth-child(2) {
+  --index: 2;
+}
+
+:nth-child(3) {
+  --index: 3;
+}
+
+:nth-child(4) {
+  --index: 4;
+}
+
+:nth-child(5) {
+  --index: 5;
+}
+
+:nth-child(6) {
+  --index: 6;
+}
+
+:nth-child(7) {
+  --index: 7;
+}
+
+:nth-child(8) {
+  --index: 8;
+}
+
+:nth-child(9) {
+  --index: 9;
+}
+
+:nth-child(10) {
+  --index: 10;
 }

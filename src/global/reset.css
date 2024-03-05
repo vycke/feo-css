@@ -32,7 +32,7 @@ body {
   min-height: 100vh;
   /* iOS webkit fix */
   min-height: -webkit-fill-available;
-  line-height: 1.78;
+  line-height: 1.4;
 }
 
 /* Removes link colors, need to be explicitly set! */

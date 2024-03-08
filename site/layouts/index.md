@@ -25,5 +25,6 @@ The available layout classes in Feo.css are listed below.
 - [Pancake](/layouts/pancake)
 - [Repel](/layouts/repel)
 - [Sidebar](/layouts/sidebar)
+- [Stack](/layouts/stack)
 - [Switcher](/layouts/switcher)
 - [Tiles](/layouts/tiles)

@@ -44,14 +44,10 @@ yarn add feo-css
 
 ## Setup and architecture
 
-The architecture of Feo.css is in line with
-[CUBE CSS](https://cube.fyi) and [OOCSS](https://www.slideshare.net/stubbornella/object-oriented-css) (separate skin from structure) and implements
-[generic layout patterns](https://every-layout.dev). By
-combines modern CSS techniques like `@layer` and CSS
-custom properties, it is fully _extensible_.
+The architecture of Feo.css follows the principles outlined [here](https://github.com/vyckes/css-architecture).
 
 ```
-@layer global, layout, utilities, components;
+@layer global, layout, components, utilities;
 ```
 
 The layers indicate the level of importance, meaning: try to solve
@@ -61,8 +57,8 @@ settings, use components.
 
 1. [Design tokens](/tokens) (part of the `global` layer)
 2. [Layout patterns](/layouts)
-3. [Utility](/utilities)
-4. [Components](/components)
+3. [Components](/components)
+4. [Utility](/utilities)
 
 Because Feo.css is build using `@layer`, you can easily
 extend and avoid cascading issues, by including your own CSS in

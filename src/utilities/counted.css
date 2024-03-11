@@ -1,0 +1,30 @@
+.counted:has(> *:nth-child(1)) {
+  --count: 1;
+}
+.counted:has(> *:nth-child(2)) {
+  --count: 2;
+}
+.counted:has(> *:nth-child(3)) {
+  --count: 3;
+}
+.counted:has(> *:nth-child(4)) {
+  --count: 4;
+}
+.counted:has(> *:nth-child(5)) {
+  --count: 5;
+}
+.counted:has(> *:nth-child(6)) {
+  --count: 6;
+}
+.counted:has(> *:nth-child(7)) {
+  --count: 7;
+}
+.counted:has(> *:nth-child(8)) {
+  --count: 8;
+}
+.counted:has(> *:nth-child(9)) {
+  --count: 9;
+}
+.counted:has(> *:nth-child(10)) {
+  --count: 10;
+}

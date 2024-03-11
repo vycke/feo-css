@@ -47,7 +47,7 @@ yarn add feo-css
 The architecture of Feo.css follows the principles outlined [here](https://github.com/vyckes/css-architecture).
 
 ```
-@layer global, layout, components, utilities;
+@layer global, layout, blocks, utilities;
 ```
 
 The layers indicate the level of importance, meaning: try to solve
@@ -57,7 +57,7 @@ settings, use components.
 
 1. [Design tokens](/tokens) (part of the `global` layer)
 2. [Layout patterns](/layouts)
-3. [Components](/components)
+3. [Blocks](/blocks)
 4. [Utility](/utilities)
 
 Because Feo.css is build using `@layer`, you can easily

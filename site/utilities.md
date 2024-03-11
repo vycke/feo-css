@@ -99,3 +99,11 @@ Makes an entire group more interactive on hover, by making the non-hover times d
 ## `.visually-hidden`
 
 Makes the element visually hidden for users, but accessible for screen-readers, etc.
+
+## `.indexed`
+
+Sets a `--index` property on the direct children, corresponding to the index of the child. Can be used for internal calculations based on this number. Up to `10` are faciliated.
+
+## `.counted`
+
+Sets a `--count` on the element with the value of the number of direct children the element has. Up to `10` is facilitated.

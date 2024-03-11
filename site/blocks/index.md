@@ -1,11 +1,11 @@
 ---
 layout: base.njk
-title: Components
+title: Blocks
 order: 4
 key: components
 ---
 
-A limited set of components (mostly based on basic HTML elements,
+A limited set of blocks (mostly based on basic HTML elements,
 but are more complex in their implementation).
 
 <details open>
@@ -15,7 +15,8 @@ but are more complex in their implementation).
 
 The available component classes in Feo.css are listed below.
 
-- [Accordion](/components/accordion)
-- [Forms](/components/forms)
-- [Table](/components/table)
-- [Toggle](/components/toggle)
+- [Accordion](/blocks/accordion)
+- [Forms](/blocks/forms)
+- [Table](/blocks/table)
+- [Toggle](/blocks/toggle)
+- [Tooltip](/blocks/tooltip)

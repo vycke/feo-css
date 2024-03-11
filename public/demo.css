@@ -11,8 +11,7 @@
   }
 }
 
-a,
-a:visited {
+a {
   transition: all 200ms;
 }
 
@@ -38,12 +37,11 @@ article {
 nav {
   position: sticky;
   top: 0;
-  bottom: 0;
   align-self: flex-start;
   z-index: 100;
   height: 100vh;
   background-color: var(--token-neutral-1);
-  color: var(--token-neutral-5);
+  color: var(--token-neutral-4);
   padding: var(--token-size-0);
 }
 nav a {
@@ -53,6 +51,12 @@ nav a:hover {
   color: inherit;
   font-weight: bold;
 }
+nav a[data-selected="true"] {
+  font-weight: bold;
+  color: var(--token-neutral-5);
+}
+
+/* small changes for responsiveness */
 @media (max-width: 785px) {
   nav {
     position: relative;
@@ -72,6 +76,7 @@ nav li {
 /* Breadcrumbs */
 .breadcrumbs {
   color: var(--text-2);
+  text-transform: uppercase;
 }
 
 h2 {

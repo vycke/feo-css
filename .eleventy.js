@@ -34,9 +34,14 @@ function getNavigation(collection) {
   );
 }
 
+function getSubitems(collection, key) {
+  return collection.filter((c) => c.data.key === key).sort(sort("title"));
+}
+
 module.exports = (config) => {
   config.addPassthroughCopy({ "./public/": "/" });
   config.addFilter("navigation", getNavigation);
+  config.addFilter("subitems", getSubitems);
 
   return {
     markdownTemplateEngine: "njk",

@@ -1,0 +1,15 @@
+<!-- NAVIGATION -->  
+<ul role="list" class="switcher --width-00 --gap-000 | hover-group">
+  {% for itemKey, item in collections.all | navigation %}
+    <li>
+      <a data-selected="{{key == itemKey}}" href="{{ item.url }}">{{ item.title }}</a>
+      {% if item.sub.length > 0 and key == itemKey %}
+        <ul class="hover-group | ml-0 size-00 mt-000">
+          {% for subitem in item.sub %}
+            <li><a data-selected="{{subkey == subitem.key}}" href="{{ subitem.url }}">{{ subitem.title }}</a></li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+    </li>
+  {% endfor %}  
+</ul> 

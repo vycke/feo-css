@@ -15,8 +15,5 @@ but are more complex in their implementation).
 
 The available component classes in Feo.css are listed below.
 
-- [Accordion](/blocks/accordion)
-- [Forms](/blocks/forms)
-- [Table](/blocks/table)
-- [Toggle](/blocks/toggle)
-- [Tooltip](/blocks/tooltip)
+{% set items = collections.all | subitems("blocks") %}
+{% include "partials/sublist.njk" %}

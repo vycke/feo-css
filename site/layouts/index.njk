@@ -18,13 +18,5 @@ Feo.css offers classes for standardized layout patterns that you see on almost e
 
 The available layout classes in Feo.css are listed below.
 
-- [Center](/layouts/center)
-- [Cluster](/layouts/cluster)
-- [Flexbox](/layouts/flexbox)
-- [Equal column grid](/layouts/grid)
-- [Pancake](/layouts/pancake)
-- [Repel](/layouts/repel)
-- [Sidebar](/layouts/sidebar)
-- [Stack](/layouts/stack)
-- [Switcher](/layouts/switcher)
-- [Tiles](/layouts/tiles)
+{% set items = collections.all | subitems("layouts") %}
+{% include "partials/sublist.njk" %}

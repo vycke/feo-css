@@ -1,3 +1,5 @@
 <ul>
-  <li>test</li>
+  {% for subitem in items %}
+    <li><a href="{{ subitem.url }}">{{ subitem.data.title }}</a></li>
+  {% endfor %}
 </ul>

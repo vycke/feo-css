@@ -33,46 +33,22 @@
   <body>
     <main class="sidebar --left --width-00 --gap-0 | flex-grow">
       <!-- SIDEBAR -->
-      <nav>
-        <div class="flex-col --gap-none items-center | mb-3">
-          <svg width="32" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg" class="flex-shrink-0">
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M15 25C15 30.5228 19.4772 35 25 35C30.5228 35 35 30.5229 35 25C35 19.4772 30.5228 15 25 15C19.4772 15 15 19.4772 15 25ZM25 20C22.2386 20 20 22.2386 20 25C20 27.7614 22.2386 30 25 30C27.7614 30 30 27.7614 30 25C30 22.2386 27.7614 20 25 20Z" fill="var(--token-neutral-4)"/>
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M43.1623 44.4868L28.1623 49.4868C26.1096 50.1711 23.8904 50.1711 21.8377 49.4868L6.83772 44.4868C2.7543 43.1257 0 39.3043 0 35L2.31474e-06 15C2.69103e-06 10.6957 2.7543 6.8743 6.83773 5.51316L21.8377 0.513167C23.8904 -0.171056 26.1096 -0.171055 28.1623 0.513167L43.1623 5.51317C47.2457 6.87431 50 10.6957 50 15L50 35C50 39.3043 47.2457 43.1257 43.1623 44.4868ZM25 5C24.466 5 23.932 5.08553 23.4189 5.25658L8.41886 10.2566C6.37715 10.9372 5 12.8478 5 15L5 35C5 37.1522 6.37715 39.0628 8.41886 39.7434L23.4189 44.7434C23.932 44.9145 24.466 45 25 45C25.534 45 26.068 44.9145 26.5811 44.7434L41.5811 39.7434C43.6228 39.0629 45 37.1522 45 35L45 15C45 12.8479 43.6229 10.9372 41.5811 10.2566L26.5811 5.25658C26.068 5.08553 25.534 5 25 5Z" fill="var(--token-neutral-4)"/>
-          </svg>
+      <nav class="flex-col items-center --gap-1">
+        <div class="flex-col --gap-none items-center">
+          {% include "svg/logo.svg" %}
           <span class="size-1 bold">Feo.css</span>
           <span class="size-00">v{{ pkg.version }}</span>
         </div>
-        <!-- NAVIGATION -->  
-        <ul role="list" class="switcher --width-00 --gap-000 | hover-group">
-          {% for itemKey, item in collections.all | navigation %}
-            <li>
-              <a {% if key == itemKey %} class="bold"{% endif %} href="{{ item.url }}">{{ item.title }}</a>
-              {% if item.sub.length > 0 and key == itemKey %}
-                <ul class="hover-group | ml-0 size-00 mt-000">
-                  {% for subitem in item.sub %}
-                    <li><a {% if subkey == subitem.key %} class="bold italic"{% endif %} href="{{ subitem.url }}">{{ subitem.title }}</a></li>
-                  {% endfor %}
-                </ul>
-              {% endif %}
-            </li>
-          {% endfor %}  
-        </ul> 
+        {% include "partials/navigation.njk" %}
       </nav>
       <!-- This DIV is required to let layout patterns play nice with eachother -->
-      <div class="flex-col --gap-2">
+      <div>
         <article class="flex-col --gap-0 items-start">
           {% include "partials/breadcrumb.njk" %}
           <h1>{{title}}</h1>
           {{ content | safe }}
-        </article>
-        <!-- FOOTER -->
-        <footer class="cluster --gap-000 justify-end | size-00 italic | mt-1">
-          <span>Powered by: <a href="https://11ty.dev" class="italic">11ty</a> & Feo.css</span>
-          <span>|</span>
-          <a href="https://github.com/vyckes/feo-css">Github</a>
-          <span>|</span>
-          <span>Made by <a href="https://crinkles.dev">Crinkles</a>
-        </footer>
+          {% include "partials/footer.njk" %}
+        </article> 
       </div>
     </main>
   </body>

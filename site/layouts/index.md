@@ -1,6 +1,6 @@
 ---
 layout: base.njk
-title: Layout patterns
+title: Layouts
 order: 3
 key: layouts
 ---

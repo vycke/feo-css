@@ -1,7 +1,7 @@
 ---
 layout: base.njk
 title: Tooltip
-key: components
+key: blocks
 subkey: tooltip
 ---
 

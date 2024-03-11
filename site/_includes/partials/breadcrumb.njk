@@ -1,0 +1,7 @@
+<ul role="list" class="breadcrumbs | flex-row --gap-000 size-00">
+  <li><a href="/">home</a></li>
+  {% if key !== "home" %}<li>/</li>{% endif %}
+  {% if key !== "home" %}<li><a href="/{{key}}">{{key}}</a></li>{% endif %}
+  {% if subkey %}<li>/</li>{% endif %}
+  {% if subkey %}<li><a href="/{{key}}/{{subkey}}">{{subkey}}</a></li>{% endif %}
+</ul>

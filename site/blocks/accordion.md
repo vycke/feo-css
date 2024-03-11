@@ -1,7 +1,7 @@
 ---
 layout: base.njk
 title: Accordion
-key: components
+key: blocks
 subkey: accordion
 ---
 

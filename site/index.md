@@ -1,6 +1,6 @@
 ---
 layout: base.njk
-title: Homepage
+title: Home
 order: 1
 key: home
 ---

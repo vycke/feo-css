@@ -1,7 +1,7 @@
 ---
 layout: base.njk
 title: Toggle
-key: components
+key: blocks
 subkey: toggle
 ---
 

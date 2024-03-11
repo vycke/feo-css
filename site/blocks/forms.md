@@ -1,7 +1,7 @@
 ---
 layout: base.njk
 title: Forms
-key: components
+key: blocks
 subkey: forms
 ---
 

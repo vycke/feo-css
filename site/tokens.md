@@ -1,6 +1,6 @@
 ---
 layout: base.njk
-title: Design tokens
+title: Tokens
 order: 2
 key: tokens
 ---
@@ -19,7 +19,7 @@ patterns allow you to set the `gap` between columns and rows, through _class uli
 
 Feo.css offers design tokens on _sizing_ that can be used for spacing (e.g. margin and padding), font-sizes, or anything you can think of. The values are based on a combination of a few key principles:
 
-- [Fluid scaling](https://vyckes.dev/writing/different-approaches-to-fluid-typography-and-layouts/) based on screen size.
+- [Fluid scaling](https://crinkles.dev/writing/different-approaches-to-fluid-typography-and-layouts/) based on screen size.
 - A ratio of `1.33` between two consecutive token values.
 - The mentioned naming convention outlined above. `1rem` is taken as the base value (`--size-0`).
 

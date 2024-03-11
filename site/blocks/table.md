@@ -1,7 +1,7 @@
 ---
 layout: base.njk
 title: Table
-key: components
+key: blocks
 subkey: table
 ---
 

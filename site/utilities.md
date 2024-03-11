@@ -1,6 +1,6 @@
 ---
 layout: base.njk
-title: Utilities classes
+title: Utilities
 order: 5
 key: utilities
 ---

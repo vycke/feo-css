@@ -1,7 +1,4 @@
-:root {
-  --accent: blueviolet;
-}
-
+/* Themes */
 @media (prefers-color-scheme: dark) {
   :root {
     color-scheme: dark;
@@ -25,51 +22,56 @@ a:hover {
   text-decoration-color: blueviolet;
 }
 
+/* Structure */
 main {
   position: relative;
 }
-
-nav {
-  position: sticky;
-  top: 0;
-  align-self: flex-start;
-  z-index: 100;
-  background-color: var(--surface-0);
-  padding: var(--token-size-0);
-}
-
-nav span {
-  line-height: 1;
-}
-
 footer {
   padding: var(--token-size-0);
 }
-
-nav ul ul {
-  font-size: var(--token-size-00);
+article {
+  padding: var(--token-size-0);
+  max-width: 68ch;
 }
 
-nav li {
-  white-space: nowrap;
-}
-
-.wrapper {
+/* Main navigation */
+nav {
+  position: sticky;
+  top: 0;
+  bottom: 0;
+  align-self: flex-start;
+  z-index: 100;
+  height: 100vh;
+  background-color: var(--token-neutral-1);
+  color: var(--token-neutral-5);
   padding: var(--token-size-0);
 }
-
-article svg {
-  width: 100%;
+nav a {
+  text-decoration: none;
 }
-
-@media (max-width: 601px) {
+nav a:hover {
+  color: inherit;
+  font-weight: bold;
+}
+@media (max-width: 785px) {
   nav {
-    border-bottom: 1px solid var(--surface-1);
+    position: relative;
+    height: fit-content;
   }
 
   nav ul ul {
     display: none;
   }
+}
+
+/* ensure text does not go on multiline in horizontal orientaiton */
+nav li {
+  white-space: nowrap;
+}
+
+/* Breadcrumbs */
+.breadcrumbs {
+  color: var(--text-2);
 }
 
 h2 {

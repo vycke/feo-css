@@ -30,5 +30,3 @@ determines how many items can be on a single row (e.g. tag cloud).
     </tbody>
   </table>
 </div>
-
-[_Back to layouts overview_](/layouts)

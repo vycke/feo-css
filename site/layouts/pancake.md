@@ -29,5 +29,3 @@ A common vertical pattern where the center content should stretch the available 
     </tbody>
   </table>
 </div>
-
-[_Back to layouts overview_](/layouts)

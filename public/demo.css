@@ -29,6 +29,9 @@ article {
   padding: var(--token-size-0);
   max-width: 68ch;
 }
+footer {
+  padding: var(--token-size-0);
+}
 
 /* Main navigation */
 nav {
@@ -52,6 +55,10 @@ nav a[data-selected="true"] {
   font-weight: bold;
   color: var(--token-neutral-5);
 }
+/* ensure text does not go on multiline in horizontal orientaiton */
+nav li {
+  white-space: nowrap;
+}
 
 /* small changes for responsiveness */
 @media (max-width: 785px) {
@@ -59,15 +66,14 @@ nav a[data-selected="true"] {
     position: relative;
     height: fit-content;
   }
+  /* ensure main takes more space when there is very limited content */
+  main {
+    min-height: calc(100vh - 200px);
+  }
 
   nav ul ul {
     display: none;
   }
-}
-
-/* ensure text does not go on multiline in horizontal orientaiton */
-nav li {
-  white-space: nowrap;
 }
 
 /* Breadcrumbs */

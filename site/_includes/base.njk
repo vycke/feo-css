@@ -30,9 +30,8 @@
     <link rel="icon" href="/favicon.ico" sizes="any" />
   </head>
 
-  <body>
-    <main class="sidebar --left --width-00 --gap-0 | flex-grow">
-      <!-- SIDEBAR -->
+  <body class="sidebar --left --width-00 --gap-0">
+    <!-- SIDEBAR -->
       <nav class="flex-col items-center --gap-1">
         <div class="flex-col --gap-none items-center">
           {% include "svg/logo.svg" %}
@@ -41,15 +40,14 @@
         </div>
         {% include "partials/navigation.njk" %}
       </nav>
-      <!-- This DIV is required to let layout patterns play nice with eachother -->
-      <div>
-        <article class="flex-col --gap-0 items-start">
-          {% include "partials/breadcrumb.njk" %}
-          <h1>{{title}}</h1>
-          {{ content | safe }}
-          {% include "partials/footer.njk" %}
-        </article> 
-      </div>
+    <!-- CONTENT -->
+    <main class="repel --column"> 
+      <article class="flex-col --gap-0 items-start">
+        {% include "partials/breadcrumb.njk" %}
+        <h1>{{title}}</h1>
+        {{ content | safe }}
+      </article> 
+      {% include "partials/footer.njk" %}
     </main>
   </body>
 </html>

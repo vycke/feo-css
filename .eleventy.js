@@ -35,7 +35,9 @@ function getNavigation(collection) {
 }
 
 function getSubitems(collection, key) {
-  return collection.filter((c) => c.data.key === key).sort(sort("title"));
+  return collection
+    .filter((c) => c.data.key === key && c.data.subkey)
+    .sort(sort("title"));
 }
 
 module.exports = (config) => {

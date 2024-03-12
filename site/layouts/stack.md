@@ -28,5 +28,3 @@ A simple layout pattern to place items on top eachother, in a depth sense. The l
     </tbody>
   </table>
 </div>
-
-[_Back to layouts overview_](/layouts)

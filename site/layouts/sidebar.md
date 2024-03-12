@@ -37,5 +37,3 @@ A common responsive layout in which there is a "sidebar" of a _fixed_ width, and
     </tbody>
   </table>
 </div>
-
-[_Back to layouts overview_](/layouts)

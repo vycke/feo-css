@@ -68,5 +68,3 @@ as you will put the label text after the toggle in most cases. You can change th
     </tbody>
   </table>
 </div>
-
-[_Back to components overview_](/components)

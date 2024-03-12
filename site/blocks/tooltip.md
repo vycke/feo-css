@@ -57,5 +57,3 @@ There are several custom properties available that can be overwritten to control
     </tbody>
   </table>
 </div>
-
-[_Back to components overview_](/components)

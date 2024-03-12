@@ -30,5 +30,3 @@ Places the targeted element in the horizontal center. It takes the entire availa
     </tbody>
   </table>
 </div>
-
-[_Back to layouts overview_](/layouts)

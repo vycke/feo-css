@@ -65,5 +65,3 @@ Although not really a layout pattern, Feo.css adds a set of classes to control f
     </tbody>
   </table>
 </div>
-
-[_Back to layouts overview_](/layouts)

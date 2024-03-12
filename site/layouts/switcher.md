@@ -36,5 +36,3 @@ A _responsive_ layout pattern that helps switching the orientation from horizont
     </tbody>
   </table>
 </div>
-
-[_Back to layouts overview_](/layouts)

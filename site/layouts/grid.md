@@ -28,5 +28,3 @@ A layout pattern to easily create a grid of equal columns.
     </tbody>
   </table>
 </div>
-
-[_Back to layouts overview_](/layouts)

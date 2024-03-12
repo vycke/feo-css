@@ -30,5 +30,3 @@ Also known as a RAM (repeat, auto, minmax) layout. It is a tile system in which 
     </tbody>
   </table>
 </div>
-
-[_Back to layouts overview_](/layouts)

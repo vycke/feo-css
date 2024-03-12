@@ -83,5 +83,3 @@ overwritten to control the looks of the table. You can change these properties o
     </tbody>
   </table>
 </div>
-
-[_Back to components overview_](/components)

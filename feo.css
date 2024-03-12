@@ -385,8 +385,12 @@
   .repel {
     justify-content: space-between;
     gap: var(--layout-gap);
-    flex-wrap: wrap;
+    flex-flow: wrap;
     display: flex;
+  }
+
+  .--column {
+    flex-direction: column;
   }
 
   .sidebar {

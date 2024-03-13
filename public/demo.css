@@ -27,6 +27,7 @@ main {
 }
 article {
   padding: var(--token-size-0);
+  width: 100%;
   max-width: 68ch;
 }
 footer {
@@ -43,6 +44,7 @@ nav {
   background-color: var(--token-neutral-1);
   color: var(--token-neutral-4);
   padding: var(--token-size-0);
+  outline: 1px solid var(--token-neutral-2);
 }
 nav a {
   text-decoration: none;

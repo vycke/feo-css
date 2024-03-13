@@ -1,5 +1,5 @@
 <!-- NAVIGATION -->  
-<ul role="list" class="switcher --width-00 --gap-000 | hover-group">
+<ul role="list" class="switcher --threshold-00 --gap-000 | hover-group">
   {% for itemKey, item in collections.all | navigation %}
     <li>
       <a data-selected="{{key == itemKey}}" href="{{ item.url }}">{{ item.title }}</a>

@@ -30,10 +30,10 @@
     <link rel="icon" href="/favicon.ico" sizes="any" />
   </head>
 
-  <body class="sidebar --left --width-00 --gap-0">
+  <body class="sidebar --left --threshold-00 --gap-0">
     <!-- SIDEBAR -->
-      <nav class="flex-col items-center --gap-1">
-        <div class="flex-col --gap-none items-center">
+      <nav class="flex --column items-center --gap-1">
+        <div class="flex --column --gap-none items-center">
           {% include "svg/logo.svg" %}
           <span class="size-1 bold">Feo.css</span>
           <span class="size-00">v{{ pkg.version }}</span>
@@ -42,7 +42,7 @@
       </nav>
     <!-- CONTENT -->
     <main class="repel --column"> 
-      <article class="flex-col --gap-0 items-start">
+      <article class="flex --column --gap-0 items-start">
         {% include "partials/breadcrumb.njk" %}
         <h1>{{title}}</h1>
         {{ content | safe }}

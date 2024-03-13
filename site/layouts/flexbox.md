@@ -14,12 +14,8 @@ Although not really a layout pattern, Feo.css adds a set of classes to control f
     <thead><tr><th>Class name</th><th>Description</th></tr></thead>
     <tbody>
       <tr>
-        <td><code>flex-col/row</code></td>
-        <td>Sets the element to flex vertically/horizontally</td>
-      </tr>
-      <tr>
-        <td><code>flex-col/row-reversed</code></td>
-        <td>Sets the element to flex vertically/horizontally, but reversed</td>
+        <td><code>flex</code></td>
+        <td>Sets the element to flex. Default orientation is row</td>
       </tr>
       <tr>
         <td><code>flex-grow</code> and <code>flex-grow-0</code></td>
@@ -62,6 +58,7 @@ Although not really a layout pattern, Feo.css adds a set of classes to control f
     </thead>
     <tbody>
       <tr><td><code>--gap-{z}</code></td><td>Controls the gap between the child elements</td></tr>
+      <tr><td><code>--column/--row</code></td><td>Controls the flex-direction. Default is row</td></tr>
     </tbody>
   </table>
 </div>

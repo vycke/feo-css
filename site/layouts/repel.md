@@ -5,9 +5,9 @@ key: layouts
 subkey: repel
 ---
 
-A simple layout pattern that pushes elements away from eachother, given the available space. Effectively implementing the `.justify-between`, `.--gap-{z}` and `.flex-row` (as the default is horizontal orientation) classes.
+A simple layout pattern that pushes elements away from eachother, given the available space. Effectively implementing the `.justify-between`, `.--gap-{z}`, `.flex`, and `.--row` (as the default is horizontal orientation) classes.
 
-{% include "svg/repel.njk" %}
+{% include "svg/repel.svg" %}
 
 ## Implementation
 
@@ -26,7 +26,7 @@ A simple layout pattern that pushes elements away from eachother, given the avai
     </thead>
     <tbody>
       <tr><td><code>--gap-{z}</code></td><td>Controls the gap between the child elements</td></tr>
-      <tr><td><code>--column</code></td><td>Sets the direction to vertical, default is horizontal</td></tr>
+      <tr><td><code>--column/--row</code></td><td>Sets the direction, default is row</td></tr>
     </tbody>
   </table>
 </div>

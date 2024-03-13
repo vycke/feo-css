@@ -3,6 +3,14 @@
  *  layout classes
  */
 
+/* Flex direction */
+.--column {
+  --layout-direction: column;
+}
+.--row {
+  --layout-direction: row;
+}
+
 /* Control the amount API */
 .--amount-1 {
   --layout-amount: 1;
@@ -70,28 +78,28 @@
   --layout-gap: var(--token-size-5);
 }
 
-/* Control the width API */
-.--width-000 {
-  --layout-width: var(--token-bp-000);
+/* Control the threshold API */
+.--threshold-000 {
+  --layout-threshold: var(--token-bp-000);
 }
-.--width-00 {
-  --layout-width: var(--token-bp-00);
+.--threshold-00 {
+  --layout-threshold: var(--token-bp-00);
 }
-.--width-0 {
-  --layout-width: var(--token-bp-0);
+.--threshold-0 {
+  --layout-threshold: var(--token-bp-0);
 }
-.--width-1 {
-  --layout-width: var(--token-bp-1);
+.--threshold-1 {
+  --layout-threshold: var(--token-bp-1);
 }
-.--width-2 {
-  --layout-width: var(--token-bp-2);
+.--threshold-2 {
+  --layout-threshold: var(--token-bp-2);
 }
-.--width-3 {
-  --layout-width: var(--token-bp-3);
+.--threshold-3 {
+  --layout-threshold: var(--token-bp-3);
 }
-.--width-4 {
-  --layout-width: var(--token-bp-4);
+.--threshold-4 {
+  --layout-threshold: var(--token-bp-4);
 }
-.--width-5 {
-  --layout-width: var(--token-bp-5);
+.--threshold-5 {
+  --layout-threshold: var(--token-bp-5);
 }

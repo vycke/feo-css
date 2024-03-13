@@ -7,12 +7,12 @@ subkey: sidebar
 
 A common responsive layout in which there is a "sidebar" of a _fixed_ width, and a content area that is flexible. This implementation switches to a vertical layout the moment the flexible content gets too little space left within the _targeted (wrapper) element_.
 
-{% include "svg/sidebar.njk" %}
+{% include "svg/sidebar.svg" %}
 
 ## Implementation
 
 ```
-<div class="sidebar --left --width-{z}">
+<div class="sidebar --left --threshold-{z}">
   ...
 </div>
 ```
@@ -32,7 +32,7 @@ A common responsive layout in which there is a "sidebar" of a _fixed_ width, and
     </thead>
     <tbody>
       <tr><td><code>--gap-{z}</code></td><td></td><td>Controls the gap between the child elements</td></tr>
-      <tr><td><code>--width-{z}</code></td><td>Required</td><td>Sets the fixed width of the "sidebar"</td></tr>
+      <tr><td><code>--threshold-{z}</code></td><td>Required</td><td>Sets the fixed width of the "sidebar"</td></tr>
       <tr><td><code>--left/right</code></td><td>Required</td><td>Sets if the left or right element is the fixed "sidebar"</td></tr>
     </tbody>
   </table>

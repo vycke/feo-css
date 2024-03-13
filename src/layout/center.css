@@ -1,7 +1,7 @@
 /**
  * horizontal center of layout elements
  *
- * --layout-width: sets the width of the element that is centered
+ * --layout-threshold: sets the width of the element that is centered
  *
  * NOTE: exceptions in child elements can be made width:
  * [class~="center"] > * {
@@ -12,10 +12,10 @@
  * }
  */
 .center {
-  --layout-width: 100%;
+  --layout-threshold: 100%;
 
   margin-inline: auto;
   width: 100%;
   /* required to ensure certain elements that should be side-scrollable don't push out the layout at 100% */
-  max-width: var(--layout-width);
+  max-width: var(--layout-threshold);
 }

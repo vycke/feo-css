@@ -7,7 +7,7 @@ subkey: pancake
 
 A common vertical pattern where the center content should stretch the available space, pushing the top and bottom to, well, the top and bottom.
 
-{% include "svg/pancake.njk" %}
+{% include "svg/pancake.svg" %}
 
 ## Implementation
 

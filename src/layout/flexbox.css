@@ -3,27 +3,13 @@
  *
  * --layout-gap: set the gap between the child elements (horizontal & vertical)
  */
-.flex-col {
+.flex {
   --layout-gap: 0;
+  --layout-direction: row;
 
   display: flex;
-  flex-direction: column;
+  flex-direction: var(--layout-direction);
   gap: var(--layout-gap);
-}
-.flex-row {
-  --layout-gap: 0;
-
-  display: flex;
-  flex-direction: row;
-  gap: var(--layout-gap);
-}
-.flex-col-reverse {
-  display: flex;
-  flex-direction: column-reverse;
-}
-.flex-row-reverse {
-  display: flex;
-  flex-direction: row-reverse;
 }
 
 /* grow/shrink */

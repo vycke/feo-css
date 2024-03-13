@@ -3,12 +3,12 @@
    * COLORS
    */
   /** NEUTRALS */
-  --token-neutral-0: hsl(215, 30%, 10%);
-  --token-neutral-1: hsl(215, 30%, 24%);
-  --token-neutral-2: hsl(215, 30%, 40%);
-  --token-neutral-3: hsl(215, 36%, 78%);
-  --token-neutral-4: hsl(215, 36%, 92%);
-  --token-neutral-5: hsl(215, 36%, 98%);
+  --token-neutral-0: hsl(215, 12%, 12%);
+  --token-neutral-1: hsl(215, 12%, 22%);
+  --token-neutral-2: hsl(215, 12%, 36%);
+  --token-neutral-3: hsl(215, 24%, 78%);
+  --token-neutral-4: hsl(215, 24%, 92%);
+  --token-neutral-5: hsl(215, 24%, 98%);
 
   /**
    * BREAK POINTS

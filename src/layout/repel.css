@@ -2,13 +2,12 @@
  * Layout to stretch items across the main axis and have the space in between
  */
 .repel {
+  --layout-gap: 0;
+  --layout-direction: row;
+
   display: flex;
-  flex-direction: row;
+  flex-direction: var(--layout-direction);
   flex-wrap: wrap;
   justify-content: space-between;
   gap: var(--layout-gap);
-}
-
-.--column {
-  flex-direction: column;
 }

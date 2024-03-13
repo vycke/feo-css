@@ -8,7 +8,7 @@ subkey: cluster
 Groups items in such a way that a 'cluster' is created that automatically
 determines how many items can be on a single row (e.g. tag cloud).
 
-{% include "svg/cluster.njk" %}
+{% include "svg/cluster.svg" %}
 
 ## Implementation
 

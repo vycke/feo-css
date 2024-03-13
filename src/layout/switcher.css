@@ -3,7 +3,7 @@
  * the width of parent becomes less than a set value. 
  *
  * --layout-gap: set the gap between the child elements (horizontal & vertical)
- * --layout-width: the min-width of a single child elements
+ * --layout-threshold: the min-width of a single child elements
  *
  * NOTE: if you want the columns to have the same size, apply "switcher justify-stretch" as
  * as the classes
@@ -11,13 +11,15 @@
 
 .switcher {
   --layout-gap: 0;
-  --layout-width: 0;
+  --layout-threshold: 0;
+  --layout-direction: row;
 
   display: flex;
+  flex-direction: var(--layout-direction);
   flex-wrap: wrap;
   gap: var(--layout-gap);
 }
 
 .switcher > * {
-  flex-basis: calc((var(--layout-width) - 100%) * 999);
+  flex-basis: calc((var(--layout-threshold) - 100%) * 999);
 }

@@ -1,0 +1,14 @@
+.fifty {
+  --layout-threshold: var(--token-bp-0);
+  --layout-gap: 0;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: var(--layout-gap);
+}
+
+.fifty > * {
+  flex-grow: 1;
+  flex-basis: var(--layout-threshold);
+}

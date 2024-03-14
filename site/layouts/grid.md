@@ -1,6 +1,6 @@
 ---
 layout: base.njk
-title: Equal column grid
+title: Grids
 key: layouts
 subkey: grids
 ---

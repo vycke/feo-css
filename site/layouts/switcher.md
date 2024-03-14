@@ -18,9 +18,8 @@ A _responsive_ layout pattern that helps switching the orientation from horizont
 ```
 
 <details>
-  <summary>Implementation tip(s)!</summary>
-  <p><b>1.</b> Combine it with the <code>justify-stretch</code> flexbox utility class, to ensure all items are of the same size, horizontally.</p>
-  <p><b>2.</b> When you apply the <code>switcher</code> pattern to the "fixed" content of <code>sidebar</code> pattern, you can get an impressive layout. On larger available width, the content in the "fixed" sidebar has a vertical orientation. Once the available width decreases, the sidebar transforms into a vertical alignment. But the switcher does the opposite, as it now has more available width. To achieve this, ensure the <code>--threshold-{z}</code> class utility of the switcher has a <code>z+1</code> compared to the sidebar.</p>
+  <summary>Implementation tip!</summary>
+  When you apply the <code>switcher</code> pattern to the "fixed" content of <code>sidebar</code> pattern, you can get an impressive layout. On larger available width, the content in the "fixed" sidebar has a vertical orientation. Once the available width decreases, the sidebar transforms into a vertical alignment. But the switcher does the opposite, as it now has more available width. To achieve this, ensure the <code>--threshold-{z}</code> class utility of the switcher has a <code>z+1</code> compared to the sidebar.</p>
 </details>
 
 ## Utility classes

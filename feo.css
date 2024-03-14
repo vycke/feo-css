@@ -231,6 +231,19 @@
     display: flex;
   }
 
+  .fifty {
+    --layout-threshold: var(--token-bp-0);
+    --layout-gap: 0;
+    gap: var(--layout-gap);
+    flex-flow: wrap;
+    display: flex;
+  }
+
+  .fifty > * {
+    flex-grow: 1;
+    flex-basis: var(--layout-threshold);
+  }
+
   .flex {
     --layout-gap: 0;
     --layout-direction: row;
@@ -379,9 +392,10 @@
   .sidebar {
     --layout-gap: 0;
     --layout-threshold: 0;
-    --layout-inline-size: 67%;
+    --layout-inline-size: 60%;
     gap: var(--layout-gap);
     flex-wrap: wrap;
+    align-items: stretch;
     display: flex;
   }
 
@@ -418,6 +432,7 @@
   }
 
   .switcher > * {
+    flex-grow: 1;
     flex-basis: calc((var(--layout-threshold)  - 100%) * 999);
   }
 
@@ -1221,6 +1236,12 @@
 
   .mr-5 {
     margin-right: var(--token-size-5);
+  }
+
+  .scroll-container {
+    contain: size;
+    flex-wrap: nowrap;
+    overflow-y: auto;
   }
 
   .size-000 {

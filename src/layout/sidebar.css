@@ -13,11 +13,12 @@
 .sidebar {
   --layout-gap: 0;
   --layout-threshold: 0;
-  --layout-inline-size: 67%;
+  --layout-inline-size: 60%;
 
   display: flex;
   flex-wrap: wrap;
   gap: var(--layout-gap);
+  align-items: stretch;
 }
 
 .sidebar > * {

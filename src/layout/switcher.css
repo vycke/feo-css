@@ -21,5 +21,6 @@
 }
 
 .switcher > * {
+  flex-grow: 1;
   flex-basis: calc((var(--layout-threshold) - 100%) * 999);
 }

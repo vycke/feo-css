@@ -611,6 +611,7 @@
   }
 
   details[open] > :not(summary) {
+    padding: var(--token-size-00);
     -webkit-animation: .25s ease-in-out slide-down-1;
     animation: .25s ease-in-out slide-down-1;
   }

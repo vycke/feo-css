@@ -10,9 +10,7 @@ patterns allow you to set the `gap` between columns and rows, through _class uli
 
 <details>
   <summary>Naming convention</summary>
-  <p>Tokens like sizing and breakpoints are considered to have a "baseline". The most common value for the design token. Those
-  tokens always have a <code>-0</code> as the post-fix. In the sequence of tokens, if you want to go up a value, you increase the value.
-  If you want to go down a value, you decrease the value, or add a 0 (e.g. <code>-00</code>).</p>
+  <p>Tokens like sizing and breakpoints are considered to have a "baseline". The most common value for the design token. Those tokens always have a <code>-0</code> as the post-fix in their naming (e.g. <code>--token-size-0</code>). For each step higher, the number is increased (e.g. <code>--token-size-2</code>). In case of lowering steps, we <i>add</i> a <code>0</code> to the token name (e.g. <code>--token-size-000</code>). This convention is chosen as it is seen to be more readable compared to <code>--token-size--1</code> (note the double dash).</p>
 </details>
 
 ## Sizing

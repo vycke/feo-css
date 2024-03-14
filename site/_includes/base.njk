@@ -30,7 +30,7 @@
     <link rel="icon" href="/favicon.ico" sizes="any" />
   </head>
 
-  <body class="sidebar --left --threshold-00 --gap-0">
+  <body class="sidebar --left --threshold-00 --gap-2">
     <!-- SIDEBAR -->
       <nav class="flex --column items-center --gap-1">
         <div class="flex --column --gap-none items-center">
@@ -41,7 +41,8 @@
         {% include "partials/navigation.njk" %}
       </nav>
     <!-- CONTENT -->
-    <main class="repel --column"> 
+    
+    <main class="repel --column | scroll-container"> 
       <article class="flex --column --gap-0 items-start">
         {% include "partials/breadcrumb.njk" %}
         <h1>{{title}}</h1>
@@ -49,5 +50,6 @@
       </article> 
       {% include "partials/footer.njk" %}
     </main>
+    
   </body>
 </html>

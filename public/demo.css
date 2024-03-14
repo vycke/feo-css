@@ -36,11 +36,7 @@ footer {
 
 /* Main navigation */
 nav {
-  position: sticky;
-  top: 0;
-  align-self: flex-start;
   z-index: 100;
-  height: 100vh;
   background-color: var(--token-neutral-1);
   color: var(--token-neutral-4);
   padding: var(--token-size-0);
@@ -63,18 +59,14 @@ nav li {
 }
 
 /* small changes for responsiveness */
-@media (max-width: 785px) {
-  nav {
-    position: relative;
-    height: fit-content;
-  }
-  /* ensure main takes more space when there is very limited content */
-  main {
-    min-height: calc(100vh - 200px);
-  }
-
+@media (max-width: 646px) {
   nav ul ul {
     display: none;
+  }
+  /* Overwrites scroll behavior and ensures growth in case main as little content */
+  main {
+    contain: none;
+    min-height: calc(100vh - 165px);
   }
 }
 

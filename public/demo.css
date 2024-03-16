@@ -66,7 +66,7 @@ nav li {
   /* Overwrites scroll behavior and ensures growth in case main as little content */
   main {
     contain: none;
-    min-height: calc(100vh - 165px);
+    min-height: calc(100vh - 165px - var(--token-size-2));
   }
 }
 
@@ -74,6 +74,14 @@ nav li {
 .breadcrumbs {
   color: var(--text-2);
   text-transform: uppercase;
+}
+
+.breadcrumbs .divider {
+  color: var(--surface-2);
+}
+
+.breadcrumbs li:last-child a {
+  text-decoration: none;
 }
 
 h2 {

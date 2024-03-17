@@ -32,8 +32,8 @@
 
   <body class="sidebar --left --threshold-00 --gap-2">
     <!-- SIDEBAR -->
-      <nav class="flex --column items-center --gap-1">
-        <div class="flex --column --gap-none items-center">
+      <nav class="flex --column --center --gap-1">
+        <div class="flex --column --gap-none --center">
           {% include "svg/logo.svg" %}
           <span class="size-1 bold">Feo.css</span>
           <span class="size-00">v{{ pkg.version }}</span>
@@ -43,7 +43,7 @@
     <!-- CONTENT -->
     
     <main class="repel --column | scroll-container"> 
-      <article class="flex --column --gap-0 items-start">
+      <article class="flex --column --gap-0 --start">
         {% include "partials/breadcrumb.njk" %}
         <h1>{{title}}</h1>
         {{ content | safe }}

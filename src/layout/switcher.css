@@ -4,9 +4,6 @@
  *
  * --layout-gap: set the gap between the child elements (horizontal & vertical)
  * --layout-threshold: the min-width of a single child elements
- *
- * NOTE: if you want the columns to have the same size, apply "switcher justify-stretch" as
- * as the classes
  */
 
 .switcher {

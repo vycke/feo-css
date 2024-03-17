@@ -43,12 +43,12 @@ A common responsive layout in which there is a "sidebar" of a _fixed_ width, and
 <div>
   <table>
     <thead>
-      <tr><th>Class name</th><th></th><th>Description</th></tr>
+      <tr><th>Class name</th><th>Required?</th><th>Description</th></tr>
     </thead>
     <tbody>
-      <tr><td><code>--gap-{z}</code></td><td></td><td>Controls the gap between the child elements</td></tr>
-      <tr><td><code>--threshold-{z}</code></td><td>Required</td><td>Sets the fixed width of the "sidebar"</td></tr>
-      <tr><td><code>--left/right</code></td><td>Required</td><td>Sets if the left or right element is the fixed "sidebar"</td></tr>
+      <tr><td><code>--threshold-{z}</code></td><td>Required</td><td>Controls the <code>--layout-threshold</code> API</tr>
+      <tr><td><code>--gap-{z}</code></td><td></td><td>Controls the <code>--layout-gap</code> API</tr>
+      <tr><td><code>--left/--right</code></td><td>Required</td><td>Sets which element is the fixed width sidebar</tr>
     </tbody>
   </table>
 </div>

@@ -34,11 +34,11 @@ A layout pattern to easily create a grid of equal columns.
 <div>
   <table>
     <thead>
-      <tr><th>Class name</th><th>Default</th><th>Description</th></tr>
+      <tr><th>Class name</th><th>Required?</th><th>Description</th></tr>
     </thead>
     <tbody>
-      <tr><td><code>--gap-{z}</code></td><td>0</td><td>Controls the gap between the child elements</td></tr>
-      <tr><td><code>--amount-{z}</code></td><td>2</td><td>Sets the amount of columns for the grid. Maximum available is 12.</td></tr>
+      <tr><td><code>--gap-{z}</code></td><td></td><td>Controls the <code>--layout-gap</code> API</tr>
+      <tr><td><code>--amount-{z}</code></td><td></td><td>Controls the <code>--layout-amount</code> API</tr>
     </tbody>
   </table>
 </div>

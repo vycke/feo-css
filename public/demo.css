@@ -86,4 +86,5 @@ nav li {
 
 h2 {
   margin-top: var(--token-size-2);
+  font-size: var(--token-size-0);
 }

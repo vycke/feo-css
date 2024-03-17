@@ -36,10 +36,10 @@ determines how many items can be on a single row (e.g. tag cloud).
 <div>
   <table>
     <thead>
-      <tr><th>Class name</th><th>Description</th></tr>
+      <tr><th>Class name</th><th>Required?</th><th>Description</th></tr>
     </thead>
     <tbody>
-      <tr><td><code>--gap-{z}</code></td><td>Controls the gap between the child elements</td></tr>
+      <tr><td><code>--gap-{z}</code></td><td></td><td>Controls the <code>--layout-gap</code> API</tr>
     </tbody>
   </table>
 </div>

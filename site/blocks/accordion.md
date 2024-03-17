@@ -7,14 +7,14 @@ subkey: accordion
 
 An accordion or alert box that can be styled and used to provide more information to users.
 
-#### Example
+## Example
 
 <details>
   <summary>Accordion title</summary>
   <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis porttitor mauris et nisl lobortis, nec efficitur lectus placerat. Nunc ultricies libero quis justo feugiat, at dapibus ex egestas. Donec cursus euismod mauris, ut pellentesque est scelerisque quis. Vestibulum pellentesque dui ut congue tempor. Morbi sit amet elit nec sapien auctor fringilla. </div>
 </details>
 
-#### Implementation
+## Implementation
 
 ```
 <details>
@@ -28,7 +28,7 @@ An accordion or alert box that can be styled and used to provide more informatio
   <div>You should wrap the content that doess <i>not</i> to the header/summary, in an HTML tag (e.g. <code>p</code>, <code>div</code>) for the opening animation to work.</div>
 </details>
 
-#### Custom properties
+## Custom properties
 
 There are several custom properties available that can be
 overwritten to control the looks of the table. You can change these properties on the `details` selector.

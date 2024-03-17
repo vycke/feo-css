@@ -63,7 +63,7 @@ the styling.
 </label>
 ```
 
-#### Custom properties
+## Custom properties
 
 There are several custom properties available that can be
 overwritten to control the looks of the table. You can change these properties on the `details` selector.

@@ -7,13 +7,13 @@ subkey: tooltip
 
 A simple `data-*` attribute that allows for a hover-triggered tooltip with plain text in it.
 
-#### Example
+## Example
 
 Hover <span data-tooltip="very long text that is needed to see what it does if there is more lines to cover">me</span> for a tooltip at the top!
 
 Hover <span data-tooltip="very long text that is needed to see what it does if there is more lines to cover" data-tooltip-bottom>me</span> for a tooltip at the bottom!
 
-#### Implementation
+## Implementation
 
 ```
 <span data-tooltip="text goes here">
@@ -23,7 +23,7 @@ Hover <span data-tooltip="very long text that is needed to see what it does if t
 
 By default the tooltip is positioned at the top. If you want it at the bottom, add `data-tooltip-bottom` to the element.
 
-#### Custom properties
+## Custom properties
 
 There are several custom properties available that can be overwritten to control the looks of the tooltip.
 

@@ -42,12 +42,12 @@ A _responsive_ layout pattern that helps switching the orientation from horizont
 <div>
   <table>
     <thead>
-      <tr><th>Class name</th><th></th><th>Description</th></tr>
+      <tr><th>Class name</th><th>Required?</th><th>Description</th></tr>
     </thead>
     <tbody>
-      <tr><td><code>--gap-{z}</code></td><td></td><td>Controls the gap between the child elements</td></tr>
-      <tr><td><code>--threshold-{z}</code></td><td>Required</td><td>Sets the breakpoint for the parent when it switches from horizontal to vertical orientation</td></tr>
-       <tr><td><code>--column/--row</code></td><td></td><td>Sets the direction. Default is row.</td></tr>
+      <tr><td><code>--threshold-{z}</code></td><td>Required</td><td>Controls the <code>--layout-threshold</code> API</tr>
+      <tr><td><code>--gap-{z}</code></td><td></td><td>Controls the <code>--layout-threshold</code> API</tr>
+      <tr><td><code>--column/--row</code></td><td></td><td>Controls the <code>--layout-direction</code> API</tr>
     </tbody>
   </table>
 </div>

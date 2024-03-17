@@ -61,10 +61,10 @@ the proper layer.
 
 Feo.css has some particular naming conventions that are important to know and understand. In particular two naming patterns.
 
-#### Design tokens
+## Design tokens
 
 Tokens like sizing and breakpoints are considered to have a "baseline". The most common value for the design token. Those tokens always have a `-0` as the post-fix in their naming (e.g. `--token-size-0`). For each step higher, the number is increased (e.g. `--token-size-2`). In case of lowering steps, we _add_ a `0` to the token name (e.g. `--token-size-000`). This convention is chosen as it is seen to be more readable compared to `--token-size--1` (note the double dash).
 
-#### Class utilities
+## Class utilities
 
 [Utility classes](/utilities) are classes that do one thing, and one thing well. _Class utilities_ are classes that that allow you to control one aspect from a different CSS class, like a layout class. Class utilities on their own have no impact whatsoever, in contract to utility classes. Class utilities have a `--` post-fix, to make them easily spottable (as in most cases they alter interal custom properties).

@@ -28,15 +28,17 @@ A common vertical pattern where the center content should stretch the available 
       <tr><td><code>--layout-gap</code></td><td><code>0</code></td><td>Sets the <code>gap</code> of the targeted element</tr>
     </tbody>
   </table>
-</div>## Utility classes
+</div>
+
+## Utility classes
 
 <div>
   <table>
     <thead>
-      <tr><th>Class name</th><th>Description</th></tr>
+      <tr><th>Class name</th><th>Required?</th><th>Description</th></tr>
     </thead>
     <tbody>
-      <tr><td><code>--gap-{z}</code></td><td>Controls the gap between the child elements</td></tr>
+      <tr><td><code>--gap-{z}</code></td><td></td><td>Controls the <code>--layout-gap</code> API</tr>
     </tbody>
   </table>
 </div>

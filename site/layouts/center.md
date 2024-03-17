@@ -17,6 +17,19 @@ Places the targeted element in the horizontal center. It takes the entire availa
 </div>
 ```
 
+## API
+
+<div>
+  <table>
+    <thead>
+      <tr><th>Custom property</th><th>Default</th><th>Description</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><code>--layout-threshold</code></td><td><code>100%</code></td><td>Sets the <code>max-width</code> of the targeted element</tr>
+    </tbody>
+  </table>
+</div>
+
 ## Utility classes
 
 <div>

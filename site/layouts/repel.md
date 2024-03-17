@@ -17,7 +17,19 @@ A simple layout pattern that pushes elements away from eachother, given the avai
 </div>
 ```
 
-## Utility classes
+## API
+
+<div>
+  <table>
+    <thead>
+      <tr><th>Custom property</th><th>Default</th><th>Description</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><code>--layout-gap</code></td><td><code>0</code></td><td>Sets the <code>gap</code> of the targeted element</tr>
+      <tr><td><code>--layout-direction</code></td><td><code>row</code></td><td>Sets the <code>flex-direction</code> of the targeted element</tr>
+    </tbody>
+  </table>
+</div>## Utility classes
 
 <div>
   <table>

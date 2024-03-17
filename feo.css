@@ -232,7 +232,7 @@
   }
 
   .fifty {
-    --layout-threshold: var(--token-bp-0);
+    --layout-threshold: 0;
     --layout-gap: 0;
     gap: var(--layout-gap);
     flex-flow: wrap;
@@ -327,7 +327,7 @@
   }
 
   .tiles {
-    --layout-threshold: ;
+    --layout-threshold: 0;
     --layout-gap: 0;
     grid-template-columns: repeat(auto-fit, minmax(min(var(--layout-threshold), 100%), 1fr));
     gap: var(--layout-gap);

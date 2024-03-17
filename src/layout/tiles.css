@@ -6,7 +6,7 @@
  * --layout-gap: set the gap between the child elements (horizontal & vertical)
  */
 .tiles {
-  --layout-threshold: ;
+  --layout-threshold: 0;
   --layout-gap: 0;
 
   display: grid;

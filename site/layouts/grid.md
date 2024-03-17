@@ -15,6 +15,20 @@ A layout pattern to easily create a grid of equal columns.
 </div>
 ```
 
+## API
+
+<div>
+  <table>
+    <thead>
+      <tr><th>Custom property</th><th>Default</th><th>Description</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><code>--layout-gap</code></td><td><code>0</code></td><td>Sets the <code>gap</code> of the targeted element</tr>
+      <tr><td><code>--layout-amount</code></td><td><code>2</code></td><td>Sets the number of colums</tr>
+    </tbody>
+  </table>
+</div>
+
 ## Utility classes
 
 <div>

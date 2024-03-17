@@ -1,5 +1,7 @@
 /**
  * A stack of position items on top of eachother (depth)
+ * 
+ * --layout-ratio: can be used to set a ratio, but empty by default
  */
 .stack {
   display: grid;

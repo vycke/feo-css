@@ -1,5 +1,11 @@
+/**
+ * Makes a fifty-fifty layout in case there are two elements. 
+ * 
+ * --layout-gap: set the gap between the child elements (horizontal & vertical)
+ * --layout-threshold: set the min-width of child elements
+ */
 .fifty {
-  --layout-threshold: var(--token-bp-0);
+  --layout-threshold: 0;
   --layout-gap: 0;
 
   display: flex;

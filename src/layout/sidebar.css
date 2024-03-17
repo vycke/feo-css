@@ -6,7 +6,7 @@
  *
  * --layout-gap: set the gap between the child elements (horizontal & vertical)
  * --layout-threshold: sets the absolute value of the fixed-width column
- * --min-inline-size: the minimum size of the responsive column
+ * --layout-inline-size: the minimum size of the responsive column
  *
  * NOTE: use the --left and --right classes to set which column is the fixed bar
  */
@@ -33,5 +33,6 @@
   flex-grow: 999;
 
   /* wraps when content becomes less than X */
+  /* similar to min-width in horizontal reading direction */
   min-inline-size: var(--layout-inline-size);
 }

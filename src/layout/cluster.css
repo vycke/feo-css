@@ -2,7 +2,7 @@
  * Groups items in such a way that a 'cluster' is created that automatically
 determines how many items can be on a single row (e.g. tag cloud)
  *
- * --layout-gap:set the gap between the child elements (horizontal & vertical)
+ * --layout-gap: set the gap between the child elements (horizontal & vertical)
  */
 .cluster {
   --layout-gap: 0;

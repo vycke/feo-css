@@ -15,6 +15,19 @@ A simple layout pattern that makes two elements of equal width next to eachother
 </div>
 ```
 
+## API
+
+<div>
+  <table>
+    <thead>
+      <tr><th>Custom property</th><th>Default</th><th>Description</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><code>--layout-threshold</code></td><td><code>0</code></td><td>Sets the <code>max-width</code> of the child elements</tr>
+      <tr><td><code>--layout-gap</code></td><td><code>0</code></td><td>Sets the <code>gap</code> of the targeted element</tr>
+    </tbody>
+  </table>
+</div>
 ## Utility classes
 
 <div>

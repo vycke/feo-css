@@ -4,6 +4,7 @@
  *
  * --layout-gap: set the gap between the child elements (horizontal & vertical)
  * --layout-threshold: the min-width of a single child elements
+ * --layout-direction: sets flex-direction
  */
 
 .switcher {

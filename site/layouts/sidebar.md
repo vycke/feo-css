@@ -23,6 +23,21 @@ A common responsive layout in which there is a "sidebar" of a _fixed_ width, and
   <p><b>2.</b> There is a custom property called <code>--layout-inline-size</code>, set to 60% to calculate the breaking point of this layout. If you want a different breaking point, you can overwrite this custom property. There are <i>class utilities</i> available.</p>
 </details>
 
+## API
+
+<div>
+  <table>
+    <thead>
+      <tr><th>Custom property</th><th>Default</th><th>Description</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><code>--layout-threshold</code></td><td><code>0</code></td><td>Sets the "fixed width" of the sidebar child element</tr>
+      <tr><td><code>--layout-gap</code></td><td><code>0</code></td><td>Sets the <code>gap</code> of the targeted element</tr>
+      <tr><td><code>--layout-inline-size</code></td><td><code>60%</code></td><td>Sets the <code>min-width</code> of the flexible content child element</tr>
+    </tbody>
+  </table>
+</div>
+
 ## Utility classes
 
 <div>

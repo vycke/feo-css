@@ -10,22 +10,18 @@
 .--row {
   --layout-direction: row;
 }
-/* helper around grow */
-.--grow {
-  flex-grow: 1;
-}
 /* helpers around the cross axis */
 .--start {
-  align-items: flex-start;
+  --layout-align: flex-start;
 }
 .--end {
-  align-items: flex-end;
+  --layout-align: flex-end;
 }
 .--center {
-  align-items: center;
+  --layout-align: center;
 }
 .--stretch {
-  align-items: stretch;
+  --layout-align: stretch;
 }
 /* Control the amount API */
 .--amount-1 {

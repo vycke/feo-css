@@ -9,7 +9,7 @@
 @import "layout/center.css" layer(layout);
 @import "layout/cluster.css" layer(layout);
 @import "layout/fifty.css" layer(layout);
-@import "layout/flexbox.css" layer(layout);
+@import "layout/flex.css" layer(layout);
 @import "layout/grid.css" layer(layout);
 @import "layout/pancake.css" layer(layout);
 @import "layout/repel.css" layer(layout);

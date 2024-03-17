@@ -1,64 +1,23 @@
 ---
 layout: base.njk
-title: Flexbox
+title: Flex
 key: layouts
-subkey: flexbox
+subkey: flex
 ---
 
-Although not really a layout pattern, Feo.css adds a set of classes to control flexbox properties on elements. As some of these classes use the generic "layout class utilities", they are grouped in Feo.css, under "layout".
-
-## Classes
-
-<div>
-  <table>
-    <thead><tr><th>Class name</th><th>Description</th></tr></thead>
-    <tbody>
-      <tr>
-        <td><code>flex</code></td>
-        <td>Sets the element to flex. Default orientation is row</td>
-      </tr>
-      <tr>
-        <td><code>flex-grow</code> and <code>flex-grow-0</code></td>
-        <td>...</td>
-      </tr>
-      <tr>
-        <td><code>flex-shrink</code> and <code>flex-shrink-0</code></td>
-        <td>...</td>
-      </tr>
-      <tr>
-        <td><code>flex-wrap</code> and <code>flex-nowrap</code></td>
-        <td>...</td>
-      </tr>
-      <tr>
-        <td><code>justify-{z}</code></td>
-        <td>...</td>
-      </tr>
-      <tr>
-        <td><code>content-{z}</code></td>
-        <td>...</td>
-      </tr>
-      <tr>
-        <td><code>items-{z}</code></td>
-        <td>...</td>
-      </tr>
-      <tr>
-        <td><code>self-{z}</code></td>
-        <td>...</td>
-      </tr>
-    </tbody>
-  </table>
-</div>
+Implements a flex container that makes use of the common layout APIs defined in Feo.css.
 
 ## Utility classes
 
 <div>
   <table>
     <thead>
-      <tr><th>Class name</th><th>Description</th></tr>
+      <tr><th>Class name</th><th></th><th>Description</th></tr>
     </thead>
     <tbody>
-      <tr><td><code>--gap-{z}</code></td><td>Controls the gap between the child elements</td></tr>
-      <tr><td><code>--column/--row</code></td><td>Controls the flex-direction. Default is row</td></tr>
+      <tr><td><code>--gap-{z}</code></td><td>Controls the gap between the child elements. Default is '0'.</td></tr>
+      <tr><td><code>--column/--row</code></td><td>Controls the flex-direction. Default is 'row'.</td></tr>
+      <tr><td><code>--start/--end/--center/--stretch</code></td><td>Aligns items at the start on the cross-axis. Default is 'center'.</td></tr>
     </tbody>
   </table>
 </div>

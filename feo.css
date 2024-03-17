@@ -224,8 +224,9 @@
 
   .cluster {
     --layout-gap: 0;
+    --layout-align: center;
+    align-items: var(--layout-align);
     justify-content: flex-start;
-    align-items: center;
     gap: var(--layout-gap);
     flex-wrap: wrap;
     display: flex;
@@ -272,7 +273,9 @@
   .repel {
     --layout-gap: 0;
     --layout-direction: row;
+    --layout-align: center;
     flex-direction: var(--layout-direction);
+    align-items: var(--layout-align);
     justify-content: space-between;
     gap: var(--layout-gap);
     flex-wrap: wrap;

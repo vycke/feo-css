@@ -27,6 +27,7 @@ determines how many items can be on a single row (e.g. tag cloud).
     </thead>
     <tbody>
       <tr><td><code>--layout-gap</code></td><td><code>0</code></td><td>Sets the <code>gap</code> of the targeted element</tr>
+      <tr><td><code>--layout-align</code></td><td><code>center</code></td><td>Sets the <code>align-items</code> of the targeted element</tr>
     </tbody>
   </table>
 </div>
@@ -40,6 +41,7 @@ determines how many items can be on a single row (e.g. tag cloud).
     </thead>
     <tbody>
       <tr><td><code>--gap-{z}</code></td><td></td><td>Controls the <code>--layout-gap</code> API</tr>
+      <tr><td><code>--start/--end/--center/--stretch</code></td><td></td><td>Controls the <code>--layout-align</code> API</tr>
     </tbody>
   </table>
 </div>

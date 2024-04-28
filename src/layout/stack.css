@@ -10,5 +10,5 @@
 }
 
 .stack > * {
-  grid-area: "stack";
+  grid-area: stack;
 }

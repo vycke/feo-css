@@ -1,8 +1,8 @@
 ---
 layout: base.njk
-title: Stack
+title: Pile
 key: layouts
-subkey: stack
+subkey: pile
 ---
 
 A simple layout pattern to place items on top eachother, in a depth sense. The lower items in the DOM-tree are positioned more on top.
@@ -10,7 +10,7 @@ A simple layout pattern to place items on top eachother, in a depth sense. The l
 ## Implementation
 
 ```html
-<div class="stack">
+<div class="pile">
   <img ... />
   <h2>text</h2>
 </div>

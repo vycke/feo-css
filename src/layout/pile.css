@@ -3,12 +3,13 @@
  * 
  * --layout-ratio: can be used to set a ratio, but empty by default
  */
-.stack {
+.pile {
   display: grid;
-  grid-template-areas: "stack";
+  grid: [pile] 1fr / [pile] 1fr;
+  place-items: center;
   aspect-ratio: var(--layout-ratio);
 }
 
-.stack > * {
-  grid-area: stack;
+.pile > * {
+  grid-area: pile;
 }

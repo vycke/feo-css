@@ -270,6 +270,18 @@
     display: grid;
   }
 
+  .pile {
+    aspect-ratio: var(--layout-ratio);
+    grid: [pile] 1fr / [pile] 1fr;
+    align-items: center;
+    justify-items: center;
+    display: grid;
+  }
+
+  .pile > * {
+    grid-area: pile;
+  }
+
   .repel {
     --layout-gap: 0;
     --layout-direction: row;
@@ -302,16 +314,6 @@
     min-width: var(--layout-inline-size);
     flex-grow: 999;
     flex-basis: 0;
-  }
-
-  .stack {
-    aspect-ratio: var(--layout-ratio);
-    grid-template-areas: "stack";
-    display: grid;
-  }
-
-  .stack > * {
-    grid-area: stack;
   }
 
   .switcher {

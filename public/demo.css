@@ -15,6 +15,9 @@ a {
   transition: all 200ms;
 }
 
+a:visited {
+}
+
 a:hover {
   text-decoration-thickness: 2px;
   color: blueviolet;
@@ -42,8 +45,11 @@ nav {
   padding: var(--token-size-0);
   outline: 1px solid var(--token-neutral-2);
 }
-nav a {
+
+nav a,
+nav a:visited {
   text-decoration: none;
+  color: var(--token-neutral-4);
 }
 nav a:hover {
   color: inherit;

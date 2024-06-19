@@ -9,7 +9,7 @@ Generic form fields useful for all forms.
 
 ## Example
 
-<form class="flex --column --gap-0 maxw-1">
+<form class="flex --column --start --gap-0 maxw-1">
   <label>
     <span>Input field</span>
     <input placeholder="placeholder" />

@@ -18,10 +18,12 @@ table {
 
   /* Table fills always the available space */
   width: 100%;
-  border: 1px solid var(--table-color);
-  /* the entire table gets the background, and cells get the site BG */
-  background: var(--table-color);
+  border-collapse: collapse;
   border-radius: calc(var(--table-radius) * 1.3);
+}
+
+thead {
+  background: var(--table-color);
 }
 
 table tr:last-child td:first-child {
@@ -48,6 +50,10 @@ td,
 th {
   text-align: left;
   padding: 4px var(--token-size-000);
+}
+
+tbody tr {
+  border-top: 1px solid var(--table-color);
 }
 
 table tr:hover td {

@@ -660,10 +660,13 @@
   table {
     --table-radius: 6px;
     --table-color: var(--surface-1);
-    border: 1px solid var(--table-color);
-    background: var(--table-color);
+    border-collapse: collapse;
     border-radius: calc(var(--table-radius) * 1.3);
     width: 100%;
+  }
+
+  thead {
+    background: var(--table-color);
   }
 
   table tr:last-child td:first-child {
@@ -689,6 +692,10 @@
   td, th {
     text-align: left;
     padding: 4px var(--token-size-000);
+  }
+
+  tbody tr {
+    border-top: 1px solid var(--table-color);
   }
 
   table tr:hover td {

@@ -481,7 +481,7 @@
 }
 
 @layer blocks {
-  details {
+  details.accordion {
     --accordion-border: var(--surface-1);
     --accordion-radius: 8px;
     --accordion-surface: var(--surface-1);
@@ -489,17 +489,17 @@
     border-radius: var(--accordion-radius);
   }
 
-  details > * {
+  details.accordion > * {
     padding: 2px 12px;
   }
 
-  summary {
+  details.accordion summary {
     background-color: var(--accordion-surface);
     border-radius: calc(var(--accordion-radius)  - 3px);
     font-weight: bold;
   }
 
-  details[open] summary {
+  details.accordion[open] summary {
     border-bottom: 1px solid var(--accordion-border);
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0;
@@ -521,7 +521,7 @@
     }
   }
 
-  details[open] > :not(summary) {
+  details.accordion[open] > :not(summary) {
     padding: var(--token-size-00);
     -webkit-animation: .25s ease-in-out slide-down-1;
     animation: .25s ease-in-out slide-down-1;

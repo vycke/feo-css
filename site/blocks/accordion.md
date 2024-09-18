@@ -17,13 +17,13 @@ An accordion or alert box that can be styled and used to provide more informatio
 ## Implementation
 
 ```
-<details>
+<details class="accordion">
   <summary>Title</summary>
   <div>...</div>
 </details>
 ```
 
-<details open style="--accordion-bg: indianred; --accordion-border: indianred;">
+<details class="accordion" open style="--accordion-bg: indianred; --accordion-border: indianred;">
   <summary>About the wrapping div</summary>
   <div>You should wrap the content that doess <i>not</i> to the header/summary, in an HTML tag (e.g. <code>p</code>, <code>div</code>) for the opening animation to work.</div>
 </details>

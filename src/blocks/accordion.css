@@ -1,7 +1,7 @@
 /* 
  * Accordion component
  */
-details {
+details.accordion {
   --accordion-border: var(--surface-1);
   --accordion-radius: 8px;
   --accordion-surface: var(--surface-1);
@@ -11,11 +11,11 @@ details {
 }
 
 /* Assumes only <summary> and one other div */
-details > * {
+details.accordion > * {
   padding: 2px 12px;
 }
 
-summary {
+details.accordion summary {
   font-weight: bold;
   background-color: var(--accordion-surface);
   /* Offset needed to make the borders play nice with the details */
@@ -23,7 +23,7 @@ summary {
 }
 
 /* Changes in styling when opened */
-details[open] summary {
+details.accordion[open] summary {
   border-bottom-right-radius: 0px;
   border-bottom-left-radius: 0px;
   border-bottom: 1px solid var(--accordion-border);
@@ -38,7 +38,7 @@ details[open] summary {
     transform: translateY(-0.5em);
   }
 }
-details[open] > *:not(summary) {
+details.accordion[open] > *:not(summary) {
   animation: slide-down-1 250ms ease-in-out;
   padding: var(--token-size-00);
 }

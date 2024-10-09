@@ -1,0 +1,21 @@
+/**
+ * Makes a wrapper fill the available space
+ * Makes all children equal size in the available space
+ */
+
+.equal {
+  --layout-gap: 0;
+  --layout-align: center;
+  --layout-direction: row;
+
+  display: flex;
+  flex-direction: var(--layout-direction);
+  flex-wrap: nowrap;
+  align-items: var(--layout-align);
+  gap: var(--layout-gap);
+  width: 100%;
+}
+
+.equal > * {
+  flex: 1 1 0px;
+}

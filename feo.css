@@ -232,6 +232,22 @@
     display: flex;
   }
 
+  .equal {
+    --layout-gap: 0;
+    --layout-align: center;
+    --layout-direction: row;
+    flex-direction: var(--layout-direction);
+    align-items: var(--layout-align);
+    gap: var(--layout-gap);
+    flex-wrap: nowrap;
+    width: 100%;
+    display: flex;
+  }
+
+  .equal > * {
+    flex: 1 1 0;
+  }
+
   .fifty {
     --layout-threshold: 0;
     --layout-gap: 0;

@@ -9,7 +9,7 @@
     "build:11ty": "npx @11ty/eleventy && yarn css:docs"
   },
   "name": "feo-css",
-  "version": "5.3.0",
+  "version": "5.3.1",
   "main": "feo.css",
   "description": "A tiny CSS framework",
   "repository": "https://github.com/vyckes/feo-css.git",

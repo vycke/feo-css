@@ -17,5 +17,5 @@
   margin-inline: auto;
   width: 100%;
   /* required to ensure certain elements that should be side-scrollable don't push out the layout at 100% */
-  max-width: var(--layout-threshold);
+  max-width: min(100%, var(--layout-threshold));
 }

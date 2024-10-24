@@ -216,7 +216,7 @@
 @layer layout {
   .center {
     --layout-threshold: 100%;
-    max-width: var(--layout-threshold);
+    max-width: min(100%, var(--layout-threshold));
     width: 100%;
     margin-left: auto;
     margin-right: auto;

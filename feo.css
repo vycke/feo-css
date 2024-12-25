@@ -960,9 +960,8 @@
   }
 
   .contrast {
-    --bg-color: ;
-    background-color: var(--bg-color);
-    color: lch(from var(--bg-color) calc((49.44 - l) * infinity) 0 0);
+    background-color: var(--contrast-bg);
+    color: lch(from var(--contast-bg) calc((49.44 - l) * infinity) 0 0);
   }
 
   .counted:has( > :first-child) {

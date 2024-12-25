@@ -39,7 +39,7 @@ footer {
 
 /* Main navigation */
 nav {
-  --bg-color: var(--token-neutral-1);
+  --contrast-bg: var(--token-neutral-1);
 
   z-index: 100;
   /* background-color: var(--token-neutral-1); */

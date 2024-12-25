@@ -961,7 +961,7 @@
 
   .contrast {
     background-color: var(--contrast-bg);
-    color: lch(from var(--contast-bg) calc((49.44 - l) * infinity) 0 0);
+    color: lch(from var(--contrast-bg) calc((49.44 - l) * infinity) 0 0);
   }
 
   .counted:has( > :first-child) {

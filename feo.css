@@ -217,6 +217,10 @@
     color: var(--surface-0) !important;
     background: var(--text-0) !important;
   }
+
+  @view-transition {
+    navigation: auto;
+  }
 }
 
 @layer layout {

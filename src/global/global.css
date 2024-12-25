@@ -86,3 +86,8 @@ pre > code {
   color: var(--surface-0) !important;
   background: var(--text-0) !important;
 }
+
+/** Basic smooth view transitions, when supported */
+@view-transition {
+  navigation: auto;
+}

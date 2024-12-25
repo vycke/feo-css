@@ -32,7 +32,7 @@
 
   <body class="sidebar --left --threshold-00 --gap-2">
     <!-- SIDEBAR -->
-      <nav class="flex --column --gap-1">
+      <nav class="flex --column --gap-1 | contrast">
         <div class="flex --column --gap-none">
           {% include "svg/logo.svg" %}
           <span class="size-1 bold">Feo.css</span>
@@ -41,15 +41,15 @@
         {% include "partials/navigation.njk" %}
       </nav>
     <!-- CONTENT -->
-    
-    <main class="repel --column | scroll-container"> 
+
+    <main class="repel --column | scroll-container">
       <article class="flex --column --gap-0 --start">
         {% include "partials/breadcrumb.njk" %}
         <h1>{{title}}</h1>
         {{ content | safe }}
-      </article> 
+      </article>
       {% include "partials/footer.njk" %}
     </main>
-    
+
   </body>
 </html>

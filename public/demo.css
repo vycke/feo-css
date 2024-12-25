@@ -39,9 +39,11 @@ footer {
 
 /* Main navigation */
 nav {
+  --bg-color: var(--token-neutral-1);
+
   z-index: 100;
-  background-color: var(--token-neutral-1);
-  color: var(--token-neutral-4);
+  /* background-color: var(--token-neutral-1); */
+  /* color: var(--token-neutral-4); */
   padding: var(--token-size-0);
   outline: 1px solid var(--token-neutral-2);
 }
@@ -49,7 +51,6 @@ nav {
 nav a,
 nav a:visited {
   text-decoration: none;
-  color: var(--token-neutral-4);
 }
 nav a:hover {
   color: inherit;
@@ -57,8 +58,8 @@ nav a:hover {
 }
 nav a[data-selected="true"] {
   font-weight: bold;
-  color: var(--token-neutral-5);
 }
+
 /* ensure text does not go on multiline in horizontal orientaiton */
 nav li {
   white-space: nowrap;

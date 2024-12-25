@@ -30,6 +30,7 @@
 /** utilities */
 @import "utilities/animations.css" layer(utilities);
 @import "utilities/click-area.css" layer(utilities);
+@import "utilities/contrast.css" layer(utilities);
 @import "utilities/counted.css" layer(utilities);
 @import "utilities/hover-group.css" layer(utilities);
 @import "utilities/indexed.css" layer(utilities);

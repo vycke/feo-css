@@ -42,7 +42,7 @@ Generic form fields useful for all forms.
     </datalist>
   </label>
   <label>
-    My text-area
+    <span>My text-area</span>
     <textarea placeholder="placeholder"></textarea>
   </label>
 </form>

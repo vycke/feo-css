@@ -15,6 +15,11 @@ label {
   gap: 4px;
 }
 
+label span {
+  font-size: var(--token-size-00);
+  margin-left: var(--form-radius);
+}
+
 /**
  * Base styling for form elements
  */
@@ -41,14 +46,13 @@ textarea:not(:disabled):where(:hover, :focus) {
 input:disabled,
 textarea:disabled,
 select:disabled {
-  cursor: not-allowed;
   background-color: var(--form-disabled-surface);
   border: 1px solid var(--form-disabled-border);
   padding-left: var(--form-disabled-padding);
 }
 
 /**
- * Adjustments for textarea 
+ * Adjustments for textarea
  */
 textarea {
   min-height: 8em;
@@ -65,6 +69,10 @@ input[list] {
   display: block;
   background-image: var(--arrow-icon);
   background-repeat: no-repeat, repeat;
-  background-position: right var(--token-size-000) top 50%, 0 0;
-  background-size: 0.8em auto, 100%;
+  background-position:
+    right var(--token-size-000) top 50%,
+    0 0;
+  background-size:
+    0.8em auto,
+    100%;
 }

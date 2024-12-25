@@ -15,3 +15,26 @@
   align-items: var(--layout-align);
   gap: var(--layout-gap);
 }
+
+/**
+ * Utility functions for flex containers
+ */
+.grow {
+  flex-grow: 1;
+}
+
+.self-start {
+  align-self: self-start;
+}
+
+.self-center {
+  align-self: center;
+}
+
+.self-stretch {
+  align-self: stretch;
+}
+
+.self-end {
+  align-self: self-end;
+}

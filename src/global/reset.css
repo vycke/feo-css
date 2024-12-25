@@ -35,35 +35,31 @@ body {
   line-height: 1.4;
 }
 
-/* Removes link colors, need to be explicitly set! */
-a,
-a:visited {
-  color: inherit;
-  text-decoration-color: inherit;
-}
-
 /* Remove list styles on ul, ol elements, if they have any other class */
-:where(ul[class], ol[class]) {
+:where(ul[role="list"], ol[role="list"]) {
   list-style: none;
   padding-left: 0;
 }
 
-:where(ul, ol):not([class]) li {
+:where(ul, ol):not([role="list"]) li {
   padding-left: 0.35em;
 }
 
 /* Set shorter line heights on headings and interactive elements */
-:where(h1, h2, h3, button, input, label) {
+:where(h1, h2, h3, h4, button, input, label) {
   line-height: 1.1;
 }
 
 /* Balance text wrapping on headings */
-:where(h1, h2, h3) {
+:where(h1, h2, h3, h4) {
   text-wrap: balance;
 }
 
 /* Baseline for default links */
-:where(a, a:visited):not([class]) {
+a,
+a:visited {
+  color: inherit;
+  text-decoration-color: inherit;
   touch-action: manipulation;
   text-decoration-thickness: 1px;
   text-decoration-skip-ink: auto;
@@ -78,7 +74,8 @@ a:visited {
 
 /* default input style */
 :where(input, button, textarea, select) {
-  font: inherit;
+  font-family: inherit;
+  font-size: inherit;
 }
 
 /* Anything that has been anchored to should have extra scroll margin */
@@ -99,6 +96,15 @@ a:visited {
 /* Makes focus through keyboard better */
 :focus-visible {
   outline: 1px solid currentColor;
+}
+
+[hidden] {
+  display: none;
+}
+
+:disabled,
+[disabled] {
+  cursor: not-allowed;
 }
 
 /* Remove all animations and transitions for

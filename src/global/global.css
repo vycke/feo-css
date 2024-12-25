@@ -39,10 +39,6 @@ h3 {
 }
 
 /**
- * LINKS
- */
-
-/**
  * CODE
  */
 code {
@@ -83,7 +79,7 @@ pre > code {
   -webkit-text-size-adjust: none;
 }
 
-/** 
+/**
  * SELECTION
  */
 ::selection {

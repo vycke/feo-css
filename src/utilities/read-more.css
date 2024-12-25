@@ -1,0 +1,8 @@
+.read-more {
+  --line-count: 2;
+
+  display: -webkit-box;
+  -webkit-line-clamp: var(--line-count);
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}

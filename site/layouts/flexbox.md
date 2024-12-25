@@ -41,6 +41,8 @@ Implements a flex container that makes use of the common layout APIs defined in 
       <tr><td><code>--gap-{z}</code></td><td></td><td>Controls the <code>--layout-gap</code> API</tr>
       <tr><td><code>--column/--row</code></td><td></td><td>Controls the <code>--layout-direction</code> API</tr>
       <tr><td><code>--start/--end/--center/--stretch</code></td><td></td><td>Controls the <code>--layout-align</code> API</tr>
+      <tr><td><code>--grow</code></td><td></td><td>sets <code>flex-grow: 1;</code> on the targeted element.</tr>
+      <tr><td><code>--self-start/end/stretch/center</code></td><td></td><td>sets the <code>align-self</code> property on the targeted element.</tr>
     </tbody>
   </table>
 </div>

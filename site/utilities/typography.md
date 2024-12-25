@@ -25,6 +25,11 @@ subkey: typography
         <td>-</td>
         <td>Various</td>
       </tr>
+      <tr>
+        <td><code>text-center/text-start/text-end</code></td>
+        <td>-</td>
+        <td>Sets the <code>text-align</code> property.</td>
+      </tr>
     </tbody>
   </table>
 </div>

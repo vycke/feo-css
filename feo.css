@@ -221,6 +221,12 @@
   @view-transition {
     navigation: auto;
   }
+
+  @media (prefers-reduced-motion: reduce) {
+    @view-transition {
+      navigation: none;
+    }
+  }
 }
 
 @layer layout {

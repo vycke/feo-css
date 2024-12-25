@@ -44,7 +44,7 @@ subkey: margins
   </table>
 </div>
 
-<details>
+<details class="accordion">
   <summary>Were is my padding?!</summary>
   <p>You might be wondering, where are the padding classes? Well Feo.css is a little opinionated. The layers are build with 'layout' being the most important layer. Layout is about how elements are positioned in relation to eachother. Margin has an impact on that, padding, does not. If you want padding, copy over the <code>src/utilities/margin.css</code> and replace <code>margin</code> with <code>padding</code>.</p>
 </details>

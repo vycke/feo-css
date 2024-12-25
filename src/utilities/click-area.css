@@ -1,4 +1,6 @@
 /* Makes an entire box clickable based on a single child anchor */
+/* NOTE: not usable on table rows, as ::after is not supported on Safari & Chrome */
+
 .click-area {
   position: relative;
 }

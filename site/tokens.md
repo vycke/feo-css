@@ -8,7 +8,7 @@ key: tokens
 Feo.css offers a limited set of design tokens, implemented in [CSS Custom Properties](https://developer.mozilla.org/en-US/docs/Web/CSS/--*) (`--*`). These design tokens are used throughout all the different layers of Feo.css. For example, several layout
 patterns allow you to set the `gap` between columns and rows, through _class ulilities_. These classes directly use the defined tokens.
 
-<details>
+<details class="accordion">
   <summary>Naming convention</summary>
   <p>Tokens like sizing and breakpoints are considered to have a "baseline". The most common value for the design token. Those tokens always have a <code>-0</code> as the post-fix in their naming (e.g. <code>--token-size-0</code>). For each step higher, the number is increased (e.g. <code>--token-size-2</code>). In case of lowering steps, we <i>add</i> a <code>0</code> to the token name (e.g. <code>--token-size-000</code>). This convention is chosen as it is seen to be more readable compared to <code>--token-size--1</code> (note the double dash).</p>
 </details>
@@ -21,7 +21,7 @@ Feo.css offers design tokens on _sizing_ that can be used for spacing (e.g. marg
 - A ratio of `1.33` between two consecutive token values.
 - The mentioned naming convention outlined above. `1rem` is taken as the base value (`--size-0`).
 
-<details>
+<details class="accordion">
   <summary>Note on fluid scaling</summary>
   <p>If you do not want to use a fluid scaling of the <code>--size-{z}</code> tokens, you can overwrite the <code>--feo-scale</code> Custom Property in your own code, and set it to <code>0</code>.</p>
 </details>
@@ -228,7 +228,7 @@ Feo.css does not offer multiple themes out of the box, but offers a basic _light
   </table>
 </div>
 
-<details>
+<details class="accordion">
   <summary>About contrasts</summary>
   <p>The selected theme colors, if combined with <code>--surface-{z}</code> and <code>--text-{z}</code> have a contrast score of AAA (> 7) and can be used freely. Except when you combine <code>--surface-2</code> and <code>--text-2</code>. That combination has a AA+ (4.25) score. So it should only be used with larger text.</p>
 </details>

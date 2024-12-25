@@ -17,7 +17,7 @@ A common responsive layout in which there is a "sidebar" of a _fixed_ width, and
 </div>
 ```
 
-<details>
+<details class="accordion">
   <summary>Implementation tip(s)!</summary>
   <p><b>1.</b> The sidebar layout pattern does not have to be applied to an entire page. You can even apply it to a "searchbar". The input bar is the flexible content, but the search button is of a fixed content. If there is not enough room, they switch to a vertical layout.</p>
   <p><b>2.</b> There is a custom property called <code>--layout-inline-size</code>, set to 60% to calculate the breaking point of this layout. If you want a different breaking point, you can overwrite this custom property. There are <i>class utilities</i> available.</p>

@@ -9,7 +9,7 @@ An accordion or alert box that can be styled and used to provide more informatio
 
 ## Example
 
-<details>
+<details class="accordion">
   <summary>Accordion title</summary>
   <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis porttitor mauris et nisl lobortis, nec efficitur lectus placerat. Nunc ultricies libero quis justo feugiat, at dapibus ex egestas. Donec cursus euismod mauris, ut pellentesque est scelerisque quis. Vestibulum pellentesque dui ut congue tempor. Morbi sit amet elit nec sapien auctor fringilla. </div>
 </details>
@@ -51,13 +51,13 @@ overwritten to control the looks of the table. You can change these properties o
       <tr>
         <td><code>--accordion-surface</code></td>
         <td>
-          Sets <code>background-color</code> property of the header (also known as the <code>summary</code>). 
+          Sets <code>background-color</code> property of the header (also known as the <code>summary</code>).
         </td>
       </tr>
       <tr>
         <td><code>--accordion-radius</code></td>
         <td>
-          Sets <code>border-radius</code> property. 
+          Sets <code>border-radius</code> property.
         </td>
       </tr>
     </tbody>

@@ -8,7 +8,7 @@ key: home
 Feo.css is a small CSS library (<5kB) that gives you a good starting point on any project. It provides you with sensible defaults for standard HTML elements, and some CSS classes around layout patterns and simple utility classes. A solid CSS foundation
 and architecture speeds up everything. Feo.css provides that.
 
-<details>
+<details class="accordion">
   <summary>Did you know?</summary>
   <p>1. The name Feo means "front-end optimized". It also happens to mean "ugly" in Spanish. Happy coincidence, don't you think?</p>
   <p class="mt-00">2. Everything on this site, is purely based on the library. Ok, almost <a href="https://github.com/vyckes/feo-css/blob/main/public/demo.css">everything</a> (less than 100 lines of CSS required).</p>

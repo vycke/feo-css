@@ -7,10 +7,6 @@
 /**
  * Now do everything else
  */
-html {
-  overflow-x: hidden;
-}
-
 body {
   min-width: var(--token-bp-0);
   max-width: 100vw;
@@ -19,6 +15,11 @@ body {
   position: relative;
   color: var(--text-0);
   background-color: var(--surface-0);
+}
+
+:where(a:not([class])) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
 }
 
 /**
@@ -85,14 +86,4 @@ pre > code {
 ::selection {
   color: var(--surface-0) !important;
   background: var(--text-0) !important;
-}
-
-/** Basic smooth view transitions, when supported */
-@view-transition {
-  navigation: auto;
-}
-@media (prefers-reduced-motion: reduce) {
-  @view-transition {
-    navigation: none;
-  }
 }

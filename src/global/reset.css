@@ -19,6 +19,10 @@ html {
   text-size-adjust: none;
   /* iOS webkit fix */
   height: -webkit-fill-available;
+  /* allow of transitions on height */
+  interpolate-size: allow-keywords;
+  /* as WCAG dictates scroll in only one direction */
+  overflow-x: hidden;
 }
 
 /* Set core root defaults */
@@ -56,9 +60,9 @@ body {
 }
 
 /* Baseline for default links */
-a,
-a:visited {
-  color: inherit;
+:where(a:not([class])),
+:where(a:not([class]):visited) {
+  color: currentColor;
   text-decoration-color: inherit;
   touch-action: manipulation;
   text-decoration-thickness: 1px;
@@ -107,11 +111,29 @@ a:visited {
   cursor: not-allowed;
 }
 
+[disabled="false"] {
+  cursor: pointer;
+}
+
+/* disallows scroll on background */
+body:has(dialog[open]) {
+  overflow: hidden;
+}
+
+/** Basic smooth view transitions, when supported */
+@view-transition {
+  navigation: auto;
+}
+
 /* Remove all animations and transitions for
   people that prefer not to see them */
 @media (prefers-reduced-motion: reduce) {
   html:focus-within {
     scroll-behavior: auto !important;
+  }
+
+  @view-transition {
+    navigation: none;
   }
 
   *,

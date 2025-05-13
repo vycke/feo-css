@@ -16,6 +16,7 @@
 @import "layout/pile.css" layer(layout);
 @import "layout/repel.css" layer(layout);
 @import "layout/sidebar.css" layer(layout);
+@import "layout/stack.css" layer(layout);
 @import "layout/switcher.css" layer(layout);
 @import "layout/tiles.css" layer(layout);
 @import "layout/utilities.css" layer(layout);
@@ -40,3 +41,4 @@
 @import "utilities/typography.css" layer(utilities);
 @import "utilities/visually-hidden.css" layer(utilities);
 @import "utilities/width.css" layer(utilities);
+@import "utilities/z-index.css" layer(utilities);

@@ -1,0 +1,3 @@
+.z-indexed {
+  z-index: calc(infinity);
+}

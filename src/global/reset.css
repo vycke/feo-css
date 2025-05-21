@@ -40,12 +40,12 @@ body {
 }
 
 /* Remove list styles on ul, ol elements, if they have any other class */
-:where(ul[role="list"], ol[role="list"]) {
+:where(ul[role], ol[role]) {
   list-style: none;
   padding-left: 0;
 }
 
-:where(ul, ol):not([role="list"]) li {
+:where(ul, ol):not([role]) li {
   padding-left: 0.35em;
 }
 
@@ -101,17 +101,19 @@ body {
 :focus-visible {
   outline: 1px solid currentColor;
 }
-
+/* Hide elements */
 [hidden] {
   display: none;
 }
 
+/* Set the correct cursor */
 :disabled,
-[disabled] {
+[aria-disabled="true"],
+[disabled="true"] {
   cursor: not-allowed;
 }
 
-[disabled="false"] {
+[aria-controls] {
   cursor: pointer;
 }
 

@@ -35,6 +35,7 @@
 @import "utilities/counted.css" layer(utilities);
 @import "utilities/hover-group.css" layer(utilities);
 @import "utilities/indexed.css" layer(utilities);
+@import "utilities/loading.css" layer(blocks);
 @import "utilities/margin.css" layer(utilities);
 @import "utilities/read-more.css" layer(utilities);
 @import "utilities/scroll-container.css" layer(utilities);

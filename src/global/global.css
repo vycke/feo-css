@@ -1,10 +1,4 @@
 /**
- * First import the reset and tokens
- */
-@import "reset.css";
-@import "tokens.css";
-
-/**
  * Now do everything else
  */
 body {
@@ -15,11 +9,6 @@ body {
   position: relative;
   color: var(--text-0);
   background-color: var(--surface-0);
-}
-
-:where(a:not([class])) {
-  text-decoration-skip-ink: auto;
-  color: currentColor;
 }
 
 /**

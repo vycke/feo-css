@@ -23,6 +23,12 @@ html {
   interpolate-size: allow-keywords;
   /* as WCAG dictates scroll in only one direction */
   overflow-x: hidden;
+  /* Enables keyword animations, like view-transitions  */
+  @supports (interpolate-size: allow-keywords) {
+    @media (prefers-reduced-motion: no-preference) {
+      interpolate-size: allow-keywords;
+    }
+  }
 }
 
 /* Set core root defaults */
@@ -32,11 +38,12 @@ html:focus-within {
 
 /* Set core body defaults */
 body {
-  text-rendering: optimizeSpeed;
   min-height: 100vh;
   /* iOS webkit fix */
   min-height: -webkit-fill-available;
-  line-height: 1.4;
+  line-height: 1.5;
+  /* Improve text-rendering */
+  -webkit-font-smoothing: antialiased;
 }
 
 /* Remove list styles on ul, ol elements, if they have any other class */
@@ -54,20 +61,24 @@ body {
   line-height: 1.1;
 }
 
-/* Balance text wrapping on headings */
+/* Better line-wrapping */
 :where(h1, h2, h3, h4) {
   text-wrap: balance;
 }
 
+p {
+  text-wrap: pretty;
+}
+
 /* Baseline for default links */
-:where(a:not([class])),
-:where(a:not([class]):visited) {
-  color: currentColor;
-  text-decoration-color: inherit;
-  touch-action: manipulation;
-  text-decoration-thickness: 1px;
+a:not([class]) {
   text-decoration-skip-ink: auto;
-  text-underline-offset: 0.1em;
+  color: currentColor;
+  text-underline-offset: 0.2em;
+}
+/* slight transparent border in the current color */
+a:not([class]):not(:is(:hover, :focus)) {
+  text-decoration-color: color-mix(in srgb, currentColor, transparent 75%);
 }
 
 /* Make images easier to work with */
@@ -111,6 +122,9 @@ body {
 [aria-disabled="true"],
 [disabled="true"] {
   cursor: not-allowed;
+}
+[disabled="false"] {
+  cursor: pointer;
 }
 
 [aria-controls] {

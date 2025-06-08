@@ -1,0 +1,51 @@
+:root {
+  /**
+   * NEUTRAL
+   */
+  --token-neutral-0: hsl(215, 12%, 12%);
+  --token-neutral-1: hsl(215, 12%, 22%);
+  --token-neutral-2: hsl(215, 12%, 36%);
+  --token-neutral-3: hsl(215, 24%, 78%);
+  --token-neutral-4: hsl(215, 24%, 92%);
+  --token-neutral-5: hsl(215, 24%, 98%);
+
+  /**
+   * LIGHT THEME
+   */
+  color-scheme: light;
+  --text-0: var(--token-neutral-0);
+  --text-1: var(--token-neutral-1);
+  --text-2: var(--token-neutral-2);
+  --surface-0: var(--token-neutral-5);
+  --surface-1: var(--token-neutral-4);
+  --surface-2: var(--token-neutral-3);
+}
+
+/**
+ * DARK THEME
+ */
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+    --text-0: var(--token-neutral-5);
+    --text-1: var(--token-neutral-4);
+    --text-2: var(--token-neutral-3);
+    --surface-0: var(--token-neutral-0);
+    --surface-1: var(--token-neutral-1);
+    --surface-2: var(--token-neutral-2);
+  }
+}
+
+/**
+ * Minimal global styling that is color related.
+ */
+
+body {
+  color: var(--text-0);
+  background-color: var(--surface-0);
+}
+
+::selection {
+  color: var(--surface-0) !important;
+  background: var(--text-0) !important;
+}

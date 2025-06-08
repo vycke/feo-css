@@ -1,0 +1,6 @@
+@import "global/colors.css" layer(global);
+
+@import "components/accordion.css" layer(components);
+@import "components/form.css" layer(components);
+@import "components/table.css" layer(components);
+@import "components/tooltip.css" layer(components);

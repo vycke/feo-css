@@ -24,12 +24,10 @@
 /** utilities */
 @import "utilities/aspect-ratio.css" layer(utilities);
 @import "utilities/click-area.css" layer(utilities);
-@import "utilities/contrast.css" layer(utilities);
 @import "utilities/counted.css" layer(utilities);
 @import "utilities/dimensions.css" layer(utilities);
 @import "utilities/hover-group.css" layer(utilities);
 @import "utilities/indexed.css" layer(utilities);
-@import "utilities/loading.css" layer(utilities);
 @import "utilities/margin.css" layer(utilities);
 @import "utilities/no-print.css" layer(utilities);
 @import "utilities/scroll.css" layer(utilities);

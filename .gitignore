@@ -6,6 +6,7 @@ npm-debug.*
 .DS_Store
 .sass-cache
 node_modules
+*.min.css
 
 _site
 yarn-error.log

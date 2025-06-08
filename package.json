@@ -1,11 +1,11 @@
 {
   "dependencies": {},
   "scripts": {
-    "css:bundle": "lightningcss --bundle --nesting  --targets '> 0.25%, not IE 11' src/index.css -o feo.css",
-    "css:minified": "lightningcss --bundle --nesting --minify --targets '> 0.25%, not IE 11' src/index.css -o feo.min.css",
-    "css:docs": "lightningcss --bundle --nesting --minify --targets '> 0.25%, not IE 11' src/index.css -o public/feo.min.css",
-    "build": "yarn css:bundle && yarn css:minified && yarn css:docs",
-    "start": "eleventy --serve & yarn css:docs & onchange 'src/**/*.css' -- yarn build",
+    "css:core": "lightningcss --bundle --nesting --minify  --targets '> 0.25%, not IE 11' src/core.css -o feo-core.min.css",
+    "css:components": "lightningcss --bundle --nesting --minify --targets '> 0.25%, not IE 11' src/components.css -o feo-components.min.css",
+    "css:docs": "yarn css:core && yarn css:components && copyfiles -f ./*.min.css public",
+    "build": "yarn css:core && yarn css:components",
+    "start": "eleventy --serve & yarn css:build & onchange 'src/**/*.css' -- yarn build",
     "build:11ty": "npx @11ty/eleventy && yarn css:docs"
   },
   "name": "feo-css",
@@ -25,7 +25,8 @@
   "homepage": "https://github.com/vyckes/feo-css#readme",
   "devDependencies": {
     "@11ty/eleventy": "^2.0.1",
-    "lightningcss-cli": "^1.18.0",
+    "copyfiles": "^2.4.1",
+    "lightningcss-cli": "^1.30.1",
     "onchange": "^7.1.0"
   }
 }

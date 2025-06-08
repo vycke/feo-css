@@ -1,15 +1,4 @@
 /**
- * Make a table horizontal scroll, in case there is a wrapper div, 
- * without the need for a custom class. Does nothing in browsers not
- * supporting :has
- */
-div:has(> table:only-child) {
-  overflow-x: auto;
-  /* Ensure that even in flex-start on the parent, tables will be full width and scrollable */
-  width: 100%;
-}
-
-/**
  * Table component
  */
 table {

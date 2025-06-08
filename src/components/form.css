@@ -1,3 +1,6 @@
+/**
+ * FORM ELEMENTS
+ */
 form {
   --form-radius: 8px;
   --form-border: var(--text-2);
@@ -7,7 +10,7 @@ form {
   --form-disabled-border: var(--text-2);
 }
 
-label {
+form label {
   display: flex;
   flex-direction: column;
   color: var(--text-2);
@@ -15,17 +18,14 @@ label {
   gap: 4px;
 }
 
-label span {
+form label span {
   font-size: var(--token-size-00);
   margin-left: var(--form-radius);
 }
 
-/**
- * Base styling for form elements
- */
-input:not([type="checkbox"]),
-select,
-textarea {
+form input:not([type="checkbox"]),
+form select,
+form textarea {
   width: 100%;
   padding: 6px var(--token-size-000);
   background-color: var(--token-surface-0);
@@ -36,33 +36,27 @@ textarea {
   color: var(--text-0);
 }
 
-input:not(:disabled):not([type="checkbox"]):where(:hover, :focus),
-select:not(:disabled):where(:hover, :focus),
-textarea:not(:disabled):where(:hover, :focus) {
+form input:not(:disabled):not([type="checkbox"]):where(:hover, :focus),
+form select:not(:disabled):where(:hover, :focus),
+form textarea:not(:disabled):where(:hover, :focus) {
   border: 1px solid var(--form-focus);
   outline: 1px solid var(--form-focus);
 }
 
-input:disabled,
-textarea:disabled,
-select:disabled {
+form input:disabled,
+form textarea:disabled,
+form select:disabled {
   background-color: var(--form-disabled-surface);
   border: 1px solid var(--form-disabled-border);
   padding-left: var(--form-disabled-padding);
 }
 
-/**
- * Adjustments for textarea
- */
-textarea {
+form textarea {
   min-height: 8em;
 }
 
-/**
- * Select and datalist
- */
-select,
-input[list] {
+form select,
+form input[list] {
   --arrow-icon: url("data:image/svg+xml,%3Csvg width='14' height='9' viewBox='0 0 14 9' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Cpath id='Path' fill='%232B3A50' d='M7 9L13.0622 0H0.937822L7 9Z'/%3E%3C/svg%3E");
 
   appearance: none;

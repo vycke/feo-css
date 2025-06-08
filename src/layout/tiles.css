@@ -8,11 +8,16 @@
 .tiles {
   --layout-threshold: 0;
   --layout-gap: 0;
+  --tiles-repeat: auto-fill;
 
   display: grid;
   grid-template-columns: repeat(
-    auto-fit,
+    var(--tiles-repeat),
     minmax(min(var(--layout-threshold), 100%), 1fr)
   );
   gap: var(--layout-gap);
+}
+
+.--fit {
+  --tiles-repeat: auto-fit;
 }

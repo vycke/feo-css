@@ -8,7 +8,7 @@
 .flex {
   --layout-gap: 0;
   --layout-direction: row;
-  --layout-align: center;
+  --layout-align: stretch;
 
   display: flex;
   flex-direction: var(--layout-direction);
@@ -21,6 +21,12 @@
  */
 .grow {
   flex-grow: 1;
+}
+.no-shrink {
+  flex-shrink: 0;
+}
+.wrap {
+  flex-wrap: wrap;
 }
 
 .self-start {

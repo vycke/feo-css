@@ -23,43 +23,6 @@
 .--stretch {
   --layout-align: stretch;
 }
-/* Control the amount API */
-.--amount-1 {
-  --layout-amount: 1;
-}
-.--amount-2 {
-  --layout-amount: 2;
-}
-.--amount-3 {
-  --layout-amount: 3;
-}
-.--amount-4 {
-  --layout-amount: 4;
-}
-.--amount-5 {
-  --layout-amount: 5;
-}
-.--amount-6 {
-  --layout-amount: 6;
-}
-.--amount-7 {
-  --layout-amount: 7;
-}
-.--amount-8 {
-  --layout-amount: 8;
-}
-.--amount-9 {
-  --layout-amount: 9;
-}
-.--amount-10 {
-  --layout-amount: 10;
-}
-.--amount-11 {
-  --layout-amount: 11;
-}
-.--amount-12 {
-  --layout-amount: 12;
-}
 /* Control the gap API */
 .--gap-none {
   --layout-gap: none;

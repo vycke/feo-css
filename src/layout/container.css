@@ -1,0 +1,8 @@
+.container {
+  --layout-container-name: layoutContainer;
+
+  container-name: var(--layout-container-name);
+  container-type: inline-size;
+  /* hack to resolve overflow when no wrapping is on */
+  min-width: 0;
+}

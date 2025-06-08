@@ -4,11 +4,23 @@
  * --layout-gap: set the gap between the child elements (horizontal & vertical)
  * --layout-amount: sets a fixed number of columns
  */
-.grid {
+[class*="grid-"] {
   --layout-amount: 2;
   --layout-gap: 0;
 
   display: grid;
-  grid-template-columns: repeat(var(--layout-amount), 1fr);
+  grid-template-columns: repeat(var(--layout-amount), minmax(0, 1fr));
   gap: var(--layout-gap);
+}
+.grid-3 {
+  --layout-amount: 3;
+}
+.grid-4 {
+  --layout-amount: 4;
+}
+.grid-5 {
+  --layout-amount: 5;
+}
+.grid-6 {
+  --layout-amount: 6;
 }

@@ -1,11 +1,11 @@
 /**
  * A stack of position items on top of eachother (depth)
- * 
+ *
  * --layout-ratio: can be used to set a ratio, but empty by default
  */
 .pile {
   display: grid;
-  grid: [pile] 1fr / [pile] 1fr;
+  grid: [pile] minmax(0, 1fr) / [pile] minmax(0, 1fr);
   place-items: center;
   aspect-ratio: var(--layout-ratio);
 }

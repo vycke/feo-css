@@ -1,12 +1,12 @@
 /**
  * A simple pattern on a three (or more) layer layout in which the second layer fills the available space
- * 
+ *
  * --layout-gap: sets gap between elements
  */
 .pancake {
   --layout-gap: 0;
 
   display: grid;
-  grid-template-rows: auto 1fr auto;
+  grid-template-rows: auto minmax(0, 1fr) auto;
   gap: var(--layout-gap);
 }

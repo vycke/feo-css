@@ -5,7 +5,7 @@
 
 .equal {
   --layout-gap: 0;
-  --layout-align: center;
+  --layout-align: stretch;
   --layout-direction: row;
 
   display: flex;

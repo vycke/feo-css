@@ -1,13 +1,13 @@
 /**
  * Layout to stretch items across the main axis and have the space in between
- * 
+ *
  * --layout-gap: sets gap between child elements
  * --layout-direction: sets the flex-direction
  */
 .repel {
   --layout-gap: 0;
   --layout-direction: row;
-  --layout-align: center;
+  --layout-align: stretch;
 
   display: flex;
   flex-direction: var(--layout-direction);

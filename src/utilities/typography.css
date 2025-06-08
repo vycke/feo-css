@@ -33,6 +33,19 @@
 .italic {
   font-style: italic;
 }
+.fl::first-letter {
+  text-transform: capitalize;
+}
+.uppercase {
+  text-transform: uppercase;
+}
+.lowercase {
+  text-transform: lowercase;
+}
+.capitalize {
+  text-transform: capitalize;
+}
+/** Text align */
 .text-center {
   text-align: center;
 }
@@ -41,4 +54,20 @@
 }
 .text-start {
   text-align: start;
+}
+/** ellipsis */
+.read-more {
+  --line-count: 2;
+
+  display: -webkit-box;
+  -webkit-line-clamp: var(--line-count);
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.ellipsis {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  min-width: 0;
 }

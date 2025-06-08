@@ -1,6 +1,0 @@
-.scroll-container {
-  contain: size;
-  overflow-y: auto;
-  /* required to ensure flex column layouts do not wrap to the side */
-  flex-wrap: nowrap;
-}

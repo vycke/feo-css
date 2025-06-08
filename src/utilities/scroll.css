@@ -1,0 +1,12 @@
+.x-scroll {
+  overflow-x: auto;
+  display: block;
+  overscroll-behavior-x: contain;
+  width: 100%;
+}
+
+.y-scroll {
+  overflow-y: auto;
+  display: block;
+  overscroll-behavior-y: contain;
+}

@@ -1,3 +1,4 @@
+/* max-width */
 .maxw-000 {
   max-width: var(--token-bp-000);
 }
@@ -28,4 +29,12 @@
 
 .maxw-5 {
   max-width: var(--token-bp-5);
+}
+/* width */
+.w-full {
+  width: 100%;
+}
+/* height */
+.h-full {
+  height: 100%;
 }

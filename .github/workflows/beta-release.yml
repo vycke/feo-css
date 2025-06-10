@@ -2,7 +2,7 @@ name: publish
 
 on:
   release:
-    types: [created]
+    types: [prereleased]
 
 jobs:
   publish-npm:
@@ -17,6 +17,6 @@ jobs:
         run: |
           yarn config set //registry.npmjs.org/:_authToken=$NODE_AUTH_TOKEN
           yarn build
-          npm publish --access public
+          npm publish --access public --tag beta
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTOMATION_TOKEN }}

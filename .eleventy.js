@@ -1,49 +1,19 @@
-function sort(key) {
-  return function (a, b) {
-    return a.data[key] < b.data[key] ? -1 : 1;
-  };
-}
+import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
+import * as filters from "./site/_config/filters.js";
+import * as shortcodes from "./site/_config/shortcodes.js";
 
-function getNavigation(collection) {
-  const items = {};
-
-  // main navigation items
-  let _c = collection.filter((c) => !c.data.parent);
-  for (let i in _c) {
-    const item = _c[i].data;
-    items[item.key] = {
-      title: item.title,
-      order: item.order,
-      url: item.page.url,
-      sub: [],
-    };
-  }
-
-  // sub items
-  _c = collection.filter((c) => c.data.parent).sort(sort("title"));
-  for (let i in _c) {
-    const item = _c[i].data;
-    items[item.parent].sub.push({
-      title: item.title,
-      url: item.page.url,
-      key: item.key,
-    });
-  }
-  return Object.entries(items).sort((a, b) =>
-    Math.sign(a[1].order - b[1].order),
-  );
-}
-
-function getSubitems(collection, key) {
-  return collection
-    .filter((c) => c.data.key === key && c.data.key)
-    .sort(sort("title"));
-}
-
-module.exports = (config) => {
+export default async function (config) {
   config.addPassthroughCopy({ "./public/": "/" });
-  config.addFilter("navigation", getNavigation);
-  config.addFilter("subitems", getSubitems);
+  config.addPlugin(syntaxHighlight);
+
+  // filters
+  Object.keys(filters).forEach((name) => {
+    config.addFilter(name, filters[name]);
+  });
+  // shortcodes
+  Object.keys(shortcodes).forEach((name) => {
+    config.addShortcode(name, shortcodes[name]);
+  });
 
   return {
     markdownTemplateEngine: "njk",
@@ -54,4 +24,4 @@ module.exports = (config) => {
       output: "_site",
     },
   };
-};
+}

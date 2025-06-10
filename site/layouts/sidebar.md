@@ -1,8 +1,8 @@
 ---
 layout: base.njk
 title: Sidebar
-key: layouts
-subkey: sidebar
+parent: layouts
+key: sidebar
 ---
 
 A common responsive layout in which there is a "sidebar" of a _fixed_ width, and a content area that is flexible. This implementation switches to a vertical layout the moment the flexible content gets too little space left within the _targeted (wrapper) element_. By default, items are stretch vertically within the parent wrapper.

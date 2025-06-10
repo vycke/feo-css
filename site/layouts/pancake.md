@@ -1,8 +1,8 @@
 ---
 layout: base.njk
 title: Pancake
-key: layouts
-subkey: pancake
+parent: layouts
+key: pancake
 ---
 
 A common vertical pattern where the center content should stretch the available space, pushing the top and bottom to, well, the top and bottom.

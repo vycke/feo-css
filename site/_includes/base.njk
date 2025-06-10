@@ -25,25 +25,25 @@
       content="#0E131B"
     />
     <meta name="view-transition" content="same-origin" />
-    <link rel="stylesheet" href="/feo.min.css" />
+    <link rel="stylesheet" href="/feo-core.min.css" />
+    <link rel="stylesheet" href="/feo-components.min.css" />
     <link rel="stylesheet" href="/demo.css" />
     <link rel="icon" href="/favicon.ico" sizes="any" />
   </head>
 
   <body class="sidebar --left --threshold-00 --gap-2">
     <!-- SIDEBAR -->
-      <nav class="flex --column --gap-1 | contrast">
-        <div class="flex --column --gap-none">
+      <nav class="flex --column --gap-1 | self-start">
+        <div class="flex --column --center --gap-none">
           {% include "svg/logo.svg" %}
-          <span class="size-1 bold">Feo.css</span>
-          <span class="size-00">v{{ pkg.version }}</span>
+          <span class="size-00 italic">v{{ pkg.version }}</span>
         </div>
         {% include "partials/navigation.njk" %}
       </nav>
     <!-- CONTENT -->
 
     <main class="repel --column | scroll-container">
-      <article class="flex --column --gap-0 --start">
+      <article class="flow">
         {% include "partials/breadcrumb.njk" %}
         <h1>{{title}}</h1>
         {{ content | safe }}

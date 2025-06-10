@@ -1,8 +1,8 @@
 ---
 layout: base.njk
 title: Click-area
-key: utilities
-subkey: click-area
+parent: utilities
+key: click-area
 ---
 
 Makes the entire element with this class clickable, based on the

@@ -8,7 +8,7 @@ function getNavigation(collection) {
   const items = {};
 
   // main navigation items
-  let _c = collection.filter((c) => !c.data.subkey);
+  let _c = collection.filter((c) => !c.data.parent);
   for (let i in _c) {
     const item = _c[i].data;
     items[item.key] = {
@@ -20,23 +20,23 @@ function getNavigation(collection) {
   }
 
   // sub items
-  _c = collection.filter((c) => c.data.subkey).sort(sort("title"));
+  _c = collection.filter((c) => c.data.parent).sort(sort("title"));
   for (let i in _c) {
     const item = _c[i].data;
-    items[item.key].sub.push({
+    items[item.parent].sub.push({
       title: item.title,
       url: item.page.url,
-      key: item.subkey,
+      key: item.key,
     });
   }
   return Object.entries(items).sort((a, b) =>
-    Math.sign(a[1].order - b[1].order)
+    Math.sign(a[1].order - b[1].order),
   );
 }
 
 function getSubitems(collection, key) {
   return collection
-    .filter((c) => c.data.key === key && c.data.subkey)
+    .filter((c) => c.data.key === key && c.data.key)
     .sort(sort("title"));
 }
 

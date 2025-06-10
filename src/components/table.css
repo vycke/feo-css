@@ -1,6 +1,8 @@
-/**
- * Table component
- */
+/* Ensures tables are always full-width */
+div:has(table:only-child) {
+  width: 100%;
+}
+
 table {
   --table-radius: 6px;
   --table-color: var(--surface-1);

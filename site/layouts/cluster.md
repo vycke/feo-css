@@ -1,8 +1,8 @@
 ---
 layout: base.njk
 title: Cluster
-key: layouts
-subkey: cluster
+parent: layouts
+key: cluster
 ---
 
 Groups items in such a way that a 'cluster' is created that automatically

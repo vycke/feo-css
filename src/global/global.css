@@ -7,8 +7,6 @@ body {
   font-size: var(--token-size-0);
   font-family: var(--sans-serif);
   position: relative;
-  color: var(--text-0);
-  background-color: var(--surface-0);
 }
 
 /**
@@ -38,17 +36,15 @@ code {
 }
 
 :not(pre) > code {
-  border: 1px solid var(--surface-2);
-  background-color: var(--surface-1);
-  border-radius: 4px;
-  padding: 2px;
+  border: 1px solid currentColor;
+  border-radius: 0.25em;
+  padding: 0.125em;
   white-space: nowrap;
   word-break: break-all;
 }
 
 pre {
-  border-radius: 8px;
-  background-color: var(--surface-1);
+  border-radius: 0.5em;
   position: relative;
   padding: 0;
   width: 100%;
@@ -60,19 +56,10 @@ pre {
 
 pre > code {
   padding: var(--token-size-000) var(--token-size-00);
-  font-size: var(--token-size-00);
   display: block;
   white-space: pre;
   overflow-x: auto;
   tab-size: 2;
   /* fix for increased font-size safari iOS */
   -webkit-text-size-adjust: none;
-}
-
-/**
- * SELECTION
- */
-::selection {
-  color: var(--surface-0) !important;
-  background: var(--text-0) !important;
 }

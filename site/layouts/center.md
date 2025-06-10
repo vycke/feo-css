@@ -1,8 +1,8 @@
 ---
 layout: base.njk
 title: Center
-key: layouts
-subkey: center
+parent: layouts
+key: center
 ---
 
 Places the targeted element in the horizontal center. It takes the entire available horizontal space, until it hits its set `max-width` set through the `--threshold-{z}` class utilities.

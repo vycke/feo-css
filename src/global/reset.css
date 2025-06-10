@@ -74,11 +74,11 @@ p {
 a:not([class]) {
   text-decoration-skip-ink: auto;
   color: currentColor;
-  text-underline-offset: 0.2em;
+  text-underline-offset: 0.125em;
 }
 /* slight transparent border in the current color */
 a:not([class]):not(:is(:hover, :focus)) {
-  text-decoration-color: color-mix(in srgb, currentColor, transparent 75%);
+  text-decoration-color: hsl(from currentColor h s l / 50%);
 }
 
 /* Make images easier to work with */

@@ -1,8 +1,8 @@
 ---
 layout: base.njk
 title: Flex
-key: layouts
-subkey: flex
+parent: layouts
+key: flex
 ---
 
 Implements a flex container that makes use of the common layout APIs defined in Feo.css.

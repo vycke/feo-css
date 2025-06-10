@@ -1,8 +1,8 @@
 ---
 layout: base.njk
-title: Blocks
+title: Components
 order: 4
-key: blocks
+key: components
 ---
 
 A limited set of blocks (mostly based on basic HTML elements,

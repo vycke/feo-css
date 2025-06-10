@@ -1,8 +1,8 @@
 ---
 layout: base.njk
 title: Repel
-key: layouts
-subkey: repel
+parent: layouts
+key: repel
 ---
 
 A simple layout pattern that pushes elements away from eachother, given the available space. Effectively implementing the `.justify-between`, `.--gap-{z}`, `.flex`, and `.--row` (as the default is horizontal orientation) classes.

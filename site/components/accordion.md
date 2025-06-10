@@ -1,8 +1,8 @@
 ---
 layout: base.njk
 title: Accordion
-key: blocks
-subkey: accordion
+parent: components
+key: accordion
 ---
 
 An accordion or alert box that can be styled and used to provide more information to users.
@@ -33,7 +33,7 @@ An accordion or alert box that can be styled and used to provide more informatio
 There are several custom properties available that can be
 overwritten to control the looks of the table. You can change these properties on the `details` selector.
 
-<div>
+<div class="h-scroll">
   <table>
     <thead>
       <tr>

@@ -1,8 +1,8 @@
 ---
 layout: base.njk
 title: Typography
-key: utilities
-subkey: typography
+parent: utilities
+key: typography
 ---
 
 <div>

@@ -1,8 +1,8 @@
 ---
 layout: base.njk
 title: Toggle
-key: blocks
-subkey: toggle
+parent: components
+key: toggle
 ---
 
 A toggle is a specific component that can be used as a solitary

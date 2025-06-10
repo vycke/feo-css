@@ -1,8 +1,8 @@
 ---
 layout: base.njk
 title: Table
-key: blocks
-subkey: table
+parent: components
+key: table
 ---
 
 Generic table component.

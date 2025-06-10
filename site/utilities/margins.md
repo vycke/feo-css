@@ -1,8 +1,8 @@
 ---
 layout: base.njk
 title: Margins
-key: utilities
-subkey: margins
+parent: utilities
+key: margins
 ---
 
 <div>

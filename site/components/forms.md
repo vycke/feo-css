@@ -1,8 +1,8 @@
 ---
 layout: base.njk
 title: Forms
-key: blocks
-subkey: forms
+parent: components
+key: forms
 ---
 
 Generic form fields useful for all forms.

@@ -1,8 +1,8 @@
 ---
 layout: base.njk
 title: Pile
-key: layouts
-subkey: pile
+parent: layouts
+key: pile
 ---
 
 A simple layout pattern to place items on top eachother, in a depth sense. The lower items in the DOM-tree are positioned more on top.

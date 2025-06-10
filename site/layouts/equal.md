@@ -1,8 +1,8 @@
 ---
 layout: base.njk
 title: Equal
-key: layouts
-subkey: equal
+parent: layouts
+key: equal
 ---
 
 Makes a wrapper fill the available space and makes all the children equal size within that space. Does not wrap.

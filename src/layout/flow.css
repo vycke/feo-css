@@ -2,26 +2,26 @@
  * Stack Layout Utility
  * -------------------
  * Originally inspired by: https://piccalil.li/blog/my-favourite-3-lines-of-css/
- * 
+ *
  * The stack utility creates consistent vertical spacing between elements.
  * It follows the "lobotomized owl" selector pattern (* + *) to add
  * margin between consecutive sibling elements.
- * 
+ *
  * Usage:
  * <div class="stack">
  *   <p>First element</p>
  *   <p>Second element (gets margin-top)</p>
  *   <p>Third element (gets margin-top)</p>
  * </div>
- * 
+ *
  * You can customize the gap by setting --layout-gap on the .stack element:
  * <div class="stack" style="--layout-gap: 2rem">
  *   ...
  * </div>
  */
 
-.stack > * + * {
-  --layout-gap: 0;
+.flow > * + * {
+  --layout-gap: initial;
 
   margin-block-start: var(--layout-gap, 1em);
 }

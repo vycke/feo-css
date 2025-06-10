@@ -1,8 +1,8 @@
 ---
 layout: base.njk
 title: Scroll container
-key: utilities
-subkey: scroll-container
+parent: utilities
+key: scroll-container
 ---
 
 Allows for vertical scroll within the element, enabled by the `contain: size` property/value. This allows it to be easily used in flex containers (e.g. stretched items across the height of the parent).

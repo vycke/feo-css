@@ -1,8 +1,8 @@
 ---
 layout: base.njk
 title: Grids
-key: layouts
-subkey: grids
+parent: layouts
+key: grids
 ---
 
 A layout pattern to easily create a grid of equal columns.

@@ -1,8 +1,8 @@
 ---
 layout: base.njk
 title: Read more
-key: utilities
-subkey: read-more
+parent: utilities
+key: read-more
 ---
 
 A simple class that makes works like an "elipsis" for long, multi-line text.

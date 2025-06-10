@@ -1,8 +1,8 @@
 ---
 layout: base.njk
 title: Fifty-fifty
-key: layouts
-subkey: fifty-fifty
+parent: layouts
+key: fifty-fifty
 ---
 
 A simple layout pattern that makes two elements of equal width next to eachother, until a threshold is met. When the available space is lower than the threshold, items are positioned below eachother. Can be used with more than 2 items, but does not act the same as the [switcher](/layouts/switcher), as items just wrap.

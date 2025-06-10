@@ -1,8 +1,8 @@
 ---
 layout: base.njk
 title: Tooltip
-key: blocks
-subkey: tooltip
+parent: components
+key: tooltip
 ---
 
 A simple `data-*` attribute that allows for a hover-triggered tooltip with plain text in it.
@@ -45,13 +45,13 @@ There are several custom properties available that can be overwritten to control
       <tr>
         <td><code>--tooltip-color</code></td>
         <td>
-          Sets <code>color</code> property of the text. 
+          Sets <code>color</code> property of the text.
         </td>
       </tr>
       <tr>
         <td><code>--tooltip-decoration</code></td>
         <td>
-          Sets <code>text-decoration</code> on the hover element. 
+          Sets <code>text-decoration</code> on the hover element.
         </td>
       </tr>
     </tbody>

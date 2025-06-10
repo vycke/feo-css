@@ -1,27 +1,29 @@
 /* Themes */
+:root {
+  --brand-0: #1c756a;
+  --brand-1: #f2b25a;
+  --primary: var(--brand-0);
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
-    color-scheme: dark;
-    --text-0: var(--token-neutral-5);
-    --text-1: var(--token-neutral-4);
-    --text-2: var(--token-neutral-3);
-    --surface-0: var(--token-neutral-0);
-    --surface-1: var(--token-neutral-1);
-    --surface-2: var(--token-neutral-2);
+    --primary: var(--brand-1);
   }
 }
 
+/* Global styles */
+body {
+  position: relative;
+  color: var(--text-0);
+  background-color: var(--surface-0);
+}
 a {
   transition: all 200ms;
+  color: var(--primary);
 }
-
-a:visited {
-}
-
-a:hover {
-  text-decoration-thickness: 2px;
-  color: blueviolet;
-  text-decoration-color: blueviolet;
+pre {
+  background-color: var(--surface-1);
+  border: 2px solid var(--surface-2);
 }
 
 /* Structure */
@@ -39,40 +41,40 @@ footer {
 
 /* Main navigation */
 nav {
-  --contrast-bg: var(--token-neutral-1);
-
-  z-index: 100;
-  /* background-color: var(--token-neutral-1); */
-  /* color: var(--token-neutral-4); */
+  background-color: var(--surface-1);
   padding: var(--token-size-0);
-  outline: 1px solid var(--token-neutral-2);
+  outline: 1px solid var(--primary);
+  position: sticky;
+  top: 0;
+  height: 100vh;
 }
-
-nav a,
-nav a:visited {
+nav a {
   text-decoration: none;
+  color: var(--text-1);
 }
 nav a:hover {
-  color: inherit;
-  font-weight: bold;
+  color: var(--text-5);
 }
 nav a[data-selected="true"] {
   font-weight: bold;
 }
-
-/* ensure text does not go on multiline in horizontal orientaiton */
+/* ensure text does not go on multiline in horizontal orientation */
 nav li {
   white-space: nowrap;
 }
 
 /* small changes for responsiveness */
 @media (max-width: 646px) {
+  nav {
+    position: initial;
+    height: auto;
+  }
+
   nav ul ul {
     display: none;
   }
   /* Overwrites scroll behavior and ensures growth in case main as little content */
   main {
-    contain: none;
     min-height: calc(100vh - 165px - var(--token-size-2));
   }
 }
@@ -89,9 +91,4 @@ nav li {
 
 .breadcrumbs li:last-child a {
   text-decoration: none;
-}
-
-h2 {
-  margin-top: var(--token-size-2);
-  font-size: var(--token-size-0);
 }

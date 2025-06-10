@@ -1,8 +1,8 @@
 ---
 layout: base.njk
 title: Switcher
-key: layouts
-subkey: switcher
+parent: layouts
+key: switcher
 ---
 
 A _responsive_ layout pattern that helps switching the orientation from horizontal to vertical if the _available width for the targeted (wrapper) element_ becomes less than the set width. Useful when the targeted element has >= 2 child elements.

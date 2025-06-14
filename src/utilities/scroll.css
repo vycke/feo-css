@@ -1,11 +1,11 @@
-.h-scroll {
+.x-scroll {
   overflow-x: auto;
   display: block;
   overscroll-behavior-x: contain;
   width: 100%;
 }
 
-.v-scroll {
+.y-scroll {
   overflow-y: auto;
   display: block;
   overscroll-behavior-y: contain;

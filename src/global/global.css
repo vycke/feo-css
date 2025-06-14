@@ -36,9 +36,6 @@ code {
 }
 
 :not(pre) > code {
-  border: 1px solid currentColor;
-  border-radius: 0.25em;
-  padding: 0.125em;
   white-space: nowrap;
   word-break: break-all;
 }

@@ -3,16 +3,18 @@
  *
  * --layout-gap: set the gap between the child elements (horizontal & vertical)
  * --layout-direction: sets flex-direction
- * --layout-align: sets align-items
+ * --layout-items: sets align-items
  */
 .flex {
   --layout-gap: 0;
   --layout-direction: row;
-  --layout-align: stretch;
+  --layout-items: stretch;
+  --layout-justify: flex-start;
 
   display: flex;
   flex-direction: var(--layout-direction);
-  align-items: var(--layout-align);
+  align-items: var(--layout-items);
+  justify-content: var(--layout-justify);
   gap: var(--layout-gap);
 }
 

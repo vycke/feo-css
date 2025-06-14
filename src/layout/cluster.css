@@ -6,11 +6,12 @@ determines how many items can be on a single row (e.g. tag cloud)
  */
 .cluster {
   --layout-gap: 0;
-  --layout-align: center;
+  --layout-items: center;
+  --layout-justify: flex-start;
 
   display: flex;
   flex-wrap: wrap;
-  align-items: var(--layout-align);
-  justify-content: flex-start;
+  align-items: var(--layout-items);
+  justify-content: var(--layout-justify);
   gap: var(--layout-gap);
 }

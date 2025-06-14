@@ -1,5 +1,7 @@
 .github
 public/
 site/
+src/
+package.json
 .eleventy.js
 netlify.toml

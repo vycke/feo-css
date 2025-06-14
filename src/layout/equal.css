@@ -5,13 +5,16 @@
 
 .equal {
   --layout-gap: 0;
-  --layout-align: stretch;
+  --layout-items: stretch;
+  --layout-justify: flex-start;
+
   --layout-direction: row;
 
   display: flex;
   flex-direction: var(--layout-direction);
   flex-wrap: nowrap;
-  align-items: var(--layout-align);
+  align-items: var(--layout-items);
+  justify-content: var(--layout-justify);
   gap: var(--layout-gap);
   width: 100%;
 }

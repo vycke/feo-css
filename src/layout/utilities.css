@@ -12,16 +12,31 @@
 }
 /* helpers around the cross axis */
 .--start {
-  --layout-align: flex-start;
+  --layout-items: flex-start;
 }
 .--end {
-  --layout-align: flex-end;
+  --layout-items: flex-end;
 }
 .--center {
-  --layout-align: center;
+  --layout-items: center;
 }
 .--stretch {
-  --layout-align: stretch;
+  --layout-items: stretch;
+}
+.--justify-start {
+  --layout-justify: start;
+}
+.--content-end {
+  --layout-justify: end;
+}
+.--content-center {
+  --layout-justify: center;
+}
+.--content-between {
+  --layout-justify: space-between;
+}
+.--content-around {
+  --layout-justify: space-around;
 }
 /* Control the gap API */
 .--gap-none {

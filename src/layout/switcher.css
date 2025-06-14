@@ -1,6 +1,6 @@
 /**
  * A layout of X columns that switches from horizontal to vertical the moment
- * the width of parent becomes less than a set value. 
+ * the width of parent becomes less than a set value.
  *
  * --layout-gap: set the gap between the child elements (horizontal & vertical)
  * --layout-threshold: the min-width of a single child elements
@@ -11,14 +11,30 @@
   --layout-gap: 0;
   --layout-threshold: 0;
   --layout-direction: row;
+  --layout-items: stretch;
+  --layout-justify: flex-start;
 
   display: flex;
   flex-direction: var(--layout-direction);
   flex-wrap: wrap;
   gap: var(--layout-gap);
+  align-items: var(--layout-items);
+  justify-content: var(--layout-justify);
 }
 
 .switcher > * {
   flex-grow: 1;
   flex-basis: calc((var(--layout-threshold) - 100%) * 999);
+}
+
+.switcher.counted > * {
+  flex-basis: calc((var(--count) * var(--layout-threshold) - 100%) * 999);
+}
+
+.--no-grow {
+  justify-content: center;
+}
+
+.--no-grow > * {
+  flex-grow: 0;
 }

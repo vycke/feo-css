@@ -116,11 +116,14 @@ a:not([class]):not(:is(:hover, :focus)) {
 [hidden] {
   display: none;
 }
+/* Impacts non-tabbable items */
+[tabindex="-1"] {
+  outline: none;
+}
 
 /* Set the correct cursor */
 :disabled,
-[aria-disabled="true"],
-[disabled="true"] {
+[disabled] {
   cursor: not-allowed;
 }
 [disabled="false"] {

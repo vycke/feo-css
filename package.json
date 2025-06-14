@@ -9,11 +9,11 @@
     "build:11ty": "npx @11ty/eleventy && yarn css:docs"
   },
   "name": "feo-css",
-  "version": "6.0.0-beta.0",
+  "version": "6.0.0-beta.1",
   "main": "feo.css",
   "type": "module",
   "description": "A tiny CSS framework",
-  "repository": "https://github.com/vyckes/feo-css.git",
+  "repository": "https://github.com/crinkels/feo-css.git",
   "keywords": [
     "cube css",
     "css"
@@ -21,9 +21,9 @@
   "author": "Kevin Pennekamp <hello@crinkles.dev>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/vyckes/feo-css/issues"
+    "url": "https://github.com/crinkels/feo-css/issues"
   },
-  "homepage": "https://github.com/vyckes/feo-css#readme",
+  "homepage": "https://github.com/crinkels/feo-css#readme",
   "devDependencies": {
     "@11ty/eleventy": "^3.1.1",
     "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.1",

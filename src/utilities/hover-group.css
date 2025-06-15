@@ -4,7 +4,8 @@
  * enlarges hover element
  */
 .hover-group {
-  --opacity: 0.4;
+  --hover-opacity: 0.4;
+  --hover-grow: 1.175;
 }
 
 .hover-group > * {
@@ -13,7 +14,13 @@
 
 /** check if hover is available or not, is not available on mobile */
 @media (hover: hover) {
-  .hover-group:hover > *:not(:hover) {
-    opacity: var(--opacity);
+  .hover-group:hover > *:not(:hover),
+  .hover-group:hover > *:not(:hover)::before,
+  .hover-group:hover > *:not(:hover)::after {
+    opacity: var(--hover-opacity);
+  }
+
+  .hover-group > *:hover {
+    transform: matrix(var(--hover-grow), 0, 0, var(--hover-grow), 0, 0);
   }
 }

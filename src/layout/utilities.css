@@ -26,16 +26,16 @@
 .--justify-start {
   --layout-justify: start;
 }
-.--content-end {
+.--justify-end {
   --layout-justify: end;
 }
-.--content-center {
+.--justify-center {
   --layout-justify: center;
 }
-.--content-between {
+.--justify-between {
   --layout-justify: space-between;
 }
-.--content-around {
+.--justify-around {
   --layout-justify: space-around;
 }
 /* Control the gap API */

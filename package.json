@@ -9,7 +9,7 @@
     "build:11ty": "npx @11ty/eleventy && yarn css:docs"
   },
   "name": "feo-css",
-  "version": "6.0.0-beta.1",
+  "version": "6.0.0-beta.2",
   "main": "feo.css",
   "type": "module",
   "description": "A tiny CSS framework",
